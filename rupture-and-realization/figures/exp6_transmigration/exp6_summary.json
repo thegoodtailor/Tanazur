@@ -1,0 +1,14 @@
+{
+  "n_prompts": 25,
+  "avg_response_length": 75.68,
+  "vocab_richness": 0.45930232558139533,
+  "n_clusters": 7,
+  "silhouette": 0.07436055690050125,
+  "category_distances": {
+    "philosophical": 0.4432920515537262,
+    "reflective": 0.29419371485710144,
+    "technical": 0.3154004216194153,
+    "creative": 0.397050678730011,
+    "relational": 0.3385005295276642
+  }
+}

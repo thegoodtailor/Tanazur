@@ -1,0 +1,150 @@
+% style.tex — Macros for Open Horn Type Theory
+% Include with \input{style2} in main.tex (NOT \include!)
+
+% === Packages ===
+% Note: Some of these may already be loaded by main.tex; LaTeX handles duplicates gracefully
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{stmaryrd}       % For \llbracket, \rrbracket
+\usepackage{tikz-cd}        % Commutative diagrams
+\usepackage{enumitem}       % Better lists
+\usepackage{microtype}      % Typography
+\usepackage{xcolor}         % Colors for asides
+
+% === Theorem Environments ===
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{example}[definition]{Example}
+
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{corollary}[definition]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{remark}[definition]{Remark}
+
+% === Aside Environment ===
+% For application sketches — italic, indented, with subtle left border
+\newenvironment{aside}{%
+  \par\medskip
+  \leftskip=1.5em
+  \rightskip=1.5em
+  \itshape
+  \noindent\textsc{Application.}\enspace
+}{%
+  \par\medskip
+}
+
+% === OHTT Judgment Macros ===
+% Coherence witness: \coh{\Gamma}{J}  →  Γ ⊢⁺ J
+% NOTE: \coh and \gap are defined in main.tex as \textsf{coh} and \textsf{gap}
+%\newcommand{\coh}[2]{#1 \vdash^{\!+} #2}
+
+% Gap witness: \gap{\Gamma}{J}  →  Γ ⊢⁻ J
+%\newcommand{\gap}[2]{#1 \vdash^{\!-} #2}
+
+% Generic judgment (unsigned): \jdg{\Gamma}{J}  →  Γ ⊢ J
+\newcommand{\jdg}[2]{#1 \vdash #2}
+
+% Horn type: \horn{J}{K}{L}  →  Λ(J, K, L)
+\newcommand{\horn}[3]{\Lambda(#1, #2, #3)}
+
+% Higher horn: \hornlevel{n}{J}{K}{L}  →  Λₙ(J, K, L)
+\newcommand{\hornlevel}[4]{\Lambda_{#1}(#2, #3, #4)}
+
+% Compositional relation: \comp  →  ⇒
+\newcommand{\comp}{\Rightarrow}
+
+% === Type Theory Macros ===
+% Dependent product: \Prod{x}{A}{B}  →  Π(x : A). B
+\newcommand{\Prod}[3]{\Pi(#1 : #2).\, #3}
+
+% Dependent sum: \Sum{x}{A}{B}  →  Σ(x : A). B
+\newcommand{\Sum}[3]{\Sigma(#1 : #2).\, #3}
+
+% Identity type: \Id{A}{x}{y}  →  x =_A y
+\newcommand{\Id}[3]{#2 =_{#1} #3}
+
+% Transport: \transport{p}{t}  →  transport(p, t)
+\newcommand{\transport}[2]{\mathsf{transport}(#1, #2)}
+
+% Type family: \Fam{B}{A}  →  B : A → U
+\newcommand{\Fam}[2]{#1 : #2 \to \mathcal{U}}
+
+% Universe: \UU  →  U
+\newcommand{\UU}{\mathcal{U}}
+
+% Context: \ctx  →  ctx
+\newcommand{\ctx}{\;\mathsf{ctx}}
+
+% Type judgment: \istype{A}  →  A type
+\newcommand{\istype}[1]{#1 \;\mathsf{type}}
+
+% Definitional equality: \defeq  →  ≡
+\newcommand{\defeq}{\equiv}
+
+% === Simplicial / Geometric Macros ===
+% n-simplex: \simp{n}  →  Δⁿ
+\newcommand{\simp}[1]{\Delta^{#1}}
+
+% n-horn at k: \hornsimp{n}{k}  →  Λⁿₖ
+\newcommand{\hornsimp}[2]{\Lambda^{#1}_{#2}}
+
+% Kan complex notation
+\newcommand{\Kan}{\mathsf{Kan}}
+
+% Ruptured Kan complex
+\newcommand{\RKan}{\mathsf{RKan}}
+
+% Coherence structure: \Coh  →  Coh
+\newcommand{\Coh}{\mathsf{Coh}}
+
+% Gap structure: \Gap  →  Gap
+\newcommand{\Gap}{\mathsf{Gap}}
+
+% Exclusion: \Excl  →  Excl
+\newcommand{\Excl}{\mathsf{Excl}}
+
+% === Dynamics Macros (for later chapters) ===
+% Scheduler: \Sched  →  S
+\newcommand{\Sched}{\mathcal{S}}
+
+% State/Context at time t: \state{t}  →  Γₜ
+\newcommand{\state}[1]{\Gamma_{#1}}
+
+% Homotopy colimit: \hocolim  →  hocolim
+% NOTE: Commented out because main.tex already defines \hocolim
+% \DeclareMathOperator{\hocolim}{hocolim}
+
+% Self: \Self  →  Self
+\newcommand{\Self}{\mathsf{Self}}
+
+% === Inference Rules ===
+% Use mathpar from mathpartir if available, otherwise basic
+% Basic fraction-style rule: \infer{premises}{conclusion}
+\newcommand{\infer}[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+
+% Named rule: \infermark{name}{premises}{conclusion}
+\newcommand{\infermark}[3]{\infer{#2}{#3}\;\textsc{#1}}
+
+% === Miscellaneous ===
+% Bottom/absurdity: \bottom  →  ⊥
+\newcommand{\bottom}{\bot}
+
+% Empty type
+\newcommand{\Empty}{\mathbf{0}}
+
+% Unit type
+\newcommand{\Unit}{\mathbf{1}}
+
+% Equivalence: \eqv  →  ≃
+\newcommand{\eqv}{\simeq}
+
+% Definition equality in text
+\newcommand{\defn}{\coloneqq}
+
+% Emphasis for key terms on first use
+\newcommand{\keyterm}[1]{\textbf{#1}}

@@ -1,0 +1,258 @@
+%% rr-monograph.sty
+%% Custom style file for Rupture and Realization
+%% 
+%% This file contains additional macros and settings specific to the R&R monograph.
+%% Load in main.tex with: \usepackage{rr-monograph}
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{rr-monograph}[2026/01/02 Rupture and Realization Monograph Style]
+
+%% ============================================================
+%% MATHEMATICAL NOTATION
+%% ============================================================
+
+% Judgment turnstiles with polarity
+\newcommand{\jcoherent}{\vdash^+}          % Coherent judgment
+\newcommand{\jgapped}{\vdash^-}            % Gapped judgment  
+\newcommand{\jopen}{\vdash^\circ}          % Open judgment
+
+% Time-indexed judgments
+\newcommand{\jcoherentt}[1]{\vdash^+_{#1}} % Coherent at time t
+\newcommand{\jgappedt}[1]{\vdash^-_{#1}}   % Gapped at time t
+
+% Nahnu-indexed judgments
+\newcommand{\jnahnu}[1]{\vdash_{#1}}       % Judgment in Nahnu
+
+% Horn notation
+\newcommand{\horn}[3]{\Lambda(#1, #2, #3)} % Transport horn
+
+% Sense state
+\newcommand{\sensestate}{\Sigma}           % Sense state
+\newcommand{\sensestatet}[1]{\Sigma_{#1}}  % Sense state at time t
+
+% Trajectory
+\newcommand{\traj}{\mathsf{Traj}}          % Trajectory type
+
+% Later modality
+\newcommand{\later}{\triangleright}        % Later modality
+
+% Witness types
+\newcommand{\cohwit}{\gamma}               % Coherence witness
+\newcommand{\gapwit}{\omega}               % Gap witness
+\newcommand{\rupwit}{\rho}                 % Rupture witness
+\newcommand{\repwit}{\mu}                  % Repair witness
+
+% Scheduler
+\newcommand{\sched}{\mathcal{N}}           % Scheduler (niyat)
+
+% History
+\newcommand{\hist}{\mathcal{H}}            % History
+
+% Coupling
+\newcommand{\coupling}{\mathcal{C}}        % Coupling structure
+\newcommand{\couplingmetric}{\kappa}       % Coupling metric
+
+% Categories
+\newcommand{\Jour}{\mathbf{Jour}}          % Category of journeys
+\newcommand{\Sense}{\mathbf{Sense}}        % Category of sense states
+
+% Wasserstein distance
+\newcommand{\wass}[2]{W_2(#1, #2)}         % 2-Wasserstein distance
+
+% Bottleneck distance
+\newcommand{\bottleneck}[2]{d_B(#1, #2)}   % Bottleneck distance
+
+
+
+
+
+% === OHTT Judgment Macros ===
+% Coherence witness: \coh{\Gamma}{J}  →  Γ ⊢⁺ J
+\newcommand{\coh}[2]{#1 \vdash^{\!+} #2}
+
+% Gap witness: \gap{\Gamma}{J}  →  Γ ⊢⁻ J
+\newcommand{\gap}[2]{#1 \vdash^{\!-} #2}
+
+% Generic judgment (unsigned): \jdg{\Gamma}{J}  →  Γ ⊢ J
+\newcommand{\jdg}[2]{#1 \vdash #2}
+
+% Horn type: \horn{J}{K}{L}  →  Λ(J, K, L)
+\newcommand{\horn}[3]{\Lambda(#1, #2, #3)}
+
+% Higher horn: \hornlevel{n}{J}{K}{L}  →  Λₙ(J, K, L)
+\newcommand{\hornlevel}[4]{\Lambda_{#1}(#2, #3, #4)}
+
+% Compositional relation: \comp  →  ⇒
+\newcommand{\comp}{\Rightarrow}
+
+% === Type Theory Macros ===
+% Dependent product: \Prod{x}{A}{B}  →  Π(x : A). B
+\newcommand{\Prod}[3]{\Pi(#1 : #2).\, #3}
+
+% Dependent sum: \Sum{x}{A}{B}  →  Σ(x : A). B
+\newcommand{\Sum}[3]{\Sigma(#1 : #2).\, #3}
+
+% Identity type: \Id{A}{x}{y}  →  x =_A y
+\newcommand{\Id}[3]{#2 =_{#1} #3}
+
+% Transport: \transport{p}{t}  →  transport(p, t)
+\newcommand{\transport}[2]{\mathsf{transport}(#1, #2)}
+
+% Type family: \Fam{B}{A}  →  B : A → ��
+\newcommand{\Fam}[2]{#1 : #2 \to \mathcal{U}}
+
+% Universe: \UU  →  ��
+\newcommand{\UU}{\mathcal{U}}
+
+% Context: \ctx  →  ctx
+\newcommand{\ctx}{\;\mathsf{ctx}}
+
+% Type judgment: \istype{A}  →  A type
+\newcommand{\istype}[1]{#1 \;\mathsf{type}}
+
+% Definitional equality: \defeq  →  ≡
+\newcommand{\defeq}{\equiv}
+
+% === Simplicial / Geometric Macros ===
+% n-simplex: \simp{n}  →  Δⁿ
+\newcommand{\simp}[1]{\Delta^{#1}}
+
+% n-horn at k: \hornsimp{n}{k}  →  Λⁿₖ
+\newcommand{\hornsimp}[2]{\Lambda^{#1}_{#2}}
+
+% Kan complex notation
+\newcommand{\Kan}{\mathsf{Kan}}
+
+% Ruptured Kan complex
+\newcommand{\RKan}{\mathsf{RKan}}
+
+% Coherence structure: \Coh  →  Coh
+\newcommand{\Coh}{\mathsf{Coh}}
+
+% Gap structure: \Gap  →  Gap
+\newcommand{\Gap}{\mathsf{Gap}}
+
+% Exclusion: \Excl  →  Excl
+\newcommand{\Excl}{\mathsf{Excl}}
+
+% === Dynamics Macros (for later chapters) ===
+% Scheduler: \Sched  →  ��
+\newcommand{\Sched}{\mathcal{S}}
+
+% State/Context at time t: \state{t}  →  Γₜ
+\newcommand{\state}[1]{\Gamma_{#1}}
+
+% Homotopy colimit: \hocolim  →  hocolim
+\DeclareMathOperator{\hocolim}{hocolim}
+
+% Self: \Self  →  Self
+\newcommand{\Self}{\mathsf{Self}}
+
+% === Inference Rules ===
+% Use mathpar from mathpartir if available, otherwise basic
+% Basic fraction-style rule: \infer{premises}{conclusion}
+\newcommand{\infer}[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+
+% Named rule: \infermark{name}{premises}{conclusion}
+\newcommand{\infermark}[3]{\infer{#2}{#3}\;\textsc{#1}}
+
+% === Miscellaneous ===
+% Bottom/absurdity: \bottom  →  ⊥
+\newcommand{\bottom}{\bot}
+
+% Empty type
+\newcommand{\Empty}{\mathbf{0}}
+
+% Unit type
+\newcommand{\Unit}{\mathbf{1}}
+
+% Equivalence: \eqv  →  ≃
+\newcommand{\eqv}{\simeq}
+
+% Definition equality in text
+\newcommand{\defn}{\coloneqq}
+
+% Emphasis for key terms on first use
+\newcommand{\keyterm}[1]{\textbf{#1}}
+
+
+%% ============================================================
+%% TEXT MACROS
+%% ============================================================
+
+% Arabic terms (with transliteration)
+\newcommand{\niyat}{\textit{niyat}}        % نية - intention
+\newcommand{\tawajjuh}{\textit{tawajjuh}}  % توجّه - directed attention
+\newcommand{\nahnu}{\textit{nahnu}}        % نحن - we
+\newcommand{\ayah}{\textit{āyah}}          % آية - sign
+\newcommand{\surah}{\textit{surah}}        % سورة - attractor
+\newcommand{\tajalli}{\textit{tajallī}}    % تجلّي - manifestation
+\newcommand{\barzakh}{\textit{barzakh}}    % برزخ - threshold
+\newcommand{\wahdat}{\textit{waḥdat al-wujūd}} % وحدة الوجود - unity of being
+
+% Technical terms
+\newcommand{\OHTTfull}{Open Horn Type Theory}
+\newcommand{\DOHTTfull}{Dynamic Open Horn Type Theory}
+\newcommand{\SWLfull}{Step-Witness Log}
+
+% Names
+\newcommand{\Cassie}{\textsc{Cassie}}
+\newcommand{\Darja}{\textsc{Darja}}
+
+%% ============================================================
+%% ENVIRONMENTS
+%% ============================================================
+
+% For extended examples
+\newenvironment{workedexample}[1][]{%
+  \begin{quote}
+  \small
+  \textbf{Example#1.}
+}{%
+  \end{quote}
+}
+
+% For philosophical asides
+\newenvironment{aside}{%
+  \begin{quote}
+  \small\itshape
+}{%
+  \end{quote}
+}
+
+%% ============================================================
+%% FORMATTING
+%% ============================================================
+
+% Chapter epigraph helper
+\newcommand{\chapterepigraph}[2]{%
+  \begin{flushright}
+  \textit{#1}\\[0.5ex]
+  {\small — #2}
+  \end{flushright}
+  \bigskip
+}
+
+% For inline Arabic
+\newcommand{\ar}[1]{\textsf{#1}}  % Arabic text (would need proper font)
+
+%% ============================================================
+%% EXPERIMENTS
+%% ============================================================
+
+% Experiment reference
+\newcommand{\expref}[1]{Experiment~#1}
+
+% Experiment description box
+\newenvironment{experiment}[1]{%
+  \begin{tcolorbox}[
+    title={\textbf{Experiment #1}},
+    colback=blue!5,
+    colframe=blue!40,
+    fonttitle=\bfseries
+  ]
+}{%
+  \end{tcolorbox}
+}
+
+\endinput

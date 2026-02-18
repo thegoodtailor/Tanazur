@@ -1,0 +1,77 @@
+{
+  "dialogue": [
+    {
+      "role": "user",
+      "text": "I've been thinking about climate change a lot lately."
+    },
+    {
+      "role": "assistant",
+      "text": "Climate change is certainly one of the defining challenges of our time. What aspects concern you most?"
+    },
+    {
+      "role": "user",
+      "text": "The economic impacts worry me. How do we balance growth with sustainability?"
+    },
+    {
+      "role": "assistant",
+      "text": "That tension between economic growth and environmental protection is real. Many economists now argue for sustainable development."
+    },
+    {
+      "role": "user",
+      "text": "What about carbon pricing? Does it actually work?"
+    },
+    {
+      "role": "assistant",
+      "text": "Carbon pricing can be effective when well-designed. It creates market incentives to reduce emissions."
+    },
+    {
+      "role": "user",
+      "text": "Let's change topics. Tell me about ancient Rome."
+    },
+    {
+      "role": "assistant",
+      "text": "Ancient Rome was a remarkable civilization that lasted over a thousand years. From a small city-state to a vast empire spanning many regions, it shaped law, architecture, and governance."
+    },
+    {
+      "role": "user",
+      "text": "Actually, let's go back to climate. What about renewable energy?"
+    },
+    {
+      "role": "assistant",
+      "text": "Renewable energy has seen remarkable growth. Solar and wind costs have plummeted, making them competitive with fossil fuels."
+    },
+    {
+      "role": "user",
+      "text": "So there's hope for addressing climate change through technology?"
+    },
+    {
+      "role": "assistant",
+      "text": "Technology is certainly part of the solution. Renewables, storage, and efficiency improvements all contribute to reducing emissions."
+    }
+  ],
+  "consecutive_distances": [
+    26.250370025634766,
+    24.103816986083984,
+    26.20113754272461,
+    27.798110961914062,
+    27.772245407104492,
+    30.893753051757812,
+    23.337556838989258,
+    29.395429611206055,
+    27.150253295898438,
+    27.63174819946289,
+    27.26647186279297
+  ],
+  "rupture_distance": 30.893753051757812,
+  "return_distance": 29.395429611206055,
+  "baseline_mean": 26.39019012451172,
+  "baseline_std": 1.5413094758987427,
+  "rupture_zscore": 2.9219069480895996,
+  "return_zscore": 1.9497963190078735,
+  "basin_distances": {
+    "climate_pre_rome": 19.13182830810547,
+    "rome_climate_post": 19.813011169433594,
+    "climate_pre_climate_post": 13.346251487731934
+  },
+  "scar_detected": false
+}

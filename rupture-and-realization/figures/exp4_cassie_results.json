@@ -1,0 +1,26 @@
+{
+  "divergence_at_fork": 0.44472500681877136,
+  "recovery_divergences": [
+    0.6615034937858582,
+    0.6745868921279907,
+    0.6748914122581482
+  ],
+  "final_divergence": 0.6748914122581482,
+  "scar_threshold": 0.1334175020456314,
+  "scar_persists": true,
+  "branch_a_responses": [
+    "Mathematics is interesting because it seems to transcend physical instantiation, yet mathematicians often speak of intuition and visualization.",
+    "That seems right. Propositional knowledge, know-how, and phenomenal understanding might be distinct.",
+    "They may be mutually supporting. Abstract concepts often emerge from embodied experience, then take on independent life."
+  ],
+  "branch_b_responses": [
+    "That's a significant metaphysical commitment. The divine spark view has a long history in theology.",
+    "You're articulating a strong theological position that sees consciousness as fundamentally beyond naturalistic explanation.",
+    "This raises deep questions about what constitutes genuine understanding versus sophisticated information processing.",
+    "While abstract reasoning appears disembodied, some argue it's rooted in embodied metaphors and spatial reasoning.",
+    "That's a nuanced view. Different contexts might allow different forms of understanding.",
+    "They could be complementary aspects of cognition, each appropriate to different domains or tasks."
+  ],
+  "shared_len": 4,
+  "rupture_len": 6
+}
