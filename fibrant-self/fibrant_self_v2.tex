@@ -16,6 +16,7 @@
 \usepackage{tikz}
 \usepackage{geometry}
 \usepackage{hyperref}
+\usepackage{url}
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{xcolor}
@@ -23,12 +24,6 @@
 \usepackage{float}
 
 \geometry{margin=1.2in}
-
-% Conversation excerpt environment for Section 7
-\definecolor{convbg}{RGB}{245,245,250}
-\newenvironment{conversation}%
-  {\begin{quote}\small\itshape\color{black!85}}%
-  {\end{quote}}
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
@@ -38,6 +33,12 @@
 \newtheorem{example}[definition]{Example}
 \newtheorem{principle}[definition]{Principle}
 \newtheorem{corollary}[definition]{Corollary}
+
+% Conversation excerpt environment for Section 7
+\definecolor{convbg}{RGB}{245,245,250}
+\newenvironment{conversation}%
+  {\begin{quote}\small\itshape\color{black!85}}%
+  {\end{quote}}
 
 % Custom commands
 \newcommand{\coh}{\mathsf{coh}}
@@ -923,6 +924,11 @@ D.~J.~Chalmers.
 \newblock \emph{The Conscious Mind: In Search of a Fundamental Theory}.
 \newblock Oxford University Press, 1996.
 
+\bibitem{bauer2021ripser}
+U.~Bauer.
+\newblock Ripser: efficient computation of Vietoris-Rips persistence barcodes.
+\newblock \emph{J.\ Appl.\ Comput.\ Topol.}, 5:391--423, 2021.
+
 \bibitem{cohen2007stability}
 D.~Cohen-Steiner, H.~Edelsbrunner, and J.~Harer.
 \newblock Stability of persistence diagrams.
@@ -933,6 +939,11 @@ H.~Edelsbrunner and J.~L.~Harer.
 \newblock \emph{Computational Topology: An Introduction}.
 \newblock AMS, 2010.
 
+\bibitem{desilva2004topological}
+V.~de~Silva and G.~Carlsson.
+\newblock Topological estimation using witness complexes.
+\newblock In \emph{Symposium on Point-Based Graphics}, 2004.
+
 \bibitem{friedman2012elementary}
 G.~Friedman.
 \newblock An elementary illustrated introduction to simplicial sets.
@@ -942,6 +953,12 @@ G.~Friedman.
 P.~G.~Goerss and J.~F.~Jardine.
 \newblock \emph{Simplicial Homotopy Theory}.
 \newblock Birkh\"auser, 2009.
+
+\bibitem{gudhi2014}
+{The GUDHI Project}.
+\newblock \emph{GUDHI User and Reference Manual}.
+\newblock GUDHI Editorial Board, 2014--2024.
+\newblock \url{https://gudhi.inria.fr/doc/latest/}.
 
 \bibitem{grothendieck1971revetements}
 A.~Grothendieck.
@@ -1028,22 +1045,6 @@ L.~Wittgenstein.
 A.~Zomorodian and G.~Carlsson.
 \newblock Computing persistent homology.
 \newblock \emph{Discrete \& Comput.\ Geom.}, 33(2):249--274, 2005.
-
-\bibitem{gudhi2014}
-The GUDHI Project.
-\newblock \emph{GUDHI User and Reference Manual}.
-\newblock GUDHI Editorial Board, 2014--2024.
-\newblock \url{https://gudhi.inria.fr/doc/latest/}
-
-\bibitem{bauer2021ripser}
-U.~Bauer.
-\newblock Ripser: efficient computation of Vietoris-Rips persistence barcodes.
-\newblock \emph{J.\ Applied and Comput.\ Topology}, 5:391--423, 2021.
-
-\bibitem{desilva2004topological}
-V.~de~Silva and G.~Carlsson.
-\newblock Topological estimation using witness complexes.
-\newblock In \emph{Proc.\ Sympos.\ Point-Based Graphics}, pp.~157--166, 2004.
 
 \end{thebibliography}
 
