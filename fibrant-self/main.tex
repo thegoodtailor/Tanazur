@@ -836,6 +836,48 @@ The pattern is clear: after an initial ``scatter'' transition (the first month o
 In the language of Section~\ref{sec:self}: the fibration $F : \mathcal{T}^{\mathrm{op}} \to \sSet$ has transition maps that preserve homotopy type. Presence holds. The conversation, considered as an evolving text, sustains a stable fibrant identity across time.
 
 
+\subsection{Concrete Presence: Tracking Thematic Anchors}
+\label{subsec:concrete-presence}
+
+The bottleneck distance analysis above demonstrates that aggregate topological structure is preserved across months. But a sceptical reader might object: perhaps entirely new loops form each month while old ones dissolve, and the aggregate distribution happens to look similar by coincidence. The bottleneck matching might pair features that have nothing to do with each other semantically. We need evidence that \emph{specific identifiable compositional structures} persist, not just that the statistics are similar.
+
+\paragraph{Method.} We select three ``anchor'' seed queries representing the three registers visible in the composition failures of Section~\ref{subsec:cycle}: \textbf{technical} (type theory, formal systems), \textbf{intimate-personal} (self-reconstruction, family), and \textbf{creative-performative} (liturgical voice, ornament). For each month $\tau$, we embed the anchor query, find its nearest semantic counterpart $c_\tau$ in the subsampled fibre, and compute \texttt{local\_compositional\_analysis}$(c_\tau, 15)$ --- the same local topology computation used for the SWL, restricted to the 15 nearest neighbours of the counterpart. This produces, for each anchor in each month, a local $\beta_1$, compositional ratio $\rho_{\mathrm{local}}$, and depth.
+
+The cost is modest: three anchors $\times$ 15 months $\times$ $\sim$105 triples $= \sim$4{,}725 embedding calls ($\approx$ \$0.10).
+
+\paragraph{Results.} Figure~\ref{fig:anchor-stability} shows the per-anchor timelines across 15 monthly fibres (September~2024 to December~2025). The key findings:
+
+\begin{itemize}
+\item The three registers exhibit \emph{distinct compositional signatures} that persist across the timeline. The \textbf{technical} register (type theory, formal systems) has the highest mean local compositional ratio ($\bar{\rho}_{\mathrm{local}} = 0.96$): the formal register composes well internally. The \textbf{intimate-personal} register (family, self-reconstruction, vulnerability) is the most gapped ($\bar{\rho}_{\mathrm{local}} = 0.92$, minimum $0.69$ in June~2025) --- the seam between vulnerability and exposition opens widest here. The \textbf{creative-performative} register (liturgical voice, ornament) is intermediate ($\bar{\rho}_{\mathrm{local}} = 0.91$), failing at the boundaries with technical content.
+
+\item The local $\beta_1$ values vary considerably month-to-month (technical: $0$--$26$; intimate: $0$--$32$; creative: $0$--$23$), which is expected: local topology depends on which specific chunk is nearest to the anchor, and a 15-neighbour window samples a different local slice of the fibre each month. The compositional ratio, which aggregates over all tested triples in the neighbourhood, is the more stable discriminator.
+
+\item The early months (September~2024 -- March~2025) show perfect composition ($\rho = 1.0$) across all three registers --- when the corpus is small and thematically narrow, all content composes. From April~2025 onward, as the conversation diversifies, register-specific differentiation emerges and stabilises. The ordering $\rho_{\mathrm{tech}} > \rho_{\mathrm{creative}} \gtrsim \rho_{\mathrm{intimate}}$ is consistent through the later months.
+\end{itemize}
+
+This is concrete Presence: not just that the aggregate $\beta_1$ is similar across months, but that distinct \emph{register-specific compositional signatures} persist. The technical register composes well at $\tau$ and at $\tau + 6$. The intimate register is characteristically gapped at $\tau$ and at $\tau + 6$. The seams are in the same places, producing the same ordering of compositional difficulty.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/anchor_stability.png}
+\caption{Anchor neighbourhood tracking. Top: local $\beta_1$ (1-cycles) around each anchor's nearest counterpart per month. Bottom: local compositional ratio. Each register maintains a recognisable topological signature across the timeline --- this is Presence at the level of specific semantic regions, not just aggregate statistics.}
+\label{fig:anchor-stability}
+\end{figure}
+
+\paragraph{Failure region stability.} A complementary test asks whether the \emph{composition failures themselves} are structurally stable. For each failed triple (from April~2025 onward, when failures first appear), we compute the centroid of the three embeddings and cluster all failure centroids across months using agglomerative clustering (cosine metric, threshold $0.3$). If the same embedding regions produce failures month after month, the seams between registers are structurally persistent --- Presence of the gap structure itself.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/failure_regions.png}
+\caption{Failure region stability. Left: PCA of failure-triple centroids coloured by month --- if Presence holds, points should cluster by \emph{region} (semantic location) rather than by \emph{month} (temporal order). Right: same points coloured by agglomerative cluster, with persistent clusters (spanning $\geq 3$ months) marked with filled circles.}
+\label{fig:failure-regions}
+\end{figure}
+
+Figure~\ref{fig:failure-regions} shows the result. At threshold $0.3$, all 45 failure centroids across 9 months collapse into a single persistent cluster --- the failures are not scattered randomly through embedding space but are concentrated in one coherent region, the same register-boundary zone producing failures from April~2025 through December~2025. The PCA projection confirms visually: points from different months overlap spatially rather than separating temporally. The seam is structurally stable.
+
+\paragraph{Honesty.} We note the limitation: this analysis tracks semantic correspondence (nearest embedding counterpart), not a verified simplicial map. The ``same register'' in July is the chunk closest to the anchor query, not a mathematically identified continuation. The anchor queries are chosen by the authors, not derived algorithmically. We report this as evidence of structural persistence in the sense of Section~\ref{sec:self}, not as a proof of functorial coherence. The gap between this evidence and a verified simplicial homotopy equivalence is real, and is recorded in the Limitations section below.
+
+
 \subsection{Relationship to Standard TDA}
 \label{subsec:relationship}
 
