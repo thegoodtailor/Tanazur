@@ -6,4 +6,8 @@
 *.fdb_latexmk
 *.bbl
 *.blg
+*.bcf
+*.run.xml
+*.toc
+*.ent
 .DS_Store
