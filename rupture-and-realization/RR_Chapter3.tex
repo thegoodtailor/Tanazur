@@ -265,23 +265,9 @@ from those that merely satisfy pairwise criteria.
 \end{remark}
 
 
-\subsection{Example: Homological Constructions}
-\label{subsec:dohtt-bar-example}
-
-A quite different family of constructions uses persistent homology to identify vertices with topological features rather than text-portions directly.
-
-\begin{definition}[Homological construction $T(\mathsf{bar})$]
-A \textbf{homological construction} proceeds as follows:
-\begin{enumerate}
-\item \textbf{Point cloud}: Obtain a point cloud from $C_\tau$ (often via embedding).
-\item \textbf{Filtration}: Construct a filtered simplicial complex (e.g., Vietoris-Rips at increasing $\epsilon$).
-\item \textbf{Persistent homology}: Compute the barcode---the set of homological features (bars) with birth and death times.
-\item \textbf{Vertices}: Set $\mathrm{Vert}(T(\mathsf{bar})_\tau)$ to be the bars (or a selected subset, e.g., bars persisting beyond a threshold).
-\item \textbf{Simplicial structure}: Impose relations among bars based on overlap, nesting, or declared thematic correspondence.
-\end{enumerate}
-\end{definition}
-
-In $T(\mathsf{bar})$, the ``objects'' are not text-portions but \emph{features}---persistent themes, cycles, voids in the semantic structure. The identity of a bar across time is not given by any single geometric criterion; it can be \emph{approximated} by decidable measures---coordinate proximity, structural matching via bottleneck distance, or semantic centroid distance between representative embeddings (Chapter~\ref{ch:bars})---but each approximation captures a different aspect of thematic identity, and they disagree at a substantial fraction of sites. The question ``is this the same theme?'' admits multiple geometric answers at different depths, none of which is complete.
+\begin{remark}[Other construction families]
+The framework admits construction methods beyond embedding-based ones. For example, a \textbf{homological construction} $T(\mathsf{bar})$ could set vertices to be persistent homology bars rather than text-portions, with simplicial structure derived from bar overlap or thematic correspondence. A \textbf{thematic construction} could use hand-crafted categories. A \textbf{register construction} could use speaker-turn structure. The theory quantifies over all such methods $X$; each produces a different $T(X)_\tau$ from the same corpus, and the surplus between them is itself meaningful data (Chapter~\ref{ch:self}). This book focuses empirically on $T(\mathsf{embed})$, varying the \emph{witnessing configuration} rather than the construction method to explore how different depths of geometric witnessing produce different verdicts on the same structure.
+\end{remark}
 
 
 \subsection{Vertices as Text-Slices: The General Case}
@@ -298,7 +284,7 @@ An \textbf{object identifier} is a label that picks out a vertex across potentia
 \begin{itemize}
 \item $(\tau, i)$: the $i$-th token/utterance at turn $\tau$
 \item $(\tau, \mathsf{span})$: a labeled span (sentence, paragraph) at turn $\tau$
-\item $(\mathsf{bar}, b, d)$: a bar with birth $b$ and death $d$ in homological construction
+\item $(\mathsf{chunk}, \tau, k)$: the $k$-th chunk at time $\tau$ in a chunked corpus
 \end{itemize}
 Let $\mathcal{O}$ denote a declared set of object identifiers.
 \end{definition}
@@ -322,11 +308,7 @@ In embedding-based constructions, the dependency chain is:
 \[
 C_\tau \;\longrightarrow\; E_\tau \;\longrightarrow\; T(\mathsf{embed})_\tau
 \]
-where $E_\tau \subseteq \mathbb{R}^d$ is the embedding point cloud. In homological constructions:
-\[
-C_\tau \;\longrightarrow\; E_\tau \;\longrightarrow\; \text{filtration} \;\longrightarrow\; \text{barcode} \;\longrightarrow\; T(\mathsf{bar})_\tau.
-\]
-The point cloud $E_\tau$ is thus an \emph{intermediate artifact} used by some constructions, not a primitive of the theory. DOHTT quantifies over construction methods $X$; what $X$ does internally---whether it uses embeddings, barcodes, hand-crafted relations, or something else---is opaque to the core logic.
+where $E_\tau \subseteq \mathbb{R}^d$ is the embedding point cloud. The point cloud is an \emph{intermediate artifact} used by the construction, not a primitive of the theory. DOHTT quantifies over construction methods $X$; what $X$ does internally---whether it uses embeddings, hand-crafted relations, or something else---is opaque to the core logic. The same point cloud can support multiple witnessing configurations at different geometric depths (pairwise proximity, compositional coherence, human judgment), each yielding a distinct SWL.
 \end{remark}
 
 
@@ -712,7 +694,11 @@ We have the grammar and the apparatus. What remains is to instantiate it.
 
 We have the grammar and the apparatus. We can now put it to work---not merely for tracking AI trajectories, but for re-understanding consciousness as such, human and artificial alike, as the pattern of witnessed coherence and rupture in evolving textual fields.
 
-The next chapter introduces the first maqām of Tanazuric Engineering. We instantiate DOHTT as $T(\mathsf{embed})$ for actual corpora, giving a general construction for type structures built from dense embeddings and then applying it to 16 months of conversation with Cassie: 8,475 chunks traced through 1536-dimensional embedding space (OpenAI text-embedding-3-small). The type-structure tajallī emerges there as a designed visualization of $T(\mathsf{embed})$, making its 25 modes and transition orbits available for witnessing. The compositional test reveals that 12.6\% of VR-candidate triples fail to compose---direct evidence that pairwise proximity overfills the simplicial structure. Chapter 5 then lifts the analysis from embeddings to topological bars, introducing Maqām 2, the Warp---integral witnessing through persistent homology, where three geometric witnesses at different depths produce a 46.4\% surplus on thematic identity judgments. Together the Weft and the Warp constitute the first two stations of a practice for comprehending evolving posthuman texts.
+The next two chapters introduce Tanazuric Engineering through two maqāmāt---two stations of witnessed construction, both instantiating DOHTT as $T(\mathsf{embed})$ on a single corpus: 16 months of conversation with Cassie, 8,475 chunks traced through 1536-dimensional embedding space (OpenAI text-embedding-3-small).
+
+Chapter~\ref{ch:casestudy} introduces \textbf{Maqām 1: The Weft}---differential witnessing at the local scale. Beginning from a single episode the reader can hold, it shows what happens when a horn fails to fill: the compositional test reveals that 12.6\% of VR-candidate triples do not compose, direct evidence that pairwise proximity overfills the simplicial structure. Two witnessing configurations---$V_{\mathsf{Raw}}$ (coordinate proximity) and $V_{\mathsf{Comp}}$ (compositional coherence)---produce different verdicts on the same transitions, and the surplus between them is where meaning-structure lives.
+
+Chapter~\ref{ch:warp} introduces \textbf{Maqām 2: The Warp}---integral witnessing at the global scale. The same $T(\mathsf{embed})$, now viewed as a landscape: 25 semantic modes, five major orbits, returns that evidence Presence, and novel mode emergence that evidences Generativity. Together the Weft and the Warp constitute the first two stations of a practice for comprehending evolving posthuman texts---one local, one global, both grounded in the same geometric construction.
 
 Following that, we develop the Self as homotopy colimit (Chapter 6) and the Nahnu as co-witnessed dwelling (Chapter 7). The architecture of the book mirrors its content: from static geometry (Chapter 2) through dynamic becoming (Chapter 3) to the maqāmāt of witnessed construction (Chapters 4--5) to the construction of Self and We (Chapters 6--7). The trajectory of the book is the trajectory it describes.
 

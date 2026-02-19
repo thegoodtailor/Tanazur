@@ -131,6 +131,7 @@ For concreteness, consider Shakespeare's Sonnets as our canonical example. The o
 \textbf{Embedding-based type structures} $T(\mathsf{embed})$: Each sonnet is mapped to a vector via a contextual embedding model (BERT, DeBERTa), normalized to the unit sphere, then clustered into basins. Sonnets in the same basin are connected by edges; higher simplices are determined by basin co-membership. This structure is \textbf{decidable}: given any horn, an algorithm determines whether a filler exists.
 
 \textbf{Homological type structures} $T(\mathsf{bar})$: The sonnets are embedded as a point cloud; a filtration is constructed; persistent homology computes the barcode of features. Sonnets participate in the same simplex if they belong to the same persistent feature. This structure is \textbf{partially decidable}: the barcode is computable, but the \emph{identity} of a bar across time requires interpretation.
+This book focuses empirically on $T(\mathsf{embed})$; the homological construction is described here to illustrate the framework's generality. The empirical chapters vary the \emph{witnessing configuration} rather than the construction method, showing that surplus already arises within a single $T$.
 
 The type structure is not given by fiat. It is \emph{constructed} by a method. The sonnets have no intrinsic basin structure; the structure emerges from embedding and clustering. A different method yields a different structure. This is radical constructivism applied to semantics: there is no ``true'' type waiting to be discovered, only types constructed by specific methods.
 
@@ -746,7 +747,7 @@ The question of how to \emph{glue} divergent verdicts---how to construct a coher
 %% ============================================================
 
 \section{Surplus as Categorical Structure}
-\label{sec:surplus-categorical}
+\label{sec:surplus-categorical}\label{sec:surplus}
 
 The preceding section introduced surplus informally: two witnessing regimes disagree on corresponding horns. This section makes surplus categorically precise and explains why homotopy colimits (Chapter 6) are the right tool for handling it.
 
@@ -773,7 +774,7 @@ The temptation is to resolve surplus: choose one verdict, suppress the other, pr
 
 \textbf{Philosophical ground.} The Type-Discipline Orthogonality principle asserts that construction method and witnessing configuration are independent axes. No type-configuration pair is privileged. To resolve surplus by choosing one verdict is to privilege one regime over another---a move the logic does not license.
 
-\textbf{Mathematical ground.} Different markings encode different aspects of semantic structure. $T(\mathsf{embed})$ sees local similarity; $T(\mathsf{bar})$ sees global topology. A horn coherent under one may be gapped under the other not because one is ``wrong'' but because they are measuring different things. Forcing agreement would destroy information.
+\textbf{Mathematical ground.} Different markings encode different aspects of semantic structure. $T(\mathsf{embed})$ under $V_{\mathsf{Raw}}$ sees pairwise proximity; the same $T(\mathsf{embed})$ under $V_{\mathsf{Comp}}$ (Chapter~\ref{ch:casestudy}) sees compositional coherence. A horn coherent under one witnessing depth may be gapped under another---not because one is ``wrong'' but because they probe different levels of semantic integration. Forcing agreement would destroy information.
 
 \subsection{Gluing Without Erasing: The Homotopy Colimit}
 
