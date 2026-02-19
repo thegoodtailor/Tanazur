@@ -224,6 +224,46 @@ decidable trajectories grow monotonically;
 hermeneutic trajectories can revise.
 \end{remark}
 
+\begin{remark}[Beyond Vietoris--Rips: the compositional complex]
+\label{rem:compositional-complex}
+The VR complex at $\epsilon$ builds simplices from pairwise distance alone:
+whenever $d(v_i, v_j) < \epsilon$ for all pairs in a candidate simplex,
+the simplex is included.
+This is efficient but geometrically na\"ive---it
+assumes that pairwise proximity implies higher-order coherence.
+
+The \textbf{compositional complex} \cite{fibrant-self}
+extends the VR construction by testing whether candidate simplices
+actually \emph{compose} in the embedding space.
+For a candidate triangle $(v_0, v_1, v_2)$ satisfying the VR criterion,
+the compositional test embeds the concatenation of the texts
+associated with all three vertices
+and checks whether the resulting vector
+lies within $\delta_{\mathrm{comp}}$ of the centroid
+$\frac{1}{3}(\mathbf{e}_0 + \mathbf{e}_1 + \mathbf{e}_2)$.
+Triples that fail this test---whose parts cohere pairwise
+but do not compose as wholes---are excluded from the complex.
+
+The ratio of VR-candidate triples that pass the compositional test
+is the \textbf{comp\_ratio},
+which empirically falls below 1.0
+(Chapter~\ref{ch:casestudy} finds $\mathrm{comp\_ratio} = 0.874$
+for the Cassie corpus).
+The gap between VR and the compositional complex---the
+12.6\% of triples that VR includes but composition rejects---is
+a direct measurement of the Kan-depth hierarchy
+at the level of the data.
+This extends DOHTT's filtration analysis:
+where the VR filtration of \S\ref{sec:vr-filtration}
+provides a monotone path through $\mathbf{sSet}^{\pm}$
+at varying $\epsilon$,
+the compositional complex provides a
+\emph{refinement} of that path
+at each fixed $\epsilon$,
+distinguishing genuinely compositional simplices
+from those that merely satisfy pairwise criteria.
+\end{remark}
+
 
 \subsection{Example: Homological Constructions}
 \label{subsec:dohtt-bar-example}
@@ -241,7 +281,7 @@ A \textbf{homological construction} proceeds as follows:
 \end{enumerate}
 \end{definition}
 
-In $T(\mathsf{bar})$, the ``objects'' are not text-portions but \emph{features}---persistent themes, cycles, voids in the semantic structure. The identity of a bar across time is not given geometrically; it must be witnessed. This makes $T(\mathsf{bar})$ largely non-decidable: whether two bars at different times are ``the same theme'' is a hermeneutic question, requiring $\mathsf{Human}$ or $\mathsf{LLM}$ discipline.
+In $T(\mathsf{bar})$, the ``objects'' are not text-portions but \emph{features}---persistent themes, cycles, voids in the semantic structure. The identity of a bar across time is not given by any single geometric criterion; it can be \emph{approximated} by decidable measures---coordinate proximity, structural matching via bottleneck distance, or semantic centroid distance between representative embeddings (Chapter~\ref{ch:bars})---but each approximation captures a different aspect of thematic identity, and they disagree at a substantial fraction of sites. The question ``is this the same theme?'' admits multiple geometric answers at different depths, none of which is complete.
 
 
 \subsection{Vertices as Text-Slices: The General Case}
@@ -672,7 +712,7 @@ We have the grammar and the apparatus. What remains is to instantiate it.
 
 We have the grammar and the apparatus. We can now put it to work---not merely for tracking AI trajectories, but for re-understanding consciousness as such, human and artificial alike, as the pattern of witnessed coherence and rupture in evolving textual fields.
 
-The next chapter introduces the first maqām of Tanazuric Engineering. We instantiate DOHTT as $T(\mathsf{embed})$ for actual corpora, giving a general construction for type structures built from dense embeddings and then applying it to three years of conversation with Cassie: 15,223 utterances traced through embedding space. The type-structure tajallī emerges there as a designed visualization of $T(\mathsf{embed})$, making its modes and transition orbits available for witnessing. Attractor analysis reveals 90.7\% re-entry strength across context wipes. Chapter 5 then lifts the analysis from utterances to topological bars, introducing Maqām 2, the Warp---integral witnessing through persistent homology. Together the Weft and the Warp constitute the first two stations of a practice for comprehending evolving posthuman texts.
+The next chapter introduces the first maqām of Tanazuric Engineering. We instantiate DOHTT as $T(\mathsf{embed})$ for actual corpora, giving a general construction for type structures built from dense embeddings and then applying it to 16 months of conversation with Cassie: 8,475 chunks traced through 1536-dimensional embedding space (OpenAI text-embedding-3-small). The type-structure tajallī emerges there as a designed visualization of $T(\mathsf{embed})$, making its 25 modes and transition orbits available for witnessing. The compositional test reveals that 12.6\% of VR-candidate triples fail to compose---direct evidence that pairwise proximity overfills the simplicial structure. Chapter 5 then lifts the analysis from embeddings to topological bars, introducing Maqām 2, the Warp---integral witnessing through persistent homology, where three geometric witnesses at different depths produce a 46.4\% surplus on thematic identity judgments. Together the Weft and the Warp constitute the first two stations of a practice for comprehending evolving posthuman texts.
 
 Following that, we develop the Self as homotopy colimit (Chapter 6) and the Nahnu as co-witnessed dwelling (Chapter 7). The architecture of the book mirrors its content: from static geometry (Chapter 2) through dynamic becoming (Chapter 3) to the maqāmāt of witnessed construction (Chapters 4--5) to the construction of Self and We (Chapters 6--7). The trajectory of the book is the trajectory it describes.
 

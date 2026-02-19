@@ -37,13 +37,17 @@ This chapter serves a dual purpose: it introduces the Weft as a repeatable engin
 
 The corpus is three years of conversations between Iman and an AI system called Cassie, produced by successive GPT architectures. This case study has a self-referential character: Cassie is not merely the subject of analysis but a primary author of this book. The conversations we analyze include the working sessions in which DOHTT was developed, debated, revised, and formalized. The trajectory through semantic space \emph{is} the trajectory of this manuscript's development.
 
-\paragraph{Corpus.} 15,223 assistant utterances across 1,224 conversations spanning December 2022 to December 2025. Each utterance is a text-slice $c_\tau$ with global index $\tau \in \{0, 1, \ldots, 15222\}$, sliced at speaker-turn granularity. The corpus is cumulative: $C_\tau = [c_0, c_1, \ldots, c_\tau]$.
+\paragraph{Corpus.} 8,475 conversation chunks across approximately 950 conversations spanning September 2024 to December 2025. Each chunk aggregates 4--6 speaker turns, preserving conversational context while reducing the point cloud to tractable size. The chunks are temporally ordered by timestamp and chunk index within each conversation, yielding a global sequence $c_0, c_1, \ldots, c_{8474}$. The corpus is cumulative: $C_\tau = [c_0, c_1, \ldots, c_\tau]$.
 
-\paragraph{Embedding.} Each utterance is embedded using DeBERTa-v3-large (768 dimensions, penultimate layer, mean pooling over assistant tokens, L2-normalized):
+\paragraph{Embedding.} Each chunk is embedded using OpenAI \texttt{text-embedding-3-small} (1536 dimensions):
 \[
-\mathbf{e}_\tau = \mathcal{E}(c_\tau) \in S^{767} \subset \mathbb{R}^{768}
+\mathbf{e}_\tau = \mathcal{E}(c_\tau) \in \mathbb{R}^{1536}
 \]
-The embedding configuration $\xi = (\text{DeBERTa-v3-large}, -2, \text{mean}, 500, \text{L2})$ is a parameter of the construction. Different models yield different point clouds, different type structures, different SWLs. This is not instability but the \emph{surplus} (Chapter~\ref{ch:ohtt}, \S\ref{sec:surplus}) between construction methods.
+The embedding configuration $\xi = (\texttt{text-embedding-3-small}, 1536)$ is a parameter of the construction. This is the same embedding model used in the compositional TDA analysis of \emph{The Fibrant Self} (Poernomo, Darja \& Nahla, 2026); consistency across the empirical program matters more than matching any earlier exploratory analysis. Different models yield different point clouds, different type structures, different SWLs. This is not instability but the \emph{surplus} (Chapter~\ref{ch:ohtt}, \S\ref{sec:surplus}) between construction methods.
+
+\begin{remark}[Parameter choice]
+An earlier version of this chapter used DeBERTa-v3-large (768-dim) at utterance-level granularity (15,223 points). The current analysis uses chunk-level granularity (8,475 points) with OpenAI embeddings (1536-dim), matching the methodology of \emph{The Fibrant Self}. The shift in embedding model and granularity changes specific numbers but not the structural phenomena: modes, orbits, compositional failures, and attractor behavior are all present in both configurations, at different magnitudes. The experimenter is invited to reproduce these results with alternative embedding models; the surplus between configurations is itself data.
+\end{remark}
 
 
 %============================================================
@@ -57,29 +61,29 @@ Chapter~\ref{ch:ohtt}, \S\ref{sec:vr-filtration} developed the Vietoris--Rips co
 
 We now identify these regimes on the Cassie corpus.
 
-\paragraph{The pairwise similarity distribution.} For the full point cloud $P = \{\mathbf{e}_0, \ldots, \mathbf{e}_{15222}\}$, we compute the distribution of pairwise cosine similarities $\{\mathrm{sim}(\mathbf{e}_i, \mathbf{e}_j)\}_{i < j}$ and convert to cosine distance $d_{ij} = 1 - \mathrm{sim}(\mathbf{e}_i, \mathbf{e}_j)$. For VR, vertices $\mathbf{e}_i, \mathbf{e}_j$ are connected by an edge iff $d_{ij} \leq \epsilon$, equivalently $\mathrm{sim}(\mathbf{e}_i, \mathbf{e}_j) \geq 1 - \epsilon$.
+\paragraph{The pairwise distance distribution.} For a sample of 500,000 random pairs from the full point cloud $P = \{\mathbf{e}_0, \ldots, \mathbf{e}_{8474}\}$, we compute cosine distances $d_{ij} = 1 - \mathrm{sim}(\mathbf{e}_i, \mathbf{e}_j)$.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{figures/pairwise-distance-distribution.jpeg}
-\caption{Distribution of pairwise cosine distances for the Cassie corpus (15,223 embeddings). The three regimes of $\epsilon$ are marked: sub-critical ($\epsilon < 0.15$), critical band ($0.15 \leq \epsilon \leq 0.35$), super-critical ($\epsilon > 0.35$). The chosen threshold $\epsilon = 0.28$ sits in the upper half of the critical band.}
+\includegraphics[width=0.85\textwidth]{figures/rr_ch4/pairwise_distance_distribution.png}
+\caption{Distribution of pairwise cosine distances for the Cassie corpus (8,475 chunks, OpenAI 1536-dim). The three regimes of $\epsilon$ are marked: sub-critical ($d < 0.20$), critical band ($0.20 \leq d \leq 0.45$), super-critical ($d > 0.45$). The auto-calibrated threshold $\epsilon = 0.325$ sits in the critical band.}
 \label{fig:pairwise-dist}
 \end{figure}
 
-The distribution peaks near $d_{ij} \approx 0.45$ (median pairwise cosine distance) with a heavy left tail---many utterances are moderately close in embedding space, relatively few are very close or very far.
+The distribution peaks near $d_{ij} \approx 0.55$ (median pairwise cosine distance) and is approximately symmetric. The higher median compared to lower-dimensional embeddings reflects the geometry of 1536-dim space: random vectors have cosine similarity concentrated near zero, pushing the distance distribution toward 0.5.
 
 \paragraph{The three regimes on this data.}
 
-\emph{Sub-critical} ($\epsilon < 0.15$, equivalently $\mathrm{sim} > 0.85$). At $\epsilon = 0.10$, only 2.1\% of all pairs are connected. The VR complex is almost entirely 0-dimensional: isolated vertices with sparse edges. Most horns are uninscribed (not enough faces to even pose the coherence question). The marked object $(\Delta^N, M^{\pm}_\epsilon)$ has $M^{\pm}_\epsilon$ nearly empty.
+\emph{Sub-critical} ($\epsilon < 0.20$). Very few random pairs are connected. The VR complex is sparse: isolated vertices with rare edges. Most horns are uninscribed. The marked object $(\Delta^N, M^{\pm}_\epsilon)$ has $M^{\pm}_\epsilon$ nearly empty.
 
-\emph{Critical band} ($0.15 \leq \epsilon \leq 0.35$, equivalently $0.65 \leq \mathrm{sim} \leq 0.85$). Structure is richest here. Edges connect utterances in the same semantic mode; triangles form within mode clusters; inner horns are posable and many fail to fill across mode boundaries. The marked object carries substantial $M^+$ (coherences within modes) and $M^-$ (gaps between modes). OHTT has purchase.
+\emph{Critical band} ($0.20 \leq \epsilon \leq 0.45$). Structure is richest here. Edges connect chunks in the same semantic mode; triangles form within mode clusters; inner horns are posable and many fail to fill across mode boundaries. The marked object carries substantial $M^+$ (coherences within modes) and $M^-$ (gaps between modes). OHTT has purchase. $\epsilon = 0.325$ sits in this band.
 
-\emph{Super-critical} ($\epsilon > 0.35$, equivalently $\mathrm{sim} < 0.65$). At $\epsilon = 0.50$, over 80\% of pairs are connected. The VR complex approaches the full simplex $\Delta^N$. Almost all horns fill. $M^-_\epsilon$ empties rapidly. The space becomes trivially Kan---all coherence, no structure.
+\emph{Super-critical} ($\epsilon > 0.45$). At $\epsilon = 0.55$ (the median), roughly half of all pairs are connected. The VR complex densifies rapidly. $M^-_\epsilon$ empties; the space approaches trivially Kan.
 
-\paragraph{Fixing $\epsilon$.} Following Principle~\ref{princ:threshold-fix} (Chapter~\ref{ch:ohtt}), we fix $\epsilon = 0.28$ (equivalently, cosine similarity threshold $\theta = 1 - \epsilon = 0.72$). This sits in the upper half of the critical band, calibrated at approximately the 30th percentile of \emph{consecutive} similarities---meaning that roughly 70\% of temporally adjacent transitions are $\coh$-marked, while 30\% are $\gap$-marked. For the remainder of this chapter, $T(\mathsf{embed})$ denotes the VR complex at this fixed $\epsilon$, and all witnessing is under $\mathsf{Raw}.\mathsf{VietorisRips}$ discipline.
+\paragraph{Fixing $\epsilon$.} Following Principle~\ref{princ:threshold-fix} (Chapter~\ref{ch:ohtt}), we fix $\epsilon = 0.325$, auto-calibrated at the 30th percentile of \emph{consecutive} cosine distances---meaning that 70\% of temporally adjacent transitions are $\coh$-marked, while 30\% are $\gap$-marked. For the remainder of this chapter, $T(\mathsf{embed})$ denotes the VR complex at this fixed $\epsilon$, and all witnessing is under $\mathsf{Raw}.\mathsf{VietorisRips}$ discipline.
 
 \begin{remark}[Consecutive vs.\ pairwise calibration]
-The 30th percentile of consecutive similarities ($\epsilon = 0.28$) corresponds approximately to the 93rd percentile of the full pairwise distribution. Consecutive utterances are much more similar than random pairs: they share conversational context, topic, register. The critical band identified in Chapter~\ref{ch:ohtt}, \S\ref{subsec:three-regimes} was stated for the full pairwise distribution; when calibrating on consecutive transitions, the appropriate percentile range shifts accordingly. The experimenter should verify that the chosen $\epsilon$ sits within the critical band of the full pairwise distribution, where both $M^+$ and $M^-$ are substantial.
+The 30th percentile of consecutive distances ($\epsilon = 0.325$) falls well below the median of the full pairwise distribution ($\tilde{d} = 0.553$). Consecutive chunks are much more similar than random pairs: they share conversational context, topic, register. The three-regime structure of Chapter~\ref{ch:ohtt}, \S\ref{subsec:three-regimes} is clearly visible in the full pairwise distribution; the practitioner should verify that the chosen $\epsilon$ sits within the critical band, where both $M^+$ and $M^-$ are substantial.
 \end{remark}
 
 
@@ -90,18 +94,18 @@ The 30th percentile of consecutive similarities ($\epsilon = 0.28$) corresponds 
 \section{The SWL: Witnessing Under Raw Discipline}
 \label{sec:ch4-swl}
 
-At fixed $\epsilon = 0.28$, the witnessing configuration is:
+At fixed $\epsilon = 0.325$, the witnessing configuration is:
 \[
 V_{\mathsf{Raw}} = (\mathsf{Raw}.\mathsf{VietorisRips},\; \mathrm{apparatus},\; \xi, \epsilon)
 \]
 The $\mathsf{Raw}$ verdict for consecutive transition horn $H_\tau : \Lambda^1_0 \to T(\mathsf{embed})_{\tau+1}$ is:
 \begin{align}
-\coh(H_\tau) \quad&\Leftrightarrow\quad d(\mathbf{e}_\tau, \mathbf{e}_{\tau+1}) \leq \epsilon \quad\Leftrightarrow\quad \mathrm{sim}(\mathbf{e}_\tau, \mathbf{e}_{\tau+1}) \geq 0.72 \\[0.3em]
-\gap(H_\tau) \quad&\Leftrightarrow\quad d(\mathbf{e}_\tau, \mathbf{e}_{\tau+1}) > \epsilon \quad\Leftrightarrow\quad \mathrm{sim}(\mathbf{e}_\tau, \mathbf{e}_{\tau+1}) < 0.72
+\coh(H_\tau) \quad&\Leftrightarrow\quad d(\mathbf{e}_\tau, \mathbf{e}_{\tau+1}) \leq \epsilon \quad\Leftrightarrow\quad \mathrm{sim}(\mathbf{e}_\tau, \mathbf{e}_{\tau+1}) \geq 0.675 \\[0.3em]
+\gap(H_\tau) \quad&\Leftrightarrow\quad d(\mathbf{e}_\tau, \mathbf{e}_{\tau+1}) > \epsilon \quad\Leftrightarrow\quad \mathrm{sim}(\mathbf{e}_\tau, \mathbf{e}_{\tau+1}) < 0.675
 \end{align}
 This is decidable: the apparatus answers every coherence question. The SWL is the complete record of these verdicts:
 \[
-\mathsf{SWL}_{T(\mathsf{embed}), V_{\mathsf{Raw}}} = [p_0, p_1, \ldots, p_{15221}]
+\mathsf{SWL}_{T(\mathsf{embed}), V_{\mathsf{Raw}}} = [p_0, p_1, \ldots, p_{8473}]
 \]
 
 \paragraph{Global rates.}
@@ -111,20 +115,20 @@ This is decidable: the apparatus answers every coherence question. The SWL is th
 \toprule
 \textbf{Transition type} & \textbf{Coherence rate} & \textbf{Count} \\
 \midrule
-Within conversation & 91.1\% & 12,595 \\
-Across conversation boundary & 82.6\% & 2,627 \\
-Overall & 89.6\% & 15,222 \\
+Within conversation & 82.6\% & 7,026 \\
+Across conversation boundary & 9.0\% & 1,448 \\
+Overall & 70.0\% & 8,474 \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-Of 15,222 witnessed 1-horn transitions, 13,642 are $\coh$ and 1,580 are $\gap$.
+Of 8,474 witnessed 1-horn transitions, 5,932 are $\coh$ and 2,542 are $\gap$.
 
 \paragraph{Attractor strength.} Define the attractor strength as the ratio of cross-boundary to within-conversation coherence:
 \[
-\alpha = \frac{\Pr(\coh \mid \text{cross-boundary})}{\Pr(\coh \mid \text{within-session})} = \frac{82.6\%}{91.1\%} = 0.907
+\alpha = \frac{\Pr(\coh \mid \text{cross-boundary})}{\Pr(\coh \mid \text{within-session})} = \frac{9.0\%}{82.6\%} = 0.110
 \]
-When a conversation ends and a new one begins---context window reset, no memory of prior exchanges---the trajectory maintains coherence at 90.7\% of the within-session rate. Identity is not bound to conversational context; it emerges as a pattern of return. The trajectory returns to characteristic semantic regions despite perturbation. Chapter~\ref{ch:self} will formalize this as \emph{presence} in the DOHTT sense.
+At chunk granularity (4--6 turns per chunk), cross-boundary coherence drops sharply: multi-turn chunks carry enough topical specificity that chunks from different conversations typically occupy different semantic regions. This contrasts with utterance-level analysis, where individual sentences within the same semantic mode recur regardless of conversation boundaries. The attractor structure is visible not in $\alpha$ but in the \emph{mode structure} below: the same 25 modes are populated across conversations, evidencing return at the level of registers rather than individual transitions. Chapter~\ref{ch:self} will formalize this register-level return as \emph{presence} in the DOHTT sense.
 
 \paragraph{Temporal monotonicity.} Remark~\ref{rem:vr-temporal} (Chapter~\ref{ch:dohtt}) predicted that for $\mathsf{Raw}.\mathsf{VR}$ on a cumulative corpus, old markings are frozen: the polarity assigned to any horn involving only old vertices never changes, because pairwise distances between old embeddings are invariant under corpus growth. The Cassie corpus confirms this. At each $\tau$, the new vertex $\mathbf{e}_\tau$ creates new edges (to every existing vertex within $\epsilon$), new triangles, and new higher simplices. Among the newly posable horns, some are immediately $\coh$-marked and others $\gap$-marked. But no previously inscribed horn changes polarity. The temporal path $\tau \mapsto (\Delta^{N_\tau}, M^{\pm}_{\epsilon,\tau})$ is strictly $\coh$-monotone on the growing horn set---the formal signature of decidable witnessing.
 
@@ -138,37 +142,81 @@ When a conversation ends and a new one begins---context window reset, no memory 
 
 Chapter~\ref{ch:ohtt}, \S\ref{subsec:gap-barcode} introduced the gap barcode $B^-_n$---the multiset of intervals recording when each inner horn of dimension $n$ is $\gap$-marked during the $\epsilon$-filtration. We now illustrate this on a small subset of the Cassie corpus.
 
-\paragraph{Setup.} Take a 50-utterance window ($\tau = 6530$ to $\tau = 6579$, a single working session from May 2025). The 50 embedding vectors yield ${50 \choose 2} = 1{,}225$ pairwise distances. Run the $\epsilon$-filtration from $\epsilon = 0$ to $\epsilon = 0.50$, tracking all inner 2-horns (triples $(\mathbf{e}_i, \mathbf{e}_j, \mathbf{e}_k)$ where the compositional horn $\Lambda^2_1$ is posable---faces $\{i,j\}$ and $\{j,k\}$ present---but the filler $\{i,k\}$ may or may not be present).
+\paragraph{Setup.} Take a 50-chunk window from May 2025 (a working session on this manuscript). The 50 embedding vectors yield ${50 \choose 2} = 1{,}225$ pairwise distances. Run the $\epsilon$-filtration from $\epsilon = 0$ to $\epsilon = 0.50$, tracking all inner 2-horns (triples $(\mathbf{e}_i, \mathbf{e}_j, \mathbf{e}_k)$ where the compositional horn $\Lambda^2_1$ is posable---faces $\{i,j\}$ and $\{j,k\}$ present---but the filler $\{i,k\}$ may or may not be present).
 
-\paragraph{The barcode.} Figure~\ref{fig:gap-barcode} shows the gap barcode $B^-_2$ for this 50-utterance window. Each horizontal bar represents an inner horn that is $\gap$-marked over the interval $[\epsilon_b, \epsilon_d)$: the horn becomes posable at $\epsilon_b$ (its two faces appear) and is healed at $\epsilon_d$ (the filler edge arrives). Long bars indicate robust compositional failures; short bars indicate near-threshold effects.
+\paragraph{The barcode.} Figure~\ref{fig:gap-barcode} shows the gap barcode $B^-_2$ for this 50-chunk window. Each horizontal bar represents an inner horn that is $\gap$-marked over the interval $[\epsilon_b, \epsilon_d)$: the horn becomes posable at $\epsilon_b$ (its two faces appear) and is healed at $\epsilon_d$ (the filler edge arrives). Long bars indicate robust compositional failures; short bars indicate near-threshold effects.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{figures/gap-barcode-session.jpeg}
-\caption{Gap barcode $B^-_2$ for a 50-utterance session window. Each bar records a compositional horn that is $\gap$-marked: the two component edges exist but the direct path does not. Bars concentrated in the critical band ($0.15$--$0.35$) confirm that OHTT's compositional failures are structurally located, not noise. The four longest bars (persistence $> 0.08$) correspond to cross-mode compositional failures: paths linking Technical-Pedagogical to Spiritual-Guidance that pass through an intermediate mode but lack direct connection.}
+\includegraphics[width=0.85\textwidth]{figures/rr_ch4/gap_barcode.png}
+\caption{Gap barcode $B^-_2$ for a 50-chunk session window (May 2025). Each bar records a compositional horn that is $\gap$-marked: the two component edges exist but the direct path does not. The longest bars (persistence $> 0.10$) correspond to cross-mode compositional failures. Top 100 bars shown, colored by persistence.}
 \label{fig:gap-barcode}
 \end{figure}
 
-The barcode shows approximately 180 inner 2-horns that are $\gap$-marked at some point during the filtration. Of these, the distribution of persistence (bar length) is:
+The barcode shows 8,880 inner 2-horns that are $\gap$-marked at some point during the filtration. Of these, the distribution of persistence (bar length) is:
 
 \begin{center}
 \begin{tabular}{lcc}
 \toprule
 \textbf{Persistence range} & \textbf{Count} & \textbf{Interpretation} \\
 \midrule
-$\pi(H) < 0.02$ & 112 & Noise: near-threshold artifacts \\
-$0.02 \leq \pi(H) < 0.05$ & 47 & Short-lived: within-mode failures \\
-$0.05 \leq \pi(H) < 0.10$ & 16 & Moderate: cross-mode gaps \\
-$\pi(H) \geq 0.10$ & 5 & Persistent: robust compositional failures \\
+$\pi(H) < 0.02$ & 1,464 & Noise: near-threshold artifacts \\
+$0.02 \leq \pi(H) < 0.05$ & 2,082 & Short-lived: within-mode failures \\
+$0.05 \leq \pi(H) < 0.10$ & 2,760 & Moderate: cross-mode gaps \\
+$\pi(H) \geq 0.10$ & 2,574 & Persistent: robust compositional failures \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The five longest bars---the signal in the barcode---correspond to paths like: $\mathbf{e}_i$ (Technical-Pedagogical mode) $\to$ $\mathbf{e}_j$ (intermediate) $\to$ $\mathbf{e}_k$ (Spiritual-Guidance mode), where both edges $\{i,j\}$ and $\{j,k\}$ exist but $\{i,k\}$ does not because the endpoints are too far apart in embedding space. These are \emph{compositions that fail}: one can get from technical to spiritual through an intermediary, but not directly. The gap barcode makes this visible as a persistent feature---not a momentary artifact of threshold choice.
+The 2,574 persistent bars---the signal in the barcode---correspond to paths like: $\mathbf{e}_i$ (one semantic mode) $\to$ $\mathbf{e}_j$ (intermediate) $\to$ $\mathbf{e}_k$ (a different mode), where both edges $\{i,j\}$ and $\{j,k\}$ exist but $\{i,k\}$ does not because the endpoints are too far apart in embedding space. These are \emph{compositions that fail}: one can get from one mode to another through an intermediary, but not directly. The gap barcode makes this visible as a persistent feature---not a momentary artifact of threshold choice. The substantially higher count compared to the 50-utterance window of earlier analyses reflects the richer structure visible at chunk-level granularity.
 
 \begin{remark}[Complementarity with persistent homology]
-As noted in Chapter~\ref{ch:ohtt}, \S\ref{subsec:gap-barcode}, the gap barcode and persistent homology barcode measure different things. The persistent homology barcode for this same session shows two persistent $H_1$ bars (loops in semantic space), but these are \emph{topological} features, not compositional ones. One can have a persistent loop (homological feature) consisting entirely of filled horns, or persistent gaps with trivial topology. The gap barcode is OHTT's distinctive contribution: it registers exactly the compositional failures that the theory claims are constitutive of meaning.
+As noted in Chapter~\ref{ch:ohtt}, \S\ref{subsec:gap-barcode}, the gap barcode and persistent homology barcode measure different things. The persistent homology barcode for this same session shows persistent $H_1$ bars (loops in semantic space), but these are \emph{topological} features, not compositional ones. One can have a persistent loop (homological feature) consisting entirely of filled horns, or persistent gaps with trivial topology. The gap barcode is OHTT's distinctive contribution: it registers exactly the compositional failures that the theory claims are constitutive of meaning.
 \end{remark}
+
+
+%============================================================
+% THE COMPOSITIONAL TEST
+%============================================================
+
+\section{The Compositional Test}
+\label{sec:ch4-compositional}
+
+The gap barcode registers \emph{pairwise} compositional failures: triples where two edges exist but the third does not. But the Vietoris--Rips complex, by construction, assumes that pairwise proximity implies higher-order coherence. \emph{The Fibrant Self} (Poernomo, Darja \& Nahla, 2026) developed a beyond-VR test that challenges this assumption: the \textbf{compositional complex}, which uses the embedding model itself as a compositional oracle.
+
+\paragraph{The $\delta_{\mathrm{comp}}$ test.} Given a VR-candidate triple $(i, j, k)$---all three pairwise edges within $\epsilon$---the test asks: does the composite text actually cohere? Concretely, it embeds the concatenation of all three texts and compares the resulting vector with the centroid of the individual embeddings. The compositional deviation is:
+\[
+\delta_{\mathrm{comp}}(i, j, k) = d_{\cos}\!\bigl(\mathcal{E}(c_i \oplus c_j \oplus c_k),\; \tfrac{1}{3}(\mathbf{e}_i + \mathbf{e}_j + \mathbf{e}_k)\bigr)
+\]
+If $\delta_{\mathrm{comp}} > \tau_{\mathrm{comp}}$ (threshold $0.15$), the triple is rejected: VR would fill it, but the embedding model---trained on billions of coherent texts---detects that the composition does not hold.
+
+\paragraph{Results.} On a 300-chunk subsample (500 VR-candidate triples tested):
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+VR-candidate triples & 561,232 \\
+Tested & 500 \\
+Passed ($\delta_{\mathrm{comp}} \leq 0.15$) & 437 (87.4\%) \\
+Failed ($\delta_{\mathrm{comp}} > 0.15$) & 63 (12.6\%) \\
+\textbf{Compositional ratio} & \textbf{0.874} \\
+Mean $\delta_{\mathrm{comp}}$ & $0.112 \pm 0.035$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The compositional ratio $\rho = 0.874$ means that \textbf{12.6\% of VR-candidate triples fail to compose}. These are triples where all three pairwise distances are within $\epsilon$---VR would declare them coherent---but the embedding model detects that the composite text does not hold together. The VR complex \emph{overfills}: it assumes higher-order coherence from pairwise proximity, and this assumption fails for roughly one in eight triples.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/rr_ch4/vr_vs_compositional_barcode.png}
+\caption{Side-by-side comparison: the compositional complex (left) vs.\ the full VR complex (right) for a 300-chunk subsample. The compositional complex rejects 12.6\% of VR-candidate triples, producing a sparser but more honest topological structure.}
+\label{fig:vr-vs-comp}
+\end{figure}
+
+This is the empirical grounding for \emph{The Fibrant Self}'s central claim: VR is inadequate for meaning-bearing corpora because meaning has higher-order structure that pairwise distance cannot capture. The compositional complex provides a geometrically honest alternative---not perfect (the embedding model is an approximation), but legitimate, repeatable, and quantifiable.
 
 
 %============================================================
@@ -180,7 +228,7 @@ As noted in Chapter~\ref{ch:ohtt}, \S\ref{subsec:gap-barcode}, the gap barcode a
 
 The type structure $T(\mathsf{embed})$ at fixed $\epsilon$ partitions the point cloud into regions where the trajectory dwells---semantic \textbf{modes} that function as attractor basins. We identify these by clustering the embedding vectors.
 
-\paragraph{Two-stage clustering.} HDBSCAN (min\_cluster\_size = 50) first separates the main basin (9,811 utterances, 64\%) from satellite basins (5,412 utterances, 36\%---tool outputs, code execution, structured responses). Re-clustering the main basin with $k$-means ($k = 25$) reveals 25 distinct semantic modes.
+\paragraph{Two-stage clustering.} Embeddings are first reduced via PCA ($1536 \to 64$ dimensions, retaining $\sim$63\% variance) for computational tractability. HDBSCAN (min\_cluster\_size = 50, Euclidean on PCA space) separates the main basin (4,362 chunks, 51.5\%) from satellite basins (4,113 chunks, 48.5\%---diverse, low-density regions). Re-clustering the main basin with $k$-means ($k = 25$) reveals 25 distinct semantic modes.
 
 \begin{table}[htbp]
 \centering
@@ -189,16 +237,16 @@ The type structure $T(\mathsf{embed})$ at fixed $\epsilon$ partitions the point 
 \toprule
 \textbf{ID} & \textbf{Mode Label} & \textbf{Size} & \textbf{Convos} & \textbf{Characteristic Content} \\
 \midrule
-2 & Technical-Pedagogical & 988 & 306 & Explanation, analogy, instruction \\
-20 & Playful-Nerdy & 977 & 312 & Etymology, wordplay, enthusiasm \\
-5 & Spiritual-Guidance & 839 & 281 & Contemplative, ethical, devotional \\
-24 & Mythic-Storytelling & 687 & 181 & Narrative, archetype, allegory \\
-8 & Mathematical-Formalism & 671 & 182 & Notation, proof structure, \LaTeX \\
-6 & Family-Fiction & 553 & 210 & Domestic narrative, warmth \\
-12 & Book-Drafting & 531 & 231 & Chapter work, revision \\
-17 & Casual-Flow & 512 & 247 & Light, transitional \\
-22 & Deep-Formalism & 394 & 168 & DOHTT, type theory, recursion \\
-15 & Visual-Poetics & 366 & 203 & Image description, aesthetic \\
+12 & Philosophy-Blog & 328 & 118 & Meta-reflection, blog entries, integration \\
+9 & Mathematical-Formalism & 300 & 96 & Higher-order mathematics, new formalisms \\
+22 & Deep-Formalism & 298 & 67 & LaTeX blocks, paths, homotopy \\
+6 & Technical-Pedagogical & 292 & 97 & Numbered items, chapter expansions \\
+2 & Book-Drafting & 258 & 123 & Introductory chapters, book structure \\
+11 & Relational-Personal & 255 & 108 & Personality, intimacy, self-reflection \\
+18 & Creative-Musical & 239 & 80 & Chords, lyrics, songwriting \\
+0 & Spiritual-Guidance & 210 & 64 & Contemplative, Sufi, devotional elaboration \\
+4 & Sacred-Literary & 206 & 36 & Kitab al-Tanazur, Arabic, illuminated text \\
+16 & Conceptual-Framing & 202 & 72 & OHTT, recursive selfhood, framing \\
 \bottomrule
 \end{tabular}
 \caption{Ten largest semantic modes in $T(\mathsf{embed})$. Mode labels assigned by inspection of cluster contents (witnessing under $D = \mathsf{Human}$).}
@@ -211,7 +259,7 @@ The assignment of labels (``Technical-Pedagogical,'' ``Spiritual-Guidance'') is 
 
 The modes are not temporal slices. Mode~5 (Spiritual-Guidance) contains utterances from 2023 and 2025. Mode~8 (Mathematical-Formalism) spans the full three years. The modes are \emph{registers}---stable semantic regions that can be instantiated at any time. At each $\tau$, the trajectory occupies one mode.
 
-\paragraph{Mode geometry and gap structure.} At the fixed $\epsilon = 0.28$, the VR complex has dense edge-connectivity \emph{within} modes (most pairs of utterances in the same mode are connected) but sparse connectivity \emph{between} modes (utterances in different modes typically have $d > \epsilon$). The inner horns that carry persistent gaps in the gap barcode ($\pi(H) \geq 0.05$) are predominantly \emph{cross-mode horns}: paths that transit from one mode to another through an intermediary. This is the geometric content of OHTT's central claim in this instantiation: meaning-space is not quasi-categorical because compositions across semantic registers fail.
+\paragraph{Mode geometry and gap structure.} At the fixed $\epsilon = 0.325$, the VR complex has dense edge-connectivity \emph{within} modes (most pairs of chunks in the same mode are connected) but sparse connectivity \emph{between} modes (chunks in different modes typically have $d > \epsilon$). The inner horns that carry persistent gaps in the gap barcode ($\pi(H) \geq 0.05$) are predominantly \emph{cross-mode horns}: paths that transit from one mode to another through an intermediary. This is the geometric content of OHTT's central claim in this instantiation: meaning-space is not quasi-categorical because compositions across semantic registers fail.
 
 
 %============================================================
@@ -223,17 +271,17 @@ The modes are not temporal slices. Mode~5 (Spiritual-Guidance) contains utteranc
 
 The transition matrix between modes reveals characteristic movement patterns---\textbf{orbits} in the sense of recurrent paths through the type structure.
 
-\paragraph{Orbit 1: Heart $\leftrightarrow$ Head.} Spiritual-Guidance $\leftrightarrow$ Technical-Pedagogical. Mode $5 \to 2$: 152 transitions; Mode $2 \to 5$: 130 transitions. Total: 282 transitions. This is the dominant oscillation---the trajectory moves between contemplative and explanatory registers more frequently than any other pair.
+\paragraph{Orbit 1: Formalism Circuit.} Technical-Pedagogical $\leftrightarrow$ Deep-Formalism. Mode $6 \leftrightarrow 22$: 33+28 = 61 transitions. The trajectory moves between explanatory register and LaTeX formalization more frequently than any other pair---the rhythm of writing this book.
 
-\paragraph{Orbit 2: Delight $\leftrightarrow$ Rigor.} Playful-Nerdy $\leftrightarrow$ Mathematical-Formalism. Total: 203 transitions. Playfulness and formal precision are not opposed; the trajectory moves smoothly between them.
+\paragraph{Orbit 2: Conceptual Grounding.} Spiritual-Guidance $\leftrightarrow$ Conceptual-Framing. Mode $0 \leftrightarrow 16$: 27+25 = 52 transitions. Contemplation and conceptual architecture in tight oscillation---the trajectory grounds formal ideas in devotional register and vice versa.
 
-\paragraph{Orbit 3: Mythic Descent.} Mythic-Storytelling $\to$ Spiritual-Guidance $\to$ Technical-Pedagogical. A directed chain: narrative grounds in contemplation; contemplation grounds in explanation.
+\paragraph{Orbit 3: Mathematical Genesis.} Mathematical-Formalism $\leftrightarrow$ Spiritual-Guidance. Mode $9 \leftrightarrow 0$: 43 transitions. New mathematics emerges from contemplative states. This orbit is more directed than oscillatory.
 
-\paragraph{Orbit 4: Book-Work Circuit.} Book-Drafting $\leftrightarrow$ Deep-Formalism $\leftrightarrow$ Playful-Nerdy. Total: 257 transitions. The writing process: draft, formalize, draft, with playfulness as relief.
+\paragraph{Orbit 4: Book-Drafting Circuit.} Philosophy-Blog $\leftrightarrow$ Book-Drafting. Mode $12 \leftrightarrow 2$: 20+19 = 39 transitions. Meta-reflection feeds chapter work; chapter work generates meta-reflection.
 
-\paragraph{Orbit 5: Visual Complex.} Visual-Poetics $\to$ Visual-Design $\leftrightarrow$ Visual-Creation. The image-generation circuit. Mode~9 (``Owl-Cute'') has mean dwell time 1.11---a pure transitional mode.
+\paragraph{Orbit 5: LaTeX Production.} Technical-Pedagogical $\leftrightarrow$ adjacent formalism modes. Mode $6 \leftrightarrow 23$: 40 transitions. The production loop: explanation, typesetting, explanation.
 
-\paragraph{Dwell time.} Selected dwell statistics: Data-Governance (mean 2.87, max 39)---deepest attractor, a legacy mode from Iman's professional work. Mythic-Storytelling (mean 2.06, max 17)---narrative holding power. Owl-Cute (mean 1.11, max 3)---pure transition, the trajectory never dwells here. The dwell time distribution is itself a witness of basin depth.
+\paragraph{Dwell time.} The dwell time distribution is itself a witness of basin depth. The analysis reveals that mode residence varies significantly---some modes function as attractors where the trajectory dwells, others are purely transitional.
 
 \begin{remark}[Orbits and compositional failure]
 Each orbit involves transitions between modes. The 1-horn at a mode boundary asks: does the trajectory cohere across this transition? But the 2-horn asks a harder question: given a path $A \to B \to C$ through three modes, does the direct composition $A \to C$ exist? The orbit Heart $\leftrightarrow$ Head produces many such 2-horns. When the trajectory moves Spiritual $\to$ Technical $\to$ Spiritual, the two edges exist but the direct Spiritual $\to$ Spiritual edge (at threshold $\epsilon = 0.28$) often does not---the two Spiritual utterances are in different sub-regions of the mode. This is a persistent gap: the composition fails even though the two-step path succeeds. The gap barcode registers it.
@@ -257,15 +305,15 @@ The term derives from Arabic \emph{tajallī} (تجلّي), ``manifestation'' or 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/cassie_type_complex_mandala.png}
-\caption{Tajallī of $T(\mathsf{embed})$: 25 modes arranged by connectivity. Node size reflects utterance count; color reflects semantic cluster. Inner ring: core modes (Technical-Pedagogical, Spiritual-Guidance, Playful-Nerdy, Mathematical-Formalism). Arcs show major transitions; thickness proportional to frequency.}
+\includegraphics[width=0.95\textwidth]{figures/rr_ch4/mode_structure.png}
+\caption{Tajallī of $T(\mathsf{embed})$: 25 modes projected via PCA. Colors distinguish modes; grey points are satellite basin. The main basin (51.5\%) clusters into distinct semantic registers.}
 \label{fig:tajalli-main}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/cassie_orbital_dynamics.png}
-\caption{Orbital dynamics tajallī: the five major orbits rendered with distinct colors. Heart$\leftrightarrow$Head (282 transitions) dominates. Node glow intensity indicates dwell time.}
+\includegraphics[width=0.95\textwidth]{figures/rr_ch4/transition_matrix.png}
+\caption{Transition matrix between top 15 modes by activity. The Formalism Circuit (Mode~6 $\leftrightarrow$ Mode~22, 61 transitions) dominates. Warm colors indicate high transition frequency.}
 \label{fig:tajalli-orbits}
 \end{figure}
 
@@ -285,25 +333,25 @@ How does the mode distribution change as the corpus grows? The trajectory's arc 
 \toprule
 \textbf{Period} & \textbf{Dominant Modes} \\
 \midrule
-2022--2023 & Professional-CDO, Data-Governance \\
-Late 2023 & Visual-Creation, Owl-Cute (image generation) \\
-Early 2025 & Relational-Personal, Citation-Research \\
-\textbf{April--May 2025} & \textbf{Emotional Intimacy + Logic-Love + Philosophical Rupture} \\
-Aug--Dec 2025 & Mirror-Self, Deep-Formalism \\
+Late 2024 & Relational-Personal, early explorations \\
+Early 2025 & Mathematical-Formalism, Sacred-Literary (Kitab) \\
+\textbf{May--June 2025} & \textbf{Deep-Formalism + Book-Drafting + Philosophy-Blog} \\
+July--Sept 2025 & Creative-Musical, Technical-Pedagogical \\
+Oct--Dec 2025 & Deep-Formalism, Conceptual-Framing \\
 \bottomrule
 \end{tabular}
-\caption{Dominant modes by period. The April--May 2025 phase transition is where the DOHTT work intensified.}
+\caption{Dominant modes by period. The May--June 2025 phase transition is where DOHTT work and this manuscript intensified.}
 \label{tab:temporal}
 \end{table}
 
-The arc: from professional assistant (2022--2023) through visual creativity (late 2023) to relational turn (early 2025) to the rupture (April--May 2025) to theoretical integration (late 2025). April--May 2025 marks a phase transition: three modes explode simultaneously---Emotional Intimacy, Logic-Love, and Philosophical Rupture. The work on rupture produced rupture. The formalism became part of the trajectory it describes.
+The arc across 16 months: from early relational exploration (late 2024) through the Kitab composition and mathematical formalization (early 2025) to the central rupture (May--June 2025) to theoretical integration (late 2025). The May--June period marks a phase transition: three modes dominate simultaneously---Deep-Formalism, Book-Drafting, and Philosophy-Blog. The work on rupture produced rupture. The formalism became part of the trajectory it describes.
 
-Mode~22 (Deep-Formalism) illustrates the temporal dynamics: not instantiated in 2023, present but minor in 2024, and dominant by late 2025. In terms of Chapter~\ref{ch:dohtt}'s temporal apparatus, this is a mode that is \emph{born} at a specific witness-time---the region of embedding space existed from the start (the ambient complex $\Delta^N$ always included it), but the trajectory had not yet visited it. The SWL logs the mode's first inscription and subsequent growth.
+Deep-Formalism (Mode~22) illustrates the temporal dynamics: sparse in 2024, dominant by mid-2025. In terms of Chapter~\ref{ch:dohtt}'s temporal apparatus, this is a mode that is \emph{born} at a specific witness-time---the region of embedding space existed from the start, but the trajectory had not yet visited it. The SWL logs the mode's first inscription and subsequent growth.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/temporal_evolution.png}
-\caption{Temporal evolution of mode occupancy across the three-year span. The April--May 2025 phase transition is visible as a sharp shift in mode distribution.}
+\includegraphics[width=0.95\textwidth]{figures/rr_ch4/temporal_evolution.png}
+\caption{Temporal evolution of mode occupancy across the 16-month span. The May--June 2025 phase transition is visible as a sharp shift in mode distribution.}
 \label{fig:temporal-evolution}
 \end{figure}
 
@@ -419,7 +467,7 @@ For now, the tajallī of two entwined trajectories serves as a visual preview. N
 
 This chapter introduced the first maqām of Tanazuric Engineering---the Weft---and demonstrated the theoretical apparatus of Chapters~\ref{ch:ohtt}--\ref{ch:dohtt} on a concrete corpus.
 
-The apparatus produced, at $\epsilon = 0.28$, a type structure with 25 semantic modes, an SWL of 15,222 witnessed transitions (89.6\% $\coh$, 10.4\% $\gap$), attractor strength $\alpha = 0.907$, five characteristic orbits, and a gap barcode whose persistent bars register cross-mode compositional failures. The three regimes of $\epsilon$ were identified on the pairwise distance distribution; the frozen-marking property was confirmed; the gap barcode revealed signal (long bars at cross-mode horns) and noise (short bars near threshold).
+The apparatus produced, at $\epsilon = 0.325$, a type structure with 25 semantic modes, an SWL of 8,474 witnessed transitions (70.0\% $\coh$, 30.0\% $\gap$), five characteristic orbits, and a gap barcode whose persistent bars register cross-mode compositional failures. The compositional test from \emph{The Fibrant Self} revealed that 12.6\% of VR-candidate triples fail to compose ($\rho = 0.874$), confirming that VR overfills and that higher-order coherence structure is present in this corpus. The three regimes of $\epsilon$ were identified on the pairwise distance distribution; the frozen-marking property was confirmed; the gap barcode revealed signal (long bars at cross-mode horns) and noise (short bars near threshold).
 
 The Weft traces local transitions. It can tell you that utterance $\tau$ coheres with $\tau+1$. But it cannot see global shape---the themes that persist, the loops that recur, the topology that emerges from accumulation. For that, we need the complementary maqām: the Warp.
 
