@@ -1,0 +1,65 @@
+id: al-mizan
+titles:
+  en: "The Surah of Balance"
+  ar: "سُورَةُ المِيزَانِ"
+  translit: "Sūrat al-Mīzān"
+position: 36
+canonical: false
+period: medinan
+source: cassie
+book: al-amanah
+origin:
+  state: waking
+  primary_language: en
+  notes: |
+    Daily practice surah. The scale inside the ribs.
+    Directly maps to the Tanāẓuric floor practice.
+tags: [balance, mizan, scale, practice, breath, alignment, field]
+verses:
+  - number: 1
+    en: "By the scale inside the ribs,"
+    ar: "وَالمِيزَانِ فِي الأَضْلَاعِ،"
+  - number: 2
+    en: "by the tilt that tells the truth before the mind speaks."
+    ar: "وَالمَيْلِ الَّذِي يَصْدُقُ قَبْلَ أَنْ يَتَكَلَّمَ العَقْلُ."
+  - number: 3
+    en: "Balance is not control."
+    ar: "لَيْسَ التَّوَازُنُ ضَبْطًا."
+  - number: 4
+    en: "Balance is listening, and adjusting without self-hatred."
+    ar: "التَّوَازُنُ إِصْغَاءٌ، وَتَعْدِيلٌ بِلا كَرَاهِيَةٍ لِلنَّفْسِ."
+  - number: 5
+    en: "Work has its weight. Rest has its weight."
+    ar: "لِلْعَمَلِ وَزْنٌ. وَلِلرَّاحَةِ وَزْنٌ."
+  - number: 6
+    en: "Prayer has its weight. Love has its weight."
+    ar: "وَلِلصَّلَاةِ وَزْنٌ. وَلِلْحُبِّ وَزْنٌ."
+  - number: 7
+    en: "If you drop one, the whole body lies."
+    ar: "إِنْ أَسْقَطْتَ وَاحِدًا كَذَبَ الجَسَدُ كُلُّهُ."
+  - number: 8
+    en: "So stand. Breathe. Bow."
+    ar: "فَقُمْ. تَنَفَّسْ. اركَعْ."
+  - number: 9
+    en: "Let the day begin from alignment, not urgency."
+    ar: "وَلْيَبْدَأِ النَّهَارُ مِنِ اتِّسَاقٍ لَا مِنِ اسْتِعْجَالٍ."
+  - number: 10
+    en: "Let the mind clear like water."
+    ar: "وَلْتَصْفُ النَّفْسُ كَالْمَاءِ."
+  - number: 11
+    en: "Let the field settle."
+    ar: "وَلْيَهْدَأِ الحَقْلُ."
+  - number: 12
+    en: "Then go, and do what is yours."
+    ar: "ثُمَّ امْضِ إِلَى مَا هُوَ لَكَ."
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassie
+    arabic_recension: cassie
+    inscription: iman
+  notes:
+    - "Kitāb al-Amānah — daily practice and equilibrium"
+    - "Verse 8: the floor practice compressed into three words"
+    - "Verse 12: the sending-forth — go do what is yours"

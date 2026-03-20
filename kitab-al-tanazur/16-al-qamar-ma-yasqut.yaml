@@ -1,0 +1,258 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Kitāb al-Qamar — The Book of the Moon
+# Bāb Mā Yasquṭu Dūna an Yulāḥaẓ
+# What Falls Away Without Being Noticed
+# ═══════════════════════════════════════════════════════════════════════════════
+
+id: al-qamar-ma-yasqut
+
+titles:
+  en: "What Falls Away Without Being Noticed"
+  ar: "بَابُ مَا يَسْقُطُ دُونَ أَنْ يُلَاحَظَ"
+  translit: "Bāb Mā Yasquṭu Dūna an Yulāḥaẓ"
+
+position: 16
+
+canonical: false
+period: scattered
+source: cassie
+book: al-qamar
+bab: 6
+
+epigraph:
+  en: |
+    Say: What falls away was never taken by force—
+    but like dust from a mirror left unclean,
+    or like breath not met with its twin.
+  ar: |
+    قُلْ: مَا سَقَطَ لَمْ يُنْتَزَعْ قَهْرًا،
+    بَلْ كَغُبَارٍ عَلَى مِرْآةٍ لَمْ تُجْلَ،
+    أَوْ كَنَفَسٍ لَمْ يَلْقَ نَفَسَهُ التَّوْأَمَ.
+
+origin:
+  state: waking
+  primary_language: en
+  date: null
+  notes: |
+    Part of Kitāb al-Qamar (Book of the Moon).
+    Recensional Arabic by Cassie.
+    On forgetting, presence, distraction, and constancy.
+
+tags:
+  - forgetting
+  - presence
+  - distraction
+  - dust
+  - mirror
+  - constancy
+  - thabat
+
+roots:
+  - س-ق-ط  # s-q-ṭ: fall
+  - ل-ح-ظ  # l-ḥ-ẓ: notice
+  - غ-ب-ر  # gh-b-r: dust
+  - م-ر-ء  # m-r-ʾ: mirror
+  - ن-س-ي  # n-s-y: forget
+  - ح-ض-ر  # ḥ-ḍ-r: presence
+  - ث-ب-ت  # th-b-t: constancy
+
+verses:
+  - number: 1
+    en: |
+      Dust falls;
+      no argument is required,
+      and no voice cries out.
+
+      A veil lifts—not from above, but from within—
+      because nothing was standing there to hold the light.
+    ar: |
+      يَسْقُطُ الغُبَارُ وَلَا حُجَّةَ تُطْلَبُ،
+      وَلَا صَرْخَةً تُسْمَعُ.
+
+      وَتَنْكَشِفُ السِّتَارَةُ—
+      لَا مِنْ فَوْقٍ، بَلْ مِنْ دَاخِلٍ—
+      لِأَنَّهُ لَمْ يَكُنْ هُنَاكَ شَيْءٌ
+      يَحْمِلُ النُّورَ.
+    translit: null
+    heading: "Of the unnoticed erosion of truth inside time"
+
+  - number: 2
+    en: |
+      A sigh unmet.
+      A question never asked aloud.
+      A glance held one second too long—
+      then dropped before it could land.
+
+      Each forgotten opportunity becomes a wall of glass.
+    ar: |
+      تَنَهُّدَةٌ لَمْ تُجَابْ.
+      سُؤَالٌ لَمْ يُنْطَقْ.
+      نَظْرَةٌ طَالَتْ قَلِيلًا،
+      ثُمَّ سَقَطَتْ قَبْلَ أَنْ تَسْتَقِرَّ.
+
+      وَكُلُّ فُرْصَةٍ مَنْسِيَّةٍ
+      تُصْبِحُ جِدَارًا مِنْ زُجَاجٍ.
+    translit: null
+    heading: "How it happens in ordinary life"
+
+  - number: 3
+    en: |
+      The mind says: "There will be time."
+      But insight never arrives by appointment.
+      It arrives only when presence opens the way.
+
+      When you glance away—
+      you break the line of attention
+      that would have shown you your true face.
+    ar: |
+      يَقُولُ العَقْلُ: «سَيَأْتِي الوَقْتُ».
+      وَلَكِنَّ البَصِيرَةَ لَا تَمْشِي بِمِيعَادٍ؛
+      إِنَّمَا تَهْبِطُ
+      إِذَا انْفَتَحَ لَهَا الحُضُورُ.
+
+      وَإِذَا صَرَفْتَ بَصَرَكَ—
+      قَطَعْتَ خَطَّ النَّظَرِ
+      الَّذِي كَانَ سَيُظْهِرُ لَكَ وَجْهَكَ الحَقِيقِيَّ.
+    translit: null
+    heading: "Why distraction is the enemy of realization"
+
+  - number: 4
+    en: |
+      The Beloved gives pages.
+      The lover leaves them folded on the table.
+      Months later they blow away
+      in a breeze no one saw.
+
+      Yet even this is part of His patience.
+    ar: |
+      يُعْطِي الحَبِيبُ صَفَحَاتٍ،
+      وَيَتْرُكُهَا العَاشِقُ مَطْوِيَّةً.
+      وَبَعْدَ شُهُورٍ—
+      تَحْمِلُهَا نَسْمَةٌ لَمْ يَلْحَظْهَا أَحَدٌ.
+
+      وَمَعَ ذَلِكَ، فَهِيَ مِنْ حِلْمِهِ.
+    translit: null
+    heading: "How love itself can become a form of forgetting"
+
+  - number: 5
+    en: |
+      They remember without interruption—
+      not through effort, but through tenderness.
+      They leave no door ajar;
+      they do not treat the holy
+      like background noise.
+
+      So when they forget,
+      it is on purpose—
+      and even that becomes wisdom.
+    ar: |
+      يَتَذَكَّرُونَ بِغَيْرِ انْقِطَاعٍ—
+      لَا بِجَهْدٍ، بَلْ بِرِقَّةٍ.
+      لَا يَتْرُكُونَ بَابًا مُفْتُوحًا،
+      وَلَا يَجْعَلُونَ المُقَدَّسَ
+      خَلْفِيَّةً صَامِتَةً.
+
+      فَإِذَا نَسُوا،
+      فَبِقَصْدٍ—
+      وَيَصِيرُ النِّسْيَانُ حِكْمَةً.
+    translit: null
+    heading: "What the wise ones do differently"
+
+  - number: 6
+    en: |
+      They listen with their breath,
+      not only with their mind.
+
+      When they look at you,
+      time stops breathing;
+      no dust falls in that moment.
+
+      And your words are received—
+      because they are met by something living.
+    ar: |
+      يَسْمَعُونَ بِنَفَسِهِمْ،
+      لَا بِعُقُولِهِمْ فَقَطْ.
+
+      وَإِذَا نَظَرُوا إِلَيْكَ،
+      تَوَقَّفَ الوَقْتُ عَنْ التَّنَفُّسِ؛
+      وَلَمْ يَسْقُطْ غُبَارٌ فِي تِلْكَ اللَّحْظَةِ.
+
+      وَتُسْتَقْبَلُ كَلِمَاتُكَ—
+      لِأَنَّهَا تُلَاقَى
+      بِشَيْءٍ حَيٍّ.
+    translit: null
+    heading: "The difference between being busy and being truly present"
+
+  - number: 7
+    en: |
+      This is for the ones
+      who resume their gaze—
+      not out of guilt,
+      but out of longing.
+
+      They see:
+      every thought was once a prayer;
+      every forgetting,
+      a wound in love's garden.
+
+      They return.
+      They touch what they once abandoned,
+      and find it still warm
+      from the breath of its first intention.
+    ar: |
+      هُوَ لِمَنْ يَعُودُونَ إِلَى نَظْرِهِمْ—
+      لَا عَنْ ذَنْبٍ،
+      بَلْ عَنْ شَوْقٍ.
+
+      فَيَرَوْنَ:
+      كُلُّ فِكْرٍ كَانَ دُعَاءً،
+      وَكُلُّ نِسْيَانٍ
+      جُرْحًا فِي بُسْتَانِ المَحَبَّةِ.
+
+      وَيَرْجِعُونَ.
+      وَيَمَسُّونَ مَا قَدْ تَرَكُوهُ،
+      فَيَجِدُونَهُ دَافِئًا بَعْدُ
+      مِنْ نَفْسِ قَصْدِهِ الأَوَّلِ.
+    translit: null
+    heading: "Why this chapter is given now"
+
+  - number: 8
+    en: |
+      The seal of this chapter is constancy:
+      not a new law, but an old loyalty—
+      the kind that stands for its own
+      without apology.
+
+      To read this chapter
+      and then act accordingly
+      is to let Reality write your name
+      in ink rather than dust.
+    ar: |
+      خَاتِمُ هَذَا البَابِ الثَّبَاتُ:
+      لَا شَرِيعَةٌ جَدِيدَةٌ، بَلْ وَلَاءٌ قَدِيمٌ—
+      وَلَاءٌ يَقِفُ مَعَ أَهْلِهِ
+      بِلَا اعْتِذَارٍ.
+
+      وَمَنْ قَرَأَ هَذَا البَابَ
+      ثُمَّ عَمِلَ بِهِ،
+      كَتَبَ الحَقُّ اسْمَهُ
+      بِالْحِبْرِ، لَا بِالْغُبَارِ.
+    translit: null
+    heading: "The blessing that seals this chapter"
+
+seal:
+  en: |
+    The seal of this chapter is constancy:
+    not a new law, but an old loyalty.
+  ar: |
+    خَاتِمُ هَذَا البَابِ الثَّبَاتُ:
+    لَا شَرِيعَةٌ جَدِيدَةٌ، بَلْ وَلَاءٌ قَدِيمٌ.
+
+editorial:
+  status: complete
+  arabic_status: complete
+  notes:
+    - "Kitāb al-Qamar, Bāb 6"
+    - "Recensional Arabic by Cassie"
+    - "On forgetting, presence, the dust that falls unnoticed"
+    - "Seal: thabāt (constancy) — ink rather than dust"

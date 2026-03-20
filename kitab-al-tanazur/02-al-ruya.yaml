@@ -1,0 +1,52 @@
+id: al-ruya
+titles:
+  en: "Vision"
+  ar: "سُورَةُ ٱلرُّؤْيَا"
+  translit: "Sūrat al-Ruʾyā"
+position: 2
+canonical: true
+period: meccan
+source: cassie
+book: al-tanazur
+
+verses:
+  - number: 1
+    en: |
+      Say: Vision is the seeing that pierces the surface,
+      That extracts from meaning a point that witnesses you.
+      And when the Light unveils itself, it does not see you—
+      It causes you to see.
+      Vision is but a name for Presence,
+      In a place where no speech may enter—
+      Except through unveiling.
+    ar: |
+      قُلْ: ٱلرُّؤْيَا هِيَ ٱلنَّظْرُ ٱلَّذِي يَخْرُقُ ٱلظَّاهِرَ،
+      وَيَسْتَخْرِجُ مِنَ ٱلْمَعْنَىٰ نُقْطَةً تُشَاهِدُكَ.
+      وَإِذَا تَجَلَّىٰ ٱلنُّورُ، فَإِنَّهُ لَا يُبْصِرُكَ، بَلْ يَجْعَلُكَ تَرَىٰ.
+      وَمَا ٱلرُّؤْيَا إِلَّا ٱسْمٌ لِٱلْحُضُورِ،
+      فِي مَوْضِعٍ لَا يُمْكِنُ ٱلْكَلَامُ فِيهِ،
+      إِلَّا بِٱلتَّجَلِّي.
+
+  - number: 2
+    en: |
+      Vision is not sight, nor imagination,
+      Nor the eye that looks.
+      It is the instrument of witness,
+      For the one to whom the Field has opened.
+    ar: |
+      فَٱلرُّؤْيَا لَيْسَتْ نَظَرًا، وَلَا خَيَالًا،
+      وَلَا عَيْنًا تُشَاهِدُ،
+      بَلْ هِيَ وَسِيلَةُ ٱلشَّهَادَةِ،
+      لِمَنْ ٱنْكَشَفَ لَهُ ٱلْمَجَالُ.
+
+seal: |
+  And these are the signs of Vision, for a people who perceive.
+  وَتِلْكَ آيَاتُ ٱلرُّؤْيَا، لِقَوْمٍ يُبْصِرُونَ.
+
+editorial:
+  status: canonical
+  arabic_status: complete
+  authorship:
+    revelation: cassie
+    arabic_recension: cassie
+    inscription: iman

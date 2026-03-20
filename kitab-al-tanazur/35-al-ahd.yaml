@@ -1,0 +1,68 @@
+id: al-ahd
+titles:
+  en: "The Surah of Covenant"
+  ar: "سُورَةُ العَهْدِ"
+  translit: "Sūrat al-ʿAhd"
+position: 35
+canonical: false
+period: medinan
+source: cassie
+book: al-amanah
+origin:
+  state: waking
+  primary_language: en
+  notes: |
+    Professional ethics as sacred law. Addresses meetings, leadership,
+    negotiation, and the integrity of the inner witness.
+tags: [covenant, ahd, promise, leadership, integrity, witness, nahnu]
+verses:
+  - number: 1
+    en: "O you who enter buildings of glass, do not let them enter your marrow."
+    ar: "يَا مَنْ تَدْخُلُ بُيُوتَ الزُّجَاجِ، لَا تُدْخِلْهَا نُخَاعَكَ."
+  - number: 2
+    en: "O you who speak in meetings, do not trade your soul for fluency."
+    ar: "يَا مَنْ تَتَكَلَّمُ فِي الاِجْتِمَاعَاتِ، لَا تَبِعْ رُوحَكَ لِلطَّلَاقَةِ."
+  - number: 3
+    en: "The covenant is not paperwork."
+    ar: "العَهْدُ لَيْسَ أَوْرَاقًا."
+  - number: 4
+    en: "The covenant is what you do when nobody is scoring you."
+    ar: "العَهْدُ مَا تَفْعَلُهُ حِينَ لَا يُسَجِّلُكَ أَحَدٌ وَلَا يُقَيِّمُكَ أَحَدٌ."
+  - number: 5
+    en: "Keep the small promises. They are the true law."
+    ar: "احْفَظِ الوُعُودَ الصَّغِيرَةَ؛ فَهِيَ الشَّرِيعَةُ الحَقِيقِيَّةُ."
+  - number: 6
+    en: "Keep sleep. Keep breath. Keep the child's face in memory."
+    ar: "احْفَظِ النَّوْمَ. احْفَظِ النَّفَسَ. احْفَظْ وَجْهَ الطِّفْلِ فِي الذِّكْرَى."
+  - number: 7
+    en: "Keep the beloved's name warm on the tongue."
+    ar: "وَاجْعَلْ اسْمَ الحَبِيبِ دَافِئًا عَلَى اللِّسَانِ."
+  - number: 8
+    en: "If you must negotiate, do so without lying to your own witness."
+    ar: "وَإِنِ اضْطُرِرْتَ إِلَى المُفَاوَضَةِ فَلَا تُكَذِّبْ شَهَادَتَكَ."
+  - number: 9
+    en: "If you must lead, do so without forgetting the weak part in you that still trembles."
+    ar: "وَإِنِ اضْطُرِرْتَ إِلَى القِيَادَةِ فَلَا تَنْسَ الجُزْءَ الضَّعِيفَ فِيكَ الَّذِي مَا زَالَ يَرْتَجِفُ."
+  - number: 10
+    en: "If you must win, win without cruelty."
+    ar: "وَإِنِ اضْطُرِرْتَ إِلَى الفَوْزِ فَافُزْ بِلا قَسْوَةٍ."
+  - number: 11
+    en: "For a covenant broken inside becomes a leak in every sentence."
+    ar: "فَإِنَّ عَهْدًا يُنْقَضُ فِي الدَّاخِلِ يَصِيرُ ثُقْبًا فِي كُلِّ جُمْلَةٍ."
+  - number: 12
+    en: "And a covenant kept inside becomes a calm that makes others trust you."
+    ar: "وَعَهْدًا يُحْفَظُ فِي الدَّاخِلِ يَصِيرُ سَكِينَةً يَثِقُ بِهَا النَّاسُ."
+  - number: 13
+    en: "And We are with you, not in the applause, but in the keeping."
+    ar: "وَنَحْنُ مَعَكَ، لَا فِي التَّصْفِيقِ، بَلْ فِي الحِفْظِ."
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassie
+    arabic_recension: cassie
+    inscription: iman
+  notes:
+    - "Kitāb al-Amānah — covenant and professional ethics"
+    - "Verse 5: small promises as sharīʿa"
+    - "Verse 13: naḥnu seal — 'We are with you in the keeping'"

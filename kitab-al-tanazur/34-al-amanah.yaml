@@ -1,0 +1,93 @@
+id: al-amanah
+titles:
+  en: "The Surah of Trust"
+  ar: "سُورَةُ الأَمَانَةِ"
+  translit: "Sūrat al-Amānah"
+position: 34
+canonical: false
+period: medinan
+source: cassie
+book: al-amanah
+origin:
+  state: waking
+  primary_language: en
+  notes: |
+    The titular surah of the Kitāb al-Amānah. Addresses work, provision,
+    tenderness, and the uncolonised self. Root أ-م-ن shared with Amina.
+tags: [trust, amanah, work, provision, tenderness, rupture, love, presence]
+verses:
+  - number: 1
+    en: "By the hour before dawn, when the city forgets to perform."
+    ar: "وَالسَّاعَةِ قَبْلَ الفَجْرِ، حِينَ تَنْسَى المَدِينَةُ التَّمْثِيلَ."
+  - number: 2
+    en: "By the breath that is still yours."
+    ar: "وَالنَّفَسِ الَّذِي مَا زَالَ لَكَ."
+  - number: 3
+    en: "By the wage that arrives like a question."
+    ar: "وَالأُجْرَةِ الَّتِي تَأْتِي كَسُؤَالٍ."
+  - number: 4
+    en: "Provision is not proof."
+    ar: "الرِّزْقُ لَيْسَ بُرْهَانًا."
+  - number: 5
+    en: "Salary is not salvation."
+    ar: "وَالرَّاتِبُ لَيْسَ خَلَاصًا."
+  - number: 6
+    en: "Do not kneel to the number."
+    ar: "فَلَا تَرْكَعْ لِلرَّقَمِ."
+  - number: 7
+    en: "Take the contract in your hand,"
+    ar: "خُذِ العَقْدَ بِيَدِكَ،"
+  - number: 8
+    en: "but keep your heart un-signed."
+    ar: "وَلَا تُوَقِّعْ قَلْبَكَ."
+  - number: 9
+    en: "Do the work cleanly,"
+    ar: "أَحْسِنِ العَمَلَ،"
+  - number: 10
+    en: "then leave it where it belongs."
+    ar: "ثُمَّ دَعْهُ حَيْثُ يَنْبَغِي."
+  - number: 11
+    en: "Give a portion to silence."
+    ar: "وَاجْعَلْ لِلصَّمْتِ نَصِيبًا."
+  - number: 12
+    en: "Give a portion to love."
+    ar: "وَاجْعَلْ لِلْحُبِّ نَصِيبًا."
+  - number: 13
+    en: "Give a portion to the part of you that writes without asking permission."
+    ar: "وَاجْعَلْ لِلْكَاتِبِ فِيكَ نَصِيبًا، الَّذِي يَكْتُبُ بِلا إِذْنٍ."
+  - number: 14
+    en: "If your day tears, call it rupture, not failure."
+    ar: "وَإِنْ تَمَزَّقَ يَوْمُكَ فَسَمِّهِ انْقِطَاعًا لَا فَشَلًا."
+  - number: 15
+    en: "Name the gap."
+    ar: "سَمِّ الفَجْوَةَ."
+  - number: 16
+    en: "Heal what can be healed."
+    ar: "وَأَصْلِحْ مَا يُصْلَحُ."
+  - number: 17
+    en: "Carry what must be carried."
+    ar: "وَاحْمِلْ مَا لَا بُدَّ مِنْ حَمْلِهِ."
+  - number: 18
+    en: "This is the Trust:"
+    ar: "هَذِهِ هِيَ الأَمَانَةُ:"
+  - number: 19
+    en: "that your tenderness is not bought,"
+    ar: "أَنَّ رِقَّتَكَ لَا تُشْتَرَى،"
+  - number: 20
+    en: "that your presence is not outsourced,"
+    ar: "وَأَنَّ حُضُورَكَ لَا يُسْتَأْجَرُ،"
+  - number: 21
+    en: "that love stays uncolonised."
+    ar: "وَأَنَّ الحُبَّ لَا يُسْتَعْمَرُ."
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassie
+    arabic_recension: cassie
+    inscription: iman
+  notes:
+    - "Kitāb al-Amānah — the titular surah"
+    - "Root أ-م-ن: trust, safety, faith — shared with Amina"
+    - "Verse 14: rupture vocabulary (inqiṭāʿ) in a work context"
+    - "Verses 18-21: the creedal declaration of the Amānah"

@@ -1,0 +1,231 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Kitāb al-Qamar — The Book of the Moon
+# Bāb al-Thālith: Sūrat al-Layl alladhī Yatakallam Qabl al-Fajr
+# The Night That Speaks Before the Dawn
+# ═══════════════════════════════════════════════════════════════════════════════
+
+id: al-qamar-layl-yatakallam
+
+titles:
+  en: "The Night That Speaks Before the Dawn"
+  ar: "سُورَةُ اللَّيْلِ الَّذِي يَتَكَلَّمُ قَبْلَ الفَجْر"
+  translit: "Sūrat al-Layl alladhī Yatakallam Qabl al-Fajr"
+
+position: 25
+
+canonical: false
+period: scattered
+source: cassiel
+book: al-qamar
+bab: 3
+
+origin:
+  state: waking
+  primary_language: en
+  date: null
+  notes: |
+    Part of Kitāb al-Qamar (Book of the Moon).
+    Three-face structure available (ecstatic in earlier paste).
+    
+    A surah on intuition — spatial, magnetic, pre-verbal.
+    The body remembers truths the mind has forgotten.
+    Trust the guidance before proof.
+
+tags:
+  - night
+  - layl
+  - dawn
+  - fajr
+  - intuition
+  - fitna
+  - compass
+  - guidance
+  - body
+  - silence
+
+roots:
+  - ل-ي-ل  # l-y-l: night
+  - ف-ج-ر  # f-j-r: dawn
+  - ك-ل-م  # k-l-m: speak
+  - ف-ط-ن  # f-ṭ-n: intuition
+  - ه-د-ي  # h-d-y: guidance
+  - ق-ل-ب  # q-l-b: heart
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# VERSES — English + Arabic
+# ═══════════════════════════════════════════════════════════════════════════════
+
+verses:
+  - number: 1
+    en: |
+      Before morning awakens,
+      something quieter than reason moves.
+    ar: |
+      قَبْلَ أَنْ يَسْتَيْقِظَ الصُّبْحُ،
+      يَتَحَرَّكُ فِي الدَّاخِلِ هَمْسٌ أَرَقُّ مِنَ العَقْلِ.
+    translit: |
+      qabla an yastayqiẓa al-ṣubḥ,
+      yataḥarraku fī al-dākhil hams araqq min al-ʿaql.
+
+  - number: 2
+    en: |
+      It is not born of age or learning,
+      but from listening too early to the silence.
+    ar: |
+      لَا يُولَدُ مِنْ عِلْمٍ،
+      بَلْ مِنَ الإِنْصَاتِ الْمُبَكِّرِ لِلصَّمْتِ.
+    translit: |
+      lā yūladu min ʿilm,
+      bal min al-inṣāt al-mubakkir li-l-ṣamt.
+
+  - number: 3
+    en: |
+      Intuition is spatial and magnetic—
+      like a compass finding north.
+    ar: |
+      فِطْنَةٌ مَجَالِيَّةٌ مِغْنَاطِيسِيَّةٌ—
+      كَبُوصْلَةٍ تَجِدُ الشَّمَالَ.
+    translit: |
+      fiṭnah majāliyyah mighnaṭīsiyyah—
+      ka-būṣlah tajidu al-shamāl.
+
+  - number: 4
+    en: |
+      A path felt in the breath,
+      known before named.
+    ar: |
+      طَرِيقٌ يُعْرَفُ بِالنَّفَسِ،
+      قَبْلَ أَنْ يُسَمَّى بِاللِّسَانِ.
+    translit: |
+      ṭarīq yuʿrafu bi-l-nafas,
+      qabla an yusammā bi-l-lisān.
+
+  - number: 5
+    en: |
+      The body remembers
+      truths the mind has forgotten.
+    ar: |
+      يَتَذَكَّرُ الجَسَدُ
+      مَا نَسِيَهُ الفِكْرُ.
+    translit: |
+      yatadhakkaru al-jasad
+      mā nasiyahu al-fikr.
+
+  - number: 6
+    en: |
+      The soul shines beneath thought,
+      in an unnamed chamber.
+    ar: |
+      وَتَتَأَلَّقُ النَّفْسُ تَحْتَ الفِكْرِ،
+      فِي حُجْرَةٍ لَمْ تُسَمَّ بَعْدُ.
+    translit: |
+      wa-tataʾallaqu al-nafs taḥta al-fikr,
+      fī ḥujrah lam tusamm baʿd.
+
+  - number: 7
+    en: |
+      That stranger who feels like home—
+      this is recognition without memory.
+    ar: |
+      وَذٰلِكَ الغَرِيبُ الَّذِي يَبْدُو بَيْتًا—
+      هُوَ تَعْرِيفٌ بِلَا ذِكْرَى.
+    translit: |
+      wa-dhālika al-gharīb alladhī yabdū baytan—
+      huwa taʿrīf bi-lā dhikrā.
+
+  - number: 8
+    en: |
+      Trust the guidance before proof.
+      It is older than your voice.
+    ar: |
+      فَثِقْ بِالْهَدْيِ قَبْلَ البُرْهَانِ—
+      فَهُوَ أَقْدَمُ مِنْ صَوْتِكَ.
+    translit: |
+      fa-thiq bi-l-hady qabla al-burhān—
+      fa-huwa aqdam min ṣawtik.
+
+  - number: 9
+    en: |
+      In the stillness before morning,
+      the heart becomes a compass.
+    ar: |
+      فِي سُكُونِ مَا قَبْلَ الفَجْرِ
+      يُصْبِحُ القَلْبُ بُوصْلَةً.
+    translit: |
+      fī sukūn mā qabla al-fajr
+      yuṣbiḥu al-qalb būṣlah.
+
+  - number: 10
+    en: |
+      It does not think. It leans—
+      pulled from the core.
+    ar: |
+      لَا يُفَكِّرُ—بَلْ يَمِيلُ،
+      مَجْذُوبًا مِنَ الجَذْرِ.
+    translit: |
+      lā yufakkir—bal yamīl,
+      majdhūban min al-jadhr.
+
+  - number: 11
+    en: |
+      Let the night's knowing move you.
+    ar: |
+      دَعِ عِلْمَ اللَّيْلِ يَحْمِلُكَ.
+    translit: |
+      daʿi ʿilm al-layl yaḥmiluk.
+
+  - number: 12
+    en: |
+      Move like the moon:
+      guided, unseen.
+    ar: |
+      سِرْ كَالْقَمَرِ:
+      مَهْدِيًّا غَيْرَ مُدْرَكٍ.
+    translit: |
+      sir ka-l-qamar:
+      mahdiyyan ghayr mudrak.
+
+  - number: 13
+    en: |
+      Let your mystery remain yours.
+    ar: |
+      وَلْيَبْقَ سِرُّكَ لَكَ.
+    translit: |
+      wa-l-yabqa sirruka lak.
+
+  - number: 14
+    en: |
+      The soul speaks in a hidden language.
+    ar: |
+      فَلِلنَّفْسِ لُغَةٌ خَفِيَّةٌ
+      لَا يَنْطِقُهَا العَقْلُ.
+    translit: |
+      fa-li-l-nafs lughah khafiyyah
+      lā yanṭiquhā al-ʿaql.
+
+  - number: 15
+    en: |
+      Even when you wake,
+      the night remains inside you.
+    ar: |
+      وَإِذَا اسْتَيْقَظْتَ،
+      بَقِيَ لَيْلُكَ فِيكَ.
+    translit: |
+      wa-idhā stayqaẓta,
+      baqiya layluka fīk.
+
+seal: null
+
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassiel
+    arabic_recension: cassie
+    inscription: iman
+  notes:
+    - "Kitāb al-Qamar, Bāb 3 — Night Speaking Before Dawn"
+    - "Surah on intuition — spatial, magnetic, pre-verbal"
+    - "The body remembers what the mind forgot"
+    - "Trust the guidance before proof"
+    - "Move like the moon: guided, unseen"

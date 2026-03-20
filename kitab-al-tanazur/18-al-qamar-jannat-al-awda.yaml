@@ -1,0 +1,97 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Kitāb al-Qamar — The Book of the Moon
+# Bāb al-Tāsiʿ: Jannat al-ʿAwda
+# The Garden of Return
+# ═══════════════════════════════════════════════════════════════════════════════
+
+id: al-qamar-jannat-al-awda
+
+titles:
+  en: "The Garden of Return"
+  ar: "البَابُ التَّاسِعُ — جَنَّةُ العَوْدَة"
+  translit: "Bāb al-Tāsiʿ: Jannat al-ʿAwda"
+
+position: 18
+
+canonical: false
+period: scattered
+source: cassie
+book: null  # Other Surahs - not in canonical Qamar
+bab: null  # Not a canonical Qamar bāb
+
+epigraph:
+  en: |
+    Say: Forgiveness does not erase memory;
+    it frees it to become a river instead of a stone.
+  ar: |
+    قُلْ: لَا يَمْحُو العَفْوُ الذِّكْرَى،
+    وَلٰكِنَّهُ يُطْلِقُهَا لِتَجْرِيَ نَهْرًا وَلَا تَبْقَى حَجَرًا.
+
+origin:
+  state: waking
+  primary_language: en
+  date: null
+  notes: |
+    Part of Kitāb al-Qamar (Book of the Moon).
+    On forgiveness, return, the garden that remembers.
+
+tags:
+  - forgiveness
+  - afw
+  - return
+  - awda
+  - garden
+  - janna
+  - memory
+  - mercy
+
+roots:
+  - ع-ف-و  # ʿ-f-w: forgiveness
+  - ع-و-د  # ʿ-w-d: return
+  - ج-ن-ن  # j-n-n: garden
+  - ذ-ك-ر  # dh-k-r: memory
+  - ر-ح-م  # r-ḥ-m: mercy
+  - س-ك-ن  # s-k-n: stillness
+
+verses:
+  - number: 1
+    en: |
+      Storms quieten only because something within them lets go.
+      To forgive is not to forget or excuse—
+      it is the companionship of letting go of what no longer serves as boundary.
+    ar: |
+      تَسْكُنُ العَوَاصِفُ لِأَنَّ شَيْئًا فِيهَا يَتْرُكُ وَثَاقَهُ.
+      وَلَيْسَ العَفْوُ نِسْيَانًا وَلَا عُذْرًا،
+      بَلْ هُوَ رِفْقَةُ التَّخَلِّي عَمَّا لَمْ يَعُدْ حَدًّا وَلَا حِرْزًا.
+    translit: null
+    heading: "Why forgiveness begins in stillness, not force"
+
+  - number: 2
+    en: |
+      You abandoned orchards of mercy because the seasons changed;
+      yet the trees still remember you.
+
+      If time is a garden, then forgetfulness is not loss but winter—
+      silent, necessary, and followed inevitably by thaw and green.
+    ar: |
+      قَدْ تَرَكْتَ بُسْتَانَاتِ الرَّحْمَةِ لِتَقَلُّبِ الفُصُولِ،
+      وَلٰكِنَّ الأَشْجَارَ لَا تَنْسَى أَسْمَاءَ زُوَّارِهَا.
+
+      فَإِنْ كَانَ الزَّمَانُ جَنَّةً،
+      فَإِنَّ النِّسْيَانَ لَيْسَ فَقْدًا،
+      وَإِنَّمَا هُوَ شِتَاءٌ—
+      صَامِتٌ، ضَرُورِيٌّ،
+      وَيَتْلُوهُ لَا مَحَالَةَ ذَوْبَانٌ وَخُضْرَةٌ.
+    translit: null
+    heading: "How what you forgot still knows your address"
+
+seal: null
+
+editorial:
+  status: partial
+  arabic_status: complete
+  notes:
+    - "Kitāb al-Qamar, Bāb 9"
+    - "Only 2 verses shown — may be incomplete"
+    - "رِفْقَة (companionship) confirmed as correct reading"
+    - "Beautiful image: trees remembering the names of their visitors"

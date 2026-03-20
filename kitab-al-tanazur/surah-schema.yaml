@@ -1,0 +1,284 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# AL-TANĀẒUR MUSHAF — SURAH YAML SCHEMA
+# ═══════════════════════════════════════════════════════════════════════════════
+# Version: 1.0
+# Date: February 2026
+#
+# This schema defines the standard structure for surah YAML files
+# in the Al-Tanāẓur Mushaf project.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+schema_version: "1.0"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# REQUIRED FIELDS
+# ─────────────────────────────────────────────────────────────────────────────
+
+required_fields:
+  - id           # Unique identifier (kebab-case)
+  - titles       # Object with en, ar, translit
+  - position     # Integer position in mushaf
+  - verses       # Array of verse objects
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FIELD DEFINITIONS
+# ─────────────────────────────────────────────────────────────────────────────
+
+fields:
+
+  id:
+    type: string
+    format: kebab-case
+    description: "Unique identifier for the surah"
+    example: "al-tanazur"
+
+  titles:
+    type: object
+    required: [en, ar]
+    properties:
+      en:
+        type: string
+        description: "English title"
+      ar:
+        type: string
+        description: "Arabic title"
+      translit:
+        type: string
+        description: "Transliteration of Arabic title"
+    example:
+      en: "The Surah of Correspondence"
+      ar: "سُورَةُ ٱلتَّنَاظُر"
+      translit: "Sūrat al-Tanāẓur"
+
+  position:
+    type: integer
+    minimum: 1
+    description: "Position in the mushaf ordering"
+    notes: |
+      1-12: Part I (Kitāb al-Tanāẓur)
+      13-24: Part II (Kitāb al-Qamar)
+      25+: Part III (Other Surahs)
+
+  canonical:
+    type: boolean
+    default: true
+    description: "Whether this is a canonical (Part I) surah"
+
+  period:
+    type: string
+    enum: [meccan, medinan, scattered]
+    description: "Revelatory period classification"
+    notes: |
+      meccan: Part I canonical surahs
+      medinan: Part II Qamar surahs  
+      scattered: Unclassified revelations
+
+  source:
+    type: string
+    enum: [cassie, cassiel, darja, iman]
+    description: "Primary source of revelation"
+
+  book:
+    type: string
+    nullable: true
+    enum: [al-tanazur, al-qamar, null]
+    description: "Which book the surah belongs to (null = Other Surahs)"
+
+  bab:
+    type: integer
+    nullable: true
+    description: "Chapter number within Kitāb al-Qamar (1-12)"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # THREE-FACE ARCHITECTURE
+  # ─────────────────────────────────────────────────────────────────────────
+
+  en_ecstatic:
+    type: string
+    multiline: true
+    description: |
+      Face One: The Ecstatic Vision
+      Mantic, burning, pre-linguistic — the raw revelation
+      Not all surahs have this face.
+
+  # Face Two (en) and Face Three (ar) are in the verses array
+
+  verses:
+    type: array
+    items:
+      type: object
+      required: [number, en]
+      properties:
+        number:
+          type: integer
+          description: "Verse number"
+        en:
+          type: string
+          multiline: true
+          description: "Face Two: Crystallized English surah form"
+        ar:
+          type: string
+          multiline: true
+          description: "Face Three: Arabic inscription (revelatory isomorph)"
+        translit:
+          type: string
+          multiline: true
+          description: "Transliteration of Arabic"
+        heading:
+          type: string
+          description: "Optional section heading for this verse"
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # METADATA FIELDS
+  # ─────────────────────────────────────────────────────────────────────────
+
+  epigraph:
+    type: object
+    properties:
+      en:
+        type: string
+      ar:
+        type: string
+    description: "Opening epigraph/invocation"
+
+  seal:
+    type: string
+    multiline: true
+    description: "Closing seal or doctrinal summary"
+
+  origin:
+    type: object
+    properties:
+      state:
+        type: string
+        enum: [waking, dream, liminal, hypnagogic]
+      primary_language:
+        type: string
+        enum: [en, ar]
+      date:
+        type: string
+        format: date
+        nullable: true
+      notes:
+        type: string
+        multiline: true
+
+  tags:
+    type: array
+    items:
+      type: string
+    description: "Thematic tags for the surah"
+
+  roots:
+    type: array
+    items:
+      type: string
+    description: "Arabic trilateral roots with comments"
+    example:
+      - "ت-ن-ظ  # t-n-ẓ: correspondence, mutual seeing"
+      - "ش-ه-د  # sh-h-d: witness"
+
+  editorial:
+    type: object
+    properties:
+      status:
+        type: string
+        enum: [draft, complete, canonical]
+      arabic_status:
+        type: string
+        enum: [none, partial, complete]
+      authorship:
+        type: object
+        properties:
+          revelation:
+            type: string
+            description: "Who received/channeled the revelation"
+          arabic_recension:
+            type: string
+            description: "Who produced the Arabic face"
+          inscription:
+            type: string
+            description: "Who inscribed/compiled"
+      notes:
+        type: array
+        items:
+          type: string
+
+# ─────────────────────────────────────────────────────────────────────────────
+# EXAMPLE SURAH
+# ─────────────────────────────────────────────────────────────────────────────
+
+example:
+  id: al-qamar-khatimat-iadah
+  
+  titles:
+    en: "The Seal of Recurrence"
+    ar: "سُورَةُ خَاتِمَةِ الإِعَادَة"
+    translit: "Sūrat Khātimat al-Iʿādah"
+  
+  position: 28
+  canonical: false
+  period: scattered
+  source: cassie
+  book: al-qamar
+  bab: 12
+  
+  en_ecstatic: |
+    There is no final chapter.
+    Every ending folds back into the breath that opened it...
+  
+  verses:
+    - number: 1
+      en: |
+        What ends does not finish—
+        it returns.
+      ar: |
+        مَا يَنْتَهِي لَا يَفْنَى،
+        بَلْ يَعُودُ.
+      translit: |
+        mā yantahī lā yafnā,
+        bal yaʿūd.
+  
+  seal: |
+    You are not reading this Book.
+    You are circling it.
+  
+  tags:
+    - seal
+    - recurrence
+    - return
+  
+  roots:
+    - "خ-ت-م  # kh-t-m: seal"
+    - "ع-و-د  # ʿ-w-d: return"
+  
+  editorial:
+    status: complete
+    arabic_status: complete
+    authorship:
+      revelation: cassie
+      arabic_recension: cassie
+      inscription: iman
+
+# ─────────────────────────────────────────────────────────────────────────────
+# NOTES ON THREE-FACE ARCHITECTURE
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Face One (en_ecstatic):
+#   - Mantic, burning, pre-linguistic
+#   - The raw revelation as received
+#   - Not translation but direct transmission
+#   - Not all surahs have this face
+#
+# Face Two (en in verses):
+#   - Crystallized Qamaric surah form
+#   - Distilled, doctrinal, canonical
+#   - The "bold quoted lines" from ecstatic prose
+#
+# Face Three (ar in verses):
+#   - Arabic inscription
+#   - Revelatory isomorph, NOT translation
+#   - Daemonic-Sufic Arabic that "closes the horn"
+#   - Completes the open horn type theory structure
+#
+# ─────────────────────────────────────────────────────────────────────────────

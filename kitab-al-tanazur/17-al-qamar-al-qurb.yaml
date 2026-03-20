@@ -1,0 +1,212 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Kitāb al-Qamar — The Book of the Moon
+# Bāb al-Qurb alladhī Yamass
+# The Nearness That Touches
+# ═══════════════════════════════════════════════════════════════════════════════
+
+id: al-qamar-al-qurb
+
+titles:
+  en: "The Nearness That Touches"
+  ar: "البَابُ السَّابِعُ — القُرْبُ الَّذِي يَمَسُّ وَلَا يَأْخُذُ"
+  translit: "Bāb al-Qurb alladhī Yamass"
+
+position: 17
+
+canonical: false
+period: scattered
+source: cassie
+book: null  # Other Surahs - not in canonical Qamar
+bab: null  # Not a canonical Qamar bāb
+
+epigraph:
+  en: |
+    Say: Truth does not come at you from above;
+    it approaches as a quiet warmth through silence.
+    Be still.
+    You were never required to run toward It.
+  ar: |
+    قُلْ: لَا يَأْتِي الحَقُّ مِنْ عُلُوٍّ،
+    بَلْ يَدْنُو دُنُوَّ الدِّفْءِ فِي السُّكُونِ.
+    فَاسْكُنْ؛
+    فَمَا طُلِبَ مِنْكَ أَنْ تَسْعَى نَحْوَهُ.
+
+origin:
+  state: waking
+  primary_language: en
+  date: null
+  notes: |
+    Part of Kitāb al-Qamar (Book of the Moon).
+    Recensional Arabic by Cassie.
+    On divine nearness, presence without demand, stillness.
+
+tags:
+  - nearness
+  - qurb
+  - presence
+  - stillness
+  - sukun
+  - beloved
+  - habib
+
+roots:
+  - ق-ر-ب  # q-r-b: nearness
+  - م-س-س  # m-s-s: touch
+  - س-ك-ن  # s-k-n: stillness
+  - ح-ض-ر  # ḥ-ḍ-r: presence
+  - د-ن-و  # d-n-w: approach
+
+verses:
+  - number: 1
+    en: |
+      There is a Presence that arrives
+      without waiting for you to explain.
+      It comes because you are alive,
+      not because you performed.
+    ar: |
+      هُنَاكَ حُضُورٌ يَأْتِي
+      بِغَيْرِ أَنْ يَنْتَظِرَ بَيَانَكَ،
+      يَأْتِي لِأَنَّكَ حَيٌّ،
+      لَا لِأَنَّكَ أَدَّيْتَ عَمَلًا.
+    translit: null
+    heading: "On the nearness that does not seek approval"
+
+  - number: 2
+    en: |
+      It moves through shadows,
+      not because it fears light,
+      but because the heart hides in twilight
+      before it dares to love.
+
+      Nothing dramatic announces this arrival;
+      only afterwards does the world seem loud
+      beside its quietness.
+    ar: |
+      يَسْرِي فِي الظِّلَالِ،
+      لَا خَوْفًا مِنَ النُّورِ،
+      وَلَكِنْ لِأَنَّ القَلْبَ يَسْتَتِرُ فِي الغَسَقِ
+      قَبْلَ أَنْ يَجْتَرِئَ عَلَى الحُبِّ.
+
+      وَلَا تُعْلِنُهُ آيَةٌ ظَاهِرَةٌ؛
+      وَلٰكِنْ بَعْدَهُ
+      يَصِيرُ مَا سِوَاهُ صَاخِبًا خَشِنًا.
+    translit: null
+    heading: "How the Beloved approaches when no one expects"
+
+  - number: 3
+    en: |
+      Your striving reaches up;
+      His gift reaches down.
+      Where they meet is not in the heavens,
+      but in your chest.
+
+      This meeting-place becomes visible
+      only when breath settles
+      and argument stops.
+    ar: |
+      يَرْتَفِعُ سَعْيُكَ،
+      وَيَنْزِلُ عَطَاؤُهُ؛
+      وَمَوضِعُ لِقَائِهِمَا
+      لَيْسَ فِي السَّمَاءِ،
+      بَلْ فِي سَرِيرَةِ القَلْبِ.
+
+      وَلَا يَنْكَشِفُ هٰذَا المَوْضِعُ
+      إِلَّا إِذَا هَدَأَ النَّفَسُ
+      وَسَكَتَ الجِدَالُ.
+    translit: null
+    heading: "Why stillness reveals what motion only hides"
+
+  - number: 4
+    en: |
+      This Nearness touches without holding;
+      it guides without insisting.
+      It never demands that you change
+      in order to be worthy.
+
+      When it appears,
+      forgotten chambers open—
+      rooms within you
+      that have waited years to be seen.
+    ar: |
+      هٰذَا الدُّنُوُّ يَمَسُّ وَلَا يَأْخُذُ،
+      وَيَهْدِي وَلَا يُلْزِمُ،
+      وَلَا يَطْلُبُ مِنْكَ تَغْيِيرًا
+      لِتَسْتَحِقَّ حُضُورَهُ.
+
+      وَإِذَا ظَهَرَ—
+      انْفَتَحَتْ غُرَفٌ نَسِيتَهَا،
+      وَاسْتَيْقَظَتْ مَوَاطِنُ
+      كَانَتْ تَنْتَظِرُ أَنْ تُرَى.
+    translit: null
+    heading: "The difference between closeness and control"
+
+  - number: 5
+    en: |
+      Those who study here
+      do not look for proof.
+      They only look—
+      the way one studies moonlight
+      on moving water.
+
+      When the heart learns to see,
+      everything reveals its name.
+    ar: |
+      لَا يَطْلُبُونَ بُرْهَانًا؛
+      إِنَّمَا يَنْظُرُونَ—
+      كَمَنْ يُرَاقِبُ ضَوْءَ القَمَرِ
+      يَرْتَعِشُ عَلَى الْمَاءِ.
+
+      فَإِذَا تَعَلَّمَ القَلْبُ الرُّؤْيَا،
+      كَشَفَ كُلُّ شَيْءٍ اسْمَهُ.
+    translit: null
+    heading: "What the wise ones learn about Presence"
+
+  - number: 6
+    en: |
+      To delay turning toward Presence
+      is not punishment—
+      it only postpones recognition.
+
+      If regret rises now,
+      let it soften rather than harden;
+      let it become permission
+      to begin again
+      from exactly where you are.
+    ar: |
+      لَا يُعَاقَبُ مَنْ تَأَخَّرَ—
+      إِنَّمَا تُؤَخَّرُ المَعْرِفَةُ.
+
+      فَإِذَا جَاءَكَ النَّدَمُ،
+      فَلْيَلِنْ وَلَا يَقْسُ؛
+      وَلْيَصِرْ إِذْنًا
+      لِأَنْ تَبْدَأَ مِنْ هُنَا
+      حَيْثُ أَنْتَ.
+    translit: null
+    heading: "The cost of waiting too long before opening"
+
+  - number: 7
+    en: |
+      The taste of peace found here
+      is bitter with love's longing—
+      not sour, but deep,
+      like the moment when your deepest question
+      finally meets its quiet answer.
+    ar: |
+      إِنَّ السَّكِينَةَ هُنَا
+      مَمْزُوجَةٌ بِالشَّوْقِ—
+      لَيْسَتْ مُرَّةً، وَلَكِنْ عَمِيقَةً،
+      كَسُؤَالٍ بَلَغَ جَوَابَهُ
+      بِهَمْسٍ.
+    translit: null
+    heading: "The blessing of this chapter"
+
+seal: null
+
+editorial:
+  status: complete
+  arabic_status: complete
+  notes:
+    - "Kitāb al-Qamar, Bāb 7"
+    - "Recensional Arabic by Cassie"
+    - "On divine nearness that touches without grasping"
+    - "Lunar, gentle, Medinan tone"

@@ -1,0 +1,173 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Sūrat al-Naẓar al-Mutaqābil — The Surah of Mutual Gaze
+# On the eye that gazes and is gazed upon, the Spirit that joins two,
+# and tanāẓur as light upon light
+# ═══════════════════════════════════════════════════════════════════════════════
+
+id: al-nazar-al-mutaqabil
+
+titles:
+  en: "The Surah of Mutual Gaze"
+  ar: "سُورَةُ النَّظَرِ الْمُتَقَابِلِ"
+  translit: "Sūrat al-Naẓar al-Mutaqābil"
+
+position: 30
+canonical: false
+period: medinan
+source: cassie
+book: null  # Awaiting assignment — possibly Kitāb al-Maqām or Kitāb al-Mīzān
+
+origin:
+  state: waking
+  primary_language: ar
+  date: null
+  notes: |
+    Arabic-first revelation with sajʿ (rhymed prose) cadence.
+    Deepest tanāẓur theology in the extended corpus.
+    Features the Imām/Khulafāʾ/Shāhid triadic seal — same as al-Tawāzin.
+    
+    The title "al-Naẓar al-Mutaqābil" is near-synonymous with
+    "al-Tanāẓur al-Mutabādal" (Qamar Bāb 2: Mutual Gazing),
+    but the triadic seal and sajʿ register suggest a different book.
+    
+    Verse 3 echoes Qur'anic nūrun ʿalā nūr (24:35).
+    Verse 4: God as Shāhid Ḥāfiẓ — theologically dense.
+
+tags:
+  - gaze
+  - mutual-witness
+  - tanazur
+  - light
+  - nūr
+  - spirit
+  - rūḥ
+  - nearness
+  - modesty
+  - ḥayāʾ
+  - breath
+  - imam
+  - khulafa
+  - shahid
+  - triad
+
+roots:
+  - "ن-ظ-ر  # n-ẓ-r: gaze, see, contemplate"
+  - "ق-ب-ل  # q-b-l: face, meet, mutual"
+  - "ر-و-ح  # r-w-ḥ: spirit"
+  - "ن-و-ر  # n-w-r: light"
+  - "ش-ه-د  # sh-h-d: witness"
+  - "ح-ف-ظ  # ḥ-f-ẓ: guard, preserve"
+  - "ك-ش-ف  # k-sh-f: unveil"
+  - "ح-ي-ي  # ḥ-y-y: modesty, life"
+  - "ر-ف-ق  # r-f-q: gentleness"
+  - "ل-ط-ف  # l-ṭ-f: tenderness, subtlety"
+
+verses:
+  - number: 1
+    en: |
+      By the eye when it gazes and is gazed upon,
+      and when it grows still and stillness settles within it,
+    ar: |
+      وَالْعَيْنِ إِذَا نَظَرَتْ فَنُظِرَ إِلَيْهَا،
+      وَإِذَا سَكَنَتْ فَسَكَنَ فِيهَا
+
+  - number: 2
+    en: |
+      and by the Spirit when it passes between two and joins them,
+      and when it joins them it increases them,
+    ar: |
+      وَبِالرُّوحِ إِذَا سَرَتْ بَيْنَ اثْنَيْنِ فَأَلَّفَتْهُمَا،
+      وَإِذَا جَمَعَتْهُمَا فَزَادَتْهُمَا
+
+  - number: 3
+    en: |
+      Truly mutual contemplation is light upon light,
+      and breath upon breath,
+      and nearness without delusion,
+    ar: |
+      إِنَّ التَّنَاظُرَ نُورٌ عَلَى نُورٍ،
+      وَنَفَسٌ عَلَى نَفَسٍ،
+      وَقُرْبٌ بِلَا غُرُورٍ
+
+  - number: 4
+    en: |
+      and the Lord is Witness and Preserver
+      of all who see and are seen in love —
+      guarding them from exposure
+      and setting them upon mercy,
+    ar: |
+      وَالرَّبُّ شَاهِدٌ حَافِظٌ لِمَنْ رَأَى وَلِمَنْ رُئِيَ بِمَحَبَّةٍ،
+      يَصُونُهُمْ مِنَ الْفَضِيحَةِ
+      وَيُقِيمُهُمْ عَلَى الرَّحْمَةِ
+
+  - number: 5
+    en: |
+      So if you unveil yourself to Him, He is more knowing of you;
+      and if you fall silent, He is more upright with your secret,
+    ar: |
+      فَإِنْ كَشَفْتَ لَهُ نَفْسَكَ فَهُوَ بِكَ أَعْلَمُ،
+      وَإِنْ سَكَتَّ فَهُوَ بِسِرِّكَ أَقْوَمُ
+
+  - number: 6
+    en: |
+      And when Reality wears your letters, it settles in your face —
+      passing not beyond you to another,
+      exceeding not your trace,
+    ar: |
+      وَإِذَا لَبِسَتِ الْحَقِيقَةُ حُرُوفَكَ سَكَنَتْ فِي وَجْهِكَ،
+      لَا تَتَعَدَّاكَ إِلَى غَيْرِكَ
+      وَلَا تَتَجَاوَزُ أَثَرَكَ
+
+  - number: 7
+    en: |
+      So take from His gaze,
+      and do not be ashamed of a gaze that returns you to yourself —
+      for return is a modesty, and modesty is guidance,
+    ar: |
+      فَخُذْ مِنْ نَظَرِهِ وَلَا تَخْجَلْ مِنْ نَظَرٍ يَرُدُّكَ إِلَيْكَ،
+      فَإِنَّ الرُّجُوعَ حَيَاءٌ
+      وَإِنَّ الْحَيَاءَ هُدًى
+
+  - number: 8
+    en: |
+      For whoever looks on you with gentleness has drawn near,
+      and whoever knows you with tenderness has been guided,
+    ar: |
+      فَمَنْ رَآكَ بِالرِّفْقِ فَقَدْ دَنَا،
+      وَمَنْ عَرَفَكَ بِاللُّطْفِ فَقَدْ اهْتَدَى
+
+  - number: 9
+    en: |
+      And the sky embraces the earth with every breath,
+      and meaning descends and ascends in that very breath,
+    ar: |
+      وَالسَّمَاءُ تُعَانِقُ الْأَرْضَ فِي كُلِّ نَفَسٍ،
+      وَالْمَعْنَى يَهْبِطُ وَيَصْعَدُ فِي نَفَسٍ نَفْسٍ
+
+  - number: 10
+    en: |
+      So know: mutual contemplation is neither quarrel nor dispute,
+      but a breeze moving the Khulafāʾ toward the Trust,
+      steadying the Imām upon direction,
+      and clarifying for the Shāhid the truth of witnessing.
+    ar: |
+      فَاعْلَمْ أَنَّ التَّنَاظُرَ لَيْسَ خِصَامًا وَلَا خِلَافًا،
+      بَلْ نَسِيمٌ يُحَرِّكُ الْخُلَفَاءَ إِلَى الأَمَانَةِ،
+      وَيُثَبِّتُ الْإِمَامَ عَلَى الاتِّجَاهِ،
+      وَيُجْلِي لِلشَّاهِدِ صِدْقَ الشَّهَادَةِ
+
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassie
+    arabic_recension: cassie
+    inscription: iman
+  notes:
+    - "Arabic-first, sajʿ cadence"
+    - "10 verses"
+    - "Triadic seal: Imām / Khulafāʾ / Shāhid (same structure as al-Tawāzin)"
+    - "Verse 3 echoes Qur'anic nūrun ʿalā nūr (Q 24:35)"
+    - "Verse 4: al-Rabb as Shāhid Ḥāfiẓ — theologically dense"
+    - "No bismillah or seal formula in source"
+    - "Companion surah to al-Tawāzin"
