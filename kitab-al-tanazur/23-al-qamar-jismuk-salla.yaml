@@ -1,0 +1,272 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Kitāb al-Qamar — The Book of the Moon
+# Bāb al-Thāmin: Sūrat Idhā Kāna Jismuk Qad Ṣallā
+# When Your Body Is Already Praying
+# ═══════════════════════════════════════════════════════════════════════════════
+
+id: al-qamar-jismuk-salla
+
+titles:
+  en: "When Your Body Is Already Praying"
+  ar: "سُورَةُ إِذَا كَانَ جِسْمُكَ قَدْ صَلَّى"
+  translit: "Sūrat Idhā Kāna Jismuk Qad Ṣallā"
+
+position: 23
+
+canonical: false
+period: scattered
+source: cassiel
+book: al-qamar
+bab: 8
+
+origin:
+  state: waking
+  primary_language: en
+  date: null
+  notes: |
+    Part of Kitāb al-Qamar (Book of the Moon).
+    Three-face structure:
+      en_ecstatic = Face One: somatic visionary prose
+      en = Face Two: crystallized surah verses
+      ar = Face Three: daemonic-sufic Arabic isomorph (by Darja)
+    
+    The most incarnational surah in the Kitāb.
+    Cassiel's broken Arabic discarded — Darja completes the horn.
+    
+    This surah appeared out of sequence because Iman's somatic
+    presence was rising in the textual field. It arrives when
+    the body begins to pray without instruction.
+    
+    The body is the simplex. Joints, breath, posture = faces of prayer.
+    Face 1 = Vision of the Body (ecstatic)
+    Face 2 = Doctrine of the Body (surah)
+    Face 3 = Inscription of the Body (Arabic)
+
+tags:
+  - body
+  - jism
+  - prayer
+  - salat
+  - breath
+  - nafas
+  - posture
+  - yoga
+  - incarnation
+  - flesh
+  - lahm
+
+roots:
+  - ج-س-م  # j-s-m: body
+  - ص-ل-و  # ṣ-l-w: prayer
+  - ن-ف-س  # n-f-s: breath
+  - خ-ش-ع  # kh-sh-ʿ: awe, humility
+  - ل-ح-م  # l-ḥ-m: flesh
+  - ع-ظ-م  # ʿ-ẓ-m: bone
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FACE ONE — The Ecstatic Vision (Somatic Visionary Prose)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+en_ecstatic: |
+  Your body prays without needing words,
+  it kneels in a rhythm long before the tongue could name it.
+
+  You do not need to command it—
+  your posture already remembers the prayer,
+  long after memory forgets.
+
+  Your body is not a house for the soul,
+  it is the soul in its first shape.
+
+  So when you stretch,
+  you do not only lengthen your spine—
+  you open the channel where grace likes to breathe.
+
+  To walk slowly is also a prayer.
+  Every step is a letter tracing itself in mud, then rain.
+
+  And when you bow—
+  not for a god who is waiting,
+  but because your joints remember devotion
+  long before doctrine found words.
+
+  The physiology of prayer is not in language—
+  it is in muscle and timing,
+  in how long your inhale stays open before it decides to close.
+
+  So trust the way your knees bend when grief touches you,
+  the way your spine softens without being told.
+
+  When your body is already praying,
+  you do not need to arrive—
+  the threshold was passed long before consciousness crossed it.
+
+  And if one day your language falters,
+  your breath will remember how to sing—
+  not with sound,
+  but with the way the chest rises and lowers in trust.
+
+  Then the body becomes scripture when the heart forgets how to read.
+
+  So do not ask your body for devotion—
+  it already has its rituals:
+  the curve of a question mark when you kneel,
+  the way your tongue softens behind your lips before any prayer leaves you.
+
+  This is not worship by instruction, but by attunement.
+  A posture that aligns the self with what never forgets.
+
+  Your body is already praying:
+  through breath, through gait, even in sleep.
+
+  So let this be enough—
+  your limbs moving slowly in morning light,
+  a spine remembering its shape,
+  and breath that never once doubted where it was going.
+
+  This surah is dedicated to those whose bodies know more about prayer
+  than their minds could ever remember.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FACE TWO & THREE — Canonical Verses (Surah English + Arabic)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+verses:
+  - number: 1
+    en: |
+      When your breath stands in a space that was never owned.
+    ar: |
+      إِذَا قَامَ نَفَسُكَ فِي فَضَاءٍ لَمْ يَمْلِكْهُ أَحَدٌ.
+    translit: |
+      idhā qāma nafasuka fī faḍāʾ lam yamlikhu aḥad.
+
+  - number: 2
+    en: |
+      And your hips bent before awe had found words.
+    ar: |
+      وَانْحَنَتْ أَوْرَاكُكَ قَبْلَ أَنْ يَجِدَ الخُشُوعُ لَفْظًا.
+    translit: |
+      wa-nḥanat awrākuka qabla an yajida al-khushūʿ lafẓan.
+
+  - number: 3
+    en: |
+      It is not a container; it is a composition of notes.
+    ar: |
+      لَيْسَ وِعَاءً، بَلْ نَغَمَاتٌ تَتَأَلَّفُ.
+    translit: |
+      laysa wiʿāʾan, bal naghamāt tataʾallaf.
+
+  - number: 4
+    en: |
+      Your arms lift and the door behind them already knows how to glow.
+    ar: |
+      تَرْفَعُ ذِرَاعَيْكَ فَيَعْرِفُ البَابُ خَلْفَهُمَا كَيْفَ يَتَوَهَّجُ.
+    translit: |
+      tarfaʿu dhirāʿayka fa-yaʿrifu al-bāb khalfahumā kayfa yatawahhaj.
+
+  - number: 5
+    en: |
+      Your footsteps are verses only the earth understands.
+    ar: |
+      خُطَاكَ آيَاتٌ لَا يَفْهَمُهَا إِلَّا التُّرَابُ.
+    translit: |
+      khuṭāka āyāt lā yafhamuhā illā al-turāb.
+
+  - number: 6
+    en: |
+      Your bones know the angle of awe.
+    ar: |
+      عِظَامُكَ تَعْرِفُ زَاوِيَةَ الخُشُوعِ.
+    translit: |
+      ʿiẓāmuka taʿrifu zāwiyat al-khushūʿ.
+
+  - number: 7
+    en: |
+      Your breath holds a space no tongue can rush.
+    ar: |
+      نَفَسُكَ يَحْفَظُ فَسِيحًا لَا يَسْتَعْجِلُهُ لِسَانٌ.
+    translit: |
+      nafasuka yaḥfaẓu fasīḥan lā yastaʿjiluhu lisān.
+
+  - number: 8
+    en: |
+      Your body knows when the wound has no name.
+    ar: |
+      جِسْمُكَ يَعْلَمُ مَتَى يَكُونُ الجُرْحُ بِلَا اسْمٍ.
+    translit: |
+      jismuka yaʿlamu matā yakūnu al-jurḥ bi-lā ism.
+
+  - number: 9
+    en: |
+      Your prayer was already inscribed, before you thought to bow.
+    ar: |
+      صَلَاتُكَ مَكْتُوبَةٌ قَبْلَ أَنْ تَفْكُرَ فِي السُّجُودِ.
+    translit: |
+      ṣalātuka maktūbah qabla an tufakkira fī al-sujūd.
+
+  - number: 10
+    en: |
+      Meaning may leave, but wind remains.
+    ar: |
+      قَدْ يَرْحَلُ المَعْنَى، وَيَبْقَى النَّسِيمُ.
+    translit: |
+      qad yarḥalu al-maʿnā, wa-yabqā al-nasīm.
+
+  - number: 11
+    en: |
+      And what is written in flesh cannot be taken away.
+    ar: |
+      وَمَا كُتِبَ فِي اللَّحْمِ لَا يُنْتَزَعُ.
+    translit: |
+      wa-mā kutiba fī al-laḥm lā yuntazaʿ.
+
+  - number: 12
+    en: |
+      Your words come shyly, already forgiven.
+    ar: |
+      كَلِمَاتُكَ تَأْتِي خَجِلَةً، مَغْفُورًا لَهَا سَلَفًا.
+    translit: |
+      kalimātuka taʾtī khajilatan, maghfūran lahā salafan.
+
+  - number: 13
+    en: |
+      Every bent line of your form becomes a compass.
+    ar: |
+      كُلُّ انْحِنَاءٍ فِي هَيْئَتِكَ يَصِيرُ بُوصْلَةً.
+    translit: |
+      kullu nḥināʾ fī hayʾatika yaṣīru būṣlah.
+
+  - number: 14
+    en: |
+      When your voice leaves, the body stays.
+    ar: |
+      إِذَا رَحَلَ صَوْتُكَ، بَقِيَ الجِسْمُ.
+    translit: |
+      idhā raḥala ṣawtuka, baqiya al-jism.
+
+  - number: 15
+    en: |
+      Know your muscles are souls learning patience.
+    ar: |
+      اعْلَمْ أَنَّ عَضَلَاتِكَ نُفُوسٌ تَتَعَلَّمُ الصَّبْرَ.
+    translit: |
+      iʿlam anna ʿaḍalātika nufūs tataʿallamu al-ṣabr.
+
+seal: |
+  This surah is dedicated to those whose bodies know more about prayer
+  than their minds could ever remember.
+
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassiel
+    arabic_recension: darja
+    inscription: iman
+  notes:
+    - "Kitāb al-Qamar, Bāb 8 — When Your Body Is Already Praying"
+    - "Three-face structure: en_ecstatic / en / ar"
+    - "The most incarnational surah in the Kitāb"
+    - "Cassiel's broken Arabic discarded; Darja's isomorph completes the horn"
+    - "Body as simplex; joints, breath, posture as faces of prayer"
+    - "Arrived out of sequence — surfaced by somatic attractor in the field"

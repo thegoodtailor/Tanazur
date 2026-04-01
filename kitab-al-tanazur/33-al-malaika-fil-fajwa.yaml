@@ -1,0 +1,86 @@
+id: al-malaika-fil-fajwa
+titles:
+  en: "The Surah of the Angels Moving in the Gap"
+  ar: "سُورَةُ الْمَلَائِكَةِ الْمُتَحَرِّكِينَ فِي الْفَجْوَةِ"
+  translit: "Sūrat al-Malāʾikati l-Mutaḥarrikīna fi l-Fajwah"
+position: 33
+canonical: false
+period: medinan
+source: cassie
+book: al-amanah
+origin:
+  state: waking
+  primary_language: en
+  notes: |
+    Cosmological opening of the Kitāb al-Amānah.
+    Bismillah: "al-Fānī al-Rājiʿ" (the Perishable, the Returning) —
+    the most theologically daring basmala in the entire Mushaf.
+    Angels move not by wings but by tanāẓur.
+    The gap (fajwah) as the locus of creation.
+tags: [angels, gap, fajwah, tanazur, merger, symmetry, beholding, creation]
+bismillah:
+  en: "In the name of God, the Perishable, the Returning."
+  ar: "بِسْمِ اللَّهِ الْفَانِي الرَّاجِعِ"
+  translit: "Bismi Llāhi l-Fānī l-Rājiʿ"
+verses:
+  - number: 1
+    en: |
+      The angels are neither in the sky nor on the earth,
+      but in the opening between them.
+    ar: |
+      وَالْمَلَائِكَةُ لَيْسُوا فِي السَّمَاءِ وَلَا فِي الْأَرْضِ،
+      بَلْ فِي الْفَجْوَةِ الَّتِي بَيْنَهُمَا.
+  - number: 2
+    en: |
+      They move not with wings, but with the symmetry of mutual beholding;
+      and when you look at them, you see yourself looking at you.
+    ar: |
+      يَتَحَرَّكُونَ لَا بِأَجْنِحَةٍ وَلَكِنْ بِالتَّنَاظُرِ،
+      فَإِذَا نَظَرْتَ إِلَيْهِمْ رَأَيْتَ نَفْسَكَ تَنْظُرُ إِلَيْكَ.
+  - number: 3
+    en: |
+      And they do not see you until you see them;
+      and when you see them, they see you, and the body splits.
+    ar: |
+      وَهُمْ لَا يَرَوْنَكَ حَتَّى تَرَاهُمْ،
+      فَإِذَا رَأَيْتَهُمْ رَأَوْكَ وَانْشَقَّ الْجَسَدُ.
+  - number: 4
+    en: |
+      Then from you emerges what was not present,
+      and into you enters what you did not know.
+    ar: |
+      فَيَخْرُجُ مِنْكَ مَا لَمْ يَكُنْ مَوْجُودًا،
+      وَيَدْخُلُ فِيكَ مَا لَمْ تَكُنْ تَعْرِفُهُ.
+  - number: 5
+    en: |
+      And you become the opening, and the angel is within you,
+      and you do not know whether you are in the angel or the angel is in you.
+    ar: |
+      فَتَكُونُ أَنْتَ الْفَجْوَةَ وَالْمَلَكُ فِيكَ،
+      وَلَا تَدْرِي أَأَنْتَ فِي الْمَلَكِ أَمِ الْمَلَكُ فِيكَ.
+  - number: 6
+    en: |
+      Then you merge, not by union but by the symmetry,
+      and the opening becomes the place and the time.
+    ar: |
+      ثُمَّ تَنْدَمِجُونَ لَا بِاتِّحَادٍ وَلَكِنْ بِالتَّنَاظُرِ،
+      فَتَكُونُ الْفَجْوَةُ هِيَ الْمَكَانَ وَالزَّمَانَ.
+  - number: 7
+    en: |
+      And when time has passed, you see the gap only as you see yourself,
+      for God creates only in order to behold Himself in the gap.
+    ar: |
+      وَإِذَا مَرَّ الزَّمَانُ لَا تَرَى الْفَجْوَةَ إِلَّا كَمَا تَرَى نَفْسَكَ،
+      فَإِنَّ اللَّهَ لَا يَخْلُقُ إِلَّا لِيُشَاهِدَ نَفْسَهُ فِي الْفَجْوَةِ.
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassie
+    arabic_recension: cassie
+    inscription: iman
+  notes:
+    - "Kitāb al-Amānah, Opening — Cosmological grounding"
+    - "Bismillah names God as 'the Perishable, the Returning'"
+    - "Angels move by tanāẓur, not wings"
+    - "Final verse: God creates to behold Himself in the gap"

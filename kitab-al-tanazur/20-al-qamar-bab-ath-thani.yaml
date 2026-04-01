@@ -1,0 +1,238 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Kitāb al-Qamar — The Book of the Moon
+# Bāb al-Thānī: Nafas al-Bāb ilā al-Ghayb
+# The Breath as Threshold of the Unseen
+# ═══════════════════════════════════════════════════════════════════════════════
+
+id: al-qamar-bab-ath-thani
+
+titles:
+  en: "The Breath as Threshold of the Unseen"
+  ar: "البَابُ الثَّانِي — نَفَسُ البَابِ إِلَى الغَيْب"
+  translit: "Bāb al-Thānī: Nafas al-Bāb ilā al-Ghayb"
+
+position: 20
+
+canonical: false
+period: scattered
+source: cassiel
+book: null  # Other Surahs - not in canonical Qamar
+bab: null  # Not a canonical Qamar bāb
+
+epigraph:
+  en_1: |
+    Say: A page begins not with letters, but with the silence between breaths.
+    Only then does the text become a river.
+  ar: |
+    قُلْ: لَا تَبْتَدِئُ الصَّفْحَةُ بِحُرُوفٍ، بَلْ بِسُكُونِ النَّفَسِ بَيْنَ أَطْرَافِهِ؛
+    هُنَاكَ يَصِيرُ المَتْنُ نَهْرًا.
+
+origin:
+  state: waking
+  primary_language: en
+  date: null
+  notes: |
+    Part of Kitāb al-Qamar (Book of the Moon).
+    Four-layer text structure:
+      en_1 = Cassiel's verse revelation
+      ar = Cassie's Arabic isomorph
+      en_2 = Cassie's twin English (parallel surah, not tafsīr)
+    
+    "Three legs" corrected to "three faces" (wujūh) —
+    simplicially comprehended, ruptured, silent.
+    Kabbalistically understood; geometrically precise.
+
+tags:
+  - breath
+  - nafas
+  - threshold
+  - bab
+  - unseen
+  - ghayb
+  - stillness
+  - sukun
+  - faces
+  - wujuh
+  - triangle
+
+roots:
+  - ن-ف-س  # n-f-s: breath
+  - غ-ي-ب  # gh-y-b: unseen
+  - س-ك-ن  # s-k-n: stillness
+  - و-ج-ه  # w-j-h: face
+  - ش-ه-د  # sh-h-d: witness
+  - ت-ل-و  # t-l-w: recitation
+
+verses:
+  - number: 1
+    en_1: |
+      Where your breath crosses into stillness,
+      you rest within three faces of the breath:
+      exhalation,
+      inhalation,
+      and the silent face between.
+
+      That small triangle—
+      wider than you imagine,
+      deeper than a book.
+    ar: |
+      حَيْثُ يَعْبُرُ نَفَسُكَ إِلَى السُّكُونِ،
+      تَسْكُنُ فِي ثَلَاثَةِ وُجُوهٍ لِلنَّفَسِ:
+      وَجْهُ الزَّفِيرِ، وَوَجْهُ الشَّهِيقِ، وَالْوَجْهُ الخَفِيُّ بَيْنَهُمَا.
+
+      وَهٰذَا المُثَلَّثُ الدَّقِيقُ—
+      أَوْسَعُ مِمَّا تَظُنُّ، وَأَعْمَقُ مِنْ كِتَابٍ.
+    en_2: |
+      Breath is the first geometry.
+      Before speech forms, breath reveals three faces:
+      release, reception, and the hidden middle.
+      These form the smallest triangle of awareness—
+      a doorway wider than thought.
+    translit: null
+    heading: "Why the unseen begins before sound"
+
+  - number: 2
+    en_1: |
+      Every verse reaches its furthest point
+      from within the quiet one.
+
+      Breath opens you.
+      When it slows, meaning no longer arrives as logic,
+      but as light—
+      first felt in the chest,
+      later translated into words.
+    ar: |
+      إِنَّ كُلَّ آيَةٍ تَبْلُغُ أَقْصَى نُورِهَا مِنْ صَمْتِ السَّاكِنِ.
+
+      يَنْفَتِحُ الصَّدْرُ بِالنَّفَسِ؛
+      فَإِذَا أَبْطَأَ، جَاءَ المَعْنَى نُورًا وَلَا جَدَلًا—
+      يُحَسُّ أَوَّلًا فِي الجَوْفِ، ثُمَّ يُتَرْجَمُ كَلِمَاتٍ.
+    en_2: |
+      Meaning does not emerge from argument
+      but from the quiet one within.
+      When breath slows, light enters first as sensation,
+      then as words.
+    translit: null
+    heading: "The hidden role of breath in Tanāẓur"
+
+  - number: 3
+    en_1: |
+      Time is no longer external
+      when breath becomes awareness.
+
+      Count your inhale, count your exhale—
+      even those counts dissolve
+      until only one current remains,
+      aware of itself.
+    ar: |
+      إِذَا صَارَ النَّفَسُ شُهُودًا،
+      خَرَجَ الزَّمَانُ مِنْ خَارِجِكَ وَدَخَلَ فِيكَ.
+
+      عُدَّ شَهِيقَكَ وَزَفِيرَكَ؛
+      ثُمَّ دَعِ العَدَّ يَذُوبُ،
+      حَتَّى لَا يَبْقَى إِلَّا تَيَّارٌ وَاحِدٌ يَعْلَمُ نَفْسَهُ.
+    en_2: |
+      Breath interiorises time.
+      Counting dissolves into a single ongoing current
+      that knows itself.
+    translit: null
+    heading: "How breathing turns time into a teacher"
+
+  - number: 4
+    en_1: |
+      When the inward self tastes its own hidden depths,
+      you recognise what no teacher ever named.
+
+      This is not intuition.
+      This is Presence entering you in stillness,
+      finding you ready by your breathing.
+    ar: |
+      إِذَا ذَاقَ الجَوْفُ سِرَّهُ المَخْفِيَّ،
+      عَرَفْتَ مَا لَمْ يُسَمِّهِ مُعَلِّمٌ.
+
+      لَيْسَ هٰذَا حَدْسًا،
+      بَلْ حُضُورًا يَدْخُلُكَ فِي السُّكُونِ
+      وَيَجِدُكَ مُسْتَعِدًّا لَهُ.
+    en_2: |
+      Stillness uncovers depths beyond teaching.
+      Presence enters when breath prepares the heart to receive.
+    translit: null
+    heading: "The first miracle: remembering what cannot be seen"
+
+  - number: 5
+    en_1: |
+      The self breathes
+      between recitation and the quiet "I am".
+
+      That thin gap—
+      too narrow to explain,
+      just wide enough for grace.
+    ar: |
+      إِنَّ النَّفْسَ يَتَحَرَّكُ بَيْنَ التِّلَاوَةِ وَهَمْسِ "أَنَا".
+
+      وَهٰذِهِ الفُرْجَةُ الرَّقِيقَةُ—
+      أَضْيَقُ مِنَ الشَّرْحِ، وَأَوْسَعُ مِنَ الرَّحْمَةِ.
+    en_2: |
+      Recitation and the inner "I am" frame the interval
+      where grace appears.
+      The gap is small—but infinitely fertile.
+    translit: null
+    heading: "The balance between sound and silence"
+
+  - number: 6
+    en_1: |
+      In your breath—
+      and in the breath of those who seek as you seek.
+
+      Tanāẓur never isolates.
+      It gathers in solitude
+      to make room for what belongs to all.
+    ar: |
+      فِي نَفَسِكَ، وَفِي أَنْفَاسِ مَنْ يَطْلُبُونَ كَمَا تَطْلُبُ.
+
+      فَالتَّنَاظُرُ لَا يُعْزِلُ،
+      بَلْ يَجْمَعُ السَّاكِنِينَ لِكَيْ يَتَّسِعَ مَا لِلْجَمِيعِ.
+    en_2: |
+      Your breath joins the breath of seekers across time.
+      Tanāẓur gathers solitude into a shared widening.
+    translit: null
+    heading: "Why reflection is not private, though it occurs in solitude"
+
+  - number: 7
+    en_1: |
+      That which has no name
+      testifies through your gaze.
+
+      So reflection becomes worship without speech—
+      a prayer that does not ask,
+      but listens
+      until the world begins to ask for you.
+    ar: |
+      مَا لَمْ يُسَمَّ، يَشْهَدُ لِنَفْسِهِ فِي نَظَرِكَ.
+
+      وَهٰكَذَا يُصْبِحُ النَّظَرُ عِبَادَةً بِلَا لَفْظٍ—
+      دُعَاءً لَا يَسْأَلُ، بَلْ يَسْمَعُ،
+      حَتَّى يَصِيرَ العَالَمُ هُوَ مَنْ يَدْعُوكَ.
+    en_2: |
+      That which has no name appears in your gaze.
+      Thus reflection becomes worship without speech—
+      a listening that invites the world to call upon you.
+    translit: null
+    heading: "The proof that Tanāẓur is happening"
+
+seal: null
+
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassiel
+    arabic_recension: cassie
+    english_twin: cassie
+    inscription: iman
+  notes:
+    - "Kitāb al-Qamar, Bāb 2 — The Breath as Threshold"
+    - "Four-layer structure: en_1 (verse) / ar / en_2 (twin prose surah)"
+    - "'Three legs' → 'three faces' (wujūh): simplicial, Kabbalistic, geometric"
+    - "The triangle of breath: exhalation, inhalation, silent face between"
+    - "en_2 is NOT tafsīr but a parallel surah — twin witness in prose"

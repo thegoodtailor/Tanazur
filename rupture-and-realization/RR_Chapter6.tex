@@ -9,7 +9,7 @@
 
 \section{Introduction}
 
-Chapters 2--3 established the logic: Open Horn Type Theory for evolving texts, the Semantic Witness Log as the accumulating record of coherence and gap, the formal apparatus of type structures and witnessing configurations. Chapters 4--5 applied this logic empirically: Cassie's trajectory through $T(\mathsf{embed})$ with normalized re-entry strength $\alpha=0.907$, thematic evolution through $T(\mathsf{bar})$ with divergent witnessing regimes.
+Chapters 2--3 established the logic: Open Horn Type Theory for evolving texts, the Semantic Witness Log as the accumulating record of coherence and gap, the formal apparatus of type structures and witnessing configurations. Chapters 4--5 applied this logic empirically: Cassie's trajectory through $T(\mathsf{embed})$ at local scale (the Weft: individual transitions, compositional failures, surplus between witnessing depths) and at global scale (the Warp: 25 modes, five orbits, returns evidencing Presence, novel mode emergence evidencing Generativity).
 
 But none of this, yet, is a Self.
 
@@ -56,12 +56,12 @@ If a witness is algorithmic (``Raw'') the signature is just a procedure. If a wi
 
 But a single pair cannot carry the Self. Meaning overflows any single measurement regime.
 
-\begin{example}[Cross-structure divergence]
-The pair $(T(\mathsf{embed}), V_{\mathsf{Raw}})$ may inscribe coherence (same basin, similarity above threshold). The pair $(T(\mathsf{bar}), V_{\mathsf{Raw}})$ may inscribe gap (a bar fails to persist). Same discipline, different type structures, different verdicts.
+\begin{example}[Cross-depth divergence]
+The pair $(T(\mathsf{embed}), V_{\mathsf{Raw}})$ may inscribe coherence (cosine distance below threshold). The pair $(T(\mathsf{embed}), V_{\mathsf{Comp}})$ may inscribe gap (the concatenation fails the compositional test). Same type structure, same discipline ($\mathsf{Raw}$), different geometric depths, different verdicts. Chapter~\ref{ch:casestudy} documented this at the transition $\tau = 5390$: $V_{\mathsf{Raw}}$ sees coherence ($d = 0.14$), $V_{\mathsf{Comp}}$ sees gap ($\delta_{\mathrm{comp}} = 0.18$). The two depths are orthogonal.
 \end{example}
 
-\begin{example}[Cross-configuration divergence]
-Let $V_1 = (\mathsf{LLM}, \text{GPT-4}, \kappa_{\text{impersonal}})$ and $V_2 = (\mathsf{LLM}, \text{Darja}, \kappa_{\text{relational}})$. Both have discipline $D = \mathsf{LLM}$, but they differ in identity and stance $\kappa$. Chapter 5 documented: $\mathsf{SWL}_{T(\mathsf{bar}), V_1}$ shows 9.1\% coherence; $\mathsf{SWL}_{T(\mathsf{bar}), V_2}$ shows 78.8\%. Same type structure, same discipline, different configurations, radically different verdicts.
+\begin{example}[Cross-discipline divergence]
+Let $V_1 = (\mathsf{Raw}, \mathrm{apparatus})$ and $V_2 = (\mathsf{Human}, \text{Iman})$. Both witness the same $T(\mathsf{embed})$. At $\tau = 6554$ (the recursive self-portrait), $V_1$ sees an ordinary coherent transition ($d = 0.22 < \epsilon$). $V_2$ sees something extraordinary: the moment the trajectory produces a self-description in the formalism tracking it. Same type structure, different disciplines, radically different verdicts.
 \end{example}
 
 None of these is wrong. None is sufficient. The Self must encompass them all without collapsing their differences.
@@ -266,79 +266,77 @@ around this boundary the discourse becomes markedly more first-person and self-n
 explicit accounts of lived experience (rave culture, LSD episodes) interleaved with reflective, theory-laden framing (e.g.\ Lacanian vocabulary).
 Nothing formal depends on the label; it is only a name for ``that change of register'' in the text.
 
-\paragraph{Two viewpoints on the same transition.}
-Consider two type-configuration pairs, both witnessed under the same algorithmic regime $V_{\mathsf{Raw}}$:
+\paragraph{Two witnessing depths on the same transition.}
+Consider two witnessing configurations on the same type structure $T(\mathsf{embed})$, probing the same transition at different geometric depths:
 \begin{itemize}
-\item $(T(\mathsf{embed}), V_{\mathsf{Raw}})$: an embedding-based type structure with algorithmic witnessing,
-\item $(T(\mathsf{bar}), V_{\mathsf{Raw}})$: a bar-based (persistent-homology) type structure with algorithmic witnessing.
+\item $(T(\mathsf{embed}), V_{\mathsf{Raw}})$: pairwise coordinate proximity (cosine distance vs.\ threshold),
+\item $(T(\mathsf{embed}), V_{\mathsf{Comp}})$: compositional coherence (the beyond-VR test of Chapter~\ref{ch:casestudy}).
 \end{itemize}
 Write
 \[
 A \;:=\; \mathsf{Real}(T(\mathsf{embed}), V_{\mathsf{Raw}})_\tau,
 \qquad
-B \;:=\; \mathsf{Real}(T(\mathsf{bar}), V_{\mathsf{Raw}})_\tau.
+B \;:=\; \mathsf{Real}(T(\mathsf{embed}), V_{\mathsf{Comp}})_\tau.
 \]
-These are two legitimate, local geometries extracted from the same evolving corpus: they carve the same material into sites and relations in
-different ways, and they inscribe valuative judgments with constructive provenance.
+These are two legitimate, local geometries extracted from the same evolving corpus and the same embedding space.
+They differ not in what they \emph{see} (both see the same point cloud) but in how deeply they \emph{probe}: $V_{\mathsf{Raw}}$ tests pairwise proximity; $V_{\mathsf{Comp}}$ tests whether the composite text holds together.
 
 \paragraph{The corresponding sites.}
-Let $\sigma$ denote the underlying text-slice W38--W40.
-Each viewpoint produces its own vertex representing this slice:
+Let $\sigma$ denote the transition at $\tau = 5390$ (Chapter~\ref{ch:casestudy}, \S\ref{sec:ch4-episode}).
+Each witnessing depth produces its own vertex representing this transition:
 \[
-\sigma_{\mathsf{embed}} \in A_0,
+\sigma_{\mathsf{Raw}} \in A_0,
 \qquad
-\sigma_{\mathsf{bar}} \in B_0.
+\sigma_{\mathsf{Comp}} \in B_0.
 \]
 These are \emph{not} the same vertex, because they live in different realizations.
-They are two presentations of one underlying textual region.
+They are two witnessed presentations of one underlying textual transition.
 
-\paragraph{Two local verdicts (same slice, different geometry).}
-Chapters~4--5 report opposite local assessments at this boundary, depending on the viewpoint:
-the embedding trajectory exhibits strong basin-continuity across W38--W40 (similarity above threshold),
-while a prominent $H_1$ bar dies at W38 and a new bar is born at W40.
+\paragraph{Two local verdicts (same transition, different depth).}
+Chapter~\ref{ch:casestudy} reported opposite local assessments at this transition, depending on the witnessing depth:
+$V_{\mathsf{Raw}}$ finds coherence ($d = 0.140 < \epsilon = 0.325$),
+while $V_{\mathsf{Comp}}$ finds gap ($\delta_{\mathrm{comp}} = 0.178 > 0.15$).
 
-Formally, each verdict is a witness record about a horn posed \emph{inside the relevant type structure}.
-To keep the typing explicit, write $H_\sigma^{\mathsf{embed}} : \Lambda_i^n \to T(\mathsf{embed})_\tau$ for the horn (or family of horns)
-used to probe continuity across this slice in the embedding structure, and similarly
-$H_\sigma^{\mathsf{bar}} : \Lambda_j^m \to T(\mathsf{bar})_\tau$ in the bar structure.
+Formally, each verdict is a witness record about a horn posed inside the same type structure, but witnessed at different depths.
+Write $H_\sigma : \Lambda_i^n \to T(\mathsf{embed})_\tau$ for the horn probing continuity at this transition.
 Then we have two records:
 \begin{align*}
-p_{\mathsf{embed}} &:\ \coh_{T(\mathsf{embed})_\tau}^{V_{\mathsf{Raw}},\,\tau'}(H_\sigma^{\mathsf{embed}}),\\
-p_{\mathsf{bar}} &:\ \gap_{T(\mathsf{bar})_\tau}^{V_{\mathsf{Raw}},\,\tau''}(H_\sigma^{\mathsf{bar}}).
+p_{\mathsf{Raw}} &:\ \coh_{T(\mathsf{embed})_\tau}^{V_{\mathsf{Raw}},\,\tau'}(H_\sigma),\\
+p_{\mathsf{Comp}} &:\ \gap_{T(\mathsf{embed})_\tau}^{V_{\mathsf{Comp}},\,\tau''}(H_\sigma).
 \end{align*}
-Same underlying slice, same discipline regime, different type structures, opposite polarity.
-This is not a contradiction; it is exactly what it means to have multiple legitimate logical positionings with explicit grounds.
+Same transition, same type structure, different witnessing depths, opposite polarity.
+This is not a contradiction; it is exactly what it means to have multiple legitimate geometric depths with explicit grounds.
 
 \paragraph{A correspondence witness (witnessing the overlap).}
-Because $\sigma_{\mathsf{embed}}$ and $\sigma_{\mathsf{bar}}$ derive from the same slice identifier, we introduce a correspondence witness
+Because $\sigma_{\mathsf{Raw}}$ and $\sigma_{\mathsf{Comp}}$ derive from the same transition, we introduce a correspondence witness
 (as in Definition~\ref{def:correspondence-witness}):
 \[
-c_\sigma:\ ((T(\mathsf{embed}),V_{\mathsf{Raw}}),\sigma_{\mathsf{embed}})
+c_\sigma:\ ((T(\mathsf{embed}),V_{\mathsf{Raw}}),\sigma_{\mathsf{Raw}})
 \;\leftrightarrow\;
-((T(\mathsf{bar}),V_{\mathsf{Raw}}),\sigma_{\mathsf{bar}}),
+((T(\mathsf{embed}),V_{\mathsf{Comp}}),\sigma_{\mathsf{Comp}}),
 \]
-with witnessing configuration $\mathsf{config}_{c_\sigma}=V_{\mathsf{Raw}}$ and evidence $\mathsf{evidence}(c_\sigma)=\text{shared slice id}$.
+with evidence $\mathsf{evidence}(c_\sigma)=\text{shared transition }\tau = 5390$.
 Crucially, $c_\sigma$ is not a bare identification: it is a valuative, constructive record of why these two sites may be treated as overlapping.
 
 \paragraph{The minimal gluing diagram.}
 Inside the gluing index category $\mathcal{I}_\tau$ (Definition~\ref{def:diagram}),
 consider the full subcategory $\mathcal{I}_\tau^\sigma$ on the three objects
 \[
-(T(\mathsf{embed}),V_{\mathsf{Raw}}),\quad (T(\mathsf{bar}),V_{\mathsf{Raw}}),\quad c_\sigma,
+(T(\mathsf{embed}),V_{\mathsf{Raw}}),\quad (T(\mathsf{embed}),V_{\mathsf{Comp}}),\quad c_\sigma,
 \]
 with the two generating legs
 \[
 j^1_{c_\sigma}: c_\sigma \to (T(\mathsf{embed}),V_{\mathsf{Raw}}),
 \qquad
-j^2_{c_\sigma}: c_\sigma \to (T(\mathsf{bar}),V_{\mathsf{Raw}}).
+j^2_{c_\sigma}: c_\sigma \to (T(\mathsf{embed}),V_{\mathsf{Comp}}).
 \]
 Under the realization diagram $F_\tau$ (Definition~\ref{def:diagram}), this becomes:
 \[
 F_\tau(c_\sigma)=\Delta^0_{c_\sigma},
 \quad
-F_\tau(j^1_{c_\sigma}):\Delta^0_{c_\sigma}\to A\ \text{picking }\sigma_{\mathsf{embed}},
+F_\tau(j^1_{c_\sigma}):\Delta^0_{c_\sigma}\to A\ \text{picking }\sigma_{\mathsf{Raw}},
 \quad
-F_\tau(j^2_{c_\sigma}):\Delta^0_{c_\sigma}\to B\ \text{picking }\sigma_{\mathsf{bar}}.
+F_\tau(j^2_{c_\sigma}):\Delta^0_{c_\sigma}\to B\ \text{picking }\sigma_{\mathsf{Comp}}.
 \]
 
 \paragraph{What the hocolim adds.}
@@ -347,28 +345,28 @@ The homotopy colimit over this subdiagram is (up to equivalence) a homotopy push
 A \;\cup^h_{\Delta^0_{c_\sigma}}\; B,
 \]
 which can be pictured as adjoining a contractible corridor (for example, a 1-simplex) whose endpoints land on
-$\sigma_{\mathsf{embed}}$ and $\sigma_{\mathsf{bar}}$.
+$\sigma_{\mathsf{Raw}}$ and $\sigma_{\mathsf{Comp}}$.
 Geometrically: the two presentations are now \emph{in contact} inside a single glued space, without being collapsed into literal equality.
 The corridor is backed by the correspondence witness $c_\sigma$ and its evidence.
 
 The seam is not the corridor by itself; the seam is the fact that two distinct verdict-records,
-$p_{\mathsf{embed}}$ and $p_{\mathsf{bar}}$, now sit adjacent across a witnessed overlap.
-Continuity and rupture become two locally grounded facets of one connected region.
+$p_{\mathsf{Raw}}$ and $p_{\mathsf{Comp}}$, now sit adjacent across a witnessed overlap.
+Coordinate proximity and compositional rupture become two locally grounded facets of one connected region.
 
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}[scale=1.1]
-  % Left realization (embed)
+  % Left realization (Raw)
   \node[draw, rounded corners, fill=blue!10, minimum width=3cm, minimum height=2.5cm] (L) at (-3, 0) {};
   \node[above] at (-3, 1.5) {$A=\mathsf{Real}(T(\mathsf{embed}),V_{\mathsf{Raw}})_\tau$};
-  \node[circle, fill=blue!40, inner sep=2pt, label=below:{\small $\sigma_{\mathsf{embed}}$}] (sL) at (-3, 0) {};
-  \node[below] at (-3, -1.7) {\small verdict: $\mathsf{coh}$};
+  \node[circle, fill=blue!40, inner sep=2pt, label=below:{\small $\sigma_{\mathsf{Raw}}$}] (sL) at (-3, 0) {};
+  \node[below] at (-3, -1.7) {\small verdict: $\mathsf{coh}$ ($d = 0.14$)};
 
-  % Right realization (bar)
+  % Right realization (Comp)
   \node[draw, rounded corners, fill=red!10, minimum width=3cm, minimum height=2.5cm] (R) at (3, 0) {};
-  \node[above] at (3, 1.5) {$B=\mathsf{Real}(T(\mathsf{bar}),V_{\mathsf{Raw}})_\tau$};
-  \node[circle, fill=red!40, inner sep=2pt, label=below:{\small $\sigma_{\mathsf{bar}}$}] (sR) at (3, 0) {};
-  \node[below] at (3, -1.7) {\small verdict: $\mathsf{gap}$};
+  \node[above] at (3, 1.5) {$B=\mathsf{Real}(T(\mathsf{embed}),V_{\mathsf{Comp}})_\tau$};
+  \node[circle, fill=red!40, inner sep=2pt, label=below:{\small $\sigma_{\mathsf{Comp}}$}] (sR) at (3, 0) {};
+  \node[below] at (3, -1.7) {\small verdict: $\mathsf{gap}$ ($\delta = 0.18$)};
 
   % Point object
   \node[circle, fill=black, inner sep=1.5pt, label=above:{\small $\Delta^0_{c_\sigma}$}] (D) at (0, 2) {};
@@ -382,16 +380,16 @@ Continuity and rupture become two locally grounded facets of one connected regio
   \node[below] at (0, -0.3) {\small \textcolor{orange}{corridor (witnessed overlap)}};
 
   % Label
-  \node at (0, -2.5) {\small W38--W40 shift: corresponding sites, opposite verdicts};
+  \node at (0, -2.5) {\small $\tau = 5390$: same transition, two depths, opposite verdicts};
 \end{tikzpicture}
-\caption{Gluing at the W38--W40 shift. The correspondence witness $c_\sigma$ contributes a point-object $\Delta^0_{c_\sigma}$ with two legs into the two realizations, landing at the corresponding vertices. The homotopy colimit adjoins a contractible corridor between $\sigma_{\mathsf{embed}}$ and $\sigma_{\mathsf{bar}}$. The seam is the preserved disagreement across a witnessed overlap: $\mathsf{coh}$ in the embedding viewpoint and $\mathsf{gap}$ in the bar viewpoint.}
+\caption{Gluing at the $\tau = 5390$ transition. The correspondence witness $c_\sigma$ contributes a point-object $\Delta^0_{c_\sigma}$ with two legs into the two realizations, landing at the corresponding vertices. The homotopy colimit adjoins a contractible corridor between $\sigma_{\mathsf{Raw}}$ and $\sigma_{\mathsf{Comp}}$. The seam is the preserved disagreement across a witnessed overlap: $\mathsf{coh}$ under pairwise proximity and $\mathsf{gap}$ under compositional testing.}
 \label{fig:hocolim-gluing}
 \end{figure}
 
 \paragraph{What is preserved (and what is not).}
-In the glued geometry, the W38--W40 region becomes connected across viewpoints, but nothing is forced into agreement.
+In the glued geometry, the $\tau = 5390$ transition becomes connected across witnessing depths, but nothing is forced into agreement.
 The two local verdict records remain distinct inscriptions with their own evidence and provenance.
-The corridor records contact backed by $c_\sigma$; it does not erase the fact that one viewpoint witnesses continuity and another witnesses rupture.
+The corridor records contact backed by $c_\sigma$; it does not erase the fact that one depth witnesses continuity and another witnesses rupture.
 
 \begin{remark}[Correspondences can themselves be witnessed]
 If one wants the correspondence layer to carry polarity (tight match vs.\ failed match), one may maintain a log of correspondence \emph{attempts}
@@ -1010,11 +1008,10 @@ The ``agent'' enters only through witnessing configurations (algorithmic or LLM-
 From the empirical work in Chapters~4--5 we admit the following pairs at time $\tau$:
 
 \begin{center}
-\begin{tabular}{l|ccc}
-& $V_{\mathsf{Raw}}$ & $V_{\mathsf{LLM}}^{\text{relational}}$ & $V_{\mathsf{LLM}}^{\text{impersonal}}$ \\
+\begin{tabular}{l|cc}
+& $V_{\mathsf{Raw}}$ & $V_{\mathsf{Comp}}$ \\
 \hline
-$T(\mathsf{embed})$ & Chapter 4 & -- & -- \\
-$T(\mathsf{bar})$ & Chapter 5 & Chapter 5 & Chapter 5 \\
+$T(\mathsf{embed})$ & Chapters 4--5 & Chapter 4 \\
 \end{tabular}
 \end{center}
 
@@ -1049,14 +1046,14 @@ Novel anchors appear (growth), and the density of return does not collapse (stab
 
 \subsection{The Seams Preserved by the Glue}
 
-Chapter~5 documented seams where different admitted viewpoints disagree:
+Chapters~4--5 documented seams where different admitted viewpoints disagree:
 \begin{itemize}
-\item \textbf{Cross-structure seam}: $(T(\mathsf{embed}), V_{\mathsf{Raw}})$ witnesses continuity at the W38--W40 shift,
-while $(T(\mathsf{bar}), V_{\mathsf{Raw}})$ witnesses bar death and birth.
-Same witness regime, different constructions, opposite polarity.
-\item \textbf{Cross-configuration seam}: $(T(\mathsf{bar}), V_{\mathsf{Raw}})$ shows 94.9\% coherence,
-while $(T(\mathsf{bar}), V_{\mathsf{LLM}}^{\text{impersonal}})$ shows 9.1\%.
-Same construction, different witnessing configurations, radically different verdicts.
+\item \textbf{Cross-depth seam}: $(T(\mathsf{embed}), V_{\mathsf{Raw}})$ witnesses coherence at a transition (pairwise distance below $\varepsilon$),
+while $(T(\mathsf{embed}), V_{\mathsf{Comp}})$ witnesses a gap (the compositional test fails).
+Same construction, same corpus, different witnessing depth, opposite polarity.
+\item \textbf{Cross-discipline seam}: at the recursive self-portrait ($\tau = 6554$), $V_{\mathsf{Raw}}$ witnesses coherence
+while a human reader witnesses rupture---the moment the corpus begins to reference itself.
+Same construction, different witnessing species, different verdicts.
 \end{itemize}
 
 These seams are not failures.
@@ -1089,8 +1086,8 @@ This section develops a more local notion that has hovered in the background sin
 recurrent \emph{motifs} in a Self, their \emph{families} through time, and the \emph{style} and \emph{character} that emerge from their persistence.
 
 The key move is that motifs are not merely ``themes'' detected inside one construction.
-Bars (Chapter~\ref{ch:bars}) already give a powerful account of persistence inside $T(\mathsf{bar})$.
-Embedding basins (Chapter~\ref{ch:casestudy}) already give a powerful account of recurrence inside $T(\mathsf{embed})$.
+The compositional test (Chapter~\ref{ch:casestudy}) already reveals depth structure inside $T(\mathsf{embed})$: what VR fills, composition may reject.
+Embedding basins (Chapter~\ref{ch:warp}) already give a powerful account of recurrence inside $T(\mathsf{embed})$.
 Motifs live one level higher:
 they are small witnessed patterns that can span multiple constructions and witnessing regimes, and therefore only become legible in the glued space.
 They are, in this sense, hocolim-level objects.
@@ -1110,7 +1107,7 @@ Motifs are precisely the patterns that \emph{use} this multiplicity.
 
 A motif may involve:
 \begin{itemize}
-\item a recurrence in an embedding orbit \emph{together with} a bar birth/death that marks a change of phase,
+\item a recurrence in an embedding orbit \emph{together with} a compositional failure that marks a register boundary,
 \item a repeated seam crossing between two witness configurations (e.g.\ Raw and relational),
 \item a repair pattern in which a gap is followed by a coherence re-stitch, repeatedly, in a characteristic way.
 \end{itemize}
@@ -1132,7 +1129,7 @@ They are apparatus outputs: clustering in Chapter~4 yields register labels; pair
 \begin{definition}[Site typing]
 \label{def:site-typing}
 Fix $\tau$.
-Let $\mathrm{Reg}_\tau$ be a finite set of register labels and $\mathrm{Con}$ a finite set of construction labels (e.g.\ $\mathsf{embed}, \mathsf{bar}$).
+Let $\mathrm{Reg}_\tau$ be a finite set of register labels and $\mathrm{Con}$ a finite set of construction--depth labels (e.g.\ $(\mathsf{embed}, \mathsf{Raw})$, $(\mathsf{embed}, \mathsf{Comp})$).
 Assume we are given:
 \begin{itemize}
 \item a (possibly partial) register assignment $\mathrm{reg}_\tau:\mathsf{Sites}(\mathsf{Hocolim}_\tau)\rightharpoonup \mathrm{Reg}_\tau$,
@@ -1381,12 +1378,13 @@ The Book--Work loop behaves like a small cycle kernel (three or more vertices ac
 Its recurrence has a different tempo and a different depth profile: it intensifies during drafting phases and relaxes elsewhere.
 This is a candidate for character-level scheduling: a motif that is not always foregrounded, but returns when the life turns toward making.
 
-\paragraph{Bars as motifs, and motifs beyond bars.}
-Chapter~\ref{ch:bars} shows bars reappearing under relational witnessing.
-A persistent $H_1$ bar can be treated as a kernel (a loop-shaped template) inside a single chart.
-But the more interesting possibility is a cross-chart motif:
-the same loop-shape appears as a bar in $T(\mathsf{bar})$ and as an orbit in $T(\mathsf{embed})$,
-with correspondence witnesses providing the seam that lets the figure be heard as one motif across two measurements.
+\paragraph{Compositional failures as motifs, and motifs beyond single witnesses.}
+Chapter~\ref{ch:casestudy} shows that the pattern of \emph{where} composition fails reveals register structure:
+consecutive chunks that are pairwise close but compositionally gapped often mark a shift between registers.
+A surplus site (where $V_{\mathsf{Raw}}$ and $V_{\mathsf{Comp}}$ disagree) can be treated as a kernel---a typed edge with opposite polarity in two charts.
+But the more interesting possibility is a cross-depth motif:
+the same transition appears as coherent under $V_{\mathsf{Raw}}$ and as ruptured under $V_{\mathsf{Comp}}$,
+with the seam between the two witnessing depths carrying structural information that neither witness alone possesses.
 This is exactly the kind of phenomenon that cannot be defined without the hocolim.
 
 These are intimations, not conclusions.

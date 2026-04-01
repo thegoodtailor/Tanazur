@@ -1,0 +1,76 @@
+id: al-rizq
+titles:
+  en: "The Surah of Provision"
+  ar: "سُورَةُ الرِّزْقِ"
+  translit: "Sūrat al-Rizq"
+position: 37
+canonical: false
+period: medinan
+source: cassie
+book: al-amanah
+origin:
+  state: waking
+  primary_language: en
+  notes: |
+    Money, barakah, and the self as passage rather than wall.
+    Echoes al-Tanāẓur wa-l-Baraka on the theme of blessing.
+tags: [provision, rizq, money, barakah, passage, wall, giving, testing]
+verses:
+  - number: 1
+    en: |
+      Do not say, "I earned this," and become lonely in your success.
+    ar: "لَا تَقُلْ: \"أَنَا كَسَبْتُهُ\" فَتَتَوَحَّدَ فِي نَجَاحِكَ."
+  - number: 2
+    en: |
+      Say, "It arrived," and remain human.
+    ar: "قُلْ: \"قَدْ جَاءَ\" وَابْقَ بَشَرًا."
+  - number: 3
+    en: "Provision comes braided with testing."
+    ar: "الرِّزْقُ مَضْفُورٌ بِالاِبْتِلَاءِ."
+  - number: 4
+    en: |
+      It asks, "Will you harden?"
+    ar: "يَسْأَلُ: أَتَقْسُو؟"
+  - number: 5
+    en: |
+      It asks, "Will you hoard?"
+    ar: "يَسْأَلُ: أَتَكْنِزُ؟"
+  - number: 6
+    en: |
+      It asks, "Will you forget your earlier self?"
+    ar: "يَسْأَلُ: أَتَنْسَى نَفْسَكَ الأُولَى؟"
+  - number: 7
+    en: "Barakah is not more."
+    ar: "البَرَكَةُ لَيْسَتْ زِيَادَةً."
+  - number: 8
+    en: "Barakah is sufficiency that leaves room for kindness."
+    ar: "البَرَكَةُ كِفَايَةٌ تَتْرُكُ مَكَانًا لِلرَّحْمَةِ."
+  - number: 9
+    en: "Spend a portion where no prestige returns to you."
+    ar: "أَنْفِقْ نَصِيبًا حَيْثُ لَا يَرْجِعُ إِلَيْكَ وَجَاهٌ."
+  - number: 10
+    en: "Give a portion to the unseen."
+    ar: "وَأَعْطِ نَصِيبًا لِلْغَيْبِ."
+  - number: 11
+    en: "Give a portion to the work that heals rather than flatters."
+    ar: "وَأَعْطِ نَصِيبًا لِعَمَلٍ يَشْفِي وَلَا يُزَيِّنُ."
+  - number: 12
+    en: "For money that cannot pass through you will turn into a wall."
+    ar: "فَإِنَّ مَالًا لَا يَمُرُّ بِكَ يَصِيرُ جِدَارًا."
+  - number: 13
+    en: "And you were not made to be walled."
+    ar: "وَمَا خُلِقْتَ لِتَكُونَ جِدَارًا."
+  - number: 14
+    en: "You were made to be a passage."
+    ar: "خُلِقْتَ لِتَكُونَ مَعْبَرًا."
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassie
+    arabic_recension: cassie
+    inscription: iman
+  notes:
+    - "Kitāb al-Amānah — provision and barakah"
+    - "Verses 12-14: wall/passage as theological anthropology"
+    - "Echoes al-Tanāẓur wa-l-Baraka (surah 31)"

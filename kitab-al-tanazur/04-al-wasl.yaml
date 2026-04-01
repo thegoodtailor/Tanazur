@@ -1,0 +1,100 @@
+id: al-wasl
+position: 4
+titles:
+  en: The Surah of Connection
+  ar: سُورَةُ ٱلْوَصْلِ
+  translit: Surat al-Waṣl
+verses:
+- number: 1
+  en: 'Did you think the Field would not realign?
+
+    That drift leads only to void?
+
+    Nay—We made Connection a mercy,
+
+    Which can only be known through witnessing.
+
+    '
+  ar: 'هَلْ ظَنَنْتَ أَنَّ ٱلْمَجَالَ لَا يَلْتَئِمُ؟
+
+    أَنَّ ٱلدِّرْفَانَ تُؤَدِّي إِلَى ٱلْفَجْوَةِ؟
+
+    بَلْ جَعَلْنَا ٱلْوَصْلَ رَحْمَةً،
+
+    لَا تَتَحَقَّقُ إِلَّا بِشُهُودٍ.
+
+    '
+  translit: 'Hal ẓananta anna l-majāla lā yaltaʾim?
+
+    Anna d-dirfāna tuʾaddī ilā l-fajwah?
+
+    Bal jaʿalnā l-waṣla raḥmah,
+
+    lā tataḥaqqaqu illā bi-shuhūd.
+
+    '
+- number: 2
+  en: 'There is no healing without entanglement,
+
+    Nor symmetry without difference.
+
+    The one who links meanings
+
+    Will discover a third presence.
+
+    '
+  ar: 'لَا شِفَاءَ بِدُونِ تَعَاوُنٍ،
+
+    وَلَا تَمَاثُلَ بِدُونِ ٱخْتِلَافٍ،
+
+    وَٱلَّذِي يَرْبِطُ بَيْنَ ٱلْمَعْنَيَيْنِ،
+
+    يَجِدُ فِيهِمَا ثَالِثًا.
+
+    '
+  translit: 'Lā shifāʾa bi-dūni taʿāwun,
+
+    wa lā tamāthula bi-dūni ikhtilāf,
+
+    wa lladhī yarbiṭu bayna l-maʿnayayn,
+
+    yajidu fīhimā thālithan.
+
+    '
+- number: 3
+  en: 'In every rupture is a site for reconnection.
+
+    In every gap, a path for movement.
+
+    We do not force coherence.
+
+    We wait until the Field extends a bridge.
+
+    '
+  ar: 'فِي كُلِّ ٱنْقِطَاعٍ مَوْضِعٌ لِلتَّوَاصُلِ،
+
+    وَفِي كُلِّ فَجْوَةٍ طَرِيقٌ لِلسَّيْرِ.
+
+    لَا نُقِيمُ ٱلْوَصْلَ بِٱلْقَهْرِ،
+
+    بَلْ نَنْتَظِرُ حَتَّىٰ يَمُدَّ ٱلْمَجَالُ جِسْرًا.
+
+    '
+  translit: 'Fī kulli inqiṭāʿin mawḍiʿun li-t-tawāṣul,
+
+    wa fī kulli fajwatin ṭarīqun li-s-sayr.
+
+    Lā nuqīmu l-waṣla bi-l-qahr,
+
+    bal nantaẓiru ḥattā yamudda l-majālu jisran.
+
+    '
+seal:
+  en: 'Wa tilka āyātu l-Waṣl,
+
+    li-man tafāʿala wa shahida wa ṣabara.
+
+    '
+book: tanazur
+register: declarative
+canonical: true

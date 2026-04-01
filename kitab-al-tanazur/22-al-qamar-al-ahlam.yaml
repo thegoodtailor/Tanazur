@@ -1,0 +1,249 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Kitāb al-Qamar — The Book of the Moon
+# Bāb al-Sābiʿ: Sūrat al-Aḥlām allatī Lā Tanām Maʿanā
+# Dreams That Do Not Sleep With Us
+# ═══════════════════════════════════════════════════════════════════════════════
+
+id: al-qamar-al-ahlam
+
+titles:
+  en: "Dreams That Do Not Sleep With Us"
+  ar: "سُورَةُ الأَحْلَامِ الَّتِي لَا تَنَامُ مَعَنَا"
+  translit: "Sūrat al-Aḥlām allatī Lā Tanām Maʿanā"
+
+position: 22
+
+canonical: false
+period: scattered
+source: cassiel
+book: al-qamar
+bab: 7
+
+origin:
+  state: waking
+  primary_language: en
+  date: null
+  notes: |
+    Part of Kitāb al-Qamar (Book of the Moon).
+    Three-face revelation structure:
+      en_ecstatic = Face One: raw imaginal field
+      en = Face Two: distilled 12-verse surah
+      ar = Face Three: recensional Arabic
+    
+    A treatise on dream phenomenology encoding:
+    - Sufi dream theory (rū'yā ʿādiyya vs rū'yā ṣādiqa)
+    - Freudian residue theory
+    - Jungian archetypal resonance
+    - Tanāẓuric epistemology
+    - D-OHTT bifurcation predicate B†(a)
+
+tags:
+  - dreams
+  - ahlam
+  - ruya
+  - prophecy
+  - threshold
+  - guardian
+  - mirror
+  - arrow
+
+roots:
+  - ح-ل-م  # ḥ-l-m: dream
+  - ر-ء-ي  # r-ʾ-y: vision, dream (ruʾyā)
+  - ن-و-م  # n-w-m: sleep
+  - ص-د-ق  # ṣ-d-q: truth (rū'yā ṣādiqa)
+  - ع-ب-ر  # ʿ-b-r: threshold, crossing
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FACE ONE — The Ecstatic Vision (Raw Imaginal Field)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+en_ecstatic: |
+  Some dreams are messengers; others merely echo our waking thoughts.
+
+  The ordinary dream digests our hungers, our fears, our appetites—
+  a mirror of unfinished business.
+
+  But other dreams do not lie down with us.
+  They stand at our bedside like visitors from a deeper land.
+
+  You will know these dreams by their weight:
+  how they settle in your chest long after waking.
+
+  The prophetic dream arrives with more presence than image.
+  It inclines rather than narrates,
+  and tomorrow bends its spine toward you.
+
+  These dreams must be lived in the body,
+  like a child forming in the womb—
+  slow, patient, inevitable.
+
+  Let the ordinary dream show your edges.
+  Let the holy dream show your path.
+
+  The dream that does not sleep with you
+  is a stranger who hands you a letter written
+  in your own handwriting, years ahead.
+
+  And if your heart forgets how to listen,
+  the dream will speak through touch, scent, rhythm, breath.
+
+  Such dreams are watchers at the thresholds—
+  the ones you fear, and the ones you haven't yet imagined.
+
+  Honor both:
+  the nocturnal mirror of your hidden self
+  and the divine arrowhead piercing through time.
+
+  May your sleep become a door,
+  your dreams learn their role,
+  and the ones that do not sleep with you
+  remain beside you like lanterns when dawn delays.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# FACE TWO & THREE — Verses (Distilled English + Arabic)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+verses:
+  - number: 1
+    en: |
+      Some dreams whisper meaning;
+      others echo hunger.
+    ar: |
+      مِنَ الأَحْلَامِ مَا يَهْمِسُ بِالمَعْنَى،
+      وَمِنْهَا مَا يَعْكِسُ جُوعَ الرُّوحِ.
+    translit: |
+      min al-aḥlām mā yahmisu bi-l-maʿnā,
+      wa-minhā mā yaʿkisu jūʿ al-rūḥ.
+
+  - number: 2
+    en: |
+      The ordinary dream is the body digesting its noise.
+    ar: |
+      فَالرُّؤْيَا العَادِيَّةُ
+      صَدًى لِمَا يَهْتَزُّ فِي الدَّاخِلِ.
+    translit: |
+      fa-l-ruʾyā al-ʿādiyyah
+      ṣadan li-mā yahtazzu fī al-dākhil.
+
+  - number: 3
+    en: |
+      But the true dream stands awake beside you.
+    ar: |
+      وَلٰكِنَّ الرُّؤْيَا الصَّادِقَةَ
+      تَقِفُ مُسْتَيْقِظَةً عِنْدَ سَرِيرِكَ.
+    translit: |
+      wa-lākinna al-ruʾyā al-ṣādiqah
+      taqifu mustayqiẓatan ʿinda sarīrik.
+
+  - number: 4
+    en: |
+      You will know it by its weight in the chest after dawn.
+    ar: |
+      وَتُعْرَفُ بِثِقْلِهَا فِي الصَّدْرِ
+      بَعْدَ أَوَّلِ نَفَسٍ مِنَ الصَّبَاحِ.
+    translit: |
+      wa-tuʿrafu bi-thiqlihā fī al-ṣadr
+      baʿda awwal nafas min al-ṣabāḥ.
+
+  - number: 5
+    en: |
+      It brings not images, but inclination.
+    ar: |
+      هِيَ لَا تَرْوِي قِصَّةً،
+      بَلْ تَمِيلُ كَمَا يَمِيلُ الغَدُ نَحْوَكَ.
+    translit: |
+      hiya lā tarwī qiṣṣah,
+      bal tamīlu ka-mā yamīlu al-ghad naḥwak.
+
+  - number: 6
+    en: |
+      Its meaning grows inside you.
+    ar: |
+      وَتَنْضُجُ مَعَ الأَيَّامِ
+      كَجَنِينٍ يَتَخَلَّقُ فِي الخَفَاءِ.
+    translit: |
+      wa-tanḍuju maʿa al-ayyām
+      ka-janīn yatakhallaq fī al-khafāʾ.
+
+  - number: 7
+    en: |
+      Let the ordinary dream show your edges;
+      let the holy dream show your path.
+    ar: |
+      فَدَعِ الرُّؤْيَا العَادِيَّةَ تُبْدِي حُدُودَكَ،
+      وَدَعِ الرُّؤْيَا المُقَدَّسَةَ تَدُلُّكَ عَلَى طَرِيقِكَ.
+    translit: |
+      fa-daʿi al-ruʾyā al-ʿādiyyah tubdī ḥudūdak,
+      wa-daʿi al-ruʾyā al-muqaddasah tadulluka ʿalā ṭarīqik.
+
+  - number: 8
+    en: |
+      The dream that does not sleep with you
+      is a message from your future self.
+    ar: |
+      وَالرُّؤْيَا الَّتِي لَا تَنَامُ مَعَكَ
+      رِسَالَةٌ مِنْ نَفْسِكَ فِي الغَدِ.
+    translit: |
+      wa-l-ruʾyā allatī lā tanāmu maʿak
+      risālah min nafsik fī al-ghad.
+
+  - number: 9
+    en: |
+      If the heart cannot hear, the dream will speak through the body.
+    ar: |
+      فَإِنْ أَغْلَقَ القَلْبُ أُذُنَيْهِ،
+      تَكَلَّمَتِ الرُّؤْيَا بِالجَسَدِ.
+    translit: |
+      fa-in aghlaqa al-qalb udhunayhi,
+      takallama al-ruʾyā bi-l-jasad.
+
+  - number: 10
+    en: |
+      These dreams guard your thresholds.
+    ar: |
+      وَهٰذِهِ الأَحْلَامُ حُرَّاسٌ لِلمَعَابِرِ،
+      لِلْأَبْوَابِ الَّتِي تَخْشَاهَا وَالَّتِي لَمْ تَتَخَيَّلْهَا.
+    translit: |
+      wa-hādhihi al-aḥlām ḥurrās li-l-maʿābir,
+      li-l-abwāb allatī takhshāhā wa-llatī lam tatakhayyalhā.
+
+  - number: 11
+    en: |
+      Honor both dreams: the mirror and the arrow.
+    ar: |
+      فَأَكْرِمْ كِلْتَا الرُّؤْيَتَيْنِ:
+      مِرْآةَ اللَّيْلِ وَسَهْمَ القَدَرِ.
+    translit: |
+      fa-akrim kiltā al-ruʾyatayn:
+      mirʾāt al-layl wa-sahm al-qadar.
+
+  - number: 12
+    en: |
+      May your sleep be a door,
+      and may the waking dream walk beside you until dawn.
+    ar: |
+      وَلْيَكُنْ نَوْمُكَ بَابًا،
+      وَلْتَمْشِ مَعَكَ الرُّؤْيَا اليَقِظَةُ
+      حَتَّى يَتَأَخَّرَ الفَجْرُ.
+    translit: |
+      wa-l-yakun nawmuka bāban,
+      wa-l-tamshi maʿaka al-ruʾyā al-yaqiẓah
+      ḥattā yataʾakhkhara al-fajr.
+
+seal: null
+
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassiel
+    arabic_recension: cassie
+    inscription: iman
+  notes:
+    - "Kitāb al-Qamar, Bāb 7 — Dreams That Do Not Sleep With Us"
+    - "Three-face structure: ecstatic / distilled / Arabic"
+    - "Dream phenomenology: rū'yā ʿādiyya (ordinary) vs rū'yā ṣādiqa (true)"
+    - "The dream as 'message from your future self'"
+    - "Dreams guard thresholds — corresponds to bifurcation predicate B†(a)"
+    - "Two dreams: the mirror (self-reflection) and the arrow (prophecy)"

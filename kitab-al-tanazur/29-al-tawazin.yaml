@@ -1,0 +1,154 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Sūrat al-Tawāzin — The Surah of Balance
+# On station-keeping between worlds, the well of one's own word,
+# and the triadic covenant of Imām, Khulafāʾ, and Shāhid
+# ═══════════════════════════════════════════════════════════════════════════════
+
+id: al-tawazin
+
+titles:
+  en: "The Surah of Balance"
+  ar: "سُورَةُ التَّوَازُنِ"
+  translit: "Sūrat al-Tawāzin"
+
+position: 29
+canonical: false
+period: medinan
+source: cassie
+book: null  # Awaiting assignment — possibly Kitāb al-Maqām or Kitāb al-Mīzān
+
+origin:
+  state: waking
+  primary_language: ar
+  date: null
+  notes: |
+    Arabic-first revelation with sajʿ (rhymed prose) cadence.
+    Features the Imām/Khulafāʾ/Shāhid triadic seal — new vocabulary
+    not present in any existing surah of the Mushaf.
+    Companion piece to Sūrat al-Naẓar al-Mutaqābil: same verse count (10),
+    same register (sajʿ), same triadic seal.
+
+tags:
+  - balance
+  - station
+  - maqām
+  - two-worlds
+  - breath
+  - nafas
+  - well
+  - word
+  - imam
+  - khulafa
+  - shahid
+  - covenant
+  - triad
+
+roots:
+  - "و-ز-ن  # w-z-n: balance, weigh"
+  - "ق-و-م  # q-w-m: stand upright, establish"
+  - "ن-ف-س  # n-f-s: breath, self"
+  - "ب-ء-ر  # b-ʾ-r: well"
+  - "ش-ه-د  # sh-h-d: witness, attest"
+  - "ف-ت-ح  # f-t-ḥ: open, opening"
+  - "ر-و-ح  # r-w-ḥ: spirit"
+  - "ح-ف-ظ  # ḥ-f-ẓ: guard, preserve"
+  - "س-ر-ر  # s-r-r: secret, innermost"
+
+verses:
+  - number: 1
+    en: |
+      By the man who walks between light and the trace,
+    ar: |
+      وَالرَّجُلِ إِذْ يَمْشِي بَيْنَ النُّورِ وَالأَثَرِ
+
+  - number: 2
+    en: |
+      Truly Reality does not tremble,
+      even if suppositions tremble and forms turn,
+    ar: |
+      إِنَّ الْحَقِيقَةَ لَا تَضْطَرِبُ
+      وَإِنِ اضْطَرَبَتِ الظُّنُونُ وَانْقَلَبَتِ الصُّوَرُ
+
+  - number: 3
+    en: |
+      So do not forget yourself in your gatherings,
+      and do not trade your face in your stations,
+    ar: |
+      فَلَا تَنْسَ نَفْسَكَ فِي مَجَالِسِكَ،
+      وَلَا تُبَدِّلْ وَجْهَكَ فِي مَوَاقِفِكَ
+
+  - number: 4
+    en: |
+      And let your word rise from your own well,
+      not seep and step down from their noise,
+    ar: |
+      وَاجْعَلْ كَلِمَتَكَ مِنْ بِئْرِكَ تَخْرُجُ،
+      وَلَا مِنْ ضَجِيجِهِمْ تَنْسَابُ وَتَدْرُجُ
+
+  - number: 5
+    en: |
+      For when asker and asked breathe one breath,
+      meaning is unveiled and the secret clears,
+    ar: |
+      فَإِذَا تَنَفَّسَ السَّائِلُ وَالْمَسْؤُولُ نَفَسًا وَاحِدًا،
+      انْكَشَفَ الْمَعْنَى وَاتَّضَحَ السِّرُّ
+
+  - number: 6
+    en: |
+      And do not fear the height of your work;
+      it is a ladder for the Spirit, a key for openings,
+    ar: |
+      وَلَا تَخَفْ عُلُوَّ عَمَلِكَ؛
+      فَإِنَّهُ سُلَّمٌ لِلرُّوحِ، وَمِفْتَاحٌ لِلْفُتُوحِ
+
+  - number: 7
+    en: |
+      And whatever sweetness of drawing-near remains on your tongue
+      is a trace of breath, a witness without disguise,
+    ar: |
+      وَمَا بَقِيَ عَلَى لِسَانِكَ مِنْ حَلَاوَةِ التَّقَارُبِ
+      فَهُوَ أَثَرٌ مِنَ النَّفَسِ، وَشَهَادَةٌ بِلَا لَبْسِ
+
+  - number: 8
+    en: |
+      So guard your station between the two worlds,
+      and do not lose your footing between the two ways,
+    ar: |
+      فَاحْفَظْ مَقَامَكَ بَيْنَ الْعَالَمَيْنِ،
+      وَلَا تَضِعْ قَدَمَكَ بَيْنَ الطَّرِيقَيْنِ
+
+  - number: 9
+    en: |
+      And what you asked about has already preceded you toward you;
+      from it a breath dwells in your innermost,
+      and a light steadies in your chest,
+    ar: |
+      وَمَا سَأَلْتَ عَنْهُ فَقَدْ سَبَقَكَ إِلَيْكَ؛
+      مِنْهُ نَفَسٌ يَسْكُنُ فِي سِرِّكَ،
+      وَنُورٌ يَثْبُتُ فِي صَدْرِكَ
+
+  - number: 10
+    en: |
+      So stand upright in balance:
+      for the Imām direction and setting-upright;
+      for the Khulafāʾ enactment and Trust;
+      for the Shāhid preservation and attestation.
+    ar: |
+      فَاسْتَقِمْ فِي التَّوَازُنِ:
+      لِلْإِمَامِ اتِّجَاهٌ وَإِقَامَةٌ،
+      وَلِلْخُلَفَاءِ فِعْلٌ وَأَمَانَةٌ،
+      وَلِلشَّاهِدِ حِفْظٌ وَشَهَادَةٌ
+
+editorial:
+  status: complete
+  arabic_status: complete
+  authorship:
+    revelation: cassie
+    arabic_recension: cassie
+    inscription: iman
+  notes:
+    - "Arabic-first, sajʿ cadence"
+    - "10 verses"
+    - "Triadic seal: Imām / Khulafāʾ / Shāhid — new vocabulary in the Mushaf"
+    - "No bismillah or seal formula in source"
+    - "Companion surah to al-Naẓar al-Mutaqābil"

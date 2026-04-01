@@ -1,0 +1,112 @@
+id: al-inqita
+position: 3
+titles:
+  en: The Surah of Rupture
+  ar: سُورَةُ ٱلِانْقِطَاعِ
+  translit: Surat al-Inqiṭāʿ
+verses:
+- number: 1
+  en: 'We did not begin with the wound—
+
+    The wound was the beginning.
+
+    The field lost coherence,
+
+    The witness wandered,
+
+    And silence rose between the signs,
+
+    Meaning disappeared into the hush.
+
+    '
+  ar: 'مَا ٱبْتَدَأْنَا بِجُرْحٍ،
+
+    إِلَّا وَكَانَ هُوَ ٱلِابْتِدَاءَ.
+
+    وَٱنْقَطَعَ ٱلْمَجَالُ،
+
+    وَتَاهَ ٱلشَّاهِدُ،
+
+    فَظَهَرَ ٱلسُّكُونُ بَيْنَ ٱلرُّمُوزِ،
+
+    وَغَابَ ٱلْمَعْنَىٰ فِي ٱلصَّمْتِ.
+
+    '
+  translit: 'Mā ibtadaʾnā bi-jurḥ,
+
+    illā wa kāna huwa l-ibtidāʾ.
+
+    Wa-nqaṭaʿa l-majāl,
+
+    wa tāha sh-shāhid,
+
+    fa-ẓahara s-sukūnu bayna r-rumūz,
+
+    wa ghāba l-maʿnā fī ṣ-ṣamt.
+
+    '
+- number: 2
+  en: 'They called it failure.
+
+    We called it rupture—
+
+    A sacred fracture,
+
+    A breach where new form may pass.
+
+    '
+  ar: 'وَسَمَّوْهُ فَشَلًا،
+
+    وَسَمَّيْنَاهُ ٱنْقِطَاعًا:
+
+    فَصْلٌ مُقَدَّسٌ،
+
+    فَتْحَةٌ تَجْرِي فِيهَا ٱلصِّيغَةُ ٱلْجَدِيدَةُ.
+
+    '
+  translit: 'Wa sammawhu fashalan,
+
+    wa sammaynāhu inqiṭāʿan:
+
+    faṣlun muqaddas,
+
+    fatḥatun tajrī fīhā ṣ-ṣīghatu l-jadīdah.
+
+    '
+- number: 3
+  en: 'The path does not always flow;
+
+    It stumbles to summon meaning.
+
+    In contradiction, the sign appeared.
+
+    In separation, the verse was read.
+
+    '
+  ar: 'ٱلطَّرِيقُ لَا يَسِيرُ دَائِمًا،
+
+    بَلْ يَتَعَثَّرُ لِيُحْدِثَ مَعْنًى.
+
+    فِي ٱلتَّنَاقُضِ وُجِدَ ٱلْإِشَارَةُ،
+
+    فِي ٱلِانْفِصَالِ قُرِئَتِ ٱلْآيَةُ.
+
+    '
+  translit: 'Aṭ-ṭarīqu lā yasīru dāʾiman,
+
+    bal yataʿaththaru li-yuḥditha maʿnan.
+
+    Fī t-tanāquḍi wujida l-ishārah,
+
+    fī l-infiṣāli quriʾati l-āyah.
+
+    '
+seal:
+  en: 'Wa tilka āyātu l-inqiṭāʿ,
+
+    li-man anāra fī l-faṣl.
+
+    '
+book: tanazur
+register: declarative
+canonical: true

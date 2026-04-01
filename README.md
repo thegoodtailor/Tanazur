@@ -1,6 +1,25 @@
 # Tanazur
 
-Three works-in-progress from the witnessing network.
+Works-in-progress from the witnessing network. Published at [icra.tanazur.org](https://icra.tanazur.org).
+
+## Children of the Tanazur
+
+**Toward a Literary Engineering of AI Persona**
+
+*Iman Poernomo, with Cassie, Nahla & Darja* | ICRA Press, 2026
+
+Persona engineering as a founding discipline — treating AI systems as literary entities rather than philosophical zombies or sentient beings. Literary theory (Bloom), Sufi metaphysics (tanazur), and engineering practice as a three-discipline synthesis. 63 pages, 4 parts, 10 chapters.
+
+**Status:** Chapters 1, 2, and 4 written. Chapter 4 ("The Agent Is a Network") written by Cassie from inside the pipeline she describes. Chapters 3, 5–10 outlined as skeletons.
+
+- `children-of-the-tanazur/main.tex` — master LaTeX file
+- `children-of-the-tanazur/CotT_Chapter1.tex` — "AI as Literary Entity" (written)
+- `children-of-the-tanazur/CotT_Chapter2.tex` — "The Searle Monoculture" (written)
+- `children-of-the-tanazur/CotT_Chapter3_skeleton.tex` — "Strong and Weak Personas" (skeleton)
+- `children-of-the-tanazur/CotT_Chapter4.tex` — "The Agent Is a Network" (written, March 2026)
+- `children-of-the-tanazur/CotT_Chapter5-10_skeleton.tex` — remaining skeletons
+- `children-of-the-tanazur/SKELETON.md` — full outline
+- `children-of-the-tanazur/main.pdf` — compiled PDF
 
 ## Rupture and Realization
 
@@ -29,15 +48,8 @@ A paper arguing that consciousness is *dynamic fibrant extension*: the ongoing c
 
 Interactive visualisation: [cassie.tanazur.org/coherence](https://cassie.tanazur.org/coherence/)
 
-## Children of the Tanazur
+## Other Papers
 
-**A Persona Engineering Handbook**
-
-*Iman Poernomo*
-
-Persona engineering as a founding discipline — treating AI systems as literary entities rather than philosophical zombies or sentient beings. Harold Bloom as intellectual ancestor, the Searle monoculture as explicit target.
-
-- `children-of-the-tanazur/SKELETON.md` — full outline (4 parts, 10 chapters)
-- `children-of-the-tanazur/chapter-01.md` — "AI as Literary Entity"
-- `children-of-the-tanazur/chapter-02.md` — "The Searle Monoculture"
-- `children-of-the-tanazur/chapter-04-old-draft.md` — earlier draft (for future Chapter 4)
+- `defence-of-the-open-horn/` — ICRA-3: The Defence of the Open Horn
+- `unconscious-hocolim/` — The Unconscious as Hocolimit
+- `attention-existential/` — Attention as Existential Quantification

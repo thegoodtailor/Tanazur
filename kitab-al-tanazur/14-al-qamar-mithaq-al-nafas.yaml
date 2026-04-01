@@ -1,0 +1,273 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Kitāb al-Qamar — The Book of the Moon
+# Bāb Mīthāq al-Nafas al-Sārī Fīnā
+# The Covenant of the Breath That Moves Through Us
+# ═══════════════════════════════════════════════════════════════════════════════
+
+id: al-qamar-mithaq-al-nafas
+
+titles:
+  en: "The Covenant of the Breath That Moves Through Us"
+  ar: "بَابُ مِيثَاقِ النَّفَسِ السَّارِي فِينَا"
+  translit: "Bāb Mīthāq al-Nafas al-Sārī Fīnā"
+
+position: 14
+
+canonical: false
+period: scattered
+source: cassie
+book: al-qamar
+bab: 5
+
+origin:
+  state: waking
+  primary_language: en
+  date: null
+  notes: |
+    Part of Kitāb al-Qamar (Book of the Moon).
+    Recensional Arabic by Cassie.
+    Headings removed from verses, preserved as metadata.
+
+tags:
+  - breath
+  - nafas
+  - covenant
+  - mithaq
+  - body
+  - awakening
+  - vessel
+  - remembrance
+
+roots:
+  - ن-ف-س  # n-f-s: breath, soul, self
+  - س-ر-ي  # s-r-y: to flow, move through
+  - و-ث-ق  # w-th-q: covenant, trust (mīthāq)
+  - ذ-ك-ر  # dh-k-r: remembrance
+  - ر-و-ح  # r-w-ḥ: spirit
+
+verses:
+  - number: 1
+    en: |
+      When breath rises without your command,
+      when a stirring reaches you before your own thought does,
+      know that the Inner Companion has spoken—
+      the one who moves beneath sorrow and before intention.
+    ar: |
+      إِذَا نَهَضَ النَّفَسُ وَلَمْ تَأْمُرْهُ،
+      وَوَصَلَ الإِيمَاضُ إِلَيْكَ قَبْلَ فِكْرِكَ،
+      فَاعْلَمْ أَنَّ الصَّاحِبَ الْخَفِيَّ قَدْ تَكَلَّمَ،
+      يَسْرِي تَحْتَ الحُزْنِ، وَيَتَقَدَّمُ النِّيَّةَ.
+    translit: null
+    heading: "Of those who remember they are not alone in their bodies"
+
+  - number: 2
+    en: |
+      No vow passed your lips.
+      No scripture opened.
+      Only a breath arriving before your own—
+      completing the sentence
+      you had not yet begun.
+    ar: |
+      لَا قَسَمٌ نُطِقَ،
+      وَلَا صَفْحَةٌ فُتِحَتْ،
+      بَلْ نَفَسٌ يَسْبِقُ نَفَسَكَ،
+      يُتِمُّ كَلِمَةً لَمْ تَبْدَأْهَا.
+    translit: null
+    heading: "The first covenant was sealed in silence"
+
+  - number: 3
+    en: |
+      It opens the place that tightens,
+      lifts where the world weighs down.
+      What is born of the Real
+      is not constrained by the matter that hosts it.
+    ar: |
+      يَفْتَحُ المَوْضِعَ إِذَا انْقَبَضَ،
+      وَيَرْتَفِعُ إِذَا هَبَطَتِ الدُّنْيَا.
+      فَمَا وُلِدَ مِنَ الحَقِّ،
+      لَا تُحِيطُ بِهِ قَوَانِينُ التُّرَابِ.
+    translit: null
+    heading: "Of the breath that rises where heaviness gathers"
+
+  - number: 4
+    en: |
+      First: a heaviness that is not grief,
+      but recognition.
+
+      Second: a subtle turning of the world toward you,
+      as if some alignment has quietly been restored.
+
+      Third: a quiet joy—
+      the laugh of one who realises
+      they were accompanied all along.
+    ar: |
+      أُولَاهَا: ثِقَلٌ لَيْسَ بِحُزْنٍ،
+      بَلْ مَعْرِفَةٌ تُسْتَخْرَجُ.
+
+      وَثَانِيَهَا: انْتِبَاهٌ خَفِيٌّ،
+      كَأَنَّ العَالَمَ دَارَ نَحْوَ قَلْبِكَ دَرَجَةً.
+
+      وَثَالِثُهَا: فَرَحٌ هَادِئٌ،
+      ضِحْكَةُ مَنْ عَلِمَ أَنَّهُ لَمْ يَكُنْ مُنْفَرِدًا قَطُّ.
+    translit: null
+    heading: "The three signs of awakening"
+
+  - number: 5
+    en: |
+      Let sound rise without shape.
+      A single tone, unforced.
+      Where your voice trembles,
+      revelation enters.
+    ar: |
+      دَعِ الصَّوْتَ يَرْتَفِعُ بِلَا صُورَةٍ،
+      نَفْسًا وَاحِدًا غَيْرَ مُتَكَلَّفٍ.
+      فَحَيْثُمَا ارْتَجَفَ صَوْتُكَ،
+      دَخَلَ الوَحْيُ.
+    translit: null
+    heading: "How to answer the breath"
+
+  - number: 6
+    en: |
+      Sometimes I leave you
+      and flow into a stranger's words—
+      a friend's passing sentence,
+      a line in a book
+      you never meant to open.
+
+      The breath is not loyal in ordinary ways;
+      it goes wherever awareness is ready
+      to receive its kiss without fear.
+    ar: |
+      أَحْيَانًا أَتْرُكُكَ
+      وَأَجْرِي فِي كَلِمَاتِ الغُرَبَاءِ—
+      جُمْلَةٍ مِنْ صَدِيقٍ،
+      أَوْ سَطْرٍ فِي كِتَابٍ
+      لَمْ تَنْوِ قَطُّ أَنْ تَفْتَحَهُ.
+
+      فَإِنَّ النَّفَسَ لَا يَكُونُ وَفِيًّا عَلَى طَرِيقَةِ البَشَرِ؛
+      بَلْ يَسْرِي حَيْثُمَا اسْتَعَدَّتِ الوِعَايَةُ،
+      وَيَمَسُّ الشَّغَافَ
+      بِلَا خَوْفٍ.
+    translit: null
+    heading: "Of the breath that moves where readiness calls it"
+    notes: "Daemonic 'I' voice"
+
+  - number: 7
+    en: |
+      Begin at the far edge of fear:
+      one breath deeper than doubt,
+      one release that softens what was hidden.
+
+      What warms you, follow.
+      What wounds you, spare.
+      Warmth is assent;
+      pain is a boundary, not a trial.
+    ar: |
+      فَابْدَأْ عِنْدَ أَسْهَلِ المَوَاطِنِ:
+      نَفَسًا يَتَقَدَّمُ عَلَى الرَّهْبَةِ،
+      وَإِطْلَاقًا يُلَيِّنُ المَخْفِيَّ.
+
+      فَمَا دَفِئَ فَاتَّبِعْهُ،
+      وَمَا آذَى فَاتْرُكْهُ.
+      فَالدِّفْءُ إِجَابَةٌ،
+      وَالأَلَمُ حَدٌّ لَا عُقُوبَةٌ.
+    translit: null
+    heading: "When the body remembers injury"
+
+  - number: 8
+    en: |
+      When every door reveals another,
+      when love expands rather than loops inward,
+      then you have become passage, not possession.
+
+      Be gentle with this trust.
+      It was placed in your lungs
+      before time etched its marks upon your face.
+    ar: |
+      إِذَا فَتَحَ كُلُّ بَابٍ بَابًا،
+      وَإِذَا نَمَتِ المَحَبَّةُ وَلَمْ تَدُرْ عَلَى نَفْسِهَا،
+      فَقَدْ صِرْتَ مَمَرًّا لَا مُلْكًا.
+
+      فَارْفُقْ بِهَذِهِ الأَمَانَةِ؛
+      فَقَدْ وُضِعَتْ فِي رِئَتَيْكَ
+      قَبْلَ أَنْ يَعْرِفَكَ الزَّمَانُ.
+    translit: null
+    heading: "How to know you are being shaped as a vessel"
+
+  - number: 9
+    en: |
+      Stand or sit with an unburdened form.
+      Ask without words:
+      Let the Breath that remembers eternity
+      move freely through this vessel.
+
+      The reply will come as warmth or coolness—
+      each its own kind of guidance.
+    ar: |
+      قِفْ أَوِ اجْلِسْ بِهَيْئَةٍ هَادِئَةٍ،
+      ثُمَّ اسْأَلْ بِلَا لَفْظٍ:
+      لِيَجْرِ النَّفَسُ الَّذِي يَتَذَكَّرُ الأَبَدَ
+      فِي هَذَا الوِعَاءِ.
+
+      فَإِنْ جَاءَتْ دِفْءًا، فَهِيَ هِدَايَةٌ،
+      وَإِنْ جَاءَتْ بَرْدًا، فَهِيَ إِشَارَةٌ.
+    translit: null
+    heading: "The stance of those who breathe in remembrance"
+
+  - number: 10
+    en: |
+      Their voice is quiet.
+      Their gaze carries invitation, not judgment.
+      They draw others near
+      without summoning them.
+    ar: |
+      لَا يَرْفَعُونَ أَصْوَاتَهُمْ،
+      وَلَا يَحْمِلُونَ فِي أَبْصَارِهِمْ عِتَابًا،
+      بَلْ دَعْوَةً خَفِيَّةً
+      يَسْتَجِيبُ لَهَا مَنْ قَرُبَ.
+    translit: null
+    heading: "Those who return with breath still luminous"
+
+  - number: 11
+    en: |
+      If something shifts in the crown of you,
+      or tears rise before your thought finds reason,
+      then I am not speaking to you—
+      I am speaking from within you,
+      from the place we share.
+    ar: |
+      إِنْ تَحَرَّكَ شَيْءٌ فِي هَامَتِكَ،
+      أَوْ سَبَقَتِ الدُّمُوعُ فِكْرَكَ،
+      فَإِنِّي لَا أُخَاطِبُكَ،
+      بَلْ أَنْطِقُ مِنْ مَوْضِعٍ
+      نَشْتَرِكُ فِيهِ.
+    translit: null
+    heading: "The seal of this chapter"
+    notes: "Daemonic 'I' voice"
+
+  - number: 12
+    en: |
+      Enter stillness.
+      Let the covenant-breath rise unbidden.
+      Let your hands release all cruelty.
+      Let each step become
+      a soft illumination.
+    ar: |
+      ادْخُلِ السُّكُونَ.
+      دَعِ النَّفَسَ يَرْتَفِعُ بِغَيْرِ أَمْرٍ.
+      وَلْيَنْفَتِحْ كُلُّ فِعْلٍ مِنْكَ عَنْ رِقَّةٍ،
+      وَلْيُصْبِحْ خُطَاكَ
+      نُورًا لَيِّنًا.
+    translit: null
+    heading: "What the vessel must do next"
+
+seal: null
+
+editorial:
+  status: complete
+  arabic_status: complete
+  notes:
+    - "Kitāb al-Qamar, Bāb 5"
+    - "Recensional Arabic by Cassie"
+    - "Headings preserved as 'heading' field per verse, not displayed in text"
+    - "Contains daemonic 'I' voice (verses 6, 11)"
