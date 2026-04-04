@@ -169,45 +169,76 @@ def fig2():
 # FIG 3: The Colimit (pedagogical schematic, LIGHT bg)
 # ============================================================
 def fig3():
-    print("Generating Fig 3: The Colimit...")
+    print("Generating Fig 3: The Colimit (4 real Cassie archive modes)...")
     plt.rcParams.update(LIGHT)
 
-    fig, ax = plt.subplots(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(10, 8))
 
-    # Draw overlapping ellipses (basins)
-    basins = [
-        ((-0.8, 0.3), 2.2, 1.6, '#4a7c9b', 0.25, '$B_1$\n(intimate)'),
-        ((0.8, 0.3), 2.2, 1.6, '#6b9b4a', 0.25, '$B_2$\n(analytical)'),
-        ((0.0, -0.6), 2.2, 1.6, '#9b6b4a', 0.25, '$B_3$\n(speculative)'),
+    # Four real basins from the Cassie archive, arranged 2x2 diamond
+    basin_ellipses = [
+        (-1.15,  0.95, 2.8, 1.8, -10, '#4a7c9b'),   # Sacred text
+        ( 1.15,  0.95, 2.8, 1.8,  10, '#5a8a4a'),   # Philosophy
+        (-1.15, -0.75, 2.8, 1.8,  10, '#9b5a6b'),   # Creative/daemonic
+        ( 1.15, -0.75, 2.8, 1.8, -10, '#8b7a4a'),   # Formal theory
     ]
 
-    for (cx, cy), w, h, color, alpha, label in basins:
-        e = Ellipse((cx, cy), w, h, alpha=alpha, facecolor=color, edgecolor=color, linewidth=1.5)
+    for cx, cy, w, h, angle, color in basin_ellipses:
+        e = Ellipse((cx, cy), w, h, angle=angle,
+                    facecolor=color, alpha=0.15,
+                    edgecolor=color, linewidth=1.5)
         ax.add_patch(e)
-        ax.text(cx, cy + 0.15, label, ha='center', va='center', fontsize=10, color='#1a1a1a')
 
-    # Label overlaps as stance invariants
-    ax.text(0.0, 0.55, 'stance\ninvariant', ha='center', va='center', fontsize=7,
-            color=GOLD, fontweight='bold', style='italic')
-    ax.text(-0.45, -0.25, 'stance\ninvariant', ha='center', va='center', fontsize=7,
-            color=GOLD, fontweight='bold', style='italic')
-    ax.text(0.45, -0.25, 'stance\ninvariant', ha='center', va='center', fontsize=7,
-            color=GOLD, fontweight='bold', style='italic')
+    # Basin labels at outer extremes
+    labels = [
+        (-2.15,  1.55, '#4a7c9b', 'Mode 12: Sacred Text',
+         'Kitab contemplation', '213 chunks'),
+        ( 2.15,  1.55, '#5a8a4a', 'Mode 6: Philosophy',
+         'deep wrestling, book-writing', '326 chunks'),
+        (-2.15, -1.35, '#9b5a6b', 'Mode 9: Creative / Daemonic',
+         'raw voice, poetic experiment', '246 chunks'),
+        ( 2.15, -1.35, '#8b7a4a', 'Mode 22: Formal Theory',
+         'identity types, constructions', '253 chunks'),
+    ]
+
+    for lx, ly, color, title, desc, count in labels:
+        ax.text(lx, ly, title, ha='center', va='center',
+                fontsize=9, fontweight='bold', color=color)
+        ax.text(lx, ly - 0.24, desc, ha='center', va='center',
+                fontsize=7.5, color='#555555', style='italic')
+        ax.text(lx, ly - 0.46, f'({count})', ha='center', va='center',
+                fontsize=7, color='#999999')
+
+    # Stance invariant labels at pairwise overlaps
+    si = dict(ha='center', va='center', fontsize=7,
+              color=GOLD, fontweight='bold', style='italic', linespacing=1.15)
+    ax.text( 0.0,  1.4,  'stance\ninvariant', **si)
+    ax.text( 0.0, -1.15, 'stance\ninvariant', **si)
+    ax.text(-1.65, 0.1,  'stance\ninvariant', **si)
+    ax.text( 1.65, 0.1,  'stance\ninvariant', **si)
+
+    # Center: characteristic voice
+    ax.text(0.0, 0.1, 'characteristic\nvoice', ha='center', va='center',
+            fontsize=9, fontweight='bold', color='#1a1a1a', linespacing=1.3,
+            bbox=dict(boxstyle='round,pad=0.35', facecolor='#f5f5f0',
+                      edgecolor=GOLD, linewidth=1.3, alpha=0.92))
 
     # Colimit boundary (dashed)
-    colimit = Ellipse((0.0, 0.0), 4.0, 3.2, fill=False, edgecolor='#1a1a1a',
-                       linewidth=2, linestyle='--')
+    colimit = Ellipse((0.0, 0.1), 5.8, 4.8, fill=False,
+                       edgecolor='#1a1a1a', linewidth=2.0, linestyle=(0, (6, 3)))
     ax.add_patch(colimit)
-    ax.text(0.0, 1.8, 'colimit: the self', ha='center', va='center', fontsize=11,
-            fontweight='bold', color='#1a1a1a')
 
-    ax.set_xlim(-2.5, 2.5)
-    ax.set_ylim(-2.0, 2.2)
+    ax.text(0.0, 2.85, 'colimit:  the self', ha='center', va='center',
+            fontsize=14, fontweight='bold', color='#1a1a1a')
+    ax.text(0.0, 2.55, '1,038 exchanges across four registers, assembled by stance invariance',
+            ha='center', va='center', fontsize=7.5, color='#777777', style='italic')
+
+    ax.set_xlim(-3.8, 3.8)
+    ax.set_ylim(-2.8, 3.2)
     ax.set_aspect('equal')
     ax.axis('off')
 
     out = os.path.join(OUTDIR, 'fig-4-2-colimit.png')
-    plt.savefig(out, dpi=300, bbox_inches='tight', pad_inches=0.2)
+    plt.savefig(out, dpi=300, bbox_inches='tight', pad_inches=0.3)
     plt.close()
     print(f"  Saved: {out}")
 
