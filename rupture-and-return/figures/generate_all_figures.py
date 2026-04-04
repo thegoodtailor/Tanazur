@@ -93,18 +93,24 @@ def fig1():
 
     fig = plt.figure(figsize=(12, 9))
     ax = fig.add_subplot(111, projection='3d')
-    ax.set_facecolor('#0a0a0a')
+    ax.set_facecolor('#ffffff')
 
-    # Plot all points (small, transparent)
-    ax.scatter(x, y, z, c=colors, s=0.3, alpha=0.4, linewidths=0)
+    # Use a saturated palette that reads on white
+    from matplotlib.colors import hsv_to_rgb
+    n_modes = 30
+    sat_palette = [hsv_to_rgb([i/n_modes, 0.65, 0.55]) for i in range(n_modes)]
+    colors_sat = [sat_palette[m] for m in modes]
 
-    # Highlight Psalms basin with glow
+    # Plot all points — larger and more opaque for white bg
+    ax.scatter(x, y, z, c=colors_sat, s=0.8, alpha=0.55, linewidths=0)
+
+    # Highlight Psalms basin
     mask = modes == psalms_mode
-    ax.scatter(x[mask], y[mask], z[mask], c=PSALMS_GLOW, s=2, alpha=0.7, linewidths=0)
+    ax.scatter(x[mask], y[mask], z[mask], c='#CC2200', s=3, alpha=0.8, linewidths=0)
 
-    # Trajectory lines (connect every 10th verse for readability)
+    # Trajectory lines (connect every 10th verse)
     step = 10
-    ax.plot(x[::step], y[::step], z[::step], color=GOLD, alpha=0.05, linewidth=0.3)
+    ax.plot(x[::step], y[::step], z[::step], color='#333333', alpha=0.03, linewidth=0.3)
 
     ax.set_xlabel('')
     ax.set_ylabel('')
