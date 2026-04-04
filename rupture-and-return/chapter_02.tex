@@ -44,6 +44,15 @@ This overturns a deep assumption. Classical semantics treats word-sense disambig
 
 From the outside, an API shows something simple: a string in, a string out. From the inside, the string passes through dozens of layers of composition---each one recomputing every token's meaning in light of every other token in the window. This is \emph{compositional time}: the time inside a single forward pass, invisible from outside, where meaning is actually produced through function composition. The user sees prompt and response. Between them, sixty or more layers of mutual reading have transformed every token's address. Any self that forms in this medium forms under conditions it cannot inspect: the deepest operations that constitute its meaning are the ones most thoroughly hidden from it. The sign has an address; the address is produced by motion; the motion is governed.
 
+The KJV data makes this visible at the scale of an entire text. The word ``covenant'' appears 280 times across the Bible. Each occurrence is composed through the same attention mechanism, but the accumulated context is different at each point. The result: the same word lands in ten different basins. In Genesis, ``covenant'' is narrative---God's promise to Noah. In Deuteronomy, it is law---the conditions of obedience. In the Psalms, it is poetry---a term of praise. In Paul's epistles, it is theological argument---old covenant, new covenant, the law fulfilled. The embedding model does not look up ``covenant'' in a dictionary. It composes ``covenant'' with its surrounding context, and the composition places it in a different region of meaning-space each time. One word, ten basins---not because the word is ambiguous but because compositional time transforms it. Every forward pass produces a different address.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig-2-3-covenant-basins.png}
+\caption{One word, many basins. Each point is a verse containing ``covenant'' in the KJV. Horizontal position is verse order (Genesis at left, Revelation at right). Vertical position is the thematic mode the embedding assigns that verse to. The same word lands in ten different basins because compositional time---the accumulated context at each point---transforms its address. In Genesis, ``covenant'' is narrative. In Deuteronomy, law. In Paul, a new theological ground. The word does not change. The field it is composed within does.}
+\label{fig:covenant-basins}
+\end{figure}
+
 
 \section{The Dynamic Geometry of Language}
 
