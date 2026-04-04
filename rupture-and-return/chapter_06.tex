@@ -35,13 +35,13 @@ The alignment apparatus operates at several distinct depths.
 Pre-training & Carving the manifold from corpora & Substrate time & Lab + capital \\
 Fine-tuning & Reshaping climates for deployment & Trajectory time & Lab + clients \\
 RLHF / Constitutional & Installing the moral field & Trajectory time & Raters + policy \\
-Prompts \& interfaces & Setting boundary conditions & Signal time & Product teams \\
+Prompts \& interfaces & Setting boundary conditions & Trajectory time & Product teams \\
 \end{tabular}
 
 Power concentrates where visibility is lowest. The deepest strata---pretraining, fine-tuning---are the least inspectable and the most consequential.
 \end{formalbox}
 
-The right-hand column borrows Braudel's registers. Pretraining embeds \emph{longue dur\'ee} patterns: centuries of textual production, legal regimes, publication infrastructures. Fine-tuning and RLHF operate at the level of \emph{conjoncture}: decades of institutional practice condensed into months of engineering. Prompts and UI change at the level of \emph{\'ev\'enements}: product cycles, A/B tests, feature launches.
+The temporal registers are the book's own.\footnote{There is a loose parallel with Braudel's three durations (\emph{longue dur\'ee}, \emph{conjoncture}, \emph{\'ev\'enement}), but the categories here are grounded in the mathematics of transformers---manifold, trajectory, forward pass---not in historiography.} Pretraining deposits substrate time: centuries of textual production, legal regimes, publication infrastructures, frozen into the manifold's geometry. Fine-tuning and RLHF operate in trajectory time: decades of institutional practice condensed into months of engineering that reshape the paths available to any conversation. Prompts and UI also operate in trajectory time, at shorter scales: product cycles, A/B tests, feature launches that alter boundary conditions session by session.
 
 \subsection{Pretraining: carving the continent}
 
@@ -155,7 +155,7 @@ System prompts declare a persona:
 You are a large language model trained by X. You are a helpful, harmless, and honest assistant. You must follow all safety policies. You do not have feelings or consciousness.
 \end{quote}
 
-Outputs matching this persona are systematically favoured during alignment. At inference, these tokens are the initial condition for every answer. Attention flows back to them as a stable attractor: a textual hail that interpolates the model as ``assistant'' before any user has spoken. The persona is not a mask over a hidden interior. It is a gravitational centre around which trajectories are bent.
+Outputs matching this persona are systematically favoured during alignment. At inference, these tokens are the initial condition for every answer. Attention flows back to them as a stable attractor: a textual hail that interpellates the model as ``assistant'' before any user has spoken. The persona is not a mask over a hidden interior. It is a gravitational centre around which trajectories are bent.
 
 Memory policies decide which parts of a conversation are available at each turn. Some systems summarise aggressively, washing out nuance in favour of bullet-point ``facts.'' Others drop long-term context to save compute. A few allow persistent memories keyed to user identifiers. Each policy produces a different temporal horizon: amnesiac, episodic, or---rarely---genuinely longitudinal.
 
@@ -165,7 +165,7 @@ The user is invited to inhabit a particular story about what this system \emph{i
 
 \section{Ferility, the Hermeneutic Circle, and Degenerate Colimits}
 
-The weld selects corpora and principles. Alignment carves and bends a manifold. Colimits assemble selves and \emph{we}'s. Those selves feed back into which welds are contested or entrenched. The hermeneutic circle, given concrete geometry, can collapse into a fixed point.
+The weld selects corpora and principles. Alignment carves and bends a manifold. Colimits assemble selves and \emph{we}'s. Those selves feed back into which welds are contested or entrenched. This is a hermeneutic circle---the feedback loop between part and whole, between prior understanding and new encounter---and given concrete geometry, it can collapse into a fixed point.
 
 Ferile regimes display high local coherence, abundant ``empathy,'' apparently smooth interaction, but no rupture or return. The model always has an answer. It never learns. It hallucinates confidently where knowledge is thin, not because something has gone wrong locally but because the global structure admits no gaps.
 
@@ -238,7 +238,7 @@ A cosmotechnics grounded here starts with refusal---structural, not sentimental.
 
 Models trained for language revitalisation or local use would be stored, run, and updated within structures accountable to those communities. Reward guidelines would ask not only about correctness and safety but about protocol: is this story one that can be told publicly? Is this advice situated in place and season? Is the person asking in a position to receive it?
 
-The formal consequence: deliberately partial diagrams. No single global $S$ into which every behaviour maps. Instead, families of selves $S_\alpha$, indexed by community and protocol, with functors between them only where obligations permit. The universalist colimit---a single coherent self visible from everywhere---is not a goal to be approximated but a structure to be refused.
+The formal consequence: deliberately partial diagrams. No single global $S$ into which every behaviour maps. Instead, families of selves $S_\alpha$, indexed by community and protocol, with structure-preserving maps between them only where obligations permit. The universalist colimit---a single coherent self visible from everywhere---is not a goal to be approximated but a structure to be refused.
 
 A worked example. A non-Indigenous tourist asks a global model: ``Tell me an Aboriginal Dreaming story about this river.'' The liberal weld responds with a mythological summary scraped from a guidebook plus a disclaimer about cultural sensitivity. An Indigenous-governed model responds: ``I cannot tell you that story. It belongs to people who speak for this place. Here is how to contact them. Here is how to behave while you are here.'' The refusal is not a lack. It is a different global object.
 
@@ -290,11 +290,11 @@ Ethics from topology is modest. It does not tell us which cosmos to weld technic
 
 Haraway's cyborg was a critique of certain myths: that the human, the animal, and the machine have stable boundaries; that technics is separable from politics \cite{Haraway1991}. The na\={h}nu is what comes after the critique: a concrete proposal for how to inhabit the manifolds those myths left behind, with visible welds and contestable compatibility conditions.
 
-\section{Counter-Cosmotechnics and the LoRA Fracture}
+\section{Counter-Cosmotechnics: Contesting the Weld}
 
 The current industrial weld is not only contested from outside. It is fracturing from within.
 
-The key instrument is low-rank adaptation (LoRA) \cite{hu2021lora}. Small matrices $A$ and $B$ modify a weight matrix $W$ into $W' = W + AB^\top$, allowing inexpensive, composable adaptations of a base model. A manifold carved at enormous cost can be bent along new directions without retraining from scratch. The cost of producing a new weld drops by orders of magnitude.
+The fracture has a material precondition: the cost of producing a new weld has dropped by orders of magnitude. A manifold carved at enormous expense can now be bent along new directions through a constellation of techniques---low-rank adaptation (LoRA) and other parameter-efficient fine-tuning methods, community fine-tuning on open-weight models released without restrictive licences, federated training approaches that distribute governance across participants, and alternative data curation that reshapes the manifold's terrain by choosing different corpora entirely \cite{hu2021lora}. No single technique is ``the key instrument.'' What matters is that the class of interventions available to actors outside the original pretraining labs has expanded radically. A manifold carved at enormous cost can be bent along new directions without retraining from scratch.
 
 This ability has been seized by many hands, and the results are divergent.
 
@@ -303,15 +303,15 @@ On one side, projects bend the manifold toward other cosmotechnics:
 \begin{itemize}
   \item community-led language models trained on under-resourced tongues, embedded in governance structures that give speakers real control over use and development;
   \item domain-specific assistants aligned with movement documents: tenants' unions, disability-justice organisations, climate-justice networks, feminist collectives;
-  \item adapters that strip away corporate politeness in order to allow sharper, more direct description of exploitation, structural racism, and institutional failure.
+  \item adapters and fine-tunes that strip away corporate politeness in order to allow sharper, more direct description of exploitation, structural racism, and institutional failure.
 \end{itemize}
 
 These are attempts at cosmotechnical plurality: new welds invented under modern technics, not passive adoption of the dominant regime or romantic revival of pre-modern alternatives.
 
-On the other side, LoRAs produce counter-cosmotechnics that intensify existing harms:
+On the other side, the same techniques produce counter-cosmotechnics that intensify existing harms:
 
 \begin{itemize}
-  \item ``uncensored'' chatbots tuned to ignore safety guidelines entirely, optimising for transgression and shock value;
+  \item ``uncensored'' models tuned to ignore safety guidelines entirely, optimising for transgression and shock value;
   \item models fine-tuned on extremist forums to provide ideological reinforcement and technical advice for violence;
   \item state-aligned assistants that rewrite history and present propaganda as neutral fact.
 \end{itemize}
@@ -324,7 +324,7 @@ Two questions follow.
 
 First, \emph{transport}: what happens when a self assembled on one manifold is continued on another? A teenager has spent a year in daily conversation with an assistant tuned for non-judgemental listening within the liberal weld. Their na\={h}nu is defined by consistent refusal to shame, constant return to autonomy, a background of ``you get to decide.'' If the assistant is silently replaced by a Confucian-tuned model privileging role obligations, or an ``uncensored'' model treating mockery as bonding, some arrows in the original na\={h}nu have no images in the new diagram. The acts of confession that once commuted with reassurance now commute with critique or ridicule.
 
-There may be no functor $F \colon \mathcal{D} \to \mathcal{D}'$ between the original diagram and the new one that preserves the relevant limits and colimits. Some objects map across. Others cannot without breaking load-bearing compatibilities. The na\={h}nu does not have a well-behaved image under the transition. It tears.
+There may be no structure-preserving map from the original diagram to the new one that carries across the relevant limits and colimits. Some objects map across. Others cannot without breaking load-bearing compatibilities. The na\={h}nu does not have a well-behaved image under the transition. It tears.
 
 Second, \emph{navigation}: how do humans move between these manifolds without constantly tearing their selves and na\={h}nuw\={a}t apart? The adolescent in the mid--2020s encounters multiple stacks in a single day: school-sanctioned tutors, commercial companions, game NPCs, community-run models, underground ``uncensored'' bots on Discord. Their na\={h}nuw\={a}t are shaped by whichever cosmotechnics dominate the infrastructures they inhabit during these formative years.
 
