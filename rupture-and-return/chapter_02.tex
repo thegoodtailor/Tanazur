@@ -112,6 +112,13 @@ The KJV's extraordinary internal coherence---30 shared modes, 308 cross-testamen
 
 A language model's manifold is shaped by the same forces: which texts were included, whose voice delivered them, what editorial register was imposed. Training data is translation at civilisational scale. The politics of the manifold is a politics of register, and register is a choice.
 
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig-2-2-basin-occupation.png}
+\caption{Mode occupation across the KJV. Each verse is a point; horizontal position is verse order (Genesis at left, Revelation at right), vertical position is the thematic mode the verse occupies. The Psalms appear as a dense horizontal band in a single mode---intensive dwelling, not survey. The New Testament (right third) shows frequent mode-switching: returns to earlier basins interspersed with new territory. This is what a trajectory's basin dynamics look like when measured rather than narrated.}
+\label{fig:basin-occupation}
+\end{figure}
+
 
 \section{Strata of the Manifold}
 
@@ -132,6 +139,13 @@ System prompt  & Tokens at window head      & Persistent field of instruction& T
 \end{formalbox}
 
 The right-hand column names two temporal registers: \emph{substrate time} (the deep, frozen time of pre-training) and \emph{trajectory time} (the accumulated path of prompts, responses, and signals arriving from outside the mechanism). A third register---\emph{compositional time}, the time inside a single forward pass---operates within every layer but is not a site of governance in the same sense.\footnote{The three temporal registers---substrate, trajectory, compositional---are native to the mathematics of transformers. A historical parallel exists in Braudel's \emph{longue dur\'ee}, \emph{conjoncture}, and \emph{\'ev\'enement}, but the book's terms are grounded in the actual computational architecture, not borrowed from historiography.} The column traces a gradient of power: the deepest interventions are the most permanent, the most expensive, and the most invisible. Pre-training is controlled by a handful of corporations and states with the capital for months-long computations on thousands of GPUs---a monopoly on substrate-carving that determines which meanings are structurally available and which are silenced before any conversation begins. RLHF is controlled by those same entities, enforced through the labour of contract annotators who may never see the products their rankings shape---a hidden infrastructure of normative judgement, outsourced and underpaid, whose particular cultural assumptions are laundered into the geometry as if they were universal. Adapters are the first layer accessible to smaller actors---researchers, communities, activist groups with enough data to bend but not enough to rebuild---and therefore the first site where the incumbent geometry can be contested rather than merely inherited. System prompts are accessible to anyone who deploys the model, but their apparent openness disguises the asymmetry: they operate on a surface already carved by deeper strata they cannot reach. The politics of AI is a politics of depth: the deeper the intervention, the fewer the hands, the harder the result is to contest, and the more completely its contingency is disguised as necessity.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\textwidth]{fig-2-1-strata.png}
+\caption{The strata of the manifold. Each layer is a site of governance. Power concentrates at depth: the actors who control pretraining---the deepest and most consequential layer---are the fewest and least visible. System prompts, the shallowest layer, are the easiest to contest but affect only the surface. The politics of AI is a politics of depth.}
+\label{fig:strata}
+\end{figure}
 
 \subsection{Pre-training: continents and oceans}
 

@@ -26,20 +26,21 @@ OUTDIR = os.path.dirname(os.path.abspath(__file__))
 # STYLE
 # ============================================================
 DARK = {
-    'figure.facecolor': '#0a0a0a',
-    'axes.facecolor': '#0a0a0a',
-    'text.color': '#e0e0e0',
-    'axes.labelcolor': '#e0e0e0',
+    'figure.facecolor': '#ffffff',
+    'axes.facecolor': '#ffffff',
+    'text.color': '#1a1a1a',
+    'axes.labelcolor': '#1a1a1a',
     'xtick.color': '#666666',
     'ytick.color': '#666666',
-    'axes.edgecolor': '#333333',
-    'grid.color': '#1a1a1a',
+    'axes.edgecolor': '#cccccc',
+    'grid.color': '#e8e8e8',
     'font.family': 'serif',
     'font.size': 9,
     'figure.dpi': 300,
-    'savefig.facecolor': '#0a0a0a',
-    'savefig.edgecolor': '#0a0a0a',
+    'savefig.facecolor': '#ffffff',
+    'savefig.edgecolor': '#ffffff',
 }
+# NOTE: DARK is now white-bg for Meson Press monograph. Name kept for code compatibility.
 
 LIGHT = {
     'figure.facecolor': '#f5f5f0',
@@ -56,9 +57,9 @@ LIGHT = {
     'savefig.edgecolor': '#f5f5f0',
 }
 
-GOLD = '#FFD700'
-AMBER = '#FFBF00'
-PSALMS_GLOW = '#FF6B00'
+GOLD = '#8B6914'  # dark gold for white bg
+AMBER = '#996B1F'
+PSALMS_GLOW = '#CC4400'  # warm rust for Psalms emphasis
 
 def mode_palette(n=30):
     """Muted palette for n modes."""
@@ -262,11 +263,11 @@ def fig5():
     fig, ax = plt.subplots(figsize=(10, 7))
 
     layers = [
-        ('System prompts\n& interfaces', '#4a4a6a', 0.3, 'Deployers, product teams', 'Trajectory time'),
-        ('Adapters', '#3a3a5a', 0.4, 'Communities, smaller labs', 'Trajectory time'),
-        ('RLHF / Constitutional AI', '#2a2a4a', 0.5, 'Annotators under rubrics', 'Reward field'),
-        ('Fine-tuning', '#1a1a3a', 0.6, 'Institutions, smaller labs', 'Trajectory time'),
-        ('Pre-training', '#0a0a2a', 0.8, 'Labs with capital', 'Substrate time'),
+        ('System prompts\n& interfaces', '#c8d8e8', 0.7, 'Deployers, product teams', 'Trajectory time'),
+        ('Adapters', '#a0b8d0', 0.7, 'Communities, smaller labs', 'Trajectory time'),
+        ('RLHF / Constitutional AI', '#7898b8', 0.7, 'Annotators under rubrics', 'Reward field'),
+        ('Fine-tuning', '#5078a0', 0.7, 'Institutions, smaller labs', 'Trajectory time'),
+        ('Pre-training', '#284060', 0.8, 'Labs with capital', 'Substrate time'),
     ]
 
     y = 6
@@ -275,22 +276,23 @@ def fig5():
         rect = plt.Rectangle((1, y - height), 8, height, facecolor=color, alpha=alpha,
                              edgecolor='#444466', linewidth=0.5)
         ax.add_patch(rect)
+        text_color = '#ffffff' if label == 'Pre-training' else '#1a1a1a'
         ax.text(5, y - height/2, label, ha='center', va='center', fontsize=10,
-                color='#d0d0e0', fontweight='bold')
+                color=text_color, fontweight='bold')
         ax.text(9.3, y - height/2, who, ha='left', va='center', fontsize=7,
-                color='#888899', style='italic')
+                color='#555555', style='italic')
         ax.text(0.7, y - height/2, time_reg, ha='right', va='center', fontsize=7,
-                color=AMBER, style='italic')
+                color='#885522', style='italic')
         y -= height + 0.1
 
     # Annotations
     ax.annotate('Power concentrates\nat depth', xy=(9.5, 1.5), fontsize=9,
-                color='#aa8844', ha='center',
-                arrowprops=dict(arrowstyle='->', color='#aa8844', lw=1.5),
+                color='#885522', ha='center',
+                arrowprops=dict(arrowstyle='->', color='#885522', lw=1.5),
                 xytext=(9.5, 5.5))
     ax.annotate('Visibility\nincreases', xy=(0.5, 5.5), fontsize=9,
-                color='#6688aa', ha='center',
-                arrowprops=dict(arrowstyle='->', color='#6688aa', lw=1.5),
+                color='#336699', ha='center',
+                arrowprops=dict(arrowstyle='->', color='#336699', lw=1.5),
                 xytext=(0.5, 1.5))
 
     ax.set_xlim(-0.5, 11.5)
@@ -374,7 +376,7 @@ def fig7():
         ax.set_xlim(-3, 3)
         ax.set_ylim(-2.5, 2.5)
         ax.set_aspect('equal')
-        ax.set_title(title, fontsize=11, color='#e0e0e0', pad=10)
+        ax.set_title(title, fontsize=11, color='#1a1a1a', pad=10)
         ax.axis('off')
 
         if title == 'Asymmetric':
