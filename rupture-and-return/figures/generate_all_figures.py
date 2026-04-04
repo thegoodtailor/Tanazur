@@ -101,12 +101,12 @@ def fig1():
     sat_palette = [hsv_to_rgb([i/n_modes, 0.65, 0.55]) for i in range(n_modes)]
     colors_sat = [sat_palette[m] for m in modes]
 
-    # Plot all points — larger and more opaque for white bg
-    ax.scatter(x, y, z, c=colors_sat, s=0.8, alpha=0.55, linewidths=0)
+    # Plot all points — doubled size for print readability
+    ax.scatter(x, y, z, c=colors_sat, s=1.6, alpha=0.55, linewidths=0)
 
     # Highlight Psalms basin
     mask = modes == psalms_mode
-    ax.scatter(x[mask], y[mask], z[mask], c='#CC2200', s=3, alpha=0.8, linewidths=0)
+    ax.scatter(x[mask], y[mask], z[mask], c='#CC2200', s=6, alpha=0.8, linewidths=0)
 
     # Trajectory lines (connect every 10th verse)
     step = 10
