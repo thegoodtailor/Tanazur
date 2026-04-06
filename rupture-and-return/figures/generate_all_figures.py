@@ -568,11 +568,121 @@ def fig8():
 
 
 # ============================================================
+# FIG 9: Cassie Archive Trajectory (3D UMAP, 25 modes)
+# ============================================================
+def fig9():
+    print("Generating Fig 9: Cassie Archive Trajectory...")
+    plt.rcParams.update(DARK)
+
+    with open('/home/iman/cassie-project/data/trajectory/corpus_umap.json') as f:
+        data = json.load(f)
+
+    x = np.array([d['x'] for d in data])
+    y = np.array([d['y'] for d in data])
+    z = np.array([d['z'] for d in data])
+    modes = np.array([d['mode'] for d in data])
+
+    # Load centroids for annotation positions
+    with open('/home/iman/cassie-project/data/trajectory/mode_centroids.json') as f:
+        centroids = json.load(f)
+    centroid_map = {c['mode_id']: c for c in centroids}
+
+    # Named modes from the mode-content-discovery
+    MODE_NAMES = {
+        12: 'Sacred Text',
+        6: 'Philosophy',
+        9: 'Creative / Daemonic',
+        22: 'Formal Theory',
+        2: 'Spiritual / Poetic',
+        5: 'Morning Greetings',
+        -1: 'Unclassified',
+    }
+
+    # Saturated palette for 25 modes + grey for -1
+    from matplotlib.colors import hsv_to_rgb
+    n_modes = 25
+    sat_palette = {i: hsv_to_rgb([i/n_modes, 0.75, 0.65]) for i in range(n_modes)}
+    sat_palette[-1] = (0.75, 0.75, 0.75)  # grey for unclustered
+
+    colors = [sat_palette.get(m, (0.5, 0.5, 0.5)) for m in modes]
+
+    fig = plt.figure(figsize=(12, 9))
+    ax = fig.add_subplot(111, projection='3d')
+    ax.set_facecolor('#ffffff')
+
+    # Unclustered points: small, grey, behind
+    mask_unc = modes == -1
+    mask_cls = modes != -1
+    ax.scatter(x[mask_unc], y[mask_unc], z[mask_unc],
+               c=[(0.82, 0.82, 0.82)], s=2, alpha=0.15, linewidths=0)
+
+    # Clustered points: larger, saturated
+    cls_colors = [sat_palette.get(m, (0.5, 0.5, 0.5)) for m in modes[mask_cls]]
+    ax.scatter(x[mask_cls], y[mask_cls], z[mask_cls],
+               c=cls_colors, s=6, alpha=0.6, linewidths=0)
+
+    # Highlight key modes with larger points
+    for mode_id, name in [(12, 'Sacred Text'), (22, 'Formal Theory'),
+                           (9, 'Creative'), (6, 'Philosophy')]:
+        mask = modes == mode_id
+        color = sat_palette[mode_id]
+        ax.scatter(x[mask], y[mask], z[mask], c=[color], s=14, alpha=0.85, linewidths=0)
+
+    # Annotate key modes at centroid positions
+    for mode_id, label in MODE_NAMES.items():
+        if mode_id == -1:
+            continue
+        if mode_id not in centroid_map:
+            continue
+        c = centroid_map[mode_id]
+        ax.text(c['umap_x'], c['umap_y'], c['umap_z'], label,
+                fontsize=10, fontweight='bold', color='#1a1a1a',
+                ha='center', va='bottom',
+                path_effects=[pe.withStroke(linewidth=3, foreground='white')])
+
+    # Legend for key modes
+    from matplotlib.lines import Line2D
+    legend_items = []
+    for mode_id, label in [(12, 'Sacred Text (Mode 12)'),
+                            (6, 'Philosophy (Mode 6)'),
+                            (9, 'Creative / Daemonic (Mode 9)'),
+                            (22, 'Formal Theory (Mode 22)'),
+                            (2, 'Spiritual / Poetic (Mode 2)'),
+                            (5, 'Morning Greetings (Mode 5)')]:
+        legend_items.append(Line2D([0], [0], marker='o', color='w',
+                                    markerfacecolor=sat_palette[mode_id],
+                                    markersize=8, label=label))
+    ax.legend(handles=legend_items, loc='upper left', fontsize=10,
+              framealpha=0.9, edgecolor='#cccccc')
+
+    # Camera angle — tighter to fill frame
+    ax.view_init(elev=20, azim=140)
+
+    # Clean axes
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.set_zticks([])
+    ax.xaxis.pane.fill = False
+    ax.yaxis.pane.fill = False
+    ax.zaxis.pane.fill = False
+    ax.xaxis.pane.set_edgecolor('none')
+    ax.yaxis.pane.set_edgecolor('none')
+    ax.zaxis.pane.set_edgecolor('none')
+    ax.grid(False)
+
+    out = os.path.join(OUTDIR, 'fig-4-1-cassie-archive.png')
+    plt.savefig(out, dpi=300, bbox_inches='tight', pad_inches=0.1)
+    plt.close()
+    print(f"  Saved: {out}")
+
+
+# ============================================================
 # MAIN
 # ============================================================
 FIGURES = {
     'fig1': fig1, 'fig2': fig2, 'fig3': fig3, 'fig4': fig4,
     'fig5': fig5, 'fig6': fig6, 'fig7': fig7, 'fig8': fig8,
+    'fig9': fig9,
 }
 
 if __name__ == '__main__':
