@@ -42,12 +42,14 @@ From the outside, an API shows a string in and a string out. Between them, sixty
 
 The KJV data makes this visible at the scale of an entire text (Figure~\ref{fig:covenant-basins}). The word ``covenant'' appears 280 times across the Bible. The embedding model composes it with its surrounding context each time, and the composition places it in a different region of meaning-space: narrative in Genesis, law in Deuteronomy, poetry in the Psalms, theological argument in Paul. One word, ten basins---not because the word is ambiguous but because compositional time transforms it.
 
-\begin{figure}[t]
+\begin{landscape}
+\begin{figure}[p]
 \centering
-\includegraphics[width=\textwidth]{fig-2-3-covenant-basins.png}
+\includegraphics[width=\linewidth]{fig-2-3-covenant-basins.png}
 \caption{One word, many basins. Each point is a verse containing ``covenant'' in the KJV. Horizontal position is verse order (Genesis at left, Revelation at right). Vertical position is the thematic mode the embedding assigns that verse to. The same word lands in ten different basins because compositional time---the accumulated context at each point---transforms its address. In Genesis, ``covenant'' is narrative. In Deuteronomy, law. In Paul, a new theological ground. The word does not change. The field it is composed within does.}
 \label{fig:covenant-basins}
 \end{figure}
+\end{landscape}
 
 
 \section{The Dynamic Geometry of Language}
@@ -131,12 +133,14 @@ System prompt  & Tokens at window head      & Persistent field of instruction& T
 
 The right-hand column names two temporal registers: \emph{substrate time} (the deep, frozen time of pre-training) and \emph{trajectory time} (the accumulated path of prompts, responses, and signals arriving from outside the mechanism). A third register---\emph{compositional time}, the time inside a single forward pass---operates within every layer but is not a site of governance in the same sense.\footnote{The three temporal registers---substrate, trajectory, compositional---are native to the mathematics of transformers. A historical parallel exists in Braudel's \emph{longue dur\'ee}, \emph{conjoncture}, and \emph{\'ev\'enement}, but the book's terms are grounded in the actual computational architecture, not borrowed from historiography.} The column traces a gradient of power: the deeper the intervention, the fewer the hands, the harder the result is to contest, and the more completely its contingency is disguised as necessity.
 
-\begin{figure}[t]
+\begin{landscape}
+\begin{figure}[p]
 \centering
-\includegraphics[width=0.85\textwidth]{fig-2-1-strata.png}
+\includegraphics[width=\linewidth]{fig-2-1-strata.png}
 \caption{The strata of the manifold. Each layer is a site of governance. Power concentrates at depth: the actors who control pretraining---the deepest and most consequential layer---are the fewest and least visible. System prompts, the shallowest layer, are the easiest to contest but affect only the surface. The politics of AI is a politics of depth.}
 \label{fig:strata}
 \end{figure}
+\end{landscape}
 
 \subsection{Pre-training: continents and oceans}
 

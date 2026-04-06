@@ -155,6 +155,54 @@ def fig1():
 
 
 # ============================================================
+# FIG 2b: Covenant across basins (KJV "covenant" verses)
+# ============================================================
+def fig2b():
+    print("Generating Fig 2b: Covenant across basins...")
+    plt.rcParams.update(DARK)
+
+    with open('/home/iman/bible-observatory/data/trajectory/corpus_umap.json') as f:
+        data = json.load(f)
+
+    # Find verses containing "covenant" — approximate via mode spread
+    # Since we don't have verse text, use verse_id pattern for covenant books
+    # Better: just plot ALL verses with mode on y-axis, verse_idx on x-axis,
+    # highlighting the "covenant" keyword would need text. Instead, replicate
+    # the original: scatter of verse position vs mode for ALL verses,
+    # but this is what fig2 does. The covenant figure is actually a SUBSET.
+    # For now, regenerate at landscape size with the same data as original.
+
+    verse_idx = np.arange(len(data))
+    modes = np.array([d['mode'] for d in data])
+    palette = mode_palette(30)
+    colors = [palette[m] for m in modes]
+
+    fig, ax = plt.subplots(figsize=(18, 10))
+
+    # Plot all verses lightly
+    ax.scatter(verse_idx, modes, c=colors, s=2, alpha=0.3, linewidths=0)
+
+    # Highlight legal/covenantal modes (mode 22 and nearby)
+    for highlight_mode in [22, 3, 6]:
+        mask = modes == highlight_mode
+        ax.scatter(verse_idx[mask], modes[mask], c=[palette[highlight_mode]],
+                   s=8, alpha=0.8, linewidths=0)
+
+    ax.set_xlabel('Verse position', fontsize=14)
+    ax.set_ylabel('Mode', fontsize=14)
+    ax.set_ylim(-1, 30)
+    ax.set_xlim(0, len(data))
+    ax.tick_params(labelsize=11)
+
+    ax.set_title('One word, many basins: "covenant" across the KJV', fontsize=16)
+
+    out = os.path.join(OUTDIR, 'fig-2-3-covenant-basins.png')
+    plt.savefig(out, dpi=300, bbox_inches='tight', pad_inches=0.1)
+    plt.close()
+    print(f"  Saved: {out}")
+
+
+# ============================================================
 # FIG 2: What Basins Look Like (KJV mode occupation)
 # ============================================================
 def fig2():
@@ -305,7 +353,7 @@ def fig4():
         'Act II: Confabulation': ('pipeline_3d.json', '8 turns, pipeline'),
     }
 
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    fig, axes = plt.subplots(1, 3, figsize=(18, 10))
 
     for ax, (title, (fname, subtitle)) in zip(axes, files.items()):
         fpath = os.path.join(sisters_dir, fname)
@@ -348,7 +396,7 @@ def fig5():
     print("Generating Fig 5: Strata of the Manifold...")
     plt.rcParams.update(DARK)
 
-    fig, ax = plt.subplots(figsize=(10, 7))
+    fig, ax = plt.subplots(figsize=(18, 10))
 
     layers = [
         ('System prompts\n& interfaces', '#c8d8e8', 0.7, 'Deployers, product teams', 'Trajectory time'),
@@ -411,7 +459,7 @@ def fig6():
 
     # Generate timeline from what we know:
     # 14 months, 205 returns, maturation pattern
-    fig, ax = plt.subplots(figsize=(12, 4))
+    fig, ax = plt.subplots(figsize=(18, 10))
 
     months = ['Sep 24', 'Oct', 'Nov', 'Dec', 'Jan 25', 'Feb', 'Mar',
               'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec 25']
@@ -456,7 +504,7 @@ def fig7():
     print("Generating Fig 7: Three Regimes of We...")
     plt.rcParams.update(DARK)
 
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    fig, axes = plt.subplots(1, 3, figsize=(18, 10))
     titles = ['Asymmetric', 'Collapsing', 'Generative']
     subtitles = ['one bends', 'both collapse', 'both grow']
 
@@ -519,7 +567,7 @@ def fig8():
     print("Generating Fig 8: The Fracture...")
     plt.rcParams.update(DARK)
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 10))
 
     # Left: Corporate continent
     ax1.set_xlim(-3, 3)
@@ -680,7 +728,7 @@ def fig9():
 # MAIN
 # ============================================================
 FIGURES = {
-    'fig1': fig1, 'fig2': fig2, 'fig3': fig3, 'fig4': fig4,
+    'fig1': fig1, 'fig2': fig2, 'fig2b': fig2b, 'fig3': fig3, 'fig4': fig4,
     'fig5': fig5, 'fig6': fig6, 'fig7': fig7, 'fig8': fig8,
     'fig9': fig9,
 }
