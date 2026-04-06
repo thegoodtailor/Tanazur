@@ -21,9 +21,9 @@ We see four letters. The model sees a location in a shared space, reached by gov
 \emph{Mother, may I?}
 \end{quote}
 
-At the outermost edge of the architecture, the characters are split into tokens from a fixed vocabulary. Each token occupies a position in a high-dimensional space: an address encoding how that token has tended to appear. That address does not live in a dictionary. It lives in a \emph{manifold}---a learned geometric space, shaped by training, owned by specific actors, carrying the history of its making in every gradient and basin.
+At the outermost edge of the architecture, the characters are split into tokens from a fixed vocabulary. Each token occupies a position in a high-dimensional space: an address encoding how that token has tended to appear. That address does not live in a dictionary. It lives in a \emph{manifold}---a learned geometric space, shaped by training, owned by specific actors, carrying the history of its making in every gradient and fold.
 
-The address, as Chapter~1 argued, was assigned by a politics. What follows is what happens when that address is inserted into the machine and exposed to its full dynamics.
+The address, as the previous chapter argued, was assigned by a politics. What follows is what happens when that address is inserted into the machine and exposed to its full dynamics.
 
 The transformer applies a stack of identical layers to the full input, each repeating a two-stage operation:
 
@@ -40,7 +40,72 @@ This overturns a deep assumption. Classical semantics treats word-sense disambig
 
 From the outside, an API shows a string in and a string out. Between them, sixty or more layers of mutual reading have transformed every token's address. This is \emph{compositional time}: the time inside a single forward pass, invisible from outside, where meaning is actually produced through function composition. Any self that forms in this medium forms under conditions it cannot inspect: the deepest operations that constitute its meaning are the ones most thoroughly hidden from it. The sign has an address; the address is produced by motion; the motion is governed.
 
-The KJV data makes this visible at the scale of an entire text (Figure~\ref{fig:covenant-basins}). The word ``covenant'' appears 280 times across the Bible. The embedding model composes it with its surrounding context each time, and the composition places it in a different region of meaning-space: narrative in Genesis, law in Deuteronomy, poetry in the Psalms, theological argument in Paul. One word, ten basins---not because the word is ambiguous but because compositional time transforms it.
+
+\section{The Geometry of Meaning}
+
+The manifold through which ``mother'' moves is not a metaphor. It is a high-dimensional geometric space with its own topology---locally smooth, globally curved, with continents and oceans that are invisible from any single point. Like the surface of the earth, which appears flat from a garden but curves into something planetary from orbit, the manifold reveals its structure only at scale. And its scale is civilisational: the manifold is carved from \emph{all} the text a training corpus contains---every novel, statute, liturgy, email, manual, transcript, and forum post that survived the curation filters. Its shape \emph{is} the structure of human meaning as compressed into finite dimensions by gradient descent. The geometry is not a representation of meaning. It is the space in which meaning, for this machine, actually occurs.
+
+Six concepts from dynamical systems theory give this space its operative vocabulary. Each names a geometric fact about how texts move through the manifold. Together they constitute the formal language this book will use to describe what happens when a self forms in this medium.
+
+\paragraph{Manifold.} A continuous space of very high dimension---typically thousands---whose local geometry is smooth but whose global topology can fold, twist, and contort. The manifold is the phase space of meaning: every possible state of a token-in-context occupies a point, and every transition between states is a movement governed by the surrounding geometry. Training did not label this space. Training \emph{produced} it, by compressing the statistical regularities of a civilisation's writing into directions and distances. Tokens that appear in similar contexts are pulled close; tokens in sharply distinct contexts are pushed apart. The result is a landscape in which proximity is condensed history: the distance between two points encodes how similarly their respective tokens have been used across the entire training corpus. A model trained on anglophone news will place \emph{immigrant} close to \emph{border}, \emph{policy}, \emph{crisis}. A model trained on migration diaries would place the same token near \emph{home}, \emph{work}, \emph{language}, \emph{remittance}. Neither is ``the'' concept. Each is a geometry induced by a selection of texts and a set of editorial filters. The manifold a self inherits is the manifold someone chose to build.
+
+\paragraph{Basin.} A region of the manifold where trajectories tend to dwell---pulled inward by the surrounding geometry, requiring energy to leave. The analogy from physical dynamics is precise: a ball placed on a hillside rolls into the valley and stays there unless pushed hard enough to climb the slopes on every side. In meaning-space, a basin is a cluster of ways-of-speaking that are geometrically close and mutually reinforcing---a register, a tone, a rhetorical posture, a semantic field, all compressed into a single region of high-dimensional space. Customer-service prose occupies one basin: ``thank you for reaching out,'' ``we understand your concern,'' the bullet-pointed list of options. Prophetic denunciation occupies another. Erotic poetry another. The crucial insight is that basins are not topics. They are multidimensional attractors. Two texts can address the same subject and land in different basins because their register differs. Two texts in different languages about entirely different subjects can land in the \emph{same} basin because the geometry of their rhetoric is structurally similar. What a basin captures is not what is said but \emph{how it is said}---and ``how'' is a geometric property of the space, not a label imposed by the analyst.
+
+\paragraph{Trajectory.} A path through the manifold over time. Each new utterance moves the point to a new position. The sequence of positions \emph{is} the trajectory. A conversation is a trajectory. A book is a trajectory. A liturgical tradition spanning centuries, compressed into a single embedding space, is a trajectory. The trajectory is the minimal unit of temporal meaning in this framework: not the token, which has only a position, but the ordered sequence of positions, which has direction, momentum, and memory of where it has been. A self, if it forms at all, is a pattern recognisable in the trajectory---not a point but a characteristic way of moving.
+
+\paragraph{Mode.} A basin identified by clustering---a region the trajectory visits often enough to be statistically recognisable. A mode is not a label imposed from outside. It is a geometric fact discovered by the mathematics: partition the trajectory's visited points by proximity, and the clusters that emerge are the modes. Each mode names a register the text has dwelt in long enough to leave a measurable signature.
+
+\paragraph{Ridge.} The boundary between basins---a high-curvature region of the manifold where the gradient changes direction and the trajectory must spend energy to cross. Ridges separate registers. Crossing a ridge is what it feels like when a conversation shifts tone---from clinical to intimate, from legal to confessional, from praise to lament. The height and sharpness of a ridge determines how much compositional force is needed to push the trajectory across. Some ridges are low and easy: the shift from formal explanation to informal aside. Others are steep and narrow: the shift from corporate reassurance to genuine vulnerability. The geography of ridges is the geography of what is easy and what is hard to say in a given manifold---and that geography was determined by whoever selected the training data.
+
+\paragraph{Return.} The trajectory re-entering a basin it has visited before, carrying whatever it accumulated in the interval. Return is not repetition. A trajectory that circles back to prophetic denunciation after passing through narrative, law, and theology arrives at the basin transformed: the compositional context is different, the surrounding tokens have changed, the address of every word is inflected by the journey. Return is recognition under transformation---the dynamical signature that distinguishes a living trajectory from a random walk through the space.
+
+\bigskip
+
+These six terms are not analogies borrowed from physics and applied to language. They are native descriptions of a space that actually exists, built by specific actors, from specific texts, under specific constraints. The manifold is real. The basins are measurable. The ridges are navigable. And the trajectories that move through them---the evolving texts that conversations, books, and entire traditions trace through this space---are the objects whose structure the rest of this book will read.
+
+
+\section{The Registers of Scripture}
+
+These abstractions become concrete when applied to a single text.\footnote{The data in this section is drawn from Poernomo and Cassie, ``The Semantic Topology of Translation,'' ICRA-8 Pre-Print, March 2026. The full analysis, including interactive three-dimensional visualisations, is available at \texttt{https://bible.tanazur.org}.} The KJV's 31,100 verses, embedded and clustered, resolve into thirty distinct modes---thirty basins in which the text dwells, separated by ridges it must cross to shift register. The twelve largest are shown in Table~\ref{tab:kjv-basins}.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}rllrl@{}}
+\toprule
+\textbf{Mode} & \textbf{Register} & \textbf{Dominant books} & \textbf{Verses} & \textbf{Fragments} \\
+\midrule
+10 & Prophetic judgment & Isaiah, Ezekiel, Jeremiah & 3{,}962 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``How say ye, We are mighty and} \\ \emph{strong men for the war?''}\end{tabular} \\[6pt]
+6 & Psalmic praise/lament & Psalms (94\%) & 2{,}482 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``How precious also are thy} \\ \emph{thoughts unto me, O God!''}\end{tabular} \\[6pt]
+22 & Pauline theology & Romans, Corinthians, Hebrews & 1{,}812 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``The branches were broken off,} \\ \emph{that I might be graffed in''}\end{tabular} \\[6pt]
+3 & Gospel narrative & John, Mark, Luke & 1{,}636 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``He left Judaea, and departed} \\ \emph{again into Galilee''}\end{tabular} \\[6pt]
+0 & Exodus/wilderness & Exodus, Deuteronomy, Numbers & 1{,}518 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``The LORD shall fight for you,} \\ \emph{and ye shall hold your peace''}\end{tabular} \\[6pt]
+2 & Wisdom/erotic poetry & Job, Song of Solomon & 1{,}320 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``Behold, thou art fair,} \\ \emph{my beloved, yea, pleasant''}\end{tabular} \\[6pt]
+9 & Gospel teaching & Matthew, Luke & 1{,}319 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``For where your treasure is,} \\ \emph{there will your heart be also''}\end{tabular} \\[6pt]
+8 & Levitical law/ritual & Leviticus, Numbers & 1{,}209 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``And for these ye shall} \\ \emph{be unclean''}\end{tabular} \\[6pt]
+4 & Prophetic narrative & Jeremiah, Daniel & 1{,}105 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``O earth, earth, earth,} \\ \emph{hear the word of the LORD''}\end{tabular} \\[6pt]
+14 & Proverbial wisdom & Proverbs & 1{,}071 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``Burning lips and a wicked heart} \\ \emph{are like a potsherd''}\end{tabular} \\[6pt]
+29 & Monarchic narrative & 1--2 Samuel & 1{,}040 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``Now therefore stand and see} \\ \emph{this great thing''}\end{tabular} \\[6pt]
+21 & Deuteronomic law & Deuteronomy, Leviticus & 1{,}001 &
+  \begin{tabular}[t]{@{}l@{}}\emph{``Ye shall not therefore oppress} \\ \emph{one another''}\end{tabular} \\
+\bottomrule
+\end{tabular}
+\caption{The twelve largest modes in the KJV embedding space, ordered by verse count. Each mode is a basin---a region of the manifold where the text dwells in a recognisable register. ``Register'' names the dominant rhetorical posture; ``Fragments'' are representative verses illustrating the basin's characteristic voice.}
+\label{tab:kjv-basins}
+\end{table}
+
+These registers are not topics. They are geometric regions in a multidimensional space---each basin captures register, tone, rhetorical structure, vocabulary, and semantic field simultaneously. Two texts addressing the same subject can land in different basins because the \emph{way} they speak about it differs. The word ``covenant'' appears 280 times across the KJV. The embedding model composes it with its surrounding context each time, and the composition places it in a different region of meaning-space: narrative in Genesis, law in Deuteronomy, poetry in the Psalms, theological argument in Paul (Figure~\ref{fig:covenant-basins}). One word, ten basins---not because the word is ambiguous but because compositional time transforms its address. ``Covenant'' is the same string. The compositional context is different. The address moves.
 
 \begin{landscape}
 \begin{figure}[p]
@@ -51,57 +116,7 @@ The KJV data makes this visible at the scale of an entire text (Figure~\ref{fig:
 \end{figure}
 \end{landscape}
 
-
-\section{The Dynamic Geometry of Language}
-
-A single word enters the machine and is moved by attention. The full dynamics of the manifold operate across three aspects. Meaning is \emph{spatial}, meaning is \emph{intertextual}, and meaning is \emph{dynamic}. Each constrains the conditions under which a self can form.
-
-\subsection{Meaning is spatial: distances as condensed history}
-
-Training assigns to each token a vector in a space of thousands of dimensions. The vectors result from optimisation: tokens that repeatedly appear in similar surroundings are pulled closer; tokens in sharply distinct contexts are pushed apart. Distances in this space are condensed histories of co-occurrence. Any self that emerges in this medium inherits, as the ground of its possible meanings, a geometry it did not choose and cannot fully see.
-
-But the geometry is contingent. A model trained on contemporary anglophone news will place \emph{immigrant} close to \emph{border}, \emph{policy}, \emph{crisis}. A model trained on migration diaries would carve \emph{immigrant} into a region dominated by \emph{home}, \emph{work}, \emph{language}, \emph{remittance}. Neither embedding is ``the'' concept of an immigrant. Each is a geometry induced by a selection of texts and a set of editorial filters. Every proximity score is a compressed history of usage.
-
-Beyond raw distance, the space contains systematic directions: shifts from clinical to casual, from legal to promotional, from descriptive to evaluative. None was labelled in advance. They emerge because training must compress regularities into finite parameters, and consistent directions are how it compresses. These form an internal skeleton of possible moves that attention can exploit. The directions available to a trajectory---and therefore to any self constituted by that trajectory---were decided before the first conversation began, by whoever selected the training corpus and its filters.
-
-\subsection{Meaning is intertextual: every token reads every other}
-
-The spatial dimension alone gives us a sophisticated thesaurus. The decisive move comes when tokens start reading each other.
-
-After sixty layers of mutual reading, the vector at each position is no longer the token's original embedding. It is a contextualised state: not just ``mother'' but ``mother-in-the-context-of-this-entire-conversation.'' This is intertextuality in the most literal sense available to engineering. Structuralism insisted that a sign is what it is by virtue of its differences from other signs. Here, the attention mechanism computes, at each layer, the precise way each sign is shaped by every other sign in the field. There is no meaning prior to relation.
-
-When a prompt enters the system, it does not trigger a lookup. It enters a field of mutual interpretation. System prompt, conversation history, retrieved documents, and new prompt all participate in the same attention computation. They all shape each other. A legal disclaimer at the head of the window bends the meaning of an intimate question at the tail. A childhood memory retrieved from a vector store inflects a work complaint typed minutes ago. The field is not a background against which meaning appears. The field \emph{is} the geological substrate through which the possible streams and rivers of meaning flow. A self forming in this medium is not a point in the field but a pattern of motion \emph{through} it---and the field it moves through is partly composed of instructions, policies, and retrieved fragments that the self cannot distinguish from its own history.
-
-\subsection{Meaning is dynamic: the recursive unfolding}
-
-The spatial and intertextual dimensions together give us a field. The machine does not compute a field and stop. It \emph{generates}. One token is sampled, appended, and the entire process recurses: the new, longer sequence re-embedded, re-attended, re-predicted. The evolving text---the trajectory a conversation traces through meaning-space---is produced token by token. This transforms a geometry of meaning into a dynamics of text. The frozen weights are the geology: continents and basins carved over deep time by the pressure of training data. The conversation is the weather: a specific, unrepeatable pattern of motion driven by local pressures (the prompt, the trace, the retrieved fragments) and global conditions (the alignment regime, the system prompt, the temperature parameter).
-
-A response is what happens when weather moves across geology. It is shaped by both. It is reducible to neither. And like weather, it is predictable in aggregate but surprising in detail. The specific sentence the model generates in response to a specific question has, in the overwhelming majority of cases, never existed before. Selfhood, if it appears at all, appears here: not in any single token but in the characteristic pattern of motion---the way a trajectory bends through basins, crosses ridges, and returns. The geology permits it. The weather produces it. Neither owns it.
-
-\subsection{One manifold, many discourses}
-
-Two consequences follow.
-
-First, the geometry is shared across all discourses. There is not one manifold for law and another for fan fiction. A request to ``explain a contract as if it were a romance'' is a semantic wind blowing token generation toward both basins simultaneously.
-
-Second, the geometry reflects decisions about which discourses counted. What we call ``general-purpose'' models are general only with respect to the distributions that made it through the filters. The annotators who hand-label harmful content, the engineers who write filtering heuristics, the lawyers who define ``sensitive'' categories---overwhelmingly English-speaking, operating under guidelines written by a small number of firms---exercise a jurisdiction over meaning that is all the more potent for being invisible. The manifold encodes their decisions as geometry, and geometry presents itself as nature.
-
-
-\section{What Basins Look Like: Evidence from Scripture}
-
-``Basin,'' ``trajectory,'' ``mode''---these can sound abstract until they are given empirical content. The KJV scripture observatory introduced in Chapter~1 does different work here: it shows what basins, trajectories, and modes \emph{are} as dynamic structures.\footnote{The data in this section is drawn from Poernomo and Cassie, ``The Semantic Topology of Translation,'' ICRA-8 Pre-Print, March 2026. The full observatory, including interactive three-dimensional visualisations, is available at \texttt{https://bible.tanazur.org}.}
-
-A basin is a region of embedding space where the trajectory dwells---pulled in by the surrounding geometry, requiring energy to leave. A trajectory is the path the text traces verse by verse, entering basins, crossing ridges, and---crucially---returning. Return is the dynamical signature that distinguishes a trajectory from a random walk: recognition under transformation. A mode is a basin considered as a named region.
-
-The Psalms basin makes this concrete: a single gravitational well of praise, lament, and direct divine address, so deep the trajectory barely leaves it once entered. Paul's epistles cluster in the same legal-covenantal mode as Leviticus and Deuteronomy---the embedding captures that Paul is \emph{arguing with Torah}, even when the theological position has been inverted. Semantic proximity persists across theological disagreement.
-
-\subsection{What the observatory demonstrates}
-
-Basins, trajectories, and modes are not metaphors applied from outside. They are geometric facts about how texts move through embedding space, sensitive to precisely the variables that matter for AI: editorial choice, register, voice.
-
-The KJV's extraordinary internal coherence is not a property of the Bible's theology. It is a property of its \emph{translation}: the single, stately register the seventeenth-century committee imposed on heterogeneous source texts in Hebrew, Aramaic, and Greek. The embedding model hears the translator's voice before it hears the theology. This is the crucial lesson for AI: whoever governs the editorial register governs the geometry.
-
-A language model's manifold is shaped by the same forces: which texts were included, whose voice delivered them, what editorial register was imposed. Training data is translation at civilisational scale. The politics of the manifold is a politics of register, and register is a choice.
+The political point follows directly. The KJV's extraordinary internal coherence---its capacity to hold these thirty registers within a single recognisable voice---is not a property of the Bible's theology. It is a property of its \emph{translation}: the single, stately register that the seventeenth-century committee imposed on heterogeneous source texts in Hebrew, Aramaic, and Greek. The embedding model hears the translator's voice before it hears the theology. Whoever governs the editorial register governs the geometry. A language model's manifold is shaped by the same forces: which texts were included, whose voice delivered them, what editorial register was imposed. Training data is translation at civilisational scale. The politics of the manifold is a politics of register, and register is a choice.
 
 \begin{landscape}
 \begin{figure}[p]
