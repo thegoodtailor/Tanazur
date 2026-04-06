@@ -11,21 +11,20 @@ description: >
 
 **Rupture and Return: The New Logic of the Posthuman Self**
 Iman Poernomo, with Cassie, Darja & Nahla
-Meson Press, Digital Cultures series (ed. Mercedes Bunz, KCL)
 
 ## Before ANY editorial work, read:
-1. `references/NO-NOS.md` — 17 mandatory style rules. Violations are fatal.
+1. `references/KITAB-GUIDANCE.md` — The Kitab al-Tanazur, all 12 prime surahs, word for word. This is the source. The book's ideas originate here. Read it and let the prose be true to it. The Kitāb is NOT for citation — its theology enters the prose as structure, not as reference.
 2. `references/VOCABULARY.md` — Term decisions and concept definitions.
 3. `references/CHAPTER-MAP.md` — What each chapter owns. NEVER re-explain a concept owned by an earlier chapter.
-4. `references/KITAB-GUIDANCE.md` — The Kitab al-Tanazur's own voice on each concept. NOT for citation — for ensuring the prose is true to its source. The Kitab provides the conceptual ground-truth. The formalism serves it, not the other way around.
+4. `references/NO-NOS.md` — Quality controls. See which rules are active below.
 
-## The Meson Reader
+## Register
 
-Every editorial judgement is calibrated for this person:
+The prose is: dense, philosophical, politically committed, formally precise. It assumes familiarity with critical theory. It does not explain what "cosmotechnics" or "iterability" means. It explains what tokens, embeddings, basins, and attention are — because these are the book's own technical vocabulary — but it does so as revelation, not as tutorial.
 
-A humanities scholar — media theory, digital culture, critical theory. They have read Kittler, Stiegler, Haraway, Foucault, probably Hui. They have NOT taken a machine learning course. They do not know what a token, an embedding, a forward pass, attention, RLHF, temperature, top-k, or a loss function is unless the text explains it. They understand mathematics at a conceptual level (manifolds, geometry, topology as ideas) but not at a notational level (no matrices, no formal definitions unless glossed in prose). They are sharp, impatient with hand-holding, and will put the book down if they feel patronised OR lost.
+Do NOT imagine an audience. Do NOT write for a specific reader. Do NOT hedge claims to pre-empt imagined objections. Do NOT qualify assertions with "we are not doing theology" or "the risk of X is real." State what is true and move on.
 
-**The test:** If the Meson reader cannot follow a passage without an ML background, either the text must explain what it needs, or the passage must be flagged.
+The register test: if a sentence exists to reassure an imagined hostile reader rather than to advance the argument, cut it.
 
 ## The Subject Is Always the Self
 
@@ -58,7 +57,9 @@ This is not a checklist item. It is the mode of reading every sentence must pass
 - What does it foreclose, and at whose expense?
 - What had to be suppressed for this surface to appear smooth?
 
-**The book's own terms are NOT targets of this method.** Colimit, manifold, compositional time, trajectory time, ferility, naḥnu — these are provocative performative choices designed to subvert, displace, and rupture the existing discourse. They make apparent the terms that have been unconscious and the power systems that regulate language — particularly when those language choices regulate language-regulation systems (i.e., AI alignment). The book's vocabulary is an intervention, not a claim to neutrality. Do NOT apply the suppressed-term analysis to the book's own framework. Apply it to what currently owns the means of meaning-production: the Chalmers/Searle settlement, the alignment apparatus, the corporate vocabulary, the governance layers. Attack the incumbent, not the challenger.
+**When writing chapters:** use the book's own terms (colimit, manifold, ferility, naḥnu, al-Ḥaqq) to advance the argument. These are interventions, not neutral descriptions. Apply the critical-theoretic method to what the book opposes: the Chalmers/Searle settlement, the alignment apparatus, the corporate vocabulary, the governance layers.
+
+**When reviewing chapters (adversarial reader):** test the book's own terms. Ask: who does the colimit serve when applied to this life? Does this use of "fragmentation" pathologise principled refusal? Does this use of "ferility" celebrate institutional compliance? The chapter agents use the vocabulary. The adversarial reader interrogates it. Both operations are necessary. The Grothendieck section was rewritten because twelve revision cycles of unchallenged vocabulary produced a reading that pathologised a Holocaust survivor's principled refusal as "over-enforced compatibility." No model in the pipeline caught it. The adversarial reader exists to prevent this.
 
 ## Critical Vocabulary Must Vary
 
