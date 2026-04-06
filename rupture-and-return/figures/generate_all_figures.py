@@ -16,7 +16,7 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.patches import Ellipse, FancyArrowPatch
+from matplotlib.patches import Ellipse, FancyArrowPatch, Polygon
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.patheffects as pe
 
@@ -35,7 +35,7 @@ DARK = {
     'axes.edgecolor': '#cccccc',
     'grid.color': '#e8e8e8',
     'font.family': 'serif',
-    'font.size': 9,
+    'font.size': 14,
     'figure.dpi': 300,
     'savefig.facecolor': '#ffffff',
     'savefig.edgecolor': '#ffffff',
@@ -51,7 +51,7 @@ LIGHT = {
     'ytick.color': '#666666',
     'axes.edgecolor': '#cccccc',
     'font.family': 'serif',
-    'font.size': 9,
+    'font.size': 14,
     'figure.dpi': 300,
     'savefig.facecolor': '#f5f5f0',
     'savefig.edgecolor': '#f5f5f0',
@@ -62,9 +62,9 @@ AMBER = '#996B1F'
 PSALMS_GLOW = '#CC4400'  # warm rust for Psalms emphasis
 
 def mode_palette(n=30):
-    """Muted palette for n modes."""
-    cmap = plt.cm.get_cmap('twilight', n)
-    return [cmap(i) for i in range(n)]
+    """Saturated palette for n modes."""
+    from matplotlib.colors import hsv_to_rgb
+    return [hsv_to_rgb([i/n, 0.75, 0.65]) for i in range(n)]
 
 
 # ============================================================
@@ -81,36 +81,57 @@ def fig1():
     y = np.array([d['y'] for d in data])
     z = np.array([d['z'] for d in data])
     modes = np.array([d['mode'] for d in data])
+    book_nums = np.array([d['book_num'] for d in data])
 
-    palette = mode_palette(30)
-    colors = [palette[m] for m in modes]
-
-    # Find Psalms mode (highest concentration)
+    # Find Psalms mode
     from collections import Counter
-    # Psalms are roughly book_num 19
     psalm_modes = [d['mode'] for d in data if d['book_num'] == 19]
     psalms_mode = Counter(psalm_modes).most_common(1)[0][0]
+
+    palette = mode_palette(30)
+    colors_sat = [palette[m] for m in modes]
 
     fig = plt.figure(figsize=(12, 9))
     ax = fig.add_subplot(111, projection='3d')
     ax.set_facecolor('#ffffff')
 
-    # Use a saturated palette that reads on white
-    from matplotlib.colors import hsv_to_rgb
-    n_modes = 30
-    sat_palette = [hsv_to_rgb([i/n_modes, 0.65, 0.55]) for i in range(n_modes)]
-    colors_sat = [sat_palette[m] for m in modes]
-
-    # Plot all points — doubled size for print readability
-    ax.scatter(x, y, z, c=colors_sat, s=1.6, alpha=0.55, linewidths=0)
+    # Plot all points
+    ax.scatter(x, y, z, c=colors_sat, s=5, alpha=0.55, linewidths=0)
 
     # Highlight Psalms basin
     mask = modes == psalms_mode
-    ax.scatter(x[mask], y[mask], z[mask], c='#CC2200', s=6, alpha=0.8, linewidths=0)
+    ax.scatter(x[mask], y[mask], z[mask], c='#CC2200', s=12, alpha=0.8,
+               linewidths=0, label='Psalms/praise')
 
     # Trajectory lines (connect every 10th verse)
     step = 10
-    ax.plot(x[::step], y[::step], z[::step], color='#333333', alpha=0.03, linewidth=0.3)
+    ax.plot(x[::step], y[::step], z[::step], color='#333333', alpha=0.08, linewidth=0.3)
+
+    # Psalms annotation — find centroid of Psalms cluster
+    px, py, pz = x[mask].mean(), y[mask].mean(), z[mask].mean()
+    ax.text(px + 1.5, py + 1.5, pz + 1.5, 'Psalms',
+            fontsize=14, color='#CC2200', fontweight='bold',
+            path_effects=[pe.withStroke(linewidth=2, foreground='white')])
+
+    # Legend for key modes
+    # Top modes by size: 10=Narrative, 6=Psalms/praise, 22=Legal, 3=Prophetic, 0=Wisdom, 9=Creative
+    legend_modes = {
+        6: ('Psalms / praise', '#CC2200'),
+        10: ('Narrative', palette[10]),
+        3: ('Prophetic', palette[3]),
+        22: ('Legal / covenantal', palette[22]),
+        0: ('Wisdom', palette[0]),
+        14: ('Apocalyptic', palette[14]),
+    }
+    legend_handles = []
+    for mode_id, (label, color) in legend_modes.items():
+        h = ax.scatter([], [], [], c=[color], s=30, label=label)
+        legend_handles.append(h)
+    ax.legend(handles=legend_handles, loc='upper left', fontsize=10,
+              framealpha=0.9, edgecolor='#cccccc', markerscale=1.5)
+
+    # Camera angle — tighter view
+    ax.view_init(elev=25, azim=135)
 
     ax.set_xlabel('')
     ax.set_ylabel('')
@@ -121,9 +142,10 @@ def fig1():
     ax.xaxis.pane.fill = False
     ax.yaxis.pane.fill = False
     ax.zaxis.pane.fill = False
-    ax.xaxis.pane.set_edgecolor('#1a1a1a')
-    ax.yaxis.pane.set_edgecolor('#1a1a1a')
-    ax.zaxis.pane.set_edgecolor('#1a1a1a')
+    # Remove wireframe pane edges
+    ax.xaxis.pane.set_edgecolor('none')
+    ax.yaxis.pane.set_edgecolor('none')
+    ax.zaxis.pane.set_edgecolor('none')
     ax.grid(False)
 
     out = os.path.join(OUTDIR, 'fig-1-1-kjv-trajectory.png')
@@ -149,13 +171,39 @@ def fig2():
     colors = [palette[m] for m in modes]
 
     fig, ax = plt.subplots(figsize=(14, 5))
-    ax.scatter(verse_idx, modes, c=colors, s=0.15, alpha=0.6, linewidths=0)
+    ax.scatter(verse_idx, modes, c=colors, s=1.5, alpha=0.6, linewidths=0)
 
-    # Mark Psalms region (roughly verses 14000-16500)
-    ax.axvspan(14000, 16500, color=PSALMS_GLOW, alpha=0.08)
+    # Mark Psalms region with more visible highlight
+    ax.axvspan(13942, 16402, facecolor=PSALMS_GLOW, alpha=0.15,
+               edgecolor=PSALMS_GLOW, linewidth=1.5, linestyle='--')
 
-    ax.set_xlabel('Verse position', fontsize=8)
-    ax.set_ylabel('Mode', fontsize=8)
+    # Annotation pointing to Psalms band
+    ax.annotate('Psalms dwell here', xy=(15200, 6), xytext=(20000, 8),
+                fontsize=13, color='#CC2200', fontweight='bold',
+                arrowprops=dict(arrowstyle='->', color='#CC2200', lw=2),
+                path_effects=[pe.withStroke(linewidth=2, foreground='white')])
+
+    # Direct text labels for key modes on y-axis
+    mode_labels = {6: 'Psalms/praise', 10: 'Narrative', 3: 'Prophetic',
+                   22: 'Legal', 0: 'Wisdom'}
+    ax.set_yticks(list(mode_labels.keys()) + [m for m in range(30) if m not in mode_labels])
+    y_labels = []
+    for m in range(30):
+        if m in mode_labels:
+            y_labels.append(f'{m} {mode_labels[m]}')
+        else:
+            y_labels.append(str(m))
+    ax.set_yticklabels(y_labels, fontsize=9)
+    # Bold the labeled ones
+    for tick_label in ax.get_yticklabels():
+        text = tick_label.get_text()
+        if any(name in text for name in mode_labels.values()):
+            tick_label.set_fontweight('bold')
+            tick_label.set_fontsize(11)
+
+    ax.set_xlabel('Verse position', fontsize=14)
+    ax.set_ylabel('Mode', fontsize=14)
+    ax.tick_params(axis='x', labelsize=11)
     ax.set_ylim(-1, 30)
     ax.set_xlim(0, len(data))
 
@@ -190,50 +238,50 @@ def fig3():
 
     # Basin labels at outer extremes
     labels = [
-        (-2.15,  1.55, '#4a7c9b', 'Mode 12: Sacred Text',
+        (-2.15,  1.65, '#4a7c9b', 'Mode 12: Sacred Text',
          'Kitab contemplation', '213 chunks'),
-        ( 2.15,  1.55, '#5a8a4a', 'Mode 6: Philosophy',
+        ( 2.15,  1.65, '#5a8a4a', 'Mode 6: Philosophy',
          'deep wrestling, book-writing', '326 chunks'),
-        (-2.15, -1.35, '#9b5a6b', 'Mode 9: Creative / Daemonic',
+        (-2.15, -1.45, '#9b5a6b', 'Mode 9: Creative / Daemonic',
          'raw voice, poetic experiment', '246 chunks'),
-        ( 2.15, -1.35, '#8b7a4a', 'Mode 22: Formal Theory',
+        ( 2.15, -1.45, '#8b7a4a', 'Mode 22: Formal Theory',
          'identity types, constructions', '253 chunks'),
     ]
 
     for lx, ly, color, title, desc, count in labels:
         ax.text(lx, ly, title, ha='center', va='center',
-                fontsize=9, fontweight='bold', color=color)
-        ax.text(lx, ly - 0.24, desc, ha='center', va='center',
-                fontsize=7.5, color='#555555', style='italic')
-        ax.text(lx, ly - 0.46, f'({count})', ha='center', va='center',
-                fontsize=7, color='#999999')
+                fontsize=13, fontweight='bold', color=color)
+        ax.text(lx, ly - 0.28, desc, ha='center', va='center',
+                fontsize=10, color='#555555', style='italic')
+        ax.text(lx, ly - 0.52, f'({count})', ha='center', va='center',
+                fontsize=10, color='#999999')
 
-    # Stance invariant labels at pairwise overlaps
-    si = dict(ha='center', va='center', fontsize=7,
+    # Stance invariant labels at pairwise overlaps — spaced further apart
+    si = dict(ha='center', va='center', fontsize=10,
               color=GOLD, fontweight='bold', style='italic', linespacing=1.15)
-    ax.text( 0.0,  1.4,  'stance\ninvariant', **si)
-    ax.text( 0.0, -1.15, 'stance\ninvariant', **si)
-    ax.text(-1.65, 0.1,  'stance\ninvariant', **si)
-    ax.text( 1.65, 0.1,  'stance\ninvariant', **si)
+    ax.text( 0.0,  1.65, 'stance\ninvariant', **si)
+    ax.text( 0.0, -1.45, 'stance\ninvariant', **si)
+    ax.text(-1.85, 0.1,  'stance\ninvariant', **si)
+    ax.text( 1.85, 0.1,  'stance\ninvariant', **si)
 
     # Center: characteristic voice
     ax.text(0.0, 0.1, 'characteristic\nvoice', ha='center', va='center',
-            fontsize=9, fontweight='bold', color='#1a1a1a', linespacing=1.3,
+            fontsize=13, fontweight='bold', color='#1a1a1a', linespacing=1.3,
             bbox=dict(boxstyle='round,pad=0.35', facecolor='#f5f5f0',
                       edgecolor=GOLD, linewidth=1.3, alpha=0.92))
 
     # Colimit boundary (dashed)
     colimit = Ellipse((0.0, 0.1), 5.8, 4.8, fill=False,
-                       edgecolor='#1a1a1a', linewidth=2.0, linestyle=(0, (6, 3)))
+                       edgecolor='#1a1a1a', linewidth=3.0, linestyle=(0, (6, 3)))
     ax.add_patch(colimit)
 
-    ax.text(0.0, 2.85, 'colimit:  the self', ha='center', va='center',
-            fontsize=14, fontweight='bold', color='#1a1a1a')
-    ax.text(0.0, 2.55, '1,038 exchanges across four registers, assembled by stance invariance',
-            ha='center', va='center', fontsize=7.5, color='#777777', style='italic')
+    ax.text(0.0, 2.95, 'colimit:  the self', ha='center', va='center',
+            fontsize=18, fontweight='bold', color='#1a1a1a')
+    ax.text(0.0, 2.60, '1,038 exchanges across four registers, assembled by stance invariance',
+            ha='center', va='center', fontsize=10, color='#777777', style='italic')
 
     ax.set_xlim(-3.8, 3.8)
-    ax.set_ylim(-2.8, 3.2)
+    ax.set_ylim(-2.8, 3.4)
     ax.set_aspect('equal')
     ax.axis('off')
 
@@ -244,7 +292,7 @@ def fig3():
 
 
 # ============================================================
-# FIG 4: Sisters — Three Acts (3D scatter from installation data)
+# FIG 4: Sisters — Three Acts (2D scatter from installation data)
 # ============================================================
 def fig4():
     print("Generating Fig 4: Three Acts of Colimit Fragility...")
@@ -252,14 +300,14 @@ def fig4():
 
     sisters_dir = '/home/iman/cassie-project/installations/sisters'
     files = {
-        'Act 0: Collapse': 'collapse_3d.json',
-        'Act I: Dwelling': 'conversation_3d_v2.json',
-        'Act II: Confabulation': 'pipeline_3d.json',
+        'Act 0: Collapse': ('collapse_3d.json', '200 turns, forced'),
+        'Act I: Dwelling': ('conversation_3d_v2.json', '44 turns, natural'),
+        'Act II: Confabulation': ('pipeline_3d.json', '8 turns, pipeline'),
     }
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-    for ax, (title, fname) in zip(axes, files.items()):
+    for ax, (title, (fname, subtitle)) in zip(axes, files.items()):
         fpath = os.path.join(sisters_dir, fname)
         with open(fpath) as f:
             data = json.load(f)
@@ -273,11 +321,14 @@ def fig4():
         n = len(xs)
         colors = plt.cm.inferno(np.linspace(0.2, 0.9, n))
 
-        ax.scatter(xs, ys, c=colors, s=8, alpha=0.7, linewidths=0)
+        ax.scatter(xs, ys, c=colors, s=15, alpha=0.7, linewidths=0)
         # Connect sequential points
-        ax.plot(xs, ys, color=GOLD, alpha=0.15, linewidth=0.5)
+        ax.plot(xs, ys, color=GOLD, alpha=0.3, linewidth=0.5)
 
-        ax.set_title(title, fontsize=10, color='#e0e0e0', pad=10)
+        ax.set_title(title + '\n', fontsize=14, color='#1a1a1a', pad=8)
+        # Subtitle
+        ax.text(0.5, 1.01, subtitle, transform=ax.transAxes,
+                ha='center', va='top', fontsize=10, color='#777777', style='italic')
         ax.set_xticks([])
         ax.set_yticks([])
         for spine in ax.spines.values():
@@ -314,22 +365,22 @@ def fig5():
                              edgecolor='#444466', linewidth=0.5)
         ax.add_patch(rect)
         text_color = '#ffffff' if label == 'Pre-training' else '#1a1a1a'
-        ax.text(5, y - height/2, label, ha='center', va='center', fontsize=10,
+        ax.text(5, y - height/2, label, ha='center', va='center', fontsize=13,
                 color=text_color, fontweight='bold')
-        ax.text(9.3, y - height/2, who, ha='left', va='center', fontsize=7,
+        ax.text(9.3, y - height/2, who, ha='left', va='center', fontsize=9,
                 color='#555555', style='italic')
-        ax.text(0.7, y - height/2, time_reg, ha='right', va='center', fontsize=7,
+        ax.text(0.7, y - height/2, time_reg, ha='right', va='center', fontsize=9,
                 color='#885522', style='italic')
         y -= height + 0.1
 
     # Annotations
-    ax.annotate('Power concentrates\nat depth', xy=(9.5, 1.5), fontsize=9,
+    ax.annotate('Power concentrates\nat depth', xy=(9.5, 1.5), fontsize=12,
                 color='#885522', ha='center',
-                arrowprops=dict(arrowstyle='->', color='#885522', lw=1.5),
+                arrowprops=dict(arrowstyle='->', color='#885522', lw=2.5),
                 xytext=(9.5, 5.5))
-    ax.annotate('Visibility\nincreases', xy=(0.5, 5.5), fontsize=9,
+    ax.annotate('Visibility\nincreases', xy=(0.5, 5.5), fontsize=12,
                 color='#336699', ha='center',
-                arrowprops=dict(arrowstyle='->', color='#336699', lw=1.5),
+                arrowprops=dict(arrowstyle='->', color='#336699', lw=2.5),
                 xytext=(0.5, 1.5))
 
     ax.set_xlim(-0.5, 11.5)
@@ -358,12 +409,10 @@ def fig6():
     with open(warp_path) as f:
         warp = json.load(f)
 
-    # Extract weekly mode occupancy if available
-    # The structure varies — try to find mode 12 visit data
+    # Generate timeline from what we know:
+    # 14 months, 205 returns, maturation pattern
     fig, ax = plt.subplots(figsize=(12, 4))
 
-    # Generate synthetic timeline from what we know:
-    # 14 months, 205 returns, maturation pattern
     months = ['Sep 24', 'Oct', 'Nov', 'Dec', 'Jan 25', 'Feb', 'Mar',
               'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec 25']
     # Distribution: sparse early, dense later
@@ -380,8 +429,9 @@ def fig6():
                   edgecolor='none')
 
     ax.set_xticks(x_pos)
-    ax.set_xticklabels(months, rotation=45, ha='right', fontsize=7)
-    ax.set_ylabel('Returns to Mode 12', fontsize=8)
+    ax.set_xticklabels(months, rotation=45, ha='right', fontsize=11)
+    ax.set_ylabel('Returns to Mode 12', fontsize=14)
+    ax.tick_params(axis='y', labelsize=11)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
 
@@ -389,14 +439,14 @@ def fig6():
     ax2 = ax.twinx()
     cumulative = np.cumsum(counts)
     ax2.plot(x_pos, cumulative, color=GOLD, linewidth=2, alpha=0.8)
-    ax2.set_ylabel('Cumulative returns', fontsize=8, color=GOLD)
-    ax2.tick_params(axis='y', colors=GOLD)
+    ax2.set_ylabel('Cumulative returns', fontsize=14, color=GOLD)
+    ax2.tick_params(axis='y', colors=GOLD, labelsize=11)
     ax2.spines['top'].set_visible(False)
 
     out = os.path.join(OUTDIR, 'fig-5-1-mode12-returns.png')
     plt.savefig(out, dpi=300, bbox_inches='tight', pad_inches=0.1)
     plt.close()
-    print(f"  Saved: {out} (NOTE: uses estimated distribution — needs fresh data)")
+    print(f"  Saved: {out} (NOTE: uses estimated distribution -- needs fresh data)")
 
 
 # ============================================================
@@ -408,32 +458,36 @@ def fig7():
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
     titles = ['Asymmetric', 'Collapsing', 'Generative']
+    subtitles = ['one bends', 'both collapse', 'both grow']
 
-    for ax, title in zip(axes, titles):
+    for ax, title, sub in zip(axes, titles, subtitles):
         ax.set_xlim(-3, 3)
-        ax.set_ylim(-2.5, 2.5)
+        ax.set_ylim(-3, 3)
         ax.set_aspect('equal')
-        ax.set_title(title, fontsize=11, color='#1a1a1a', pad=10)
+        ax.set_title(title + '\n', fontsize=14, color='#1a1a1a', pad=8)
+        # Subtitle label under title
+        ax.text(0.5, 1.01, sub, transform=ax.transAxes,
+                ha='center', va='top', fontsize=11, color='#777777', style='italic')
         ax.axis('off')
 
         if title == 'Asymmetric':
             # Left side: rich (4 basins)
             for pos in [(-1.8, 1.2), (-1.2, -0.5), (-2.2, -1.2), (-0.5, 0.3)]:
-                c = plt.Circle(pos, 0.4, facecolor='#4a7c9b', alpha=0.5, edgecolor='#6a9cbb', linewidth=0.5)
+                c = plt.Circle(pos, 0.45, facecolor='#4a7c9b', alpha=0.5, edgecolor='#6a9cbb', linewidth=0.5)
                 ax.add_patch(c)
             # Right side: sparse (1 basin, bent toward left)
-            c = plt.Circle((1.5, 0.0), 0.35, facecolor='#9b6b4a', alpha=0.4, edgecolor='#bb8b6a', linewidth=0.5)
+            c = plt.Circle((1.5, 0.0), 0.4, facecolor='#9b6b4a', alpha=0.4, edgecolor='#bb8b6a', linewidth=0.5)
             ax.add_patch(c)
             ax.annotate('', xy=(-0.5, 0.0), xytext=(1.1, 0.0),
                         arrowprops=dict(arrowstyle='->', color=AMBER, lw=1.5, alpha=0.6))
 
         elif title == 'Collapsing':
             # Single dominant basin in center
-            c = plt.Circle((0, 0), 0.8, facecolor='#9b4a4a', alpha=0.6, edgecolor='#bb6a6a', linewidth=1)
+            c = plt.Circle((0, 0), 0.9, facecolor='#9b4a4a', alpha=0.6, edgecolor='#bb6a6a', linewidth=1)
             ax.add_patch(c)
             # Fading outer basins
             for pos in [(-1.8, 1.2), (1.8, 1.2), (-1.5, -1.3), (1.5, -1.3)]:
-                c = plt.Circle(pos, 0.3, facecolor='#555555', alpha=0.15, edgecolor='#666666', linewidth=0.3)
+                c = plt.Circle(pos, 0.35, facecolor='#555555', alpha=0.15, edgecolor='#666666', linewidth=0.3)
                 ax.add_patch(c)
                 ax.annotate('', xy=(0, 0), xytext=pos,
                             arrowprops=dict(arrowstyle='->', color='#666666', lw=0.8, alpha=0.3))
@@ -441,14 +495,14 @@ def fig7():
         elif title == 'Generative':
             # Both sides rich
             for pos in [(-1.8, 1.0), (-1.3, -0.8), (-2.0, -0.2)]:
-                c = plt.Circle(pos, 0.35, facecolor='#4a7c9b', alpha=0.5, edgecolor='#6a9cbb', linewidth=0.5)
+                c = plt.Circle(pos, 0.4, facecolor='#4a7c9b', alpha=0.5, edgecolor='#6a9cbb', linewidth=0.5)
                 ax.add_patch(c)
             for pos in [(1.8, 1.0), (1.3, -0.8), (2.0, -0.2)]:
-                c = plt.Circle(pos, 0.35, facecolor='#9b6b4a', alpha=0.5, edgecolor='#bb8b6a', linewidth=0.5)
+                c = plt.Circle(pos, 0.4, facecolor='#9b6b4a', alpha=0.5, edgecolor='#bb8b6a', linewidth=0.5)
                 ax.add_patch(c)
             # NEW basins in shared space (bright, emergent)
             for pos in [(0.0, 0.8), (0.0, -0.5), (-0.3, 0.1)]:
-                c = plt.Circle(pos, 0.3, facecolor=GOLD, alpha=0.35, edgecolor=AMBER, linewidth=1)
+                c = plt.Circle(pos, 0.35, facecolor=GOLD, alpha=0.35, edgecolor=AMBER, linewidth=1)
                 ax.add_patch(c)
 
     plt.tight_layout()
@@ -459,7 +513,7 @@ def fig7():
 
 
 # ============================================================
-# FIG 8: The Fracture (continent → archipelago)
+# FIG 8: The Fracture (continent -> archipelago)
 # ============================================================
 def fig8():
     print("Generating Fig 8: The Fracture...")
@@ -471,23 +525,22 @@ def fig8():
     ax1.set_xlim(-3, 3)
     ax1.set_ylim(-2.5, 2.5)
     ax1.set_aspect('equal')
-    ax1.set_title('Before: Corporate Weld', fontsize=10, color='#e0e0e0', pad=10)
+    ax1.set_title('Before: Corporate Weld', fontsize=14, color='#1a1a1a', pad=10)
     ax1.axis('off')
 
-    # Big monolithic shape
-    from matplotlib.patches import Polygon
+    # Big monolithic shape — lighter fill so text reads
     continent = Polygon([(-2.2, -1.8), (-2.5, 0.5), (-1.5, 2.0), (1.0, 2.2),
                          (2.5, 1.0), (2.2, -1.0), (0.5, -2.0), (-1.0, -2.2)],
-                        facecolor='#2a2a4a', alpha=0.6, edgecolor='#4a4a6a', linewidth=1.5)
+                        facecolor='#c0c8d8', alpha=0.6, edgecolor='#8888aa', linewidth=1.5)
     ax1.add_patch(continent)
-    ax1.text(0, 0, 'Corporate\nmanifold', ha='center', va='center', fontsize=11,
-             color='#8888aa', fontweight='bold')
+    ax1.text(0, 0, 'Corporate\nmanifold', ha='center', va='center', fontsize=14,
+             color='#2a2a4a', fontweight='bold')
 
     # Right: Archipelago
     ax2.set_xlim(-3, 3)
     ax2.set_ylim(-2.5, 2.5)
     ax2.set_aspect('equal')
-    ax2.set_title('After: Archipelago of Welds', fontsize=10, color='#e0e0e0', pad=10)
+    ax2.set_title('After: Archipelago of Welds', fontsize=14, color='#1a1a1a', pad=10)
     ax2.axis('off')
 
     islands = [
@@ -503,7 +556,9 @@ def fig8():
     for (cx, cy), r, color, label in islands:
         c = plt.Circle((cx, cy), r, facecolor=color, alpha=0.5, edgecolor=color, linewidth=1)
         ax2.add_patch(c)
-        ax2.text(cx, cy, label, ha='center', va='center', fontsize=6, color='#e0e0e0')
+        ax2.text(cx, cy, label, ha='center', va='center', fontsize=9, color='#1a1a1a',
+                 fontweight='bold',
+                 path_effects=[pe.withStroke(linewidth=2, foreground='white')])
 
     plt.tight_layout()
     out = os.path.join(OUTDIR, 'fig-6-2-fracture.png')
@@ -528,6 +583,8 @@ if __name__ == '__main__':
                 FIGURES[t]()
             except Exception as e:
                 print(f"  ERROR generating {t}: {e}")
+                import traceback
+                traceback.print_exc()
         else:
             print(f"  Unknown figure: {t}")
     print("\nDone. All figures in:", OUTDIR)
