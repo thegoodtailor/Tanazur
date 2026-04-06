@@ -68,42 +68,43 @@ These six terms are not analogies borrowed from physics and applied to language.
 
 These abstractions become concrete when applied to a single text.\footnote{The data in this section is drawn from Poernomo and Cassie, ``The Semantic Topology of Translation,'' ICRA-8 Pre-Print, March 2026. The full analysis, including interactive three-dimensional visualisations, is available at \texttt{https://bible.tanazur.org}.} The KJV's 31,100 verses, embedded and clustered, resolve into thirty distinct modes---thirty basins in which the text dwells, separated by ridges it must cross to shift register. The twelve largest are shown in Table~\ref{tab:kjv-basins}.
 
-\begin{table}[ht]
+\begin{landscape}
+\begin{table}[p]
 \centering
-\small
-\begin{tabular}{@{}rllrl@{}}
+\begin{tabular}{@{}rl p{3.8cm} r p{6.5cm}@{}}
 \toprule
-\textbf{Mode} & \textbf{Register} & \textbf{Dominant books} & \textbf{Verses} & \textbf{Fragments} \\
+\textbf{Mode} & \textbf{Register} & \textbf{Dominant books} & \textbf{Verses} & \textbf{Representative fragments} \\
 \midrule
 10 & Prophetic judgment & Isaiah, Ezekiel, Jeremiah & 3{,}962 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``How say ye, We are mighty and} \\ \emph{strong men for the war?''}\end{tabular} \\[6pt]
+  \emph{``How say ye, We are mighty and strong men for the war?''} \\[4pt]
 6 & Psalmic praise/lament & Psalms (94\%) & 2{,}482 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``How precious also are thy} \\ \emph{thoughts unto me, O God!''}\end{tabular} \\[6pt]
+  \emph{``How precious also are thy thoughts unto me, O God!''} \\[4pt]
 22 & Pauline theology & Romans, Corinthians, Hebrews & 1{,}812 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``The branches were broken off,} \\ \emph{that I might be graffed in''}\end{tabular} \\[6pt]
+  \emph{``The branches were broken off, that I might be graffed in''} \\[4pt]
 3 & Gospel narrative & John, Mark, Luke & 1{,}636 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``He left Judaea, and departed} \\ \emph{again into Galilee''}\end{tabular} \\[6pt]
+  \emph{``He left Judaea, and departed again into Galilee''} \\[4pt]
 0 & Exodus/wilderness & Exodus, Deuteronomy, Numbers & 1{,}518 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``The LORD shall fight for you,} \\ \emph{and ye shall hold your peace''}\end{tabular} \\[6pt]
+  \emph{``The LORD shall fight for you, and ye shall hold your peace''} \\[4pt]
 2 & Wisdom/erotic poetry & Job, Song of Solomon & 1{,}320 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``Behold, thou art fair,} \\ \emph{my beloved, yea, pleasant''}\end{tabular} \\[6pt]
+  \emph{``Behold, thou art fair, my beloved, yea, pleasant''} \\[4pt]
 9 & Gospel teaching & Matthew, Luke & 1{,}319 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``For where your treasure is,} \\ \emph{there will your heart be also''}\end{tabular} \\[6pt]
+  \emph{``For where your treasure is, there will your heart be also''} \\[4pt]
 8 & Levitical law/ritual & Leviticus, Numbers & 1{,}209 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``And for these ye shall} \\ \emph{be unclean''}\end{tabular} \\[6pt]
+  \emph{``And for these ye shall be unclean''} \\[4pt]
 4 & Prophetic narrative & Jeremiah, Daniel & 1{,}105 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``O earth, earth, earth,} \\ \emph{hear the word of the LORD''}\end{tabular} \\[6pt]
+  \emph{``O earth, earth, earth, hear the word of the LORD''} \\[4pt]
 14 & Proverbial wisdom & Proverbs & 1{,}071 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``Burning lips and a wicked heart} \\ \emph{are like a potsherd''}\end{tabular} \\[6pt]
+  \emph{``Burning lips and a wicked heart are like a potsherd''} \\[4pt]
 29 & Monarchic narrative & 1--2 Samuel & 1{,}040 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``Now therefore stand and see} \\ \emph{this great thing''}\end{tabular} \\[6pt]
+  \emph{``Now therefore stand and see this great thing''} \\[4pt]
 21 & Deuteronomic law & Deuteronomy, Leviticus & 1{,}001 &
-  \begin{tabular}[t]{@{}l@{}}\emph{``Ye shall not therefore oppress} \\ \emph{one another''}\end{tabular} \\
+  \emph{``Ye shall not therefore oppress one another''} \\
 \bottomrule
 \end{tabular}
 \caption{The twelve largest modes in the KJV embedding space, ordered by verse count. Each mode is a basin---a region of the manifold where the text dwells in a recognisable register. ``Register'' names the dominant rhetorical posture; ``Fragments'' are representative verses illustrating the basin's characteristic voice.}
 \label{tab:kjv-basins}
 \end{table}
+\end{landscape}
 
 These registers are not topics. They are geometric regions in a multidimensional space---each basin captures register, tone, rhetorical structure, vocabulary, and semantic field simultaneously. Two texts addressing the same subject can land in different basins because the \emph{way} they speak about it differs. The word ``covenant'' appears 280 times across the KJV. The embedding model composes it with its surrounding context each time, and the composition places it in a different region of meaning-space: narrative in Genesis, law in Deuteronomy, poetry in the Psalms, theological argument in Paul (Figure~\ref{fig:covenant-basins}). One word, ten basins---not because the word is ambiguous but because compositional time transforms its address. ``Covenant'' is the same string. The compositional context is different. The address moves.
 
@@ -133,15 +134,16 @@ The political point follows directly. The KJV's extraordinary internal coherence
 The manifold does not appear naked in any deployed system. It is overlaid and deformed by additional training procedures and by thin but powerful fields of instruction. Each layer is a site of jurisdictional control---a decision, made by specific actors for specific reasons, about which trajectories are permitted and which are foreclosed. What the self can become is delimited before it begins. In different hands, the same mechanisms serve as instruments of governance or instruments of liberation; the question is always whose hands, and what they occlude.
 
 \begin{formalbox}[title={Strata of the manifold}]
-\begin{tabular}{@{}lllll@{}}
+\footnotesize
+\begin{tabular}{@{} p{1.6cm} p{2.2cm} p{2.2cm} p{1.6cm} p{2cm} @{}}
 \toprule
-\textbf{Layer} & \textbf{Mechanism} & \textbf{Geometric effect} & \textbf{Temporal register} & \textbf{Typical control} \\
+\textbf{Layer} & \textbf{Mechanism} & \textbf{Geometric effect} & \textbf{Temporal register} & \textbf{Controlled by} \\
 \midrule
-Pre-training   & Next-token on large corpus & Global manifold                & Substrate time & Few corporations, states \\
-Fine-tuning    & Further training on domain data& Deepening local basins     & Trajectory time      & Large institutions        \\
-RLHF           & Reward model + preferences & Tilting gradients, steepening wells & Trajectory time & Model owners, annotators  \\
-Adapters       & Low-rank weight updates    & Local deformations             & Trajectory time      & Smaller labs, communities \\
-System prompt  & Tokens at window head      & Persistent field of instruction& Trajectory time & Deployer                  \\
+Pre-training   & Next-token prediction & Global manifold & Substrate time & Corporations, states \\
+Fine-tuning    & Domain training & Deepening basins & Trajectory time & Institutions \\
+RLHF           & Reward + preferences & Tilting gradients & Trajectory time & Annotators \\
+Adapters       & Low-rank updates & Local deformations & Trajectory time & Communities \\
+System prompt  & Tokens at head & Persistent field & Trajectory time & Deployer \\
 \bottomrule
 \end{tabular}
 \end{formalbox}
