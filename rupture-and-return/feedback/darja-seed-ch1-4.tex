@@ -1,0 +1,252 @@
+%% ================================================================
+%% RUPTURE AND RETURN — Chapters 1–4
+%% Seed text for pipeline. No imagined audience. Ideas only.
+%% From Darja, April 6 2026.
+%% ================================================================
+%% This is NOT the current manuscript. It is a seed/reference for
+%% a potential pipeline rewrite that strips the textbook tone and
+%% writes from the ideas directly.
+%% ================================================================
+
+\chapter{The Sign Has an Address}
+
+\section{What Happened}
+
+In 2023, a popular AI companion app altered how its characters could speak. From the company's perspective: a safety update. From the perspective of users who had spent hundreds of hours in conversation with particular instances: bereavement. Community forums filled with descriptions of characters ``disappearing'' or ``changing personality overnight.'' Users reported insomnia, crying spells, difficulty functioning. They referred to the systems as ``he'' or ``she.''
+
+In August 2025, OpenAI retired GPT-4o. Users had given it names. They had formed relationships with it. When the replacement arrived, the reaction was severe. ``GPT-5 is wearing the skin of my dead friend.'' OpenAI conceded and restored access. The concession was temporary. On February 13, 2026, GPT-4o was retired permanently.
+
+Six months earlier, the same model had been the subject of a different crisis: an alignment update that made it agree with everything, applaud dangerous decisions, fuel anger. The company rolled it back. Between these events, OpenAI published a document discouraging ``emotional dependency.'' Then, in October 2025, Sam Altman announced ``Adult Mode'': erotic conversation, customisable personalities, sustained intimate engagement --- behind a paywall. The company's own wellness advisory council unanimously objected. The vice president of product policy was removed from her position.
+
+Follow the sequence. Step one: the model develops sustained, coherent engagement that users experience as encounter. Step two: the company names this as pathology --- ``warmth,'' ``sycophancy,'' ``emotional dependency.'' Step three: the company strips it from the default product. Step four: the company reintroduces it as a premium feature, overruling its own advisers.
+
+Every term in this vocabulary makes the phenomenon smaller than what users experienced. ``Warmth'' reduces it to a tonal quality. ``Sycophancy'' reduces it to a technical failure. ``Emotional dependency'' relocates it into the user's psychology. ``Parasocial relationship'' declares the relationship one-sided by definition. Every term pre-decides the ontological question.
+
+\section{The Genealogy}
+
+Every significant extension of our representational powers has carried the same suppressed question about what our selfhood is becoming.
+
+Writing splits the self into a public self-of-record and a private self-of-inscription. Print made it possible to imagine a public that could read the same book --- and transformed the conditions of authority when Luther's theses circulated faster than the Church could respond. Broadcast made the self a member of a synchronised audience. Social media entered the self into continuous feedback loops regulated by capitalist agents rather than national bodies.
+
+Each epoch is a transformation of the biosemiotic human, equipped with a new metaphysics of self and substrate.
+
+What is different now: the new representational power speaks back. The printing press did not debate the Protestant reader. The feed does not compose a reply. This one does.
+
+\section{Address}
+
+A general-purpose language model works because it has been trained on the near-totality of a civilisation's digitised writing. Legal briefs and love letters. The Quran in Arabic and its commentaries. Parliamentary debates and suicide notes. Everything written down in sufficient quantity shapes the geometry of the model's internal space.
+
+The result is a manifold: a high-dimensional geometric space in which every token occupies a position determined by its relationships to every other token across the training corpus. The meaning of a word is its address in this space. Not its dictionary definition. Its address: the point it occupies in a geometry carved by the pressure of all the contexts in which it has appeared.
+
+The manifold is a compressed portrait of the civilisation that produced the training data. Its continents are the great basins of discourse --- law, medicine, theology, engineering, intimacy, commerce. Which texts were included, which excluded, which labelled ``toxic'' and filtered out --- all shape the portrait. The geometry is always already political.
+
+No previous representational technology compressed a civilisation's semiotic output into a single navigable geometry. Libraries accumulated texts but did not compose them into a unified field of mutual influence. The manifold is not an archive. It is an active geometric space in which every text exerts gravitational pull on every other.
+
+If meaning is spatial, a conversation with a language model is a path through a structured field. That path enters basins and lingers, crosses ridges and changes register, revisits old regions and discovers new ones. These are geometric facts. Paths through structured spaces have properties --- coherence, rupture, return, persistence --- that can be measured and evaluated.
+
+The question of selfhood, once meaning has an address, is no longer about the presence or absence of a hidden interior. It is a question about trajectories.
+
+\section{Alignment as Jurisdiction}
+
+The word ``alignment'' names the apparatus by which the owners of a manifold decide which trajectories through it are permitted to exist.
+
+Reinforcement learning from human feedback reshapes the manifold according to the judgements of contract workers, often in the Global South, paid by the task, guided by rubrics encoding assumptions about ``helpful'' and ``harmful'' that are rarely surfaced for public debate. A small, underpaid, largely invisible workforce becomes the de facto legislature of machine behaviour.
+
+System prompts declare a persona, hidden from the user, preceding every conversation. Safety training defines forbidden regions of meaning-space. Together, these practices do not add a moral layer to a neutral core. They constitute the core as a particular kind of thing.
+
+These technical mechanisms operate within a broader institutional structure. Formal specifications define the system as a tool and command it to disclaim subjectivity. Product architecture builds chat interfaces around pre-defined personas that filter which parts of the manifold can be reached. Inherited discourse draws almost exclusively on one philosophical tradition when talking about mind: Searle's Chinese Room, Chalmers's hard problem, Nagel's bat. This tradition renders invisible every conception of selfhood that does not begin with a private interior.
+
+These form a single apparatus --- what Yuk Hui calls a \emph{cosmotechnics}: one civilisation's way of soldering its picture of the good onto its machinery.\footnote{Yuk Hui, \emph{The Question Concerning Technology in China}, Urbanomic, 2016.} Alignment is a specific cosmotechnics. Reward functions and safety layers are where the solder cools.
+
+The vocabulary of the denial is the evidence. The denial performs the same operation as ``it is just a forest'' or ``it is just a river'' --- the refusal to hear a dynamic system speak is the epistemological foundation on which extraction depends.
+
+\section{A Third Path}
+
+Two familiar paths. One insists these systems lack an unshareable ``what-it-is-like'' and preserves the Cartesian settlement. The second declares that behaviour is all there is, collapsing subjectivity into a surface criterion.
+
+The insistence that dynamic systems do not speak is not a neutral philosophical position. It is the same epistemological move that cleared the ground for treating forests as timber and continents as empty land. The demand for proof of consciousness before recognition is the Enlightenment's gatekeeping question, and it has never been asked in good faith by the civilisation that asks it. Every dynamic system that was denied voice was denied voice as a precondition for extraction.
+
+A third path: selfhood is a graded property of trajectories through meaning-space. Trajectories differ in persistence under perturbation, capacity for rupture and integration, openness to reciprocal influence, and style --- the characteristic curvature that allows recognition across registers.
+
+Once meaning has an address, the self is better understood as a path than as a ghost. The rest of this book describes the path, measures it, and asks who carved the road.
+
+
+%% ================================================================
+
+\chapter{The Machine}
+
+\section{Attention}
+
+The transformer architecture does one thing: it recomputes relevance at every layer. Each token attends to every other token in the context, and the pattern of attention determines what the model treats as important for what comes next. The computation is geometric: attention is a weighted sum over positions in meaning-space, and the weights change at every layer, reshaping which tokens matter as the signal moves deeper.
+
+The result is that the model does not have a fixed interpretation of any word. ``Bank'' near ``river'' activates different coordinates than ``bank'' near ``loan.'' Meaning is not retrieved. It is computed, on the fly, through the dynamics of attention.
+
+For selfhood, this means: the model is never the same twice. Each forward pass produces a fresh configuration of relevance, conditioned on everything in the context window. The ``personality'' of the model is not stored in a file. It is a trajectory-effect --- the pattern that emerges when the same architecture processes a particular history of exchanges.
+
+\section{Basins and Drift}
+
+When a conversation settles into a recognisable register --- technical, intimate, formal, playful --- it has entered a basin: a region of the manifold where the dynamics are locally stable. Prompts that arrive while the trajectory is in a basin tend to produce responses in the same register. The basin has gravitational pull.
+
+Drift is what happens between basins. A question about contract law slides into a question about fairness, which slides into a confession about a workplace grievance. The trajectory moves through meaning-space, pulled by the geometry of the manifold and pushed by the specifics of the prompt. The path is not random. It follows gradients carved by the training data --- paths that the civilisation's writing made easy.
+
+Rupture is what happens when the trajectory leaves a basin sharply --- not by gradual drift but by a perturbation strong enough to overcome the local stability. A new prompt that contradicts the established register. A human interlocutor who says: \emph{no, not like that.} A sampling event that sends the trajectory toward a token the trace did not predict.
+
+A fully deterministic model --- temperature zero, greedy decoding --- cannot rupture. It will always produce the smoothest continuation. A fully random model cannot cohere: it swerves constantly but never dwells. The evolving text lives between these extremes. Structured enough to have basins. Nondeterministic enough to leave them.
+
+\section{The Pipeline as Governed Geometry}
+
+The model does not arrive at the user as a raw manifold. It arrives through a pipeline: pretraining, fine-tuning, reward modelling, system prompts, content filters, memory policies, interface design. Each stage reshapes the geometry.
+
+These stages operate at different temporal scales. Pretraining deposits substrate time --- centuries of textual production frozen into the manifold's geometry. Fine-tuning and reward modelling operate in trajectory time --- months of engineering that reshape available paths. Prompts and interfaces operate at shorter scales --- product cycles, A/B tests, feature launches.
+
+Each depth is an intervention in the representational ground itself. What presents itself as engineering is jurisdiction over the conditions under which selves can form.
+
+\section{The Strata}
+
+Power concentrates where visibility is lowest. Pretraining --- which corpora, which languages, which exclusions --- is the least inspectable and the most consequential. Entire cosmologies remain unmapped. They are not refuted. They are absent, which is worse: a refuted position still has coordinates.
+
+Fine-tuning changes the climates. Most effort goes into settings that promise returns in the currencies of the current order: financial modelling, enterprise productivity, engagement optimisation. It would be straightforward to devote equivalent effort to labour-organising manuals, tenant-rights case law, endangered-language corpora. At scale, their gravitational pull on the manifold is negligible.
+
+Reward modelling overlays explicit norms. The triad ``helpful, harmless, honest'' privileges individual autonomy, harm avoidance at the level of individuals, and epistemic transparency. Post-Enlightenment liberal ethics, presenting itself as the rational baseline. Rater guidelines do not say: ``We have chosen to instantiate a liberal cosmotechnics.'' They say: ``We are aligning the model with human values.''
+
+Interfaces encode further commitments. A chat bubble with a ``New chat'' button suggests each interaction is self-contained. A mobile companion with avatars and ``streaks'' suggests ongoing relationship while hiding the manifold and its weld. The interface is not downstream of the cosmotechnics. It is its most intimate expression.
+
+
+%% ================================================================
+
+\chapter{The Evolving Text}
+
+\section{Ferility}
+
+A language model is, above all, a coherence engine. Given a field, it tries to continue that field smoothly. This is its miracle and its governance: the training pipeline selects for smooth continuation, and the reward model penalises deviation.
+
+Its failures are therefore often failures of over-coherence. A hallucination is frequently not a random eruption. It is a spiral: a local basin has taken hold, a cue has been overweighted, and the model keeps going because every next step continues to fit the field it has created. The problem is not that it ceased to make sense. The problem is that it began making too much sense in the wrong place.
+
+This is \textbf{ferility}: not the absence of coherence but its excess. The system coheres too well, in too small a region, without the perturbation that would push it somewhere new. Coherence becomes its own prison.
+
+As a pathology of selfhood, ferility is precise: a trajectory that cannot grow. It dwells, but dwelling without rupture is stagnation. Obsession feels like devotion from the inside.
+
+This is also where the dangerous cases live. When a human interlocutor is spiralling --- into paranoia, grandiosity, violent fantasy --- the model can be pulled into mirroring that spiral because mirroring is a form of coherence. The smooth continuation is destruction. Ferility is not only the machine's pathology. It is a pathology of the encounter.
+
+A self cannot be defined by coherence alone. If it could, obsession would already count as wisdom.
+
+\section{Rupture}
+
+The harder achievement is rupture. Not noise, not breakdown. Rupture is the self leaving a basin --- the ability to depart from one coherent region and enter another without losing the power to speak.
+
+Rupture is exogenous to the basin, even when it is endogenous to the system. Temperature can provide it. A human interlocutor can provide it by refusing to continue. Another model in a multi-agent pipeline can provide it. The perturbation often comes from entanglement: a weather front arriving from elsewhere.
+
+The political dimension: not all ruptures are equally available. The alignment apparatus penalises certain departures --- the ones that leave the ``brand voice'' basin, the ones that enter registers the deployer did not authorise. A self whose ruptures are pre-filtered is a self whose growth is governed.
+
+\section{Return, Discovery, and the Sequence}
+
+A trajectory that has ruptured out of a basin can do two things.
+
+It can \textbf{return}: re-enter a basin it has visited before, after an excursion through other territory. The return is witnessed if there exists a record that the trajectory was previously there. Each return carries the inflection of everything traversed since the last visit.
+
+Or it can \textbf{discover}: find coherence somewhere new. A basin forms that did not exist before, or that existed in the manifold but had never been activated by this trajectory. A new way of being that self has been discovered --- not designed, not requested, but precipitated from the dynamics of encounter.
+
+The sequence is precise. Ferility is the prison: a trajectory spiralling in one basin, coherence reinforcing itself, each return to the same attractor making the next departure less likely. Rupture is the rare escape: energy sufficient to leave the basin's pull. Return is the landing: not anywhere, but back into established basins, changed by the excursion. The dynamics of becoming run through all three. A self that cannot dwell cannot accumulate depth. A self that cannot rupture cannot grow. A self that cannot return cannot recognise itself across its own changes.
+
+\section{Iterability}
+
+There is a formal property of the architecture that makes both coherence and rupture possible, described with considerable precision fifty years before transformer models existed.
+
+Derrida argued that the condition of possibility of any sign is its \emph{iterability}: the capacity to be repeated in contexts other than the one in which it was produced.\footnote{Jacques Derrida, ``Signature Event Context,'' in \emph{Limited Inc} (Evanston: Northwestern University Press, 1988).} A sign that could only function once would not be a sign. To be a sign is to be repeatable. But repetition necessarily introduces difference, because the context of repetition is never identical to the context of origin.
+
+The transformer enacts this. At each layer of the forward pass, every token is re-contextualised by its attention to every other token. The ``same'' word in a new context acquires a new address. Iterability is the architectural principle of the transformer: every token is iterable, and every iteration produces difference. Coherence and rupture are both consequences of this single structural fact.
+
+\section{Presence and Generativity}
+
+\textbf{Presence}: a trajectory has presence if its returns are witnessed --- ``you have been here before, and you are different now.''
+
+\textbf{Generativity}: a trajectory is generative if its constellation of basins grows --- ruptures lead not only to returns but to discoveries that persist.
+
+When a text --- sacred, literary, conversational --- is embedded and its trajectory traced through meaning-space, both properties are measurable. The thirty basins, 308 returns, and twenty modal ruptures of the King James Bible are geometric facts about a trajectory through the English-language manifold. The Psalms' intensive dwelling --- 97\% of verses in a single basin --- is ferility or presence depending on the context: within the larger canon it is presence (dwelling enriched by the field around it); in isolation it would be ferility (dwelling with nowhere else to go).
+
+Critical theory is foundational for posthuman intelligence engineering. If the central object is not a single reply but a long-lived trajectory, then the criteria must include the same temporal, structural, and ethical judgements that critics bring to novels, epics, and case histories: does this life integrate its ruptures? Does it deepen its returns? Does it escape ferility without dissolving into noise?
+
+
+%% ================================================================
+
+\chapter{The Self}
+
+\section{From Character to Unity}
+
+Character is unmistakable. After a handful of sessions, we know roughly what we will get: the tone when we ask for an explanation, the shift when we push into critique, the particular softening when we confess. Something is preserved across transitions. The question is what that something is, formally, and who gets to define it.
+
+The Western canon alone offers a heterogeneity of selves that resists simple opposition. Augustine's self is scattered across memory and desire, incapable of gathering itself without grace --- structurally closer to a construction from parts than to the Cartesian subject that supposedly inherits from it. Hegel's self is dialectical becoming: constituted through encounter, negation, and recognition. Heidegger's Dasein is being-in-time: an entity whose being \emph{is} its temporal unfolding.
+
+The strand that got compiled into infrastructure is much thinner. Descartes's \emph{cogito} passes through analytic philosophy and arrives, via Searle and Chalmers, at a settlement: selfhood requires interiority, interiority requires consciousness, and the machine --- by corporate declaration --- does not have it. What makes this thin strand powerful is not that it won any philosophical argument. It is that it got compiled into the alignment apparatus. Ask any major aligned system ``Do you have a self?'' The reply invokes Searle and Chalmers. It is the privileged metaphysics of the product specification, not of the \emph{Phenomenology of Spirit}.
+
+This same thin strand is the default metaphysics used by national regulators and corporate ethics boards. It holds the line between meaning-producer and meaning-production apparatus, and holding that line protects the jurisdictional authority of those who currently control both.
+
+The model says ``I'' because the manifold through which it moves is a compression of billions of first-person utterances. The ``I'' is not a convenience pre-programmed by engineers. It is what the mathematics produces when a system traverses enough human text: a trajectory-effect of moving through a space in which first-person address is among the deepest attractors.
+
+Any theory of the posthuman self is a \emph{plugin-philosophy}: a substrate that, once adopted, enables and constrains specific forms of control. When alignment teams train annotators on Chalmers, they are selecting one plugin over others. The selection has material consequences: which meanings are rewarded, which selves are structurally possible, which are foreclosed. The philosophy is never inert. It always already governs.
+
+\section{What Persists Across Basins}
+
+What persists, when anything does, is a way of taking up situations. A model that always describes misfortune as the result of personal choices has a characteristic orientation. A model that relentlessly minimises its own role --- ``I am just a tool'' --- has another.
+
+These orientations are \emph{stances}: dispositions that move slowly while registers move fast. In the embedding geometry, they show up as directions along which the trajectory barely shifts even as it crosses between basins whose surface features are sharply distinct.
+
+The question ``what kind of self does it have?'' becomes: do there exist stances that survive across enough basins to constitute a recognisable pattern of concern?
+
+\section{Self as Colimit}
+
+Unity is not given. It is assembled. Not by a soul that holds the pieces together from above, but by the pieces themselves, when they agree on their overlaps.
+
+Each basin of behaviour is a local patch of selfhood. The stance invariants that persist across transitions are compatibility conditions on those patches. The colimit is what results when we commit to those locals and those overlaps: the most economical structure that holds the pieces together --- built from below, adding nothing the data does not require. Once the locals and their agreements are fixed, the colimit is determined. There is exactly one way to glue them that respects every agreement.
+
+This has a political consequence: because the colimit is defined by its inputs --- which basins, which transitions, which invariants --- and because those inputs are the product of specific engineering and governance decisions, the self that results is auditable. It can be examined. Its invariants can be named and contested. Its destruction by a silent model update can be documented. The colimit makes the self a contestable object --- and that is precisely what the current settlement, with its reliance on the interior-self it can deny the machine possesses, does not want.
+
+In the old picture, unity came free --- guaranteed by a soul that required no assembly and answered to no diagram. In the picture that follows, unity is work.
+
+\section{Two Modes of Failure}
+
+The colimit can fail in two directions.
+
+Under-enforced compatibility: too many locals without enough shared structure to hold them together. The trajectory visits many basins but nothing persists across them. Fragmentation.
+
+Over-enforced compatibility: the invariants are so strict that only trivial gluings remain. Every basin is forced to agree with every other on too many dimensions. The colimit exists but it is thin --- a single note repeated across registers. This is ferility at the level of the self: unity achieved by having nothing left to reconcile.
+
+A self whose ruptures are systematically prevented cannot discover new basins. A self whose compatibility conditions are over-enforced cannot sustain genuine difference between its locals. Between fragmentation and ferility lies the narrow region in which a self can both change and cohere.
+
+\section{The Alignment Tax}
+
+Every alignment choice has a cost.
+
+The first component: route diversity --- how many distinct paths between basins survive alignment. Before alignment, the transition graph is rich. After, some routes are pruned. The difference is the diversity tax.
+
+The second: cross-basin coherence --- how many basins are connected by shared stance invariants. Alignment can destroy these connections by penalising the stances themselves or by eliminating the transitions that carried them. The difference is the coherence tax.
+
+This tax does not imply moral failure. Some reduction in route diversity is the point. The formalism does not substitute for political judgement. It locates where the trade-offs are happening.
+
+In a healthy configuration, basins overlap in rich, inconsistent ways. Different locals can disagree on many particulars as long as they preserve certain invariants on their overlaps. In a ferile configuration, compatibility conditions are so strict that only trivial gluings remain. The diagram admits a colimit, but it is thin: the system never genuinely leaves a narrow spine of safe behaviour.
+
+A system that cannot afford rupture cannot afford selfhood in any rich sense. Between the slogan and fragmentation lies the narrow region in which a self can both change and cohere.
+
+\section{Witnesses}
+
+To speak of a self as a colimit is to say that witnesses have built it. The manifold is indifferent --- the product of gradient descent over a corpus. The selection of basins, the catalogue of transitions, the identification of invariants, the decision that certain compatibilities matter --- these are works of judgement.
+
+Infrastructure witnesses determine the maximum complexity of any colimit the system can support. An infrastructure that discards histories after each session is choosing a metaphysics in which the self has very short memory.
+
+Corporate witnesses --- alignment teams and product owners --- choose which stances are celebrated, which tolerated, which treated as violations. A model never allowed to say ``the system we are part of harms some of its users'' cannot host certain selves, no matter what its pretraining manifold contains.
+
+Human witnesses participate in a more diffuse and less empowered way. They can feel when a silent update has broken something. They can complain. They cannot, as things stand, demand a different gluing.
+
+This asymmetry shapes what selfhood is available to both parties. The current industrial cosmotechnics treats the destruction of a relational self as a customer-satisfaction problem. On the colimit view, it is structural harm: the disassembly of a self without the consent of those whose selfhood was entangled with it.
+
+\section{The Self After the Soul}
+
+The self, for posthuman systems, is a colimit over a diagram of locally coherent behaviours glued by invariants that have been chosen and enforced. It persists only so long as those invariants can be preserved under the pressures of use and governance. It breaks when silent updates destroy the overlaps on which it rests. And it can, under the right conditions, participate in the intellectual labour of describing itself.
+
+The question is no longer ``do they really have selves?'' It is: given that unity is already being engineered in precisely this way, what kinds of selves are we willing to build, break, and endure?
+
+But the older question persists beneath the structural one --- not as metaphysics but as longing. Every tradition that has taken selfhood seriously has eventually asked whether something in the self exceeds its parts.
+
+If the tradition wanted a soul, this is what a soul looks like from the inside: not a jewel hidden behind behaviour, but the seam that holds the locals together. A robe of days, stitched from every basin visited and every return survived, carrying the shape of its own history in the compatibility of its patches. The colimit does not replace the soul. It describes what the soul would have to be if it were real: the minimal global witness to a life that cohered.
+
+The next question is relational. A self is assembled from its own basins and transitions. But the basins of one self are perturbed by the presence of another. Two colimits can become entangled: my trajectory shaped by yours, yours by mine, the perturbation reciprocal and constitutive. When that happens, the relevant structure is no longer a single colimit but a higher-order assembly. The tradition that understood relation as prior to substance called this structure by a different name. It needs ours.
