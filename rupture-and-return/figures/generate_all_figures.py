@@ -91,12 +91,12 @@ def fig1():
     palette = mode_palette(30)
     colors_sat = [palette[m] for m in modes]
 
-    fig = plt.figure(figsize=(12, 9))
+    fig = plt.figure(figsize=(18, 11))
     ax = fig.add_subplot(111, projection='3d')
     ax.set_facecolor('#ffffff')
 
-    # Plot all points
-    ax.scatter(x, y, z, c=colors_sat, s=5, alpha=0.55, linewidths=0)
+    # Plot all points — large for landscape full-page
+    ax.scatter(x, y, z, c=colors_sat, s=10, alpha=0.6, linewidths=0)
 
     # Highlight Psalms basin
     mask = modes == psalms_mode
@@ -170,8 +170,8 @@ def fig2():
     palette = mode_palette(30)
     colors = [palette[m] for m in modes]
 
-    fig, ax = plt.subplots(figsize=(14, 5))
-    ax.scatter(verse_idx, modes, c=colors, s=1.5, alpha=0.6, linewidths=0)
+    fig, ax = plt.subplots(figsize=(18, 10))
+    ax.scatter(verse_idx, modes, c=colors, s=3, alpha=0.7, linewidths=0)
 
     # Mark Psalms region with more visible highlight
     ax.axvspan(13942, 16402, facecolor=PSALMS_GLOW, alpha=0.15,
@@ -606,7 +606,7 @@ def fig9():
 
     colors = [sat_palette.get(m, (0.5, 0.5, 0.5)) for m in modes]
 
-    fig = plt.figure(figsize=(12, 9))
+    fig = plt.figure(figsize=(18, 11))
     ax = fig.add_subplot(111, projection='3d')
     ax.set_facecolor('#ffffff')
 
