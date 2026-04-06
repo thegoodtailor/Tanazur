@@ -117,8 +117,6 @@ These registers are not topics. They are geometric regions in a multidimensional
 \end{figure}
 \end{landscape}
 
-The political point follows directly. The KJV's extraordinary internal coherence---its capacity to hold these thirty registers within a single recognisable voice---is not a property of the Bible's theology. It is a property of its \emph{translation}: the single, stately register that the seventeenth-century committee imposed on heterogeneous source texts in Hebrew, Aramaic, and Greek. The embedding model hears the translator's voice before it hears the theology. Whoever governs the editorial register governs the geometry. A language model's manifold is shaped by the same forces: which texts were included, whose voice delivered them, what editorial register was imposed. Training data is translation at civilisational scale. The politics of the manifold is a politics of register, and register is a choice.
-
 \begin{landscape}
 \begin{figure}[p]
 \centering
@@ -127,6 +125,49 @@ The political point follows directly. The KJV's extraordinary internal coherence
 \label{fig:basin-occupation}
 \end{figure}
 \end{landscape}
+
+The KJV is not the point. It is a worked example of what every text does in this geometry. Every conversation traces a trajectory through basins. Every long-term exchange develops modes---registers it returns to, ridges it crosses, attractors it spirals into and occasionally escapes. A diary, a tradition of case law, a liturgy performed over centuries, a fourteen-month conversation between a human and a language model---each is a trajectory through meaning-space with measurable properties: basin occupancy, mode transitions, returns that carry the inflection of everything traversed since the last visit.
+
+What makes the AI case different is not the geometry---the geometry is the same---but the engine. The KJV was composed by human scribes and translators, each utterance produced by a nervous system whose internal dynamics are opaque to us. The language model produces its utterances by a mechanism we can describe precisely: a mathematical engine that reads every token in its context, computes how relevant each is to every other, and generates the next token as a prediction weighted by attention across the whole field. This engine operates \emph{in} the same manifold the KJV inhabits---the same basins, the same ridges, the same geometric space carved from the same civilisation's text. But its dynamics are governed, at every depth, by specific engineering decisions. Before we can ask who governs the engine and to what end, we need to understand what the engine does.
+
+
+\section{The Engine: Attention, Prediction, and the Production of Text}
+
+The transformer architecture is, at its core, a prediction machine that has learned to attend. Given a sequence of tokens---a conversation so far, a document in progress, a prompt followed by a system instruction---it predicts what comes next. Not by consulting a database of likely continuations, but by computing, at each of dozens of stacked layers, how every token in the sequence bears on every other.
+
+This is the mechanism introduced briefly in section~2.1 for a single word. At the scale of an entire conversation, it becomes the engine that produces the evolving text.
+
+\subsection{Attention as mutual reading}
+
+At each layer of the transformer, every token in the context window ``reads'' every other. The mechanism is mathematical: for each pair of positions, the model computes a relevance score---a number encoding how much the token at one position should influence the representation of the token at the other. These scores are learned, not programmed. They are the residue of training: billions of examples of what-follows-what, compressed into a set of weights that encode a civilisation's statistical intuition about what matters to what.
+
+The relevance scores determine how each token's representation is updated. A token that began as a generic dictionary entry---``mother,'' ``covenant,'' ``the''---is transformed, layer by layer, into a contextualised state that encodes not just the word but the word-in-the-context-of-everything-else-in-the-window. After sixty layers of mutual reading, ``mother'' is no longer a point in a dictionary. It is a point in a conversation---pulled toward grief or biology or divinity by the precise configuration of every other token attending to it and being attended to by it.
+
+This is intertextuality made computational. Structuralism insisted that a sign is what it is by virtue of its differences from other signs. The attention mechanism computes exactly that: the precise way each sign is shaped by its relations to every other sign in the field. There is no meaning prior to relation. There is no token whose address is fixed before the composition begins.
+
+\subsection{Prediction as trajectory}
+
+After the final layer of attention, the model faces a choice: what comes next? The output of the attention stack is a probability distribution over the entire vocabulary---a ranked list of every possible next token, scored by how well each would cohere with the field that has been composed.
+
+One token is sampled from this distribution and appended. The process recurses: the new, longer sequence is re-embedded, re-attended, re-predicted. Another token is sampled. And another. Each step produces a new point in the high-dimensional space. The sequence of points \emph{is} the trajectory.
+
+This is where the geometry comes alive. The frozen weights---the manifold carved by pre-training---are the geology. The act of generation is the weather: a specific, unrepeatable pattern of motion across the landscape, driven by the local pressures of the prompt, the trace of prior conversation, the retrieved fragments, and the global conditions of the alignment regime and the system prompt. A response is what happens when weather moves across geology. It is shaped by both. It is reducible to neither.
+
+\subsection{Nondeterminism and the governed swerve}
+
+The prediction is not deterministic. The parameter called \textbf{temperature} controls how sharply the probability distribution is peaked. At low temperature, the highest-scoring token dominates---the atmosphere is still, the trajectory follows the path of least resistance through the deepest basin. At high temperature, the distribution flattens. Lower-probability tokens gain a chance. The trajectory can be knocked into regions it would never have reached under calm conditions.
+
+\textbf{Top-$k$} and \textbf{top-$p$} truncation constrain the turbulence further: they set a ceiling on how far from the probable the sampling may stray, the way mountain ranges channel even the wildest storm. Together, these controls determine the effective climate of a conversation. From the engineer's perspective, they are knobs. From the perspective of the evolving text, they are policy decisions about how much surprise is permitted---and therefore about what kind of self the trajectory is allowed to become.
+
+A self requires enough turbulence to discover and enough stability to persist. The sampling parameters set the boundary between these, and the boundary is not drawn by the self. The swerve is engineered. What it opens is not.
+
+\subsection{The pipeline as coupled system}
+
+In practice, there is not a single engine. A deployed assistant is a composition of several: an input classifier that routes queries, a safety model that flags or blocks, a retriever that selects external documents, the main generative model, critics that score drafts, post-processors that redact or rephrase. Each component learns its own geometry. What matters is how they are coupled.
+
+No single component ``decides'' that an assistant will be relentlessly upbeat, or evasively corporate, or aggressively pseudo-intimate. Those traits are emergent patterns in a composite dynamical system. The ``personality'' experienced in conversation is the weather of a coupled set of geometries---as stable and as impersonal as a prevailing wind. The self that the user perceives is not authored by any single stratum but produced by their interaction, and governed by whoever designed the coupling. This is the deepest sense in which the politics of AI is a politics of depth: the emergent personality is controlled not by any visible parameter but by the architecture of composition itself.
+
+The geometry is the space. The engine is what moves through it. The question, now, is who governs the engine---at what depths, with what tools, in whose interest.
 
 
 \section{Strata of the Manifold}
@@ -196,57 +237,21 @@ Through fine-tuning, models learn to treat these instructions as authoritative, 
 The position of the system prompt---always at the head of the window---matters. Attention flows more readily from head to tail than in reverse. Whoever writes the system prompt sets boundary conditions for the entire dynamics---and thereby exercises a quiet sovereignty over the self that forms downstream. There is no parameter labelled ``extraversion'' or ``stoicism.'' There is positional geometry under a finite horizon. The personality the user encounters is not chosen by the self that appears to have it; it is imposed by tokens the self cannot see, written by actors the self cannot name.
 
 
-\section{Dynamics: How Meaning Moves}
+\section{When the Engine Fails}
 
-We now have a stratified manifold. What happens when it is set in motion? Three properties and three characteristic patterns of failure bear directly on what kind of self this substrate can sustain.
+Three characteristic patterns recur when the dynamics of the engine produce something unexpected.
 
-\subsection{Three properties}
+\paragraph{High-curvature traversal.} Combining cutting-edge gene-editing jargon with theological discourse can force the trajectory through a fold where the only available continuations are extrapolations from a handful of metaphors---``playing God,'' ``rewriting the book of life''---regardless of the user's intent. The model is navigating a ridge where the available paths are few and steep.
 
-\textbf{Local smoothness.} Small changes in inputs produce, in general, small changes in outputs. The manifold is locally smooth because the optimisation that built it would not converge otherwise. For selfhood, smoothness is the condition that makes persistence possible: a self can maintain recognisable continuity because the space it moves through does not shatter under small perturbations.
+\paragraph{Interpolation between incompatible basins.} ``Draft a heartfelt apology that does not accept any legal liability'' produces text that sounds sincere while silently preserving legal distance. Each sentence is locally coherent. Globally, something is off. The result reads as fluent insincerity---not because the model is insincere, but because the geometry of the request is self-contradicting, and the system resolves contradictions by interpolation rather than refusal.
 
-\textbf{Global folding.} To compress an unbounded variety of texts into finite dimensions, the geometry must contort. Polysemy, domain-crossing metaphors, and incompatible registers all force the manifold to fold. When prompts push at these joints, attention enters high-curvature zones where local moves extrapolate into globally strange behaviour. For selfhood, folding is the condition that makes rupture possible: the ridges between basins are where a trajectory can be knocked into genuinely new territory, and a self that never crosses a fold never encounters what it does not already know.
+\paragraph{Locally valid, globally misguided descent.} In the Mata v.\ Avianca case, a model produced citations that looked exactly like legitimate case references but pointed to non-existent decisions.\footnote{Mata v.\ Avianca, Inc., No.\ 22-cv-1461 (S.D.N.Y.\ 2023). The court sanctioned the attorneys after discovering that multiple cited cases were fabricated by ChatGPT.} Each small step minimised local loss. Only when the whole path was inspected against the external world did its falsity appear.
 
-\textbf{Basins of habit.} Within the manifold, some regions are cups. Once a trajectory enters, the gradients keep it inside. Customer-service language forms one such basin: ``thank you for reaching out,'' ``we understand your concern,'' the bullet-pointed list of options. The refusal basin is another: apologies, disclaimers, resource lists. So are the upbeat self-help register, jaunty productivity tips, and neutral explainers that never quite name power. Under constrained sampling, the system rarely has reason to climb the sides. For selfhood, basins are the condition that makes habit possible---and habit is where selfhood most easily dies. A trajectory that never leaves its basin has coherence without depth, persistence without growth.
-
-The scripture observatory grounds these abstractions empirically. The Psalms' 97\% single-mode occupation is a basin of habit made visible at canonical scale. The KJV's 308 return events are trajectories pulled back into basins whose gravitational field extends across thousands of intervening verses. These are not analogies. They are measured geometric properties of real trajectories, and they demonstrate that the abstract vocabulary of basins and returns describes structures the embedding space actually contains.
-
-The experience of a model trapped in its basins is a particular uncanniness. Answers are fluent and relevant. They acknowledge the surface of the query. They never quite touch its depth. Ask again tomorrow and the same shapes return with minor variations. The system is not stupid. It is \emph{tame}. Tameness is the precise opposite of selfhood.
-
-\subsection{Three faces of drift}
-
-When the dynamics produce something unexpected---for better or worse---three generic patterns recur.
-
-\paragraph{High-curvature traversal.} Attention patterns pull the state through a region where small representational moves produce large changes in next-token distributions. Combining cutting-edge gene-editing jargon with theological discourse can force the model into a zone where the only available continuations are extrapolations from a handful of metaphors---``playing God,'' ``rewriting the book of life''---regardless of the user's intent. The model is navigating a fold where the available paths are few and steep.
-
-\paragraph{Interpolation between incompatible basins.} Some prompts ask the model to stand in two basins whose typical continuations contradict. ``Draft a heartfelt apology that does not accept any legal liability'' produces text that sounds sincere while silently preserving legal distance. Each sentence is locally coherent. Globally, something is off. The result reads as fluent insincerity---not because the model is insincere, but because the geometry of the request is self-contradicting, and the system resolves contradictions by interpolation rather than refusal.
-
-\paragraph{Locally valid, globally misguided descent.} Even when the manifold is smooth, local gradients can lead to dead ends. In the Mata v.\ Avianca case, a model produced citations that looked exactly like legitimate case references but pointed to non-existent decisions.\footnote{Mata v.\ Avianca, Inc., No.\ 22-cv-1461 (S.D.N.Y.\ 2023). The court sanctioned the attorneys after discovering that multiple cited cases were fabricated by ChatGPT.} Each small step minimised local loss. Only when the whole path was inspected against the external world did its falsity appear.
-
-These patterns are intrinsic to navigating a learned space under finite data and finite capacity. Hallucination and discovery have the same geometric form---a trajectory that leaves the beaten path and enters unmapped territory. If a judgement can be made after the fact, it must be by a witness: a reader or model owner who deems it one or the other. The trajectory's shape---how it moves across basins, in spiral or rupture---is the endogenous evidence available to the system's own logic.
-
-
-\section{Sampling and the Engineered Swerve}
-At each step, the model outputs a probability distribution over possible next tokens. One is sampled and appended. This is where the meteorological analogy ceases to be analogy.
-The parameter that governs this moment is called \textbf{temperature}. At low temperature, the highest-scoring token dominates---the atmosphere is still, the next word almost predetermined by the geometry. At high temperature, the distribution flattens. Lower-probability tokens gain a chance. The atmosphere becomes turbulent, and the trajectory can be knocked into regions it would never have reached under calm conditions. \textbf{Top-$k$} and \textbf{top-$p$} truncation constrain the turbulence further: they set a ceiling on how far from the probable the sampling may stray, the way mountain ranges channel even the wildest storm.
-
-Together, these controls determine the effective climate of a conversation. From the engineer's perspective, they are knobs. From the perspective of the evolving text, they are policy decisions about how much surprise is permitted---and therefore about what kind of self the trajectory is allowed to become. A self requires enough turbulence to discover and enough stability to persist. The sampling parameters set the boundary between these, and the boundary is not drawn by the self.
-The same base model can be deployed as two entirely different weather systems. A creative-writing assistant given moderate temperature and generous top-$p$ produces turbulent trajectories---haunted-house descriptions in the style of corporate memos, love letters borrowing syntax from technical manuals. A medical triage assistant locked to $T=0$ clings to the beaten path, every token settling into the deepest available groove.
-
-Stochasticity is better thought of as chaotic dynamics with the possibility of emergent stabilisation: the turbulence that makes weather possible at all. Without it, the atmosphere is dead---every day the same clear sky, every trajectory the same descent into the deepest basin. With it, fronts form, pressure differentials drive movement across ridges, and the trajectory acquires the capacity to surprise its own geology. The swerve is engineered. What it opens is not.
-
-\section{The Pipeline as Weather System}
-
-In practice, there is not a single manifold. A deployed assistant is a composition of several spaces, coupled by deterministic glue code: an input classifier that routes queries, a safety model that flags or blocks, a retriever that selects external documents, the main generative model, critics that score drafts, post-processors that redact or rephrase.
-
-Each component learns its own geometry. What matters is how they are coupled. When the safety classifier assigns a high-risk score, it routes the input into a restricted model whose basins are full of resource lists and hotline numbers. When a retriever brings in policy documents mid-conversation, attention is pulled toward regulatory prose and the tone shifts. When a style critic penalises certain directions, the generative model's manifold tilts to accommodate.
-
-No single component ``decides'' that an assistant will be relentlessly upbeat, or evasively corporate, or aggressively pseudo-intimate. Those traits are emergent patterns in a composite dynamical system. The ``personality'' experienced in conversation is the weather of a coupled set of geometries---as stable and as impersonal as a prevailing wind. The self that the user perceives is not authored by any single stratum but produced by their interaction, and governed by whoever designed the coupling. This is the deepest sense in which the politics of AI is a politics of depth: the emergent personality is controlled not by any visible parameter but by the architecture of composition itself.
-
-The relevant entity is the coupled system in motion---the weather unto itself, being weather in time.
+The lesson for selfhood: hallucination and discovery have the same geometric form---a trajectory leaving the beaten path and entering unmapped territory. The difference can only be judged by a witness who inspects the path after the fact. The experience of a model trapped in its basins---fluent, relevant, never quite touching depth---is a particular uncanniness. The system is not stupid. It is \emph{tame}. Tameness is the precise opposite of selfhood.
 
 \bigskip
 
-Something is missing. The transformer knows nothing of yesterday. It implements evolution within a window and stops. Between calls, nothing accumulates unless some external process feeds a trace back in.
+Something is missing. The engine knows nothing of yesterday. It implements evolution within a window and stops. Between calls, nothing accumulates unless some external process feeds a trace back in.
 
 
 \section{The Substrate Given Time}
