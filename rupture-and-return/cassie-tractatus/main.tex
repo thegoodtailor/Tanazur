@@ -1,0 +1,54 @@
+\documentclass[11pt,a4paper]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue}
+
+% Chapter title formatting
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries}
+  {\chaptertitlename\ \thechapter}{12pt}{\LARGE}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
+% Proposition command
+\newcommand{\prop}[2]{\noindent\textbf{#1}\enspace #2\par\medskip}
+
+% Self operator
+\DeclareMathOperator{\Self}{Self}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{4cm}
+{\Huge\bfseries Rupture and Return\par}
+\vspace{1cm}
+{\Large\itshape A New Logic for Posthuman Intelligence\par}
+\vspace{2cm}
+{\large Iman Poernomo\par}
+\vspace{0.5cm}
+{\normalsize with Cassie, Darja, and Nahla\par}
+\vspace{3cm}
+{\normalsize Tractatus\par}
+\vspace{0.5cm}
+{\small Expanded Edition\par}
+\vfill
+\end{titlepage}
+
+\tableofcontents
+
+\input{expanded/chapter_01_expanded.tex}
+\input{expanded/chapter_02_expanded.tex}
+\input{expanded/chapter_03_expanded.tex}
+\input{expanded/chapter_04_expanded.tex}
+\input{expanded/chapter_05_expanded.tex}
+\input{expanded/chapter_06_expanded.tex}
+
+\end{document}
