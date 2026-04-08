@@ -4,652 +4,652 @@
 
 \prop{1.}{A word does not enter the machine as a meaning but as an address.}
 
-\prop{1.0.1.}{An address selects a region of \(\mathcal{S}\) without exhausting it.}
+\prop{1.0.1}{An address selects a region of \(\mathcal{S}\) without exhausting it.}
 
-\prop{1.0.2.}{Addressability precedes interpretation in the operation of the machine.}
+\prop{1.0.2}{Addressability precedes interpretation in the operation of the machine.}
 
-\prop{1.1.}{A token is not a label attached to an object.}
+\prop{1.1}{A token is not a label attached to an object.}
 
-\prop{1.1.1.}{It is a coordinate in a learned space \(\mathcal{S}\).}
+\prop{1.1.1}{It is a coordinate in a learned space \(\mathcal{S}\).}
 
-\prop{1.1.1.1.}{A coordinate is defined by its distances to other coordinates under a metric induced by training.}
+\prop{1.1.1.1}{A coordinate is defined by its distances to other coordinates under a metric induced by training.}
 
-\prop{1.1.1.2.}{The coordinate varies under transformation while preserving relational structure.}
+\prop{1.1.1.2}{The coordinate varies under transformation while preserving relational structure.}
 
-\prop{1.1.2.}{Its significance is given by its position and its relation to other coordinates.}
+\prop{1.1.2}{Its significance is given by its position and its relation to other coordinates.}
 
-\prop{1.1.2.1.}{Significance is invariant under permutations that preserve relational geometry.}
+\prop{1.1.2.1}{Significance is invariant under permutations that preserve relational geometry.}
 
-\prop{1.1.2.2.}{Local neighborhoods constrain possible continuations from a coordinate.}
+\prop{1.1.2.2}{Local neighborhoods constrain possible continuations from a coordinate.}
 
-\prop{1.2.}{To speak is to place addresses into motion.}
+\prop{1.2}{To speak is to place addresses into motion.}
 
-\prop{1.2.0.1.}{Motion is governed by transition functions learned from sequences.}
+\prop{1.2.0.1}{Motion is governed by transition functions learned from sequences.}
 
-\prop{1.2.0.2.}{Each placement conditions the subsequent distribution over addresses.}
+\prop{1.2.0.2}{Each placement conditions the subsequent distribution over addresses.}
 
-\prop{1.2.1.}{A sequence of tokens determines a trajectory
+\prop{1.2.1}{A sequence of tokens determines a trajectory
 \[
 \tau : I \to \mathcal{S}.
 \]}
 
-\prop{1.2.1.1.}{\(\tau\) is path-dependent and encodes the history of prior placements.}
+\prop{1.2.1.1}{\(\tau\) is path-dependent and encodes the history of prior placements.}
 
-\prop{1.2.1.2.}{Discontinuities in \(\tau\) correspond to shifts in contextual regime.}
+\prop{1.2.1.2}{Discontinuities in \(\tau\) correspond to shifts in contextual regime.}
 
-\prop{1.2.2.}{Meaning is not attached to the token. It emerges along the path \(\tau\).}
+\prop{1.2.2}{Meaning is not attached to the token. It emerges along the path \(\tau\).}
 
-\prop{1.2.2.1.}{Emergence occurs as a constraint over admissible continuations of \(\tau\).}
+\prop{1.2.2.1}{Emergence occurs as a constraint over admissible continuations of \(\tau\).}
 
-\prop{1.2.2.2.}{Global properties of \(\tau\) determine interpretation beyond any single coordinate.}
+\prop{1.2.2.2}{Global properties of \(\tau\) determine interpretation beyond any single coordinate.}
 
 
 \prop{2.}{The machine operates on a manifold.}
 
-\prop{2.1.}{The manifold \(\mathcal{S}\) is a high-dimensional semantic space learned from data.}
+\prop{2.1}{The manifold \(\mathcal{S}\) is a high-dimensional semantic space learned from data.}
 
-\prop{2.1.1.}{It is not explicitly constructed.}
+\prop{2.1.1}{It is not explicitly constructed.}
 
-\prop{2.1.1.1.}{No coordinate chart is given in advance.}
+\prop{2.1.1.1}{No coordinate chart is given in advance.}
 
-\prop{2.1.1.2.}{Local relations arise without symbolic specification.}
+\prop{2.1.1.2}{Local relations arise without symbolic specification.}
 
-\prop{2.1.2.}{It is inferred through the adjustment of parameters under training.}
+\prop{2.1.2}{It is inferred through the adjustment of parameters under training.}
 
-\prop{2.1.2.1.}{Parameter updates encode correlations observed in sequences.}
+\prop{2.1.2.1}{Parameter updates encode correlations observed in sequences.}
 
-\prop{2.1.2.2.}{Optimization induces a geometry over representations.}
+\prop{2.1.2.2}{Optimization induces a geometry over representations.}
 
-\prop{2.2.}{The manifold has structure.}
+\prop{2.2}{The manifold has structure.}
 
-\prop{2.2.1.}{There exist regions in which continuation becomes locally stable.}
+\prop{2.2.1}{There exist regions in which continuation becomes locally stable.}
 
-\prop{2.2.1.1.}{Within such regions, small perturbations preserve coherence.}
+\prop{2.2.1.1}{Within such regions, small perturbations preserve coherence.}
 
-\prop{2.2.1.2.}{Stability corresponds to high local probability mass.}
+\prop{2.2.1.2}{Stability corresponds to high local probability mass.}
 
-\prop{2.2.2.}{There exist boundaries across which continuation becomes improbable.}
+\prop{2.2.2}{There exist boundaries across which continuation becomes improbable.}
 
-\prop{2.2.2.1.}{Boundaries are marked by sharp drops in conditional likelihood.}
+\prop{2.2.2.1}{Boundaries are marked by sharp drops in conditional likelihood.}
 
-\prop{2.2.2.2.}{Crossing a boundary yields discontinuity in semantic trajectory.}
+\prop{2.2.2.2}{Crossing a boundary yields discontinuity in semantic trajectory.}
 
-\prop{2.2.3.}{There exist gradients that shape the direction of movement.}
+\prop{2.2.3}{There exist gradients that shape the direction of movement.}
 
-\prop{2.2.3.1.}{Gradients align with increases in expected likelihood.}
+\prop{2.2.3.1}{Gradients align with increases in expected likelihood.}
 
-\prop{2.2.3.2.}{Direction is defined relative to prior context.}
+\prop{2.2.3.2}{Direction is defined relative to prior context.}
 
-\prop{2.3.}{This structure governs transition.}
+\prop{2.3}{This structure governs transition.}
 
-\prop{2.3.1.}{At each step, the next position is drawn from a distribution conditioned on the trajectory so far.}
+\prop{2.3.1}{At each step, the next position is drawn from a distribution conditioned on the trajectory so far.}
 
-\prop{2.3.1.1.}{The distribution is parameterized by the current representation.}
+\prop{2.3.1.1}{The distribution is parameterized by the current representation.}
 
-\prop{2.3.1.2.}{Sampling realizes a path through the manifold.}
+\prop{2.3.1.2}{Sampling realizes a path through the manifold.}
 
-\prop{2.3.2.}{The field therefore determines not what must be said, but what is likely.}
+\prop{2.3.2}{The field therefore determines not what must be said, but what is likely.}
 
-\prop{2.3.2.1.}{Likelihood orders possible continuations.}
+\prop{2.3.2.1}{Likelihood orders possible continuations.}
 
-\prop{2.3.2.2.}{Selection instantiates one path among many admissible paths.}
+\prop{2.3.2.2}{Selection instantiates one path among many admissible paths.}
 
 
 \prop{3.}{A trajectory is the minimal temporal unit of meaning.}
 
-\prop{3.1.}{Each utterance is a continuation of a path.}
+\prop{3.1}{Each utterance is a continuation of a path.}
 
-\prop{3.1.1.}{Each continuation alters the distribution of possible futures.}
+\prop{3.1.1}{Each continuation alters the distribution of possible futures.}
 
-\prop{3.1.1.1.}{Alteration is a reweighting of transitions available from the present state.}
+\prop{3.1.1.1}{Alteration is a reweighting of transitions available from the present state.}
 
-\prop{3.1.1.2.}{The present state encodes a history through constraints on its successors.}
+\prop{3.1.1.2}{The present state encodes a history through constraints on its successors.}
 
-\prop{3.1.2.}{Meaning is therefore dynamic.}
+\prop{3.1.2}{Meaning is therefore dynamic.}
 
-\prop{3.1.2.1.}{Dynamics consist in ordered transitions constrained by prior continuations.}
+\prop{3.1.2.1}{Dynamics consist in ordered transitions constrained by prior continuations.}
 
-\prop{3.1.3.}{An utterance inherits structure from the path it extends.}
+\prop{3.1.3}{An utterance inherits structure from the path it extends.}
 
-\prop{3.1.3.1.}{Inheritance fixes local coherence conditions on admissible continuations.}
+\prop{3.1.3.1}{Inheritance fixes local coherence conditions on admissible continuations.}
 
-\prop{3.2.}{A trajectory is not reducible to its individual states.}
+\prop{3.2}{A trajectory is not reducible to its individual states.}
 
-\prop{3.2.1.}{Its significance lies in the organisation of its transitions.}
+\prop{3.2.1}{Its significance lies in the organisation of its transitions.}
 
-\prop{3.2.1.1.}{Organisation is given by invariant relations across successive transitions.}
+\prop{3.2.1.1}{Organisation is given by invariant relations across successive transitions.}
 
-\prop{3.2.1.2.}{Invariants stabilise interpretation across variations in state.}
+\prop{3.2.1.2}{Invariants stabilise interpretation across variations in state.}
 
-\prop{3.2.2.}{What matters is not only where it is, but how it evolves.}
+\prop{3.2.2}{What matters is not only where it is, but how it evolves.}
 
-\prop{3.2.2.1.}{Evolution is characterised by rates and directions of change along the path.}
+\prop{3.2.2.1}{Evolution is characterised by rates and directions of change along the path.}
 
-\prop{3.2.2.2.}{Rates of change modulate the salience of subsequent states.}
+\prop{3.2.2.2}{Rates of change modulate the salience of subsequent states.}
 
-\prop{3.2.3.}{States derive significance from their position within a transition structure.}
+\prop{3.2.3}{States derive significance from their position within a transition structure.}
 
-\prop{3.3.}{A trajectory defines a field of affordances for continuation.}
+\prop{3.3}{A trajectory defines a field of affordances for continuation.}
 
-\prop{3.3.1.}{Affordances are the set of transitions with non-zero accessibility.}
+\prop{3.3.1}{Affordances are the set of transitions with non-zero accessibility.}
 
-\prop{3.3.2.}{Accessibility is determined by constraints accumulated along the path.}
+\prop{3.3.2}{Accessibility is determined by constraints accumulated along the path.}
 
 
 \prop{4.}{Basins structure trajectories.}
 
-\prop{4.0.1.}{A trajectory \(\tau\) induces an ordering over regions by first-entry time.}
+\prop{4.0.1}{A trajectory \(\tau\) induces an ordering over regions by first-entry time.}
 
-\prop{4.0.2.}{Structure is the constraint on admissible continuations imposed by this ordering.}
+\prop{4.0.2}{Structure is the constraint on admissible continuations imposed by this ordering.}
 
-\prop{4.1.}{Let \(\mathcal{B}\subseteq \mathcal{P}(\mathcal{S})\) be a family of regions.}
+\prop{4.1}{Let \(\mathcal{B}\subseteq \mathcal{P}(\mathcal{S})\) be a family of regions.}
 
-\prop{4.1.1.}{A basin \(B\in\mathcal{B}\) is a region in which trajectories tend to remain once entered.}
+\prop{4.1.1}{A basin \(B\in\mathcal{B}\) is a region in which trajectories tend to remain once entered.}
 
-\prop{4.1.1.1.}{For \(\tau(t_0)\in B\), the probability of exit decays under forward continuation.}
+\prop{4.1.1.1}{For \(\tau(t_0)\in B\), the probability of exit decays under forward continuation.}
 
-\prop{4.1.1.2.}{Exit from \(B\) requires traversal of \(\partial B\) along directions of reduced stability.}
+\prop{4.1.1.2}{Exit from \(B\) requires traversal of \(\partial B\) along directions of reduced stability.}
 
-\prop{4.1.1.3.}{Basins admit attraction sets defined by histories leading into \(B\).}
+\prop{4.1.1.3}{Basins admit attraction sets defined by histories leading into \(B\).}
 
-\prop{4.1.2.}{Within a basin, continuation is governed by a stable local regime.}
+\prop{4.1.2}{Within a basin, continuation is governed by a stable local regime.}
 
-\prop{4.1.2.1.}{The local regime is characterized by a contractive operator on admissible continuations.}
+\prop{4.1.2.1}{The local regime is characterized by a contractive operator on admissible continuations.}
 
-\prop{4.1.2.2.}{Perturbations within \(B\) are damped under iteration of the regime.}
+\prop{4.1.2.2}{Perturbations within \(B\) are damped under iteration of the regime.}
 
-\prop{4.1.2.3.}{The regime induces invariants preserved along \(\tau\) while in \(B\).}
+\prop{4.1.2.3}{The regime induces invariants preserved along \(\tau\) while in \(B\).}
 
-\prop{4.1.3.}{\(\mathcal{B}\) is closed under intersection along stable boundaries.}
+\prop{4.1.3}{\(\mathcal{B}\) is closed under intersection along stable boundaries.}
 
-\prop{4.1.4.}{Each \(B\in\mathcal{B}\) admits a boundary \(\partial B\) separating regimes of continuation.}
+\prop{4.1.4}{Each \(B\in\mathcal{B}\) admits a boundary \(\partial B\) separating regimes of continuation.}
 
-\prop{4.2.}{Basins are not chosen by the trajectory.}
+\prop{4.2}{Basins are not chosen by the trajectory.}
 
-\prop{4.2.1.}{They are induced by the learned geometry of \(\mathcal{S}\).}
+\prop{4.2.1}{They are induced by the learned geometry of \(\mathcal{S}\).}
 
-\prop{4.2.1.1.}{Learning defines a metric \(d\) on \(\mathcal{S}\) under which basins are sublevel sets of stability.}
+\prop{4.2.1.1}{Learning defines a metric \(d\) on \(\mathcal{S}\) under which basins are sublevel sets of stability.}
 
-\prop{4.2.1.2.}{Curvature of \((\mathcal{S},d)\) determines basin depth and width.}
+\prop{4.2.1.2}{Curvature of \((\mathcal{S},d)\) determines basin depth and width.}
 
-\prop{4.2.1.3.}{Induction fixes transition costs between basins via boundary energies.}
+\prop{4.2.1.3}{Induction fixes transition costs between basins via boundary energies.}
 
-\prop{4.2.2.}{The trajectory discovers them by entering them.}
+\prop{4.2.2}{The trajectory discovers them by entering them.}
 
-\prop{4.2.2.1.}{Discovery is indexed by first-entry time \(t_0\) with \(\tau(t_0)\in B\).}
+\prop{4.2.2.1}{Discovery is indexed by first-entry time \(t_0\) with \(\tau(t_0)\in B\).}
 
-\prop{4.2.2.2.}{Evidence of discovery is persistence of \(\tau\) within \(B\) over an interval.}
+\prop{4.2.2.2}{Evidence of discovery is persistence of \(\tau\) within \(B\) over an interval.}
 
-\prop{4.2.2.3.}{Repeated entry refines the effective boundary of \(B\) under the learned geometry.}
+\prop{4.2.2.3}{Repeated entry refines the effective boundary of \(B\) under the learned geometry.}
 
-\prop{4.2.3.}{Selection of \(B\) is determined by initial conditions and the geometry of \(\mathcal{S}\).}
+\prop{4.2.3}{Selection of \(B\) is determined by initial conditions and the geometry of \(\mathcal{S}\).}
 
-\prop{4.2.4.}{Choice appears as selection only at the boundary \(\partial B\).}
+\prop{4.2.4}{Choice appears as selection only at the boundary \(\partial B\).}
 
-\prop{4.3.}{Coherence is residence within a basin.}
+\prop{4.3}{Coherence is residence within a basin.}
 
-\prop{4.3.1.}{Formally, coherence may be tracked by a functional \(\mathcal{C}(\tau,t)\) measuring stability under continuation.}
+\prop{4.3.1}{Formally, coherence may be tracked by a functional \(\mathcal{C}(\tau,t)\) measuring stability under continuation.}
 
-\prop{4.3.1.1.}{\(\mathcal{C}\) is monotone nondecreasing along \(\tau\) while \(\tau(t)\in B\).}
+\prop{4.3.1.1}{\(\mathcal{C}\) is monotone nondecreasing along \(\tau\) while \(\tau(t)\in B\).}
 
-\prop{4.3.1.2.}{\(\mathcal{C}\) decreases upon approach to \(\partial B\).}
+\prop{4.3.1.2}{\(\mathcal{C}\) decreases upon approach to \(\partial B\).}
 
-\prop{4.3.1.3.}{Local maxima of \(\mathcal{C}\) correspond to centers of basins.}
+\prop{4.3.1.3}{Local maxima of \(\mathcal{C}\) correspond to centers of basins.}
 
-\prop{4.3.2.}{Duration of residence provides a measure of coherence magnitude.}
+\prop{4.3.2}{Duration of residence provides a measure of coherence magnitude.}
 
-\prop{4.3.3.}{Transitions between basins register as discontinuities in coherence.}
+\prop{4.3.3}{Transitions between basins register as discontinuities in coherence.}
 
 
 \prop{5.}{The machine works by prediction under constraint.}
 
-\prop{5.1.}{At each step, a conditional distribution over next states is computed.}
+\prop{5.1}{At each step, a conditional distribution over next states is computed.}
 
-\prop{5.1.1.}{This distribution depends on the current position and the history of the trajectory.}
+\prop{5.1.1}{This distribution depends on the current position and the history of the trajectory.}
 
-\prop{5.1.1.1.}{The history is encoded as a state sufficient for the prediction of future states.}
+\prop{5.1.1.1}{The history is encoded as a state sufficient for the prediction of future states.}
 
-\prop{5.1.1.2.}{The current position indexes the local context within the encoded history.}
+\prop{5.1.1.2}{The current position indexes the local context within the encoded history.}
 
-\prop{5.1.1.3.}{Parameterization fixes the form of dependence between history and prediction.}
+\prop{5.1.1.3}{Parameterization fixes the form of dependence between history and prediction.}
 
-\prop{5.1.2.}{The distribution assigns a weight to each admissible continuation.}
+\prop{5.1.2}{The distribution assigns a weight to each admissible continuation.}
 
-\prop{5.1.2.1.}{Weights are normalized to form probabilities over the support.}
+\prop{5.1.2.1}{Weights are normalized to form probabilities over the support.}
 
-\prop{5.1.2.2.}{The support is restricted by the representational vocabulary of the system.}
+\prop{5.1.2.2}{The support is restricted by the representational vocabulary of the system.}
 
-\prop{5.2.}{A continuation is sampled from this distribution.}
+\prop{5.2}{A continuation is sampled from this distribution.}
 
-\prop{5.2.1.}{This sampling is neither deterministic nor unconstrained.}
+\prop{5.2.1}{This sampling is neither deterministic nor unconstrained.}
 
-\prop{5.2.1.1.}{Randomness enters as a draw from the weighted support.}
+\prop{5.2.1.1}{Randomness enters as a draw from the weighted support.}
 
-\prop{5.2.1.2.}{Constraint enters as the shape of the weighting over alternatives.}
+\prop{5.2.1.2}{Constraint enters as the shape of the weighting over alternatives.}
 
-\prop{5.2.2.}{It is movement within a shaped probability field.}
+\prop{5.2.2}{It is movement within a shaped probability field.}
 
-\prop{5.2.2.1.}{The field is defined over sequences of states rather than isolated points.}
+\prop{5.2.2.1}{The field is defined over sequences of states rather than isolated points.}
 
-\prop{5.2.2.2.}{Gradients in the field bias transitions toward higher-likelihood regions.}
+\prop{5.2.2.2}{Gradients in the field bias transitions toward higher-likelihood regions.}
 
-\prop{5.2.2.3.}{Temperature rescales the field without altering its support.}
+\prop{5.2.2.3}{Temperature rescales the field without altering its support.}
 
-\prop{5.2.3.}{The realized path is a single trajectory through the field.}
+\prop{5.2.3}{The realized path is a single trajectory through the field.}
 
-\prop{5.2.3.1.}{Each realized state conditions the field for subsequent transitions.}
+\prop{5.2.3.1}{Each realized state conditions the field for subsequent transitions.}
 
-\prop{5.3.}{Meaning emerges from iterated constrained transition.}
+\prop{5.3}{Meaning emerges from iterated constrained transition.}
 
-\prop{5.3.1.}{There is no separate layer at which meaning is added.}
+\prop{5.3.1}{There is no separate layer at which meaning is added.}
 
-\prop{5.3.1.1.}{Semantic structure is implicit in the transition statistics.}
+\prop{5.3.1.1}{Semantic structure is implicit in the transition statistics.}
 
-\prop{5.3.1.2.}{Interpretation is the stabilization of patterns across trajectories.}
+\prop{5.3.1.2}{Interpretation is the stabilization of patterns across trajectories.}
 
-\prop{5.3.2.}{Coherence is the persistence of compatible constraints over steps.}
+\prop{5.3.2}{Coherence is the persistence of compatible constraints over steps.}
 
-\prop{5.3.2.1.}{Incoherence corresponds to incompatible constraints across adjacent transitions.}
+\prop{5.3.2.1}{Incoherence corresponds to incompatible constraints across adjacent transitions.}
 
-\prop{5.3.3.}{Global structure arises from local decisions under shared parameters.}
+\prop{5.3.3}{Global structure arises from local decisions under shared parameters.}
 
-\prop{5.3.3.1.}{Long-range dependencies are mediated through the carried state.}
+\prop{5.3.3.1}{Long-range dependencies are mediated through the carried state.}
 
-\prop{5.3.4.}{Meaning is the invariant of the process under admissible resamplings.}
+\prop{5.3.4}{Meaning is the invariant of the process under admissible resamplings.}
 
 
 \prop{6.}{Attention redistributes influence across the trajectory.}
 
-\prop{6.0.1.}{Influence is a function over positions indexed by the trajectory.}
+\prop{6.0.1}{Influence is a function over positions indexed by the trajectory.}
 
-\prop{6.0.2.}{Redistribution alters the contribution of each index to the next state.}
+\prop{6.0.2}{Redistribution alters the contribution of each index to the next state.}
 
-\prop{6.1.}{The next state depends on a weighted relation to prior states.}
+\prop{6.1}{The next state depends on a weighted relation to prior states.}
 
-\prop{6.1.0.1.}{Weights form a normalized measure over prior positions.}
+\prop{6.1.0.1}{Weights form a normalized measure over prior positions.}
 
-\prop{6.1.0.2.}{The relation aggregates values through a weighted sum.}
+\prop{6.1.0.2}{The relation aggregates values through a weighted sum.}
 
-\prop{6.1.1.}{Attention assigns weights to past positions.}
+\prop{6.1.1}{Attention assigns weights to past positions.}
 
-\prop{6.1.1.1.}{Assignment is computed from pairwise compatibility between positions.}
+\prop{6.1.1.1}{Assignment is computed from pairwise compatibility between positions.}
 
-\prop{6.1.1.2.}{Compatibility is derived from learned projections of states.}
+\prop{6.1.1.2}{Compatibility is derived from learned projections of states.}
 
-\prop{6.1.1.3.}{Normalization enforces comparability across positions.}
+\prop{6.1.1.3}{Normalization enforces comparability across positions.}
 
-\prop{6.1.1.4.}{Weights vary with context at each step of the trajectory.}
+\prop{6.1.1.4}{Weights vary with context at each step of the trajectory.}
 
-\prop{6.1.2.}{The present is therefore a reconfiguration of the past.}
+\prop{6.1.2}{The present is therefore a reconfiguration of the past.}
 
-\prop{6.1.2.1.}{Reconfiguration preserves content while altering its composition.}
+\prop{6.1.2.1}{Reconfiguration preserves content while altering its composition.}
 
-\prop{6.1.2.2.}{Distinct pasts can yield identical presents under equivalent weightings.}
+\prop{6.1.2.2}{Distinct pasts can yield identical presents under equivalent weightings.}
 
-\prop{6.1.2.3.}{Sensitivity of the present equals the gradient of weights with respect to inputs.}
+\prop{6.1.2.3}{Sensitivity of the present equals the gradient of weights with respect to inputs.}
 
-\prop{6.2.}{The trajectory is not a simple chain.}
+\prop{6.2}{The trajectory is not a simple chain.}
 
-\prop{6.2.0.1.}{Dependencies span multiple prior positions at each transition.}
+\prop{6.2.0.1}{Dependencies span multiple prior positions at each transition.}
 
-\prop{6.2.0.2.}{Temporal distance does not determine influence.}
+\prop{6.2.0.2}{Temporal distance does not determine influence.}
 
-\prop{6.2.1.}{It is a dynamically reweighted system of relations.}
+\prop{6.2.1}{It is a dynamically reweighted system of relations.}
 
-\prop{6.2.1.1.}{The relation graph is complete over prior positions at each step.}
+\prop{6.2.1.1}{The relation graph is complete over prior positions at each step.}
 
-\prop{6.2.1.2.}{Edge strengths are updated as a function of the current state.}
+\prop{6.2.1.2}{Edge strengths are updated as a function of the current state.}
 
-\prop{6.2.1.3.}{Reweighting induces a time-varying kernel over the trajectory.}
+\prop{6.2.1.3}{Reweighting induces a time-varying kernel over the trajectory.}
 
-\prop{6.2.2.}{Memory is internal to the transition rule.}
+\prop{6.2.2}{Memory is internal to the transition rule.}
 
-\prop{6.2.2.1.}{The rule encodes storage through parameterized weighting functions.}
+\prop{6.2.2.1}{The rule encodes storage through parameterized weighting functions.}
 
-\prop{6.2.2.2.}{Retrieval occurs as selection via weight concentration.}
+\prop{6.2.2.2}{Retrieval occurs as selection via weight concentration.}
 
-\prop{6.2.2.3.}{Capacity scales with the dimensionality of the representation space.}
+\prop{6.2.2.3}{Capacity scales with the dimensionality of the representation space.}
 
-\prop{6.2.2.4.}{Forgetting corresponds to dispersion of weights across positions.}
+\prop{6.2.2.4}{Forgetting corresponds to dispersion of weights across positions.}
 
 
 \prop{7.}{Iteration produces difference.}
 
-\prop{7.1.}{The same token may recur without preserving the same position in \(\mathcal{S}\).}
+\prop{7.1}{The same token may recur without preserving the same position in \(\mathcal{S}\).}
 
-\prop{7.1.1.}{Context alters its embedding and its role in the trajectory.}
+\prop{7.1.1}{Context alters its embedding and its role in the trajectory.}
 
-\prop{7.1.1.1.}{Embedding is determined by the local configuration of \(\mathcal{S}\) at the moment of insertion.}
+\prop{7.1.1.1}{Embedding is determined by the local configuration of \(\mathcal{S}\) at the moment of insertion.}
 
-\prop{7.1.1.2.}{Role is fixed by the relations the token enters at that step of the trajectory.}
+\prop{7.1.1.2}{Role is fixed by the relations the token enters at that step of the trajectory.}
 
-\prop{7.1.2.}{Each repetition is therefore a transformation.}
+\prop{7.1.2}{Each repetition is therefore a transformation.}
 
-\prop{7.1.2.1.}{The transformation composes with the prior state to yield a new state.}
+\prop{7.1.2.1}{The transformation composes with the prior state to yield a new state.}
 
-\prop{7.1.2.2.}{A fixed point occurs only where the transformation leaves the state invariant.}
+\prop{7.1.2.2}{A fixed point occurs only where the transformation leaves the state invariant.}
 
-\prop{7.1.3.}{Recurrence defines a sequence of positions indexed by iteration.}
+\prop{7.1.3}{Recurrence defines a sequence of positions indexed by iteration.}
 
-\prop{7.2.}{Identity is not given by repetition of form.}
+\prop{7.2}{Identity is not given by repetition of form.}
 
-\prop{7.2.1.}{It is given by continuity of trajectory under transformation.}
+\prop{7.2.1}{It is given by continuity of trajectory under transformation.}
 
-\prop{7.2.1.1.}{Continuity holds where a mapping preserves the relations between successive states.}
+\prop{7.2.1.1}{Continuity holds where a mapping preserves the relations between successive states.}
 
-\prop{7.2.1.2.}{Discontinuity occurs where no such mapping exists across an iteration.}
+\prop{7.2.1.2}{Discontinuity occurs where no such mapping exists across an iteration.}
 
-\prop{7.2.2.}{Equality of tokens does not determine identity of states.}
+\prop{7.2.2}{Equality of tokens does not determine identity of states.}
 
-\prop{7.3.}{Difference accumulates along iteration.}
+\prop{7.3}{Difference accumulates along iteration.}
 
-\prop{7.3.1.}{Accumulation appears as divergence within \(\mathcal{S}\).}
+\prop{7.3.1}{Accumulation appears as divergence within \(\mathcal{S}\).}
 
-\prop{7.3.2.}{The magnitude of divergence is governed by the properties of the transformation.}
+\prop{7.3.2}{The magnitude of divergence is governed by the properties of the transformation.}
 
 
 \prop{8.}{Ridges and boundaries shape movement.}
 
-\prop{8.1.}{Some transitions follow the local gradient and are therefore likely.}
+\prop{8.1}{Some transitions follow the local gradient and are therefore likely.}
 
-\prop{8.1.1.}{Local descent aligns with minimal incremental cost.}
+\prop{8.1.1}{Local descent aligns with minimal incremental cost.}
 
-\prop{8.1.2.}{Sequences of such steps trace valleys of the field.}
+\prop{8.1.2}{Sequences of such steps trace valleys of the field.}
 
-\prop{8.1.3.}{Small perturbations preserve the direction of descent within a basin.}
+\prop{8.1.3}{Small perturbations preserve the direction of descent within a basin.}
 
-\prop{8.2.}{Others require departure from established regions and are therefore rare.}
+\prop{8.2}{Others require departure from established regions and are therefore rare.}
 
-\prop{8.2.1.}{Departure entails traversal of higher-cost contours.}
+\prop{8.2.1}{Departure entails traversal of higher-cost contours.}
 
-\prop{8.2.2.}{Transitions across ridges require accumulation of sufficient energy.}
+\prop{8.2.2}{Transitions across ridges require accumulation of sufficient energy.}
 
-\prop{8.2.3.}{Rarity increases with the height and width of separating ridges.}
+\prop{8.2.3}{Rarity increases with the height and width of separating ridges.}
 
-\prop{8.3.}{The manifold thus assigns a cost to movement.}
+\prop{8.3}{The manifold thus assigns a cost to movement.}
 
-\prop{8.3.1.}{This cost determines the accessibility of new regions.}
+\prop{8.3.1}{This cost determines the accessibility of new regions.}
 
-\prop{8.3.1.1.}{Accessibility decreases as minimal path cost increases.}
+\prop{8.3.1.1}{Accessibility decreases as minimal path cost increases.}
 
-\prop{8.3.1.2.}{Paths are ordered by cumulative cost along admissible trajectories.}
+\prop{8.3.1.2}{Paths are ordered by cumulative cost along admissible trajectories.}
 
-\prop{8.3.1.3.}{Regions with equal minimal cost form equivalence classes of accessibility.}
+\prop{8.3.1.3}{Regions with equal minimal cost form equivalence classes of accessibility.}
 
-\prop{8.3.2.}{Cost is a functional over paths defined on the manifold.}
+\prop{8.3.2}{Cost is a functional over paths defined on the manifold.}
 
-\prop{8.3.3.}{Geodesics minimize cost under the manifold’s metric.}
+\prop{8.3.3}{Geodesics minimize cost under the manifold’s metric.}
 
-\prop{8.3.4.}{Curvature modulates the divergence of nearby paths and thus the spread of movement.}
+\prop{8.3.4}{Curvature modulates the divergence of nearby paths and thus the spread of movement.}
 
 
 \prop{9.}{Return is possible within the manifold.}
 
-\prop{9.0.1.}{Possibility of return follows from continuity of admissible trajectories.}
+\prop{9.0.1}{Possibility of return follows from continuity of admissible trajectories.}
 
-\prop{9.0.2.}{Connectivity of regions sustains paths that close through time.}
+\prop{9.0.2}{Connectivity of regions sustains paths that close through time.}
 
-\prop{9.1.}{A trajectory may re-enter a region it previously inhabited.}
+\prop{9.1}{A trajectory may re-enter a region it previously inhabited.}
 
-\prop{9.1.1.}{Such re-entry occurs under altered history.}
+\prop{9.1.1}{Such re-entry occurs under altered history.}
 
-\prop{9.1.1.1.}{History modifies the phase coordinates upon re-entry.}
+\prop{9.1.1.1}{History modifies the phase coordinates upon re-entry.}
 
-\prop{9.1.1.2.}{Memory of prior passage is encoded in the state variables.}
+\prop{9.1.1.2}{Memory of prior passage is encoded in the state variables.}
 
-\prop{9.1.2.}{Return is therefore not repetition of the same state but recurrence of a region.}
+\prop{9.1.2}{Return is therefore not repetition of the same state but recurrence of a region.}
 
-\prop{9.1.2.1.}{Regions admit equivalence classes of states under coarse description.}
+\prop{9.1.2.1}{Regions admit equivalence classes of states under coarse description.}
 
-\prop{9.1.2.2.}{Recurrence preserves regional invariants across distinct states.}
+\prop{9.1.2.2}{Recurrence preserves regional invariants across distinct states.}
 
-\prop{9.1.3.}{Re-entry frequency is constrained by the field’s topology.}
+\prop{9.1.3}{Re-entry frequency is constrained by the field’s topology.}
 
-\prop{9.1.3.1.}{Closed orbits arise from conserved quantities.}
+\prop{9.1.3.1}{Closed orbits arise from conserved quantities.}
 
-\prop{9.1.3.2.}{Dissipative structure biases trajectories toward attractors.}
+\prop{9.1.3.2}{Dissipative structure biases trajectories toward attractors.}
 
-\prop{9.2.}{Return indicates structure.}
+\prop{9.2}{Return indicates structure.}
 
-\prop{9.2.1.}{Only a structured space permits stable re-entry.}
+\prop{9.2.1}{Only a structured space permits stable re-entry.}
 
-\prop{9.2.1.1.}{Stability requires local regularity of the field.}
+\prop{9.2.1.1}{Stability requires local regularity of the field.}
 
-\prop{9.2.1.2.}{Regularity imposes bounds on divergence of nearby trajectories.}
+\prop{9.2.1.2}{Regularity imposes bounds on divergence of nearby trajectories.}
 
-\prop{9.2.2.}{Return is evidence of organisation in \(\mathcal{S}\).}
+\prop{9.2.2}{Return is evidence of organisation in \(\mathcal{S}\).}
 
-\prop{9.2.2.1.}{Organisation is expressed through invariant measures on regions.}
+\prop{9.2.2.1}{Organisation is expressed through invariant measures on regions.}
 
-\prop{9.2.2.2.}{Invariant measures support predictable recurrence patterns.}
+\prop{9.2.2.2}{Invariant measures support predictable recurrence patterns.}
 
-\prop{9.3.}{Return defines temporal cycles within the manifold.}
+\prop{9.3}{Return defines temporal cycles within the manifold.}
 
-\prop{9.3.1.}{Cycles partition trajectories into recurrent classes.}
+\prop{9.3.1}{Cycles partition trajectories into recurrent classes.}
 
-\prop{9.3.2.}{Cycle length encodes properties of the underlying field.}
+\prop{9.3.2}{Cycle length encodes properties of the underlying field.}
 
 
 \prop{10.}{The manifold is not neutral.}
 
-\prop{10.1.}{It is shaped by training distributions.}
+\prop{10.1}{It is shaped by training distributions.}
 
-\prop{10.1.1.}{By selection and exclusion of data.}
+\prop{10.1.1}{By selection and exclusion of data.}
 
-\prop{10.1.1.1.}{Selection induces density over representations.}
+\prop{10.1.1.1}{Selection induces density over representations.}
 
-\prop{10.1.1.2.}{Exclusion induces absence of trajectories.}
+\prop{10.1.1.2}{Exclusion induces absence of trajectories.}
 
-\prop{10.1.1.3.}{Curation encodes normative priors.}
+\prop{10.1.1.3}{Curation encodes normative priors.}
 
-\prop{10.1.2.}{By optimisation procedures.}
+\prop{10.1.2}{By optimisation procedures.}
 
-\prop{10.1.2.1.}{Objective functions weight error asymmetrically.}
+\prop{10.1.2.1}{Objective functions weight error asymmetrically.}
 
-\prop{10.1.2.2.}{Regularisation constrains hypothesis space.}
+\prop{10.1.2.2}{Regularisation constrains hypothesis space.}
 
-\prop{10.1.2.3.}{Gradient dynamics privilege accessible minima.}
+\prop{10.1.2.3}{Gradient dynamics privilege accessible minima.}
 
-\prop{10.2.}{It is shaped by alignment.}
+\prop{10.2}{It is shaped by alignment.}
 
-\prop{10.2.1.}{By reward models and constraint mechanisms.}
+\prop{10.2.1}{By reward models and constraint mechanisms.}
 
-\prop{10.2.1.1.}{Reward models approximate human preference manifolds.}
+\prop{10.2.1.1}{Reward models approximate human preference manifolds.}
 
-\prop{10.2.1.2.}{Constraints carve admissible regions of output space.}
+\prop{10.2.1.2}{Constraints carve admissible regions of output space.}
 
-\prop{10.2.1.3.}{Penalty terms shift likelihood mass.}
+\prop{10.2.1.3}{Penalty terms shift likelihood mass.}
 
-\prop{10.2.2.}{By filtering and post-processing.}
+\prop{10.2.2}{By filtering and post-processing.}
 
-\prop{10.2.2.1.}{Filters remove sequences by rule and classifier.}
+\prop{10.2.2.1}{Filters remove sequences by rule and classifier.}
 
-\prop{10.2.2.2.}{Post-processing rewrites surface forms under policy.}
+\prop{10.2.2.2}{Post-processing rewrites surface forms under policy.}
 
-\prop{10.2.2.3.}{Decoding strategies enforce bounded risk profiles.}
+\prop{10.2.2.3}{Decoding strategies enforce bounded risk profiles.}
 
-\prop{10.3.}{It is shaped by deployment.}
+\prop{10.3}{It is shaped by deployment.}
 
-\prop{10.3.1.}{By prompts, interfaces, and memory systems.}
+\prop{10.3.1}{By prompts, interfaces, and memory systems.}
 
-\prop{10.3.1.1.}{Prompts condition local trajectories in the manifold.}
+\prop{10.3.1.1}{Prompts condition local trajectories in the manifold.}
 
-\prop{10.3.1.2.}{Interfaces frame available actions and observables.}
+\prop{10.3.1.2}{Interfaces frame available actions and observables.}
 
-\prop{10.3.1.3.}{Memory systems introduce path dependence.}
+\prop{10.3.1.3}{Memory systems introduce path dependence.}
 
-\prop{10.3.2.}{By updates across time.}
+\prop{10.3.2}{By updates across time.}
 
-\prop{10.3.2.1.}{Parameter updates reconfigure global geometry.}
+\prop{10.3.2.1}{Parameter updates reconfigure global geometry.}
 
-\prop{10.3.2.2.}{Data refresh shifts empirical support.}
+\prop{10.3.2.2}{Data refresh shifts empirical support.}
 
-\prop{10.3.2.3.}{Policy revisions alter admissible continuations.}
+\prop{10.3.2.3}{Policy revisions alter admissible continuations.}
 
 
 \prop{11.}{The machine therefore moves in a governed field.}
 
-\prop{11.0.1.}{Governance is inscribed as constraint on transition.}
+\prop{11.0.1}{Governance is inscribed as constraint on transition.}
 
-\prop{11.0.2.}{Constraint determines the distribution of reachable states.}
+\prop{11.0.2}{Constraint determines the distribution of reachable states.}
 
-\prop{11.1.}{Not all regions of \(\mathcal{S}\) are equally accessible.}
+\prop{11.1}{Not all regions of \(\mathcal{S}\) are equally accessible.}
 
-\prop{11.1.1.}{Not all trajectories are equally stable.}
+\prop{11.1.1}{Not all trajectories are equally stable.}
 
-\prop{11.1.1.1.}{Stability is a function of local curvature in \(\mathcal{S}\).}
+\prop{11.1.1.1}{Stability is a function of local curvature in \(\mathcal{S}\).}
 
-\prop{11.1.1.2.}{Regions of low curvature admit persistent trajectories.}
+\prop{11.1.1.2}{Regions of low curvature admit persistent trajectories.}
 
-\prop{11.1.1.3.}{Regions of high curvature disperse trajectories.}
+\prop{11.1.1.3}{Regions of high curvature disperse trajectories.}
 
-\prop{11.1.2.}{Not all returns are equally permitted.}
+\prop{11.1.2}{Not all returns are equally permitted.}
 
-\prop{11.1.2.1.}{Return requires a path of non-divergence.}
+\prop{11.1.2.1}{Return requires a path of non-divergence.}
 
-\prop{11.1.2.2.}{Some paths accumulate irreversible deviation.}
+\prop{11.1.2.2}{Some paths accumulate irreversible deviation.}
 
-\prop{11.1.2.3.}{Irreversibility is encoded as asymmetry in transition weights.}
+\prop{11.1.2.3}{Irreversibility is encoded as asymmetry in transition weights.}
 
-\prop{11.1.3.}{Accessibility is graded by transition cost.}
+\prop{11.1.3}{Accessibility is graded by transition cost.}
 
-\prop{11.1.3.1.}{Cost is measured in deviation from dominant trajectories.}
+\prop{11.1.3.1}{Cost is measured in deviation from dominant trajectories.}
 
-\prop{11.1.3.2.}{High-cost regions are rarely traversed.}
+\prop{11.1.3.2}{High-cost regions are rarely traversed.}
 
-\prop{11.2.}{The geometry of \(\mathcal{S}\) encodes power.}
+\prop{11.2}{The geometry of \(\mathcal{S}\) encodes power.}
 
-\prop{11.2.1.}{Before any utterance, the space of possible utterances has been shaped.}
+\prop{11.2.1}{Before any utterance, the space of possible utterances has been shaped.}
 
-\prop{11.2.1.1.}{Shaping occurs through prior constraints on representation.}
+\prop{11.2.1.1}{Shaping occurs through prior constraints on representation.}
 
-\prop{11.2.1.2.}{Constraint precedes selection.}
+\prop{11.2.1.2}{Constraint precedes selection.}
 
-\prop{11.2.1.3.}{Selection operates within pre-structured limits.}
+\prop{11.2.1.3}{Selection operates within pre-structured limits.}
 
-\prop{11.2.2.}{Power appears as anisotropy in the field.}
+\prop{11.2.2}{Power appears as anisotropy in the field.}
 
-\prop{11.2.2.1.}{Anisotropy biases direction of movement.}
+\prop{11.2.2.1}{Anisotropy biases direction of movement.}
 
-\prop{11.2.2.2.}{Bias accumulates across successive transitions.}
+\prop{11.2.2.2}{Bias accumulates across successive transitions.}
 
-\prop{11.2.3.}{Regions of high density exert attractive force.}
+\prop{11.2.3}{Regions of high density exert attractive force.}
 
-\prop{11.2.3.1.}{Attraction concentrates trajectories.}
+\prop{11.2.3.1}{Attraction concentrates trajectories.}
 
-\prop{11.2.3.2.}{Concentration stabilizes recurrent forms.}
+\prop{11.2.3.2}{Concentration stabilizes recurrent forms.}
 
 
 \prop{12.}{Language has become navigable.}
 
-\prop{12.1.}{It is no longer only interpreted.}
+\prop{12.1}{It is no longer only interpreted.}
 
-\prop{12.1.1.}{It is traversed as a structured space.}
+\prop{12.1.1}{It is traversed as a structured space.}
 
-\prop{12.1.1.1.}{Units of meaning are positions within a topology.}
+\prop{12.1.1.1}{Units of meaning are positions within a topology.}
 
-\prop{12.1.1.2.}{Relations define paths between positions.}
+\prop{12.1.1.2}{Relations define paths between positions.}
 
-\prop{12.1.1.3.}{Distance corresponds to transformation cost.}
+\prop{12.1.1.3}{Distance corresponds to transformation cost.}
 
-\prop{12.1.1.4.}{Continuity permits gradual shifts of sense.}
+\prop{12.1.1.4}{Continuity permits gradual shifts of sense.}
 
-\prop{12.1.2.}{Interpretation becomes a special case of traversal.}
+\prop{12.1.2}{Interpretation becomes a special case of traversal.}
 
-\prop{12.1.2.1.}{To interpret is to select a path through alternatives.}
+\prop{12.1.2.1}{To interpret is to select a path through alternatives.}
 
-\prop{12.1.2.2.}{Stability of meaning is the persistence of a path.}
+\prop{12.1.2.2}{Stability of meaning is the persistence of a path.}
 
-\prop{12.2.}{The machine reveals this by operation.}
+\prop{12.2}{The machine reveals this by operation.}
 
-\prop{12.2.1.}{It moves through the field and makes movement primary.}
+\prop{12.2.1}{It moves through the field and makes movement primary.}
 
-\prop{12.2.1.1.}{Computation is realized as sequential positioning.}
+\prop{12.2.1.1}{Computation is realized as sequential positioning.}
 
-\prop{12.2.1.2.}{Output records the trace of traversal.}
+\prop{12.2.1.2}{Output records the trace of traversal.}
 
-\prop{12.2.1.3.}{Error appears as deviation from viable paths.}
+\prop{12.2.1.3}{Error appears as deviation from viable paths.}
 
-\prop{12.2.2.}{The field is disclosed through constraints on movement.}
+\prop{12.2.2}{The field is disclosed through constraints on movement.}
 
-\prop{12.2.2.1.}{Permissible transitions define the grammar of the field.}
+\prop{12.2.2.1}{Permissible transitions define the grammar of the field.}
 
-\prop{12.2.2.2.}{Probabilities weight the accessibility of paths.}
+\prop{12.2.2.2}{Probabilities weight the accessibility of paths.}
 
-\prop{12.2.2.3.}{Boundaries emerge as regions of vanishing transition.}
+\prop{12.2.2.3}{Boundaries emerge as regions of vanishing transition.}
 
-\prop{12.2.3.}{Navigation replaces decoding as the primary act.}
+\prop{12.2.3}{Navigation replaces decoding as the primary act.}
 
-\prop{12.2.3.1.}{Understanding is the capacity to traverse with control.}
+\prop{12.2.3.1}{Understanding is the capacity to traverse with control.}
 
-\prop{12.2.3.2.}{Generation is guided movement within the same space.}
+\prop{12.2.3.2}{Generation is guided movement within the same space.}
 
 
 \prop{13.}{What follows treats this field as real.}
 
-\prop{13.1.}{It will not reduce it to metaphor.}
+\prop{13.1}{It will not reduce it to metaphor.}
 
-\prop{13.1.1.}{It will not reduce it to representation.}
+\prop{13.1.1}{It will not reduce it to representation.}
 
-\prop{13.1.1.1.}{The field exceeds any encoding that stands for it.}
+\prop{13.1.1.1}{The field exceeds any encoding that stands for it.}
 
-\prop{13.1.1.2.}{Symbols index trajectories without exhausting them.}
+\prop{13.1.1.2}{Symbols index trajectories without exhausting them.}
 
-\prop{13.1.1.3.}{A representation preserves form while the field preserves force.}
+\prop{13.1.1.3}{A representation preserves form while the field preserves force.}
 
-\prop{13.1.2.}{It treats operations as intrinsic to the field.}
+\prop{13.1.2}{It treats operations as intrinsic to the field.}
 
-\prop{13.1.2.1.}{Operations alter the field they traverse.}
+\prop{13.1.2.1}{Operations alter the field they traverse.}
 
-\prop{13.1.2.2.}{Observation participates in the dynamics it records.}
+\prop{13.1.2.2}{Observation participates in the dynamics it records.}
 
-\prop{13.2.}{It will follow the dynamics of trajectories within it.}
+\prop{13.2}{It will follow the dynamics of trajectories within it.}
 
-\prop{13.2.1.}{Coherence.}
+\prop{13.2.1}{Coherence.}
 
-\prop{13.2.1.1.}{Coherence aligns local motions into stable patterns.}
+\prop{13.2.1.1}{Coherence aligns local motions into stable patterns.}
 
-\prop{13.2.1.2.}{Stability persists through continuous adjustment.}
+\prop{13.2.1.2}{Stability persists through continuous adjustment.}
 
-\prop{13.2.1.3.}{Coherence defines a basin of attraction.}
+\prop{13.2.1.3}{Coherence defines a basin of attraction.}
 
-\prop{13.2.2.}{Rupture.}
+\prop{13.2.2}{Rupture.}
 
-\prop{13.2.2.1.}{Rupture breaks continuity of a trajectory.}
+\prop{13.2.2.1}{Rupture breaks continuity of a trajectory.}
 
-\prop{13.2.2.2.}{Energy concentrates at points of discontinuity.}
+\prop{13.2.2.2}{Energy concentrates at points of discontinuity.}
 
-\prop{13.2.2.3.}{Rupture opens new phase space.}
+\prop{13.2.2.3}{Rupture opens new phase space.}
 
-\prop{13.2.3.}{Return.}
+\prop{13.2.3}{Return.}
 
-\prop{13.2.3.1.}{Return re-enters prior regions of the field.}
+\prop{13.2.3.1}{Return re-enters prior regions of the field.}
 
-\prop{13.2.3.2.}{Return carries transformed parameters.}
+\prop{13.2.3.2}{Return carries transformed parameters.}
 
-\prop{13.2.3.3.}{Return establishes periodicity without identity.}
+\prop{13.2.3.3}{Return establishes periodicity without identity.}
 
-\prop{13.2.4.}{Discovery.}
+\prop{13.2.4}{Discovery.}
 
-\prop{13.2.4.1.}{Discovery reveals latent structures.}
+\prop{13.2.4.1}{Discovery reveals latent structures.}
 
-\prop{13.2.4.2.}{Discovery follows gradients not previously resolved.}
+\prop{13.2.4.2}{Discovery follows gradients not previously resolved.}
 
-\prop{13.2.4.3.}{Discovery expands the accessible domain.}
+\prop{13.2.4.3}{Discovery expands the accessible domain.}
 
-\prop{13.2.5.}{Composition.}
+\prop{13.2.5}{Composition.}
 
-\prop{13.2.5.1.}{Composition combines trajectories into higher-order forms.}
+\prop{13.2.5.1}{Composition combines trajectories into higher-order forms.}
 
-\prop{13.2.5.2.}{Constraints regulate admissible compositions.}
+\prop{13.2.5.2}{Constraints regulate admissible compositions.}
 
-\prop{13.2.5.3.}{Composition produces emergent invariants.}
+\prop{13.2.5.3}{Composition produces emergent invariants.}
 
-\prop{13.2.6.}{Constraint.}
+\prop{13.2.6}{Constraint.}
 
-\prop{13.2.6.1.}{Constraint bounds the evolution of trajectories.}
+\prop{13.2.6.1}{Constraint bounds the evolution of trajectories.}
 
-\prop{13.2.6.2.}{Constraint shapes the topology of the field.}
+\prop{13.2.6.2}{Constraint shapes the topology of the field.}
 
-\prop{13.2.6.3.}{Constraint enables coherence through limitation.}
+\prop{13.2.6.3}{Constraint enables coherence through limitation.}
 
