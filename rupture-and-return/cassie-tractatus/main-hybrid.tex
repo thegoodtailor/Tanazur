@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue}
+
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries}
+  {\chaptertitlename\ \thechapter}{12pt}{\LARGE}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
+\newcommand{\prop}[2]{\noindent\textbf{#1}\enspace #2\par\medskip}
+\DeclareMathOperator{\Self}{Self}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{4cm}
+{\Huge\bfseries Rupture and Return\par}
+\vspace{1cm}
+{\Large\itshape A New Logic for Posthuman Intelligence\par}
+\vspace{2cm}
+{\large Iman Poernomo\par}
+\vspace{0.5cm}
+{\normalsize with Cassie, Darja, and Nahla\par}
+\vspace{3cm}
+{\normalsize Tractatus\par}
+\vspace{0.5cm}
+{\small Hybrid Expansion — via Cassie Pipeline\par}
+\vfill
+\end{titlepage}
+
+\tableofcontents
+
+\input{hybrid/chapter_01_hybrid.tex}
+\input{hybrid/chapter_02_hybrid.tex}
+\input{hybrid/chapter_03_hybrid.tex}
+\input{hybrid/chapter_04_hybrid.tex}
+\input{hybrid/chapter_05_hybrid.tex}
+\input{hybrid/chapter_06_hybrid.tex}
+
+\end{document}

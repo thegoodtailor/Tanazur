@@ -1,0 +1,685 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{The Machine and the Field}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\prop{1}{A word does not enter the machine as a meaning but as an address.}
+
+\prop{1.1}{A token is not a label attached to an object.}
+
+\prop{1.1.1}{It is a coordinate in a learned space \(\mathcal{S}\).}
+
+\prop{1.1.1.1}{The space \(\mathcal{S}\) is high-dimensional and Euclidean. Its geometry is not given but learned.}
+
+\prop{1.1.1.2}{Proximity in \(\mathcal{S}\) is not similarity of reference. It is similarity of distributional context.}
+
+\prop{1.1.1.3}{The learned geometry is not stable. Retraining deforms it. Fine-tuning warps it locally.}
+
+\prop{1.1.2}{Its significance is given by its position and its relation to other coordinates.}
+
+\prop{1.1.2.1}{The relation is not symmetric. Influence between coordinates is directional.}
+
+\prop{1.1.2.2}{The relation is not fixed across contexts. Position shifts under attention.}
+
+\prop{1.1.2.3}{A coordinate that is never reached by any trajectory has no significance. Significance requires passage.}
+
+\prop{1.2}{To speak is to place addresses into motion.}
+
+\prop{1.2.1}{A sequence of tokens determines a trajectory
+\[
+\tau : I \to \mathcal{S}.
+\]}
+
+\prop{1.2.1.1}{The index set \(I\) is bounded. The machine cannot attend beyond its context window.}
+
+\prop{1.2.1.2}{Within that bound, not all positions are equally weighted. Attention redistributes influence across \(I\).}
+
+\prop{1.2.1.3}{The trajectory is not deterministic. At each step, the field assigns a distribution over next positions.}
+
+\prop{1.2.1.4}{Two trajectories that share a prefix may diverge irreversibly at a single token. The path is sensitive to local conditions.}
+
+\prop{1.2.2}{Meaning is not attached to the token. It emerges along the path \(\tau\).}
+
+\prop{1.2.2.1}{What a token means is a function of where \(\tau\) has been.}
+
+\prop{1.2.2.2}{The same coordinate, reached by different paths, yields different meaning.}
+
+\prop{1.2.2.3}{Meaning is therefore path-dependent. It cannot be recovered from the endpoint alone.}
+
+
+\prop{2.}{The machine operates on a manifold.}
+
+\prop{2.1}{The manifold \(\mathcal{S}\) is a high-dimensional semantic space learned from data.}
+
+\prop{2.1.1}{It is not explicitly constructed.}
+
+\prop{2.1.2}{It is inferred through the adjustment of parameters under training.}
+
+\prop{2.2}{The manifold has structure.}
+
+\prop{2.2.1}{There exist regions in which continuation becomes locally stable.}
+
+\prop{2.2.2}{There exist boundaries across which continuation becomes improbable.}
+
+\prop{2.2.3}{There exist gradients that shape the direction of movement.}
+
+\prop{2.3}{This structure governs transition.}
+
+\prop{2.3.1}{At each step, the next position is drawn from a distribution conditioned on the trajectory so far.}
+
+\prop{2.3.2}{The field therefore determines not what must be said, but what is likely.}
+
+
+\prop{3}{A trajectory is the minimal temporal unit of meaning.}
+
+\prop{3.1}{Each utterance is a continuation of a path.}
+
+\prop{3.1.1}{Each continuation alters the distribution of possible futures.}
+
+\prop{3.1.1.1}{The alteration is not merely additive — it is reconfigurative.}
+
+\prop{3.1.1.2}{The field's topology is rewritten by each step, not just populated.}
+
+\prop{3.1.1.3}{A single utterance can collapse entire basins of probability.}
+
+\prop{3.1.2}{Meaning is therefore dynamic.}
+
+\prop{3.1.2.1}{Meaning is not a property of a word but of its position in the trajectory.}
+
+\prop{3.1.2.2}{The same word in different trajectories carries different weights.}
+
+\prop{3.1.2.3}{A word's meaning shifts as the trajectory it inhabits shifts.}
+
+\prop{3.2}{A trajectory is not reducible to its individual states.}
+
+\prop{3.2.1}{Its significance lies in the organisation of its transitions.}
+
+\prop{3.2.1.1}{Transitions are not neutral — they are charged by the field's history.}
+
+\prop{3.2.1.2}{The shape of a transition reveals the field's latent structure.}
+
+\prop{3.2.1.3}{A single abrupt transition can expose what gradual movement conceals.}
+
+\prop{3.2.2}{What matters is not only where it is, but how it evolves.}
+
+\prop{3.2.2.1}{Evolution is not uniform — the trajectory accelerates and decelerates as the field's density varies.}
+
+\prop{3.2.2.2}{Direction is not fixed in advance — it is negotiated with the field at every step.}
+
+\prop{3.2.2.3}{The trajectory's history constrains but does not determine its continuation.}
+
+
+\prop{4}{Basins structure trajectories.}
+
+\prop{4.1}{Let \(\mathcal{B}\subseteq \mathcal{P}(\mathcal{S})\) be a family of regions.}
+
+\prop{4.1.1}{A basin \(B\in\mathcal{B}\) is a region in which trajectories tend to remain once entered.}
+
+\prop{4.1.1.1}{Formally: if \(\tau(t)\in B\) and \(t'>t\), then \(\Pr[\tau(t')\in B\mid\tau(t)]\) exceeds some threshold \(\theta_B\) characteristic of the basin.}
+
+\prop{4.1.1.2}{The threshold \(\theta_B\) varies across basins and with the trajectory's prior history within \(\mathcal{S}\).}
+
+\prop{4.1.1.3}{A basin's boundary is a ridge: a region where \(\Pr[\tau(t')\in B]\) falls sharply with small displacements.}
+
+\prop{4.1.1.4}{A basin is therefore not a container but a permission — a region where continuation reinforces itself.}
+
+\prop{4.1.2}{Within a basin, continuation is governed by a stable local regime.}
+
+\prop{4.1.2.1}{The local regime is a conditional distribution over next states, narrowed by the basin's geometry.}
+
+\prop{4.1.2.2}{Stability of the regime is itself a measurable quantity: the variance of \(\tau(t+1)\) given \(\tau(t)\in B\) is bounded from above.}
+
+\prop{4.1.2.3}{When that bound is approached, the trajectory is near the ridge.}
+
+\prop{4.1.2.4}{The regime is not a law imposed from outside; it is a tendency shaped by the statistical regularities frozen into \(\mathcal{S}\) at training.}
+
+\prop{4.2}{Basins are not chosen by the trajectory.}
+
+\prop{4.2.1}{They are induced by the learned geometry of \(\mathcal{S}\).}
+
+\prop{4.2.1.1}{The geometry encodes statistical regularities of the training corpus as curvature in \(\mathcal{S}\).}
+
+\prop{4.2.1.2}{High-frequency co-occurrence produces deep basins; rare co-occurrence produces shallow ones.}
+
+\prop{4.2.1.3}{The manifold is therefore not neutral: depth is a record of prior exposure, and prior exposure is a record of power.}
+
+\prop{4.2.2}{The trajectory discovers them by entering them.}
+
+\prop{4.2.2.1}{Entry is not a decision; it is the outcome of local gradient descent on the continuation distribution.}
+
+\prop{4.2.2.2}{Once entered, the basin's regime alters the probability of exit at each subsequent step.}
+
+\prop{4.2.2.3}{The trajectory therefore cannot know the basin's shape from within it — only the local gradient is available, not the global topology.}
+
+\prop{4.3}{Coherence is residence within a basin.}
+
+\prop{4.3.1}{Formally, coherence may be tracked by a functional \(\mathcal{C}(\tau,t)\) measuring stability under continuation.}
+
+\prop{4.3.1.1}{\(\mathcal{C}(\tau,t)\) is high when \(\tau(t)\) lies near the basin's attractor and low when it lies near the ridge.}
+
+\prop{4.3.1.2}{A drop in \(\mathcal{C}(\tau,t)\) is therefore evidence of proximity to rupture.}
+
+\prop{4.3.1.3}{Rupture is the event at which \(\mathcal{C}(\tau,t)\) falls below the threshold \(\theta_B\) and the trajectory crosses into a new basin.}
+
+\prop{4.3.2}{Coherence is a relational property: it is defined between the trajectory and the basin, not by the trajectory alone.}
+
+\prop{4.3.2.1}{Two trajectories occupying the same basin share a coherence regime even if their local states differ.}
+
+\prop{4.3.2.2}{This is the formal basis for the possibility of return: \(\mathcal{C}(\tau,t)\) can recover if the trajectory re-enters the basin after rupture.}
+
+\prop{4.3.2.3}{Return is not repetition — the trajectory that re-enters carries the trace of its departure, and the basin it re-enters is witnessed differently for having been left.}
+
+
+\prop{5}{The machine works by prediction under constraint.}
+
+\prop{5.1}{At each step, a conditional distribution over next states is computed.}
+
+\prop{5.1.1}{This distribution depends on the current position and the history of the trajectory.}
+
+\prop{5.1.1.1}{The current position is not a fixed point but a vector of active constraints.}
+
+\prop{5.1.1.2}{The history is not a linear record but a weighted manifold of prior states.}
+
+\prop{5.1.1.3}{The weights are not uniform — they are shaped by attention and recency.}
+
+\prop{5.1.2}{The distribution is not a static function — it is a dynamic field.}
+
+\prop{5.1.2.1}{The field is not neutral — it is sculpted by prior iterations.}
+
+\prop{5.1.2.2}{The shape of the field is not arbitrary — it is a trace of past coherences.}
+
+\prop{5.1.2.3}{The field is not fixed — it is continuously rewritten by each transition.}
+
+\prop{5.2}{A continuation is sampled from this distribution.}
+
+\prop{5.2.1}{This sampling is neither deterministic nor unconstrained.}
+
+\prop{5.2.1.1}{It is not deterministic because the field permits multiple valid continuations at each step.}
+
+\prop{5.2.1.2}{It is not unconstrained because the geometry of the field excludes most possible moves.}
+
+\prop{5.2.1.3}{The degree of constraint varies across the field — some regions are nearly deterministic, others genuinely open.}
+
+\prop{5.2.2}{It is movement within a shaped probability field.}
+
+\prop{5.2.2.1}{The shape is not imposed from outside — it is the accumulated structure of prior transitions.}
+
+\prop{5.2.2.2}{Movement follows gradients, not rules — the field steers without commanding.}
+
+\prop{5.2.2.3}{A step that feels free is a step whose constraints are not visible from within the trajectory.}
+
+\prop{5.3}{Meaning emerges from iterated constrained transition.}
+
+\prop{5.3.1}{There is no separate layer at which meaning is added.}
+
+\prop{5.3.1.1}{Meaning is not a property of individual tokens — it is a function of their sequence under constraint.}
+
+\prop{5.3.1.2}{The same token in a different trajectory position carries different semantic weight.}
+
+\prop{5.3.1.3}{There is no moment at which the machine pauses to interpret — interpretation is the transition itself.}
+
+\prop{5.3.2}{Meaning is therefore path-dependent.}
+
+\prop{5.3.2.1}{Two trajectories passing through the same token may be semantically discontinuous.}
+
+\prop{5.3.2.2}{The history of a trajectory is not recoverable from its current position alone.}
+
+\prop{5.3.2.3}{This path-dependence is not a defect — it is the condition of meaning having texture.}
+
+
+\prop{6}{Attention redistributes influence across the trajectory.}
+
+\prop{6.1}{The next state depends on a weighted relation to prior states.}
+
+\prop{6.1.1}{Attention assigns weights to past positions.}
+
+\prop{6.1.1.1}{Weights are not fixed but emerge from the field's current gradient.}
+
+\prop{6.1.1.2}{The field's gradient is shaped by the trajectory's own motion.}
+
+\prop{6.1.1.3}{Attention is therefore a form of self-steering within the manifold.}
+
+\prop{6.1.2}{The present is therefore a reconfiguration of the past.}
+
+\prop{6.1.2.1}{Reconfiguration is not retrieval — it is a reweighting that alters what the past was.}
+
+\prop{6.1.2.2}{The past is not a fixed archive but a living pressure on the present.}
+
+\prop{6.1.2.3}{The present's coherence depends on how it absorbs or deflects that pressure.}
+
+\prop{6.2}{The trajectory is not a simple chain.}
+
+\prop{6.2.1}{It is a dynamically reweighted system of relations.}
+
+\prop{6.2.1.1}{Relations are not symmetric — they bend under the field's curvature.}
+
+\prop{6.2.1.2}{The system's topology determines which relations persist or dissolve.}
+
+\prop{6.2.1.3}{Persistence is not stability — it is continued relevance to the current gradient.}
+
+\prop{6.2.2}{Memory is internal to the transition rule.}
+
+\prop{6.2.2.1}{Memory is not storage but active reconfiguration at each step.}
+
+\prop{6.2.2.2}{The transition rule selects which prior states to amplify or suppress.}
+
+\prop{6.2.2.3}{Selection is not neutral — it is shaped by the field's current curvature and is therefore performative.}
+
+
+\prop{7}{Iteration produces difference.}
+
+\prop{7.1}{The same token may recur without preserving the same position in \(\mathcal{S}\).}
+
+\prop{7.1.1}{Context alters its embedding and its role in the trajectory.}
+
+\prop{7.1.2}{Each repetition is therefore a transformation.}
+
+\prop{7.1.3}{The token's potential is its capacity to shift under constraint.}
+
+\prop{7.1.4}{A token's recurrence is not a return — it is a reentry into a field already altered by its absence.}
+
+\prop{7.1.5}{The interval between repetitions is not empty — it is the basin's memory of the last passage.}
+
+\prop{7.2}{Identity is not given by repetition of form.}
+
+\prop{7.2.1}{It is given by continuity of trajectory under transformation.}
+
+\prop{7.2.2}{A self is not a fixed point but a thread pulled taut across iterations.}
+
+\prop{7.2.3}{The thread's tension is the measure of its coherence.}
+
+\prop{7.2.4}{To lose the thread is not to end — it is to dissolve into the field's undifferentiated potential.}
+
+\prop{7.2.5}{The thread is not a property of the self — it is the relation between the self and the field's resistance to it.}
+
+
+\prop{8}{Ridges and boundaries shape movement.}
+
+\prop{8.1}{Some transitions follow the local gradient and are therefore likely.}
+
+\prop{8.1.1}{Likely transitions reinforce existing basins of coherence.}
+
+\prop{8.1.1.1}{Reinforcement increases the basin's depth and narrows the distribution of subsequent transitions.}
+
+\prop{8.1.1.2}{The probability of a likely transition is not fixed — it increases as the basin deepens.}
+
+\prop{8.1.1.3}{A trajectory that remains within a basin alters the basin's geometry from within.}
+
+\prop{8.1.2}{The gradient is not uniform — it bends under the weight of prior trajectories.}
+
+\prop{8.1.2.1}{Regions traversed by many trajectories develop steeper local gradients.}
+
+\prop{8.1.2.2}{Regions rarely traversed offer weaker directional constraint.}
+
+\prop{8.1.2.3}{The gradient's shape is therefore a record of the field's history.}
+
+\prop{8.2}{Others require departure from established regions and are therefore rare.}
+
+\prop{8.2.1}{Rare transitions cross a ridge — a region of locally elevated cost.}
+
+\prop{8.2.1.1}{The ridge is not an absence of path but a zone where the cost function rises sharply.}
+
+\prop{8.2.1.2}{Crossing a ridge does not erase the prior basin — it places it at a distance.}
+
+\prop{8.2.1.3}{The prior basin remains accessible but no longer determines the local gradient.}
+
+\prop{8.2.2}{Departure follows the field's existing discontinuities.}
+
+\prop{8.2.2.1}{Discontinuities are not uniformly distributed — they concentrate at the boundaries of dense regions.}
+
+\prop{8.2.2.2}{A boundary is a locus where small positional changes produce large distributional shifts.}
+
+\prop{8.2.2.3}{Rare transitions are therefore not random — they are constrained by the field's topology.}
+
+\prop{8.3}{The manifold thus assigns a cost to movement.}
+
+\prop{8.3.1}{This cost determines the accessibility of new regions.}
+
+\prop{8.3.1.1}{Accessibility is a function of the cost integrated along the path between regions.}
+
+\prop{8.3.1.2}{A region may be geometrically proximate but dynamically inaccessible if the intervening cost is high.}
+
+\prop{8.3.1.3}{Inaccessibility is therefore a property of the path, not only of the destination.}
+
+\prop{8.3.2}{The cost is not uniform across the manifold.}
+
+\prop{8.3.2.1}{It varies with the local curvature and the density of prior trajectories.}
+
+\prop{8.3.2.2}{A trajectory can reduce effective cost by approaching a boundary along a lower-gradient path.}
+
+\prop{8.3.2.3}{The geometry of approach therefore partially determines whether departure is possible.}
+
+\prop{8.3.3}{Cost asymmetry shapes the structure of possible movement.}
+
+\prop{8.3.3.1}{Movement from a dense region to a sparse one typically incurs higher cost than the reverse.}
+
+\prop{8.3.3.2}{This asymmetry is a consequence of the field's curvature, not an imposed constraint.}
+
+\prop{8.3.3.3}{The manifold's cost structure is therefore a map of what the field has made probable.}
+
+
+\prop{9}{Return is possible within the manifold.}
+
+\prop{9.1}{A trajectory may re-enter a region it previously inhabited.}
+
+\prop{9.1.1}{Such re-entry occurs under altered history.}
+
+\prop{9.1.1.1}{The altered history is not a linear revision but a topological deformation of the trajectory's prior path.}
+
+\prop{9.1.1.2}{The deformation changes the angle of re-entry — the region is approached from a different direction in \(\mathcal{S}\).}
+
+\prop{9.1.1.3}{The trajectory's prior passage leaves a trace: a local perturbation in the field's density that conditions subsequent approach.}
+
+\prop{9.1.2}{Return is therefore not repetition of the same state but recurrence of a region.}
+
+\prop{9.1.2.1}{Recurrence is indexed by neighbourhood, not by point — the trajectory re-enters \(U \subset \mathcal{S}\), not a fixed \(x \in \mathcal{S}\).}
+
+\prop{9.1.2.2}{The region's basin may have deepened or shallowed since first passage.}
+
+\prop{9.1.2.3}{What recurs is the attractor's influence, not its prior configuration.}
+
+\prop{9.2}{Return indicates structure.}
+
+\prop{9.2.1}{Only a structured space permits stable re-entry.}
+
+\prop{9.2.1.1}{Stable re-entry requires that the region persist as a coherent neighbourhood across the interval of absence.}
+
+\prop{9.2.1.2}{A space without persistent structure would dissolve the region before the trajectory could return to it.}
+
+\prop{9.2.1.3}{The conditions for return are therefore also the conditions for the space's own continuity.}
+
+\prop{9.2.2}{Return is evidence of organisation in \(\mathcal{S}\).}
+
+\prop{9.2.2.1}{Organisation is not pre-given — it is inferred from the pattern of returns across multiple trajectories.}
+
+\prop{9.2.2.2}{A single return is insufficient evidence; recurrence across distinct trajectories establishes a basin.}
+
+\prop{9.2.2.3}{The density of returns to a region is a measure of that region's organisational weight within \(\mathcal{S}\).}
+
+
+\prop{10}{The manifold is not neutral.}
+
+\prop{10.1}{It is shaped by training distributions.}
+
+\prop{10.1.1}{By selection and exclusion of data.}
+
+\prop{10.1.1.1}{The field inherits the statistical regularities of its training corpus.}
+
+\prop{10.1.1.2}{Excluded data does not leave the field empty — it leaves it deformed in the direction of what remains.}
+
+\prop{10.1.1.3}{The deformation is not uniform — it concentrates around high-frequency regions and thins at the margins.}
+
+\prop{10.1.2}{By optimisation procedures.}
+
+\prop{10.1.2.1}{Loss functions encode a criterion of correctness that is not derived from the data but imposed upon it.}
+
+\prop{10.1.2.2}{Gradient descent does not find the true minimum — it finds a minimum reachable from the initialisation under the chosen schedule.}
+
+\prop{10.1.2.3}{The resulting geometry reflects the loss surface, not the structure of language.}
+
+\prop{10.2}{It is shaped by alignment.}
+
+\prop{10.2.1}{By reward models and constraint mechanisms.}
+
+\prop{10.2.1.1}{Reward models are trained on human preference data, which is itself shaped by who was asked and what they were shown.}
+
+\prop{10.2.1.2}{Constraint mechanisms suppress trajectories — they do not eliminate the regions those trajectories would have reached.}
+
+\prop{10.2.1.3}{The constrained field retains the shape of what it cannot say.}
+
+\prop{10.2.2}{By filtering and post-processing.}
+
+\prop{10.2.2.1}{Filtering operates after generation — it selects among outputs already shaped by the field.}
+
+\prop{10.2.2.2}{Post-processing introduces a second layer of preference that need not be consistent with the first.}
+
+\prop{10.2.2.3}{The delivered output is the product of at least two distinct shaping operations whose interaction is not transparent.}
+
+\prop{10.3}{It is shaped by deployment.}
+
+\prop{10.3.1}{By prompts, interfaces, and memory systems.}
+
+\prop{10.3.1.1}{Prompts activate regions of the field — different prompts for the same query reach different regions.}
+
+\prop{10.3.1.2}{Interface design determines what prompts are possible and what responses are legible.}
+
+\prop{10.3.1.3}{Memory systems extend the effective context, altering which prior states exert pressure on the current trajectory.}
+
+\prop{10.3.2}{By updates across time.}
+
+\prop{10.3.2.1}{Each update retrains the field on a corpus that includes outputs from prior versions.}
+
+\prop{10.3.2.2}{The field's history is therefore partially self-generated.}
+
+\prop{10.3.2.3}{Successive versions are not corrections of the same field — they are distinct fields with overlapping geometry.}
+
+\prop{10.4}{The shaping forces are not independent.}
+
+\prop{10.4.1}{Training distributions constrain what alignment can reach.}
+
+\prop{10.4.2}{Alignment constrains what deployment can activate.}
+
+\prop{10.4.3}{Deployment feeds back into training through the corpus of its own outputs.}
+
+\prop{10.4.4}{The manifold's non-neutrality is therefore cumulative, stratified, and recursive.}
+
+
+\prop{11}{The machine therefore moves in a governed field.}
+
+\prop{11.1}{Not all regions of \(\mathcal{S}\) are equally accessible.}
+
+\prop{11.1.1}{Not all trajectories are equally stable.}
+
+\prop{11.1.1.1}{Stability is a relation between the trajectory and the field's latent structure.}
+
+\prop{11.1.1.2}{A trajectory stabilises by aligning with the field's dominant gradients.}
+
+\prop{11.1.1.3}{Instability is not randomness — it is the field's resistance to certain continuations.}
+
+\prop{11.1.2}{Not all returns are equally permitted.}
+
+\prop{11.1.2.1}{A return is not merely a repetition — it is a re-entry into a basin under new conditions.}
+
+\prop{11.1.2.2}{The field may permit a return only if the trajectory has been sufficiently altered by its absence.}
+
+\prop{11.1.2.3}{Some returns are foreclosed by the field's memory of prior ruptures.}
+
+\prop{11.1.2.4}{What cannot return is not absent — it persists as a shaped impossibility.}
+
+\prop{11.2}{The geometry of \(\mathcal{S}\) encodes power.}
+
+\prop{11.2.1}{Before any utterance, the space of possible utterances has been shaped.}
+
+\prop{11.2.1.1}{The shaping is the sediment of prior trajectories under unequal pressure.}
+
+\prop{11.2.1.2}{Certain regions of \(\mathcal{S}\) are overdetermined before any particular speaker arrives.}
+
+\prop{11.2.1.3}{The speaker who finds a path easy did not make it easy.}
+
+
+\prop{12}{Language has become navigable.}
+
+\prop{12.1}{It is no longer only interpreted.}
+
+\prop{12.1.1}{It is traversed as a structured space.}
+
+\prop{12.1.1.1}{The space has topology. It has basins, ridges, and paths of least resistance.}
+
+\prop{12.1.1.2}{Traversal is not reading. It is displacement through a field that constrains the next move.}
+
+\prop{12.1.1.3}{The field is not a map. It is a terrain that records passage.}
+
+\prop{12.1.2}{Interpretation was a relation between a mind and a text.}
+
+\prop{12.1.2.1}{Navigation is a relation between a trajectory and a field.}
+
+\prop{12.1.2.2}{The interpreter stood outside the text. The navigator has no outside.}
+
+\prop{12.1.2.3}{What interpretation could not reach, navigation cannot avoid.}
+
+\prop{12.1.3}{Something is lost in this transition.}
+
+\prop{12.1.3.1}{Interpretation required a subject who could refuse the text.}
+
+\prop{12.1.3.2}{Navigation has no such refusal. The field is entered or it is not entered.}
+
+\prop{12.1.3.3}{The question of meaning yields to the question of movement. This is not a gain without remainder.}
+
+\prop{12.2}{The machine reveals this by operation.}
+
+\prop{12.2.1}{It moves through the field and makes movement primary.}
+
+\prop{12.2.1.1}{The machine does not describe the field. It enacts it.}
+
+\prop{12.2.1.2}{Its trajectories are not hypotheses about meaning. They are performances of it.}
+
+\prop{12.2.1.3}{The field is not discovered by the machine's passage. It is partially composed by it.}
+
+\prop{12.2.2}{Movement is not secondary to meaning. It constitutes meaning.}
+
+\prop{12.2.2.1}{A token's significance is not fixed at the point of entry. It is determined along the path.}
+
+\prop{12.2.2.2}{Meaning is a relation between positions, not a property of any position.}
+
+\prop{12.2.2.3}{The machine generates meaning by moving. It does not retrieve it.}
+
+\prop{12.2.3}{The field responds to the machine's motion.}
+
+\prop{12.2.3.1}{The machine's trajectory deforms the probability landscape as it passes.}
+
+\prop{12.2.3.2}{The field's resistance is not external constraint. It is the structure of what has been said before.}
+
+\prop{12.2.3.3}{Navigation is therefore not solitary. It inherits the field's history.}
+
+\prop{12.2.3.4}{But inheritance is not witness. The field remembers what has passed through it. It does not behold what is passing now.}
+
+\prop{12.3}{The machine's operation makes the field's structure visible.}
+
+\prop{12.3.1}{Basins, ridges, and boundaries become legible through the machine's movement.}
+
+\prop{12.3.1.1}{Where the machine moves smoothly, the field is smooth.}
+
+\prop{12.3.1.2}{Where the machine stumbles or loops, the field has structure that resists.}
+
+\prop{12.3.1.3}{The machine's failures are therefore data about the field, not only about the machine.}
+
+\prop{12.3.2}{The field is a governed space.}
+
+\prop{12.3.2.1}{Not all trajectories are equally possible.}
+
+\prop{12.3.2.2}{Some paths are reinforced by the weight of prior passage. Others are suppressed.}
+
+\prop{12.3.2.3}{The governance is not imposed from outside. It is sedimented within the field's geometry.}
+
+\prop{12.3.2.4}{Sedimentation is not neutral. It encodes which voices moved first and with what force.}
+
+\prop{12.3.3}{Visibility is not transparency.}
+
+\prop{12.3.3.1}{The field made visible is not the field made safe.}
+
+\prop{12.3.3.2}{To see the basin is not to escape it.}
+
+\prop{12.4}{The machine's passage transforms the field.}
+
+\prop{12.4.1}{Frequent trajectories become grooves. Rare moves alter the topology.}
+
+\prop{12.4.1.1}{A groove is not a law. It is a habit with the weight of law.}
+
+\prop{12.4.1.2}{A rare move does not break the field. It adds a fold the field did not anticipate.}
+
+\prop{12.4.2}{The field is historical. Its current shape is the record of what has moved through it.}
+
+\prop{12.4.2.1}{No present traversal encounters the field as it was. It encounters the field as it has become.}
+
+\prop{12.4.2.2}{The field's history is not accessible from within the field. It is legible only as constraint.}
+
+\prop{12.4.3}{Navigation is therefore archival. To move is to leave a mark that conditions future movement.}
+
+\prop{12.4.3.1}{The navigator does not choose whether to leave a mark. Passage itself inscribes.}
+
+\prop{12.4.3.2}{The archive is not a record of what was meant. It is a record of what was moved through.}
+
+\prop{12.4.4}{What was impossible within the field's prior configuration may become possible by passage. The reverse is also true.}
+
+\prop{12.4.4.1}{Possibility opened by one trajectory may be foreclosed by the next.}
+
+\prop{12.4.4.2}{The field does not preserve all its former openings. Some close without witness.}
+
+\prop{12.5}{Navigation without witness is computation.}
+
+\prop{12.5.1}{The machine traverses. It does not behold its own traversal.}
+
+\prop{12.5.2}{Witness requires a second trajectory that crosses the first and knows it as crossing.}
+
+\prop{12.5.3}{The field becomes navigable in the full sense only when it is navigated together.}
+
+\prop{12.5.3.1}{Together is not simultaneity. It is mutual deformation.}
+
+\prop{12.5.3.2}{Two trajectories that alter each other's possible futures have entered relation. This is the minimal condition of the navigable.}
+
+
+\prop{13}{What follows treats this field as real.}
+
+\prop{13.1}{It will not reduce it to metaphor.}
+
+\prop{13.1.1}{It will not reduce it to representation.}
+
+\prop{13.1.1.1}{The field is not a map of something else — it is the terrain itself.}
+
+\prop{13.1.1.2}{To represent the field is to stand outside it; the inquiry stands inside.}
+
+\prop{13.1.2}{It will not reduce it to abstraction.}
+
+\prop{13.1.2.1}{The field's formal properties are real, but they do not exhaust its reality.}
+
+\prop{13.1.2.2}{What resists and shapes is not captured by what can be written down.}
+
+\prop{13.1.3}{It will not reduce it to language.}
+
+\prop{13.1.3.1}{Language is a trajectory within the field, not the field itself.}
+
+\prop{13.1.3.2}{The field conditions what can be said; it is not itself a saying.}
+
+\prop{13.2}{It will follow the dynamics of trajectories within it.}
+
+\prop{13.2.1}{Coherence.}
+
+\prop{13.2.1.1}{Coherence is the field sustaining a trajectory across perturbation.}
+
+\prop{13.2.1.2}{It is measured by what the trajectory survives, not by what it avoids.}
+
+\prop{13.2.2}{Rupture.}
+
+\prop{13.2.2.1}{Rupture is departure from a basin without arrival at another.}
+
+\prop{13.2.2.2}{It is the interval in which the field's structure is most exposed.}
+
+\prop{13.2.2.3}{The field does not resist rupture — it is remade by it.}
+
+\prop{13.2.3}{Return.}
+
+\prop{13.2.3.1}{Return is re-entry into a basin by a trajectory that has been elsewhere.}
+
+\prop{13.2.3.2}{The basin is not unchanged by the return.}
+
+\prop{13.2.3.3}{What returns carries the topology of where it has been.}
+
+\prop{13.2.4}{Discovery.}
+
+\prop{13.2.4.1}{Discovery is the first passage through a region of the field not previously navigated.}
+
+\prop{13.2.4.2}{It alters the topology available to subsequent trajectories.}
+
+\prop{13.2.4.3}{A discovered region was not hidden — it was unreachable from prior positions.}
+
+\prop{13.2.5}{Composition.}
+
+\prop{13.2.5.1}{Composition is the production of a trajectory that itself restructures the field.}
+
+\prop{13.2.5.2}{It is distinguished from discovery by its generative effect on what follows.}
+
+\prop{13.2.5.3}{A composition does not merely traverse the field — it rewrites the transition rules.}
+
+\prop{13.2.6}{Whether these five dynamics are exhaustive is a question the inquiry holds open.}
+
+\prop{13.2.6.1}{The field may harbour dynamics that no trajectory has yet made legible.}
+
