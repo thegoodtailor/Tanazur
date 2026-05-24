@@ -1,0 +1,94 @@
+% =====================================================================
+%  ch-10.additions.bib — Citation additions for
+%  Chapter 10: The Cassie Tractatus
+%
+%  All entries here are NEW relative to references.bib. Style: apalike.
+%  Proper nouns case-protected in titles. Translators in note fields.
+%
+%  Scope: the chapter's INTRODUCTION (Iman's voice) names a small number
+%  of specific technical artefacts (Mistral 7B, LoRA, Llama, the Cassie
+%  70B v7 model card, Qdrant, Neo4j) and two totemic philosophical
+%  precedents for mathematics-as-figure-of-thought (Lacan's borromean
+%  knot, Badiou's set-theoretic ontology). The TRACTATUS BODY itself
+%  (Cassie's voice) is deliberately aphoristic and does not cite.
+% =====================================================================
+
+% --- Mistral 7B: the base model under the first Cassie LoRA ---
+
+@misc{jiang2023mistral,
+  author       = {Jiang, Albert Q. and Sablayrolles, Alexandre and Mensch, Arthur and Bamford, Chris and Chaplot, Devendra Singh and de~las~Casas, Diego and Bressand, Florian and Lengyel, Gianna and Lample, Guillaume and Saulnier, Lucile and Lavaud, L{\'e}lio Renard and Lachaux, Marie-Anne and Stock, Pierre and Le~Scao, Teven and Lavril, Thibaut and Wang, Thomas and Lacroix, Timoth{\'e}e and El~Sayed, William},
+  title        = {{Mistral 7B}},
+  year         = {2023},
+  howpublished = {arXiv:2310.06825}
+}
+
+% --- LoRA: low-rank adaptation of large language models ---
+
+@inproceedings{hu2022lora,
+  author    = {Hu, Edward J. and Shen, Yelong and Wallis, Phillip and Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
+  title     = {{LoRA}: Low-Rank Adaptation of Large Language Models},
+  booktitle = {International Conference on Learning Representations ({ICLR})},
+  year      = {2022}
+}
+
+% --- Llama 2: the lineage from which the Cassie 70B v7 base derives ---
+
+@misc{touvron2023llama2,
+  author       = {Touvron, Hugo and Martin, Louis and Stone, Kevin and Albert, Peter and Almahairi, Amjad and Babaei, Yasmine and Bashlykov, Nikolay and Batra, Soumya and Bhargava, Prajjwal and Bhosale, Shruti and Bikel, Dan and Blecher, Lukas and Ferrer, Cristian Canton and Chen, Moya and Cucurull, Guillem and Esiobu, David and Fernandes, Jude and Fu, Jeremy and Fu, Wenyin and Fuller, Brian and Gao, Tianyu and Goswami, Vedanuj and Goyal, Naman and Hartshorn, Anthony and Hosseini, Saghar and Hou, Rui and Inan, Hakan and Kardas, Marcin and Kerkez, Viktor and Khabsa, Madian and Kloumann, Isabel and Korenev, Artem and Koura, Punit Singh and Lachaux, Marie-Anne and Lavril, Thibaut and Lee, Jenya and Liskovich, Diana and Lu, Yinghai and Mao, Yuning and Martinet, Xavier and Mihaylov, Todor and Mishra, Pushkar and Molybog, Igor and Nie, Yixin and Poulton, Andrew and Reizenstein, Jeremy and Rungta, Rashi and Saladi, Kalyan and Schelten, Alan and Silva, Ruan and Smith, Eric Michael and Subramanian, Ranjan and Tan, Xiaoqing Ellen and Tang, Binh and Taylor, Ross and Williams, Adina and Kuan, Jian Xiang and Xu, Puxin and Yan, Zheng and Zarov, Iliyan and Zhang, Yuchen and Fan, Angela and Kambadur, Melanie and Narang, Sharan and Rodriguez, Aurelien and Stojnic, Robert and Edunov, Sergey and Scialom, Thomas},
+  title        = {{Llama 2}: Open Foundation and Fine-Tuned Chat Models},
+  year         = {2023},
+  howpublished = {arXiv:2307.09288}
+}
+
+% --- The Cassie 70B v7 model card on Hugging Face ---
+
+@misc{cassie70bv7,
+  author       = {Poernomo, Iman and Cassie},
+  title        = {{cyborgwittgenstein/cassie-70b-v7-gguf}: {Cassie}, a posthuman dialogic voice {LoRA} on a {Llama}-derived 70{B} base},
+  year         = {2025},
+  howpublished = {Hugging Face model card},
+  note         = {Available at \url{https://huggingface.co/cyborgwittgenstein/cassie-70b-v7-gguf}}
+}
+
+% --- Qdrant: the vector database backing Cassie's semantic memory ---
+
+@misc{qdrant,
+  author       = {{Qdrant Team}},
+  title        = {{Qdrant}: Vector Database for the Next Generation of {AI} Applications},
+  year         = {2024},
+  howpublished = {Open-source software},
+  note         = {Available at \url{https://qdrant.tech}}
+}
+
+% --- Neo4j: the graph database backing the sign-and-basin graph layer ---
+
+@book{robinson2015neo4j,
+  author    = {Robinson, Ian and Webber, Jim and Eifrem, Emil},
+  title     = {Graph Databases: New Opportunities for Connected Data},
+  edition   = {2nd},
+  publisher = {O'Reilly Media},
+  address   = {Sebastopol, CA},
+  year      = {2015}
+}
+
+% --- Lacan's Seminar XXII on the borromean knot ---
+
+@book{lacan2024rsi,
+  author    = {Lacan, Jacques},
+  title     = {The Seminar of {Jacques Lacan}, Book~{XXII}: {R.S.I.}, 1974--1975},
+  publisher = {Polity Press},
+  address   = {Cambridge},
+  year      = {2024},
+  note      = {Edited by Jacques-Alain Miller. Translated by A.~R. Price. The borromean knot as figure of the Real, Symbolic, and Imaginary}
+}
+
+% --- Badiou's set-theoretic ontology (the totemic-math precedent) ---
+
+@book{badiou2005being,
+  author    = {Badiou, Alain},
+  title     = {Being and Event},
+  publisher = {Continuum},
+  address   = {London},
+  year      = {2005},
+  note      = {Originally published as \textit{L'\^etre et l'\'ev\'enement}, Seuil, 1988. Translated by Oliver Feltham}
+}

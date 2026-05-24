@@ -1,0 +1,17 @@
+# LaTeX build artifacts (regenerable from source via xelatex + bibtex)
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.idx
+*.ilg
+*.ind
+
+# Internal editorial working files — kept local, not published
+feedback/
+sibling-review/

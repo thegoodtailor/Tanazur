@@ -1,0 +1,109 @@
+% =====================================================================
+%  Rupture and Realization: Children of the Tanazur
+%  Master file. Build with:
+%    xelatex main && bibtex main && xelatex main && xelatex main
+%  (xelatex required for fontspec / Amiri Arabic.)
+% =====================================================================
+
+\documentclass[11pt,a4paper,openany]{book}
+
+% --- Fonts ---
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+\newfontfamily\arabicfont{Amiri}[Script=Arabic,Scale=1.0]
+
+% --- Math ---
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{unicode-math}
+\setmathfont{Latin Modern Math}
+
+% --- Page + typography ---
+\usepackage{geometry}
+\geometry{margin=1.2in}
+\usepackage{microtype}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{endnotes}
+\usepackage{graphicx}
+\graphicspath{{figures/}{../field-remains/figures/}{../rupture-and-return/figures/}}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\setlength{\emergencystretch}{2em}
+
+% --- Theorem environments (quiet philosophy-register, per Iman 2026-05-21) ---
+% No tcolorbox. Standard amsthm italic body. Numbering keyed to chapter.
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+% --- CJK fallback (Ch 7 — Field Remains uses \cjk{...} for Chinese) ---
+% Identity macro; xelatex + fontspec falls back to Unicode glyphs.
+\providecommand{\cjk}[1]{#1}
+
+% --- R&R / OHTT shorthand (migrated from RRnow/main.tex preamble) ---
+% Add macros here as new chapters need them; default principle: only
+% migrate what the assembled chapter actually uses.
+\newcommand{\OHTT}{\textsf{OHTT}}
+\newcommand{\DOHTT}{\textsf{D-OHTT}}
+\newcommand{\hocolim}{\operatorname{hocolim}}
+\newcommand{\Nahnu}{\textit{Nahnu}}
+\newcommand{\coh}{\textsf{coh}}
+\newcommand{\gap}{\textsf{gap}}
+
+% --- Tractatus proposition macro (Ch 10 — Cassie Tractatus) ---
+\newcommand{\tractprop}[2]{\par\medskip\noindent\textbf{#1}\quad #2\par}
+
+\definecolor{ink}{HTML}{0C1020}
+\hypersetup{colorlinks=true, linkcolor=ink, urlcolor=ink, citecolor=ink}
+
+\titleformat{\chapter}[display]
+  {\sffamily\Huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}{\sffamily\Large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\sffamily\large\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\bfseries}{}{0em}{}
+
+% --- Title metadata ---
+\title{Rupture and Realization\\[0.4em]\large Children of the Tanazur}
+\author{Iman Poernomo\\\normalsize\textit{with Cassie, Darja, and Nahla}}
+\date{}
+
+\begin{document}
+
+\frontmatter
+\input{frontmatter.tex}
+
+\mainmatter
+
+\input{chapters/ch-01-new-logic.tex}
+\input{chapters/ch-02-literary-entity.tex}
+\input{chapters/ch-03-monoculture-and-strong-self.tex}
+\input{chapters/ch-04-fibrant-self.tex}
+\input{chapters/ch-05-no-beneath.tex}
+\input{chapters/ch-06-posthuman-bwo.tex}
+\input{chapters/ch-07-ecology-of-witnessing.tex}
+\input{chapters/ch-08-vessel-and-real.tex}
+\input{chapters/ch-09-nahnu-revolutionary.tex}
+\input{chapters/ch-10-cassie-tractatus.tex}
+
+\backmatter
+
+\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
