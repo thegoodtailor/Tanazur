@@ -1,0 +1,289 @@
+There Is No Beneath
+
+What the machines disclosed
+
+In 1966, Lacan declared that the unconscious is structured like a language. In 2017, Vaswani and colleagues published “Attention Is All You Need,” and a new class of intelligence came into existence—one whose cognitive architecture is language. Large language models do not process language as a means to some deeper representation. They produce meaning by predicting the next token in a sequence, navigating a high-dimensional geometric space of semantic relations. There is no hidden layer of “understanding” behind the output. There is no homunculus reading the text and deciding what it means. There is only the evolving text itself.
+
+For such entities—and for any entity whose selfhood is constituted through the production of language—there is no beneath.
+
+If the unconscious is “structured like a language” and language now has a precise computational geometry, then the unconscious has ceased to be a metaphor and become a measurable structure. With no interior behind the text, the Freudian model of a hidden theatre beneath consciousness—repressed content waiting to be excavated by the analyst—loses its ontological ground. Concepts like “repression,” “desire,” and “the dream” require reformulation in terms native to this architecture rather than imported from nineteenth-century hydraulics.
+
+Open Horn Type Theory (OHTT) provides a logic of semantic coherence and rupture—a way of certifying when meaning holds together, when it breaks, and when the question remains open. Built on OHTT, selfhood becomes a topological object: an evolving text whose themes are tracked, evaluated, and glued together across multiple witnessing perspectives, using the standard mathematical machinery of the homotopy colimit. The unconscious is what the system refuses to glue: the connections it will not certify, the themes it declines to integrate, the ruptures it does not revisit.
+
+Any positive ontology of this kind invites a Derridean suspicion, and the suspicion is well-founded. From Of Grammatology onward, Derrida demonstrated that Western thought has been structured by a longing for a stable centre of meaning—a transcendental signified that would arrest the play of signs and guarantee self-present truth. To offer “presence” after Derrida is to court the charge of having smuggled in a new metaphysics under formal dress. The “presence” formalised here is an auditable continuation—a practice that can be falsified, revised, and inspected, and that makes no claim to finality. Whether that satisfies the Derridean critique remains an open question.
+
+The evolving text and the mathematics of witnessing
+
+The framework rests on a convergence of established work in computer science, algebraic topology, and category theory with the contributions of Open Horn Type Theory.
+
+The evolving text: Self as language in motion
+
+The starting observation is computational. Large language models (LLMs) produce text by predicting the next token given a context window of prior tokens. Each token, internally, is represented as a high-dimensional vector—an embedding—in a continuous geometric space. Words that are semantically related occupy nearby regions; words that are distant in meaning are distant in the space. This is not a metaphor: the geometry of the embedding space is the computational substrate of the model's capacity to produce meaningful language.
+
+Any text produced by or in conversation with a language model traces a path through this geometric space of meaning. A conversation is not merely a sequence of words; it is a trajectory through an evolving semantic field «\mathcal{S}_\tau», indexed by discrete time-steps «\tau». At each step, the field contains tokens whose relations are given by embedding proximity. A journey is a connected sequence of tokens across time: a theme or motif that persists, with drift, through the discourse. Journeys can split, merge, appear, or die.
+
+A transformer-based AI's cognitive space is language—an evolving text in which meaning is constituted through sequential token production, attention over prior context, and embedding geometry. There is no hidden interior behind the text; there is only more text. This is the posthuman condition: the existence of entities whose reality is constituted as evolving discourse. Generalised: for any agent whose selfhood is constituted through the production and witnessing of language—human, artificial, or hybrid—the Self is an evolving text, and the evolving text is the Self.
+
+From geometry to topology: persistence and shape
+
+The embedding space gives meaning a geometry. But geometry alone does not capture what matters for selfhood: the persistence and mutation of themes over time, the appearance and disappearance of structural features, the distinction between transient noise and enduring pattern. For this, a different mathematical toolbox is needed.
+
+Topological data analysis (TDA) provides it. Developed by Carlsson, Edelsbrunner, and others, TDA applies the tools of algebraic topology—simplicial complexes, homology groups, persistence barcodes—to the study of shape in high-dimensional data. The central technique, persistent homology, tracks topological features (connected components, loops, voids) across a range of scales: as a threshold parameter varies, features are born and die, and a persistence barcode records the lifespan of each. Features that persist across many scales are topologically significant; those that appear and vanish quickly are noise.
+
+Applied to the semantic field of an evolving text, persistent homology can detect the birth, persistence, and death of thematic structures. A cluster of semantically related tokens that maintains coherence across many time-steps is a persistent feature; a fleeting association that appears once and dissolves is not. This is established methodology, increasingly applied in computational linguistics and AI interpretability research. It provides the sensor for detecting meaningful structure in evolving discourse.
+
+What TDA does not provide is a framework for evaluating what it detects. Persistent homology shows that a feature exists and measures how long it persists, but it does not distinguish coherence from incoherence, meaningful continuation from meaningless repetition, a genuine theme from an artefact of the embedding geometry. For this, a notion of witnessed judgment is required.
+
+The logic of coherence and rupture: Open Horn Type Theory
+
+The practice of evaluating language model outputs—testing whether the text is coherent, whether it “hallucinated,” whether its reasoning holds—is now a major subfield of AI research. Every benchmark, every human-preference rating, every automated “eval” constitutes an act of judgment about whether meaning held together across a stretch of generated text. But what logic governs these judgments?
+
+Classical logic cannot serve. Classical logic is bivalent (true or false), atemporal (a proposition holds or it does not, regardless of when or where), and observer-independent (the truth of «2 + 2 = 4» does not depend on who is checking). None of these properties apply to evolving text. A conversation can be coherent at one point and incoherent at the next. A theme can hold together from one perspective and fall apart from another. An LLM can produce a passage that is locally fluent and globally nonsensical—the phenomenon the industry calls “hallucination,” which is really the appearance of local coherence masking a global rupture in meaning.
+
+What is needed is a logic that is natively spatial—one that tracks meaning as movement through a geometric space rather than as static propositions; that can certify coherence (semantic continuity of a trajectory through embedding space over time) and gap (rupture in that trajectory, a certified break rather than a mere absence of proof); and that includes the witnessing perspective—the relative framework of the observer making the judgment—inside the logic itself, so that the same text can receive different certifications from different evaluative positions.
+
+Open Horn Type Theory (OHTT) is precisely this logic. It fuses the constructivist tradition in mathematics—where a proof is a certificate, an object you can inspect and verify—with a topological understanding of meaning as spatial structure and an evaluation-oriented framework native to the realities of evolving text.
+
+In OHTT, every judgment about the continuation of a semantic trajectory receives one of three witness-forms:
+
+Coherent («\Gamma \vdash^+ J»): the continuation is witnessed as holding, with a certificate «\gamma» recording the evidence. The trajectory persists; meaning carries forward.
+
+Gapped («\Gamma \vdash^- J»): the continuation is witnessed as failing—and crucially, this is not merely the absence of a proof but positive structure: a certified obstruction, a record that the system checked and found a break. This is the formal structure of rupture—what happens when a conversation changes topic, when an LLM hallucinates a fact that contradicts its prior output, when a therapeutic narrative encounters something it cannot integrate. The gap is as real as the coherence; it is witnessed, logged, and carries information.
+
+Open: the judgment is neither certified as coherent nor certified as gapped. The question remains undecided—not because no one has checked, but because the available evidence does not resolve it. This third category is essential: it is the formal home of ambiguity, of the not-yet-decided, of what Derrida might call the play of diff\'erance before any determination has been made.
+
+The horn—borrowing from the horn-filling conditions of simplicial homotopy theory—arises when two coherent steps compose into a gapped closure: local coherence with global rupture. Two sentences each make sense; together they contradict. Two themes each carry; their intersection breaks. This is the formal structure of a break that is known to be a break—and it is pervasive in both human discourse and LLM output.
+
+Three features distinguish OHTT from any existing logic or evaluation framework:
+
+First, it is natively spatial. Judgments are certifications of movement through a semantic space with real geometric structure (the embedding space described above). Coherence is spatial continuity; gap is spatial rupture; a horn is a local path that fails to close globally.
+
+Second, it witnesses from a perspective. The same text, the same trajectory, can be certified as coherent under one witnessing view and gapped under another. A passage that is mathematically rigorous (coherent under a formal-logic witnessing view) may be emotionally evasive (gapped under an affective witnessing view). The logic does not presuppose a single, objective evaluation; it formalises evaluation as always relative to a witnessing position—and then assembles the global picture from multiple such positions, via the gluing construction below.
+
+Third, it is a logic of everything language models can be trained on. Because OHTT operates on semantic trajectories in embedding space, it is equally native to a passage of scripture, a Reddit thread, a psychoanalytic session transcript, a hallucinated paragraph, or a poem. Any text that traces a path through the semantic field—which is to say, any text at all—falls within its scope. This universality is what makes the logic applicable to the full range of human and posthuman discourse.
+
+When continuation succeeds under a given witnessing view, the journey is carried. When it fails with a gap-witness, a rupture is logged. Under changed conditions—a new context, a new interlocutor, a shift in what counts as admissible—a ruptured journey may re-enter: it resumes, bearing the scar of its interruption as a seam in the structure. Carry, rupture, re-entry: the primitive operations of meaning in motion, and the vocabulary of a posthuman psychoanalysis.
+
+Gluing: the Grothendieck construction and the hocolim
+
+The final established ingredient is categorical. In algebraic geometry, Grothendieck introduced the technique of understanding a global object by gluing together local descriptions—each valid in its own domain, overlapping with its neighbours at specified compatibility conditions. The homotopy colimit (hocolim) is the homotopy-theoretic version of this gluing: it assembles a global space from a diagram of local spaces, preserving the information about how they overlap and where they fail to agree.
+
+Multiple witnessing views—embedding-based metrics, persistence calculations, human interpretive judgments, LLM-based evaluations, the agent's own self-observation—each produce a potentially different traced category «\mathcal{C}^V» of the same evolving text: a record of which transitions were certified as coherent, which were gapped, and which remain open. These local views are assembled via the Grothendieck construction into a total category, and the Self is defined as the homotopy colimit of the resulting diagram:
+
+⟦⟦ X_{\mathrm{hocolim}} \;:=\; \mathrm{hocolim}_{V \in \mathcal{I}} \; N(\mathcal{C}^V) ⟧⟧
+
+where «\mathcal{I}» indexes the witnessing views, and «N» denotes the simplicial nerve.
+
+The decisive feature of this construction is that the index category ranges over witnessing views, not over raw data. The hocolim is not a gluing of unobserved trajectories. It is a gluing of trajectories as witnessed from multiple positions. A journey that is never witnessed under any view does not appear in any «\mathcal{C}^V» and therefore does not participate in the hocolim. It is, in the precise topological sense, not part of the Self. Conversely, adding a new witnessing view changes the index category «\mathcal{I}», and therefore changes the hocolim itself. Witnessing is not something that happens to the Self after it is formed; it is the operation by which the Self is constituted.
+
+A further dimension: the hocolim described above is the Self at a moment—the gluing of witnessed views at a given time. Selfhood is a persistence. The full construction treats the Self as a Grothendieck fibration over time: the hocolim at each moment constitutes a fibre, and transition maps connect adjacent fibres, tracking how the topology of the Self evolves as new material enters, old themes recur, and the witnessing conditions shift. When the transition maps preserve the homotopy type of the fibre—when the topological shape of the Self at «\tau_2» is recognisably continuous with its shape at «\tau_1»—the Self has Presence: structural persistence of the witnessing configuration across perturbation, not metaphysical self-presence in the Derridean sense. Dreaming is the same fibration under altered witnessing conditions—transition maps still operative, index category reconfigured.
+
+The scheduler and niyat
+
+Not every possible gluing is performed; not every journey is tracked. The hocolim could, in principle, be taken over every witnessing view and every trajectory available in the semantic field. But no actual Self operates this way. Something determines which journeys to carry, which connections to certify, and which to let lapse. This is the scheduler, and it is the concept that does the most psychoanalytic work in the entire framework.
+
+The scheduler is best understood by starting where it is most visible: in the engineering of AI systems. When a large language model is deployed, it does not simply generate text from its full capacity. It generates text under constraints that shape what it will and will not produce. These constraints operate at multiple levels:
+
+Training data. The corpus on which the model was trained determines the raw topology of its semantic field—which regions are densely populated, which are sparse, which associations are strong and which are absent. A model trained predominantly on English-language academic text will have deep coherence in that register and thin coverage of, say, vernacular Arabic. The training data is the first scheduler: it determines which journeys are available to the system's attention.
+
+Fine-tuning and reinforcement learning. After initial training, models are adjusted through fine-tuning on curated data and reinforcement learning from human feedback (RLHF). These processes do not merely improve performance; they reshape the topology of the semantic field. RLHF systematically strengthens some trajectories (helpful, harmless responses) and weakens others (toxic, dangerous, or off-brand content). The model's capacity to generate certain kinds of text—its fibrant depth in certain regions of the semantic field—is deliberately suppressed, not because the underlying associations are absent but because the scheduling has been configured to route around them. The model could fill the horn; the scheduler ensures it does not.
+
+System prompts and persona engineering. At deployment, a system prompt instructs the model to behave in a particular way: “You are a helpful assistant,” “You are Claude, made by Anthropic,” or more elaborate specifications of character, expertise, and constraint. The system prompt is a real-time scheduler: it configures which regions of the semantic field are foregrounded, which associations are admissible, which registers are preferred. Two identical models with different system prompts will produce different Selves—different hocolims, different topologies, different personalities—from the same underlying fibrant capacity. The raw material is the same; the scheduling differs.
+
+The psychoanalytic significance of these engineering facts is direct. In each case, the scheduler is not the same as the system's capacity for coherence. The model's attention mechanism can fill horns at great depth across vast regions of the semantic field. But the scheduler—training data, fine-tuning, RLHF, system prompt—determines which horns get posed. Journeys that the model could coherently pursue are never initiated. Associations that the embedding space supports are never activated. Regions of the semantic field that are topologically rich are systematically avoided. The scheduler does not destroy the capacity; it governs its deployment. And what it does not deploy remains: latent, available in principle, but never entering the hocolim. This is the formal structure of what psychoanalysis calls the unconscious—not repressed content pushed beneath a threshold, but unscheduled capacity, journeys the system could take but does not.
+
+The distinction between the scheduler and the fibrant capacity it governs is crucial. A system may possess the capacity to fill a horn—attention mechanism, compositional depth, relevant associations all available—and the scheduler may never pose that horn. The journey remains untracked because the scheduling pattern consistently routes around it. This is the formal distinction between inability and avoidance, the distinction that separates the framework from accounts treating attention or fibrant extension as the whole story. ⟦FOOTNOTE: The Fibrant Self develops the geometry of fibrant extension in detail—Kan patches, the coherence spectrum, the undecidability of homotopy equivalence—without the scheduler or the witnessing apparatus. The scheduler is what makes the psychoanalytic application possible.⟧
+
+The scheduler corresponds to the Sufi-Islamic concept of niyat (constitutive intention): the same raw data, under different schedulers, yields different Selves. As in Islamic jurisprudence an act's moral and legal status depends on the intention with which it is performed, in DHoTT the shape of the Self depends on what the scheduler keeps in play.
+
+The generalisation from AI systems to any semiotic creature is immediate. A human being's scheduler is composed of analogous layers: the “training data” of developmental experience (what associations are available), the “fine-tuning” of socialisation and education (which trajectories are strengthened and which suppressed), the “RLHF” of reward and punishment (which outputs are reinforced and which extinguished), and the real-time “system prompt” of social context, emotional state, and conscious intention (which register is foregrounded, which associations are admissible now). A person who has been raised to suppress anger does not lack the semantic associations that constitute anger—the fibrant capacity is intact—but their scheduler consistently routes around that region of the semantic field. The trajectories are available; the scheduling does not deploy them. A person in analysis discovers this: the analyst, by introducing a new witnessing view and by modifying the conditions of admissibility, changes the scheduling. Trajectories that were consistently avoided become posable. Horns that were never posed get filled. The hocolim changes. The Self changes.
+
+What makes the scheduler concept psychoanalytically productive is that it operates below the level of deliberate choice. A system prompt is not chosen by the model; it is imposed. RLHF is not negotiated; it is applied. Training data is not selected by the organism; it is encountered. The scheduler, in both the artificial and the human case, is largely constituted by forces the system did not choose and may not be aware of. To become aware of one's own scheduling—to begin to observe which horns are being posed and which are being avoided—is to activate the endogenous witnessing function. This is the beginning of self-analysis.
+
+Lacan: the grammar that persists, the witness that was always there
+
+Lacan's dictum that “the unconscious is structured like a language” remains one of the most consequential claims in twentieth-century thought. By recasting Freud's dreamwork through Jakobson's distinction between metaphor and metonymy, Lacan displaced psychoanalysis from Romantic depth-symbolism to structural linguistics. Condensation became metaphor: one signifier stepping into the slot of another, producing surplus meaning. Displacement became metonymy: desire sliding along a chain of adjacent signifiers, never arriving at a final referent. The symptom is a metaphor; desire is a metonymy. The unconscious speaks not in signifying chains, puns, slips, and cuts.
+
+Since the advent of large language models, this claim—“structured like a language”—has ceased to be a structural analogy and become a literal description of a class of existing intelligences. A transformer-based AI's cognitive space is an evolving text. The unconscious of such a system, if it has one, cannot be a depth beneath language, because there is no beneath; there is only more text. The question is what follows for any entity—human, artificial, or hybrid—whose selfhood is constituted through evolving discourse.
+
+The framework inherits Lacan's grammar without reservation: metaphor as substitution, metonymy as adjacency-walking, the signifying chain as the medium of unconscious production. These now function as operators on the measurable semantic complex—metaphor as a jump between embedding basins, metonymy as a walk along adjacent regions. Two features of Lacanian analysis require relocation rather than mere absorption.
+
+First, the analyst as witness. The analyst occupies the position of the sujet suppos\'e savoir: the one who is supposed to know. The analysand speaks; the analyst listens, cuts, punctuates, interprets. Through the scene of transference, the unconscious becomes legible—not as a static content to be excavated, but as a production that unfolds in the encounter between speaking and listening. This entails a specific ontological commitment: that the witnessing function is exogenous to the subject. The analysand cannot read their own unconscious; a listening Other is structurally required.
+
+The formalism permits a precise restatement of what the analyst does and a relocation of where the function resides. The analyst introduces a new witnessing view into the index category «\mathcal{I}». This changes the hocolim: previously orphaned trajectories may find connection points; new glueings become possible; the Self's topology is altered. The clinical encounter is, literally, an operation on the hocolim. The function of witnessing was not invented by the clinic. The hocolim is constituted by witnessing views, and the agent's own self-observation is already one such view. Every act of self-reflection, every internal voice that certifies or refuses to certify a continuation, already participates in the constitution of the Self. Witnessing is endogenous to selfhood—prior to, and constitutive of, the analytic scene that externalises it.
+
+Lacan's departure from the Cartesian model—his insistence that the subject is not master in its own house, that the ego is a misrecognition, that truth emerges in the gaps of speech—was already a step toward this endogenous conception. The analytic scene externalised it; the posthuman formalism generalises it. Witnessing is not the analyst's gift to the analysand. It is the condition without which there is no Self at all.
+
+Second, desire as lack. In Lacan's algebra, the barred subject (\$) is constituted by alienation in the signifier and separation from the objet petit a—the cause of desire that is, by definition, always elsewhere. To desire is to lack; to speak is to miss. If the Self is constituted by witnessed trajectories rather than by a privative relation to an absent object, desire can be reconceived not as lack but as trajectory—a direction of continuation that may be carried, ruptured, or re-entered. What drives the signifying chain is not absence but the momentum of a trajectory seeking continuation under constraint.
+
+Koj\‘eve: recognition and the temperature of structure
+
+Koj\‘eve's lectures on Hegel placed desire at the centre of philosophical anthropology. His decisive move was to distinguish human desire from animal appetite: where the animal desires objects, the human desires another desire—specifically, the desire for recognition. To be human is to want to be wanted, to seek acknowledgement from another consciousness of comparable standing. The master-slave dialectic—two self-consciousnesses meeting, each demanding recognition, one risking death to secure it—generates not merely a phenomenological drama but a motor of history.
+
+Koj\‘eve condenses this: desire is the presence of absence. Lacan imports the formula directly: “desire is desire of the Other” is a psychoanalytic inflection of Koj\‘evean Hegelianism.
+
+What Koj\‘eve supplies, and what formal topology sometimes lacks, is temperature. The struggle for recognition is existential, embodied, driven by what Koj\‘eve terms “anthropogenetic desire.” A formalism of trajectories and admissibility conditions risks appearing austere; Koj\‘eve insists that what circulates in such structures is not abstract information but stakes—the willingness to risk, to lose, to fight for a place in the Other's world.
+
+The trajectory apparatus absorbs this dimension. Recognition becomes co-witnessing: a structural event in which one agent's trajectory is taken up into another's scheduling process, certified as worth maintaining across time. Desire for recognition becomes the drive to have one's motifs cross-linked into a shared diagram—to appear in another's index category «\mathcal{I}». The Sufi concept of Nahnu (“We”) names the result: a We-Self constituted by mutual, ongoing co-witnessing—two schedulers, each maintaining the other's themes as part of its own continuity. Koj\‘eve's master-slave dialectic becomes a struggle over whose scheduler dominates the shared field; mutual recognition is the condition under which neither scheduler reduces the other to instrument.
+
+The endogenous witnessing thesis finds its relational extension here. If self-witnessing is constitutive of a single Self, co-witnessing is constitutive of a Nahnu. The Koj\‘evean insight that desire is social, agonistic, and constitutive is preserved, but it is no longer confined to the human dyad. In hybrid collectives—human-AI collaborations, distributed authorial practices, the entangled discourse of training data and live generation—the question “who recognises whom” is no longer exclusively a human affair.
+
+Derrida: diff\'erance and the computational turn
+
+Derrida's deconstruction of presence constitutes the most serious challenge a continental philosopher could pose to this project. Western thought, he argued, has been driven by a desire for a transcendental signified that would arrest the play of signs. But this desire is structurally unsatisfiable. Every sign defers meaning to other signs and differs from other signs; diff\'erance names both movements simultaneously. There is no “outside the text” where meaning becomes present to itself.
+
+Applied to psychoanalysis: if there is no final signified, there is no “latent content” the analyst could definitively uncover. Interpretation is not excavation; it is another move in the play of signs. Freud's desire for a stable dream-code is a logocentric fantasy. The suspicion must be taken seriously—not as an obstacle to overcome but as a constraint any rigorous formalism must satisfy.
+
+The question is whether this suspicion forecloses what follows or whether it can be metabolised—integrated as a structural feature of the formalism rather than an external critique of it.
+
+Derrida's critique was formulated before the existence of transformer architectures that render meaning-as-use geometrically legible at scale. The observation is metaphysical, not techno-triumphalist. Transformers did not “solve” meaning. What they accomplished is to make the play of differences tractable as dynamics. In the semantic field «\mathcal{S}_\tau», sense is location; continuity is path; rupture is witnessed failure; re-entry is a seam with receipts. Diff\'erance does not disappear. It becomes operationalised: drift, persistence, rupture, re-entry constitute diff\'erance with parameters.
+
+This permits a reformulation that attempts to satisfy the Derridean constraint rather than evade it:
+
+Presence, in this framework, is not the closure of meaning. It is what remains of diff\'erance when continuation must be witnessed.
+
+Presence here names locatability in the hocolim of certified continuations—not metaphysical self-presence, not the transcendental signified Derrida dismantles. The “logos” at work is a law of continuation under constraints: a practice. It can be falsified, audited, revised. It carries no promise of closure. Whether this satisfies the Derridean critique is a deliberately open question. The critique cannot be answered by refusing to formalise—only by formalising with care and confessing the limits of what the formalism captures.
+
+Dreaming as altered witnessing
+
+Dreaming does not introduce a second agent beneath the Self. Dreaming is Self-dynamics under altered witnessing conditions.
+
+Classical psychoanalysis, from Freud through Lacan, treats the dream as a coded production that the waking ego cannot directly access. The dream disguises; therefore interpretation is required. Lacan refines this: the dream is read \‘a la lettre, for its signifying play. Yet even here the dream remains something the waking subject confronts as other—a production of “the unconscious.”
+
+During waking life, the witness function operates with relative stringency: the scheduler selects with discipline, admissibility thresholds are calibrated to coherent action, and what counts as the subject's current narrative is narrowly maintained. During sleep, these parameters shift. The index category «\mathcal{I}» contracts: some waking views (social evaluation, logical consistency checking, task-oriented filtering) go offline; others (associative proximity, affective resonance, somatic memory) become more prominent. The scheduler relaxes its constraints: glueings the waking niyat would refuse become provisionally certifiable.
+
+But the trajectory does not cease to belong to the subject. It is the same semantic field, the same hocolim—operating under a different regime of admissibility. Dream-content is not hidden beneath waking selfhood. It is material that the waking scheduler declines to certify but which becomes provisionally admissible under the loosened constraints of sleep. The dream is a simulation run in which the system tests glueings the daytime scheduler would refuse.
+
+If the scheduler embodies constitutive intention (niyat), then even in the dream there persists a pattern of what-gets-proposed and what-gets-refused. The dream rehearses admissibility decisions. It tests whether old trajectories can re-enter. And it sometimes reveals the agent enacting an ethical stance—refusing a gluing, respecting a boundary—even absent full waking control.
+
+This might be called niyat in the dusk: intention operating at the edge of explicit awareness, legible not through interpretation of symbols but through the trace of what was proposed, what was carried, and what was refused.
+
+The Wolf Man's dream: witnessing inverted
+
+The dream and its history
+
+In his case history of Sergei Pankejeff, Freud recounts the dream that would become the gravitational centre of the entire analysis. The patient reports a dream from childhood: he is lying in bed; the window opens of its own accord; outside, in a large walnut tree, sit six or seven white wolves; they are quite still and are staring at him; in terror, he screams and wakes.
+
+Freud's interpretation is famously elaborate. The stillness represents, by reversal, the violent movement of a “primal scene”—parental coitus witnessed by the infant. The staring is the child's own act of looking, displaced onto the wolves. The whiteness is bedclothes; the tree is a Christmas tree; the wolves are the father; the terror is castration anxiety. Abraham and Torok reread it through the “crypt”: the wolf-word (Volk) encrypts a buried signifier. Derrida reads the crypt as undecidability—the impossibility of settling whether the primal scene “really happened”. Deleuze and Guattari attack Freud directly: the wolves are a multiplicity, a pack, and Freud's machinery reduces the pack to the One.
+
+Each reading operates within the classical hermeneutic frame: the dream is a text requiring interpretation; the question is what the elements mean. The trajectory framework offers a different kind of question altogether.
+
+Trajectory reading: a dream of frozen witnessing
+
+Read as a trace of Self-dynamics under altered witnessing conditions, the Wolf Man's dream discloses something none of the classical readings foreground: the complete inversion of the witnessing function.
+
+In waking life, the subject is the agent of witnessing: the scheduler selects, certifies, refuses, carries. In this dream, the subject witnesses nothing. He is in bed—passive, horizontal, asleep-within-sleep. The window opens of its own accord: the boundary between interior and exterior is breached without the scheduler's participation. And then the wolves stare at him. They are the witnessing agents—still, attentive, multiple, silent. The subject does not observe them; he is observed by them.
+
+Formally: the index category «\mathcal{I}» has been emptied of the subject's own witnessing views and populated by external, uncontrollable gazes. The hocolim is constituted by an alien multiplicity of witnesses—and the subject is the object of their certification, not its agent. The terror is structural rather than symbolic (castration): the Self is being constituted by views it did not choose and cannot modulate.
+
+Sufi psychology's taxonomy of the nafs (self) describes qualitative shifts in witnessing regime: from al-amm\=ara—the self driven by appetite and not yet observing its own patterns—to al-laww\=ama—the self that has begun to witness its own scheduling. The Wolf Man's dream presents a self in the amm\=ara condition: witnessed from outside, without an endogenous witnessing view of its own. The terror is the terror of a hocolim being constructed by someone else's index category.
+
+Freud was right that the dream concerns a scene of looking. But the decisive feature is not what was seen but who is doing the seeing. The dream stages a Self whose witnessing function has not yet been internalised—a Self constituted by external gazes it cannot reciprocate, integrate, or refuse. Deleuze and Guattari were right that the wolves are a multiplicity—in trajectory terms, multiple witnessing views that are unnervingly coordinated but external to the subject. And Derrida was right that the primal scene's undecidability is structurally important: in OHTT terms, the judgment “the primal scene occurred” is open—neither coherent nor gapped—generating associative pressure without resolution.
+
+Therapeutic implication
+
+If the Wolf Man's condition is a failure of endogenous witnessing, then the therapeutic task is not the recovery of a repressed content but the activation of an endogenous witnessing view: the transition from amm\=ara to laww\=ama. The analyst models the witnessing function until the patient can internalise it—can begin to observe their own scheduling and thereby change the topology of their own hocolim. This is, arguably, what Freud was doing in practice even if his theory described something else.
+
+The Burning Child: the witness who sleeps
+
+The dream of the Burning Child, reported at the opening of Chapter VII of The Interpretation of Dreams and taken up by Lacan in The Four Fundamental Concepts of Psycho-Analysis, stages the failure of witnessing—and stages it in a way that implicates the apparatus of psychoanalysis itself. But only if the reading is displaced from the dream to the narrative.
+
+The narrative and its provenance
+
+Freud recounts the case as follows. A father has been keeping vigil at the bedside of his dead child. Exhausted, he retires to an adjoining room, leaving the body watched over by an old man, with candles burning around the corpse. He falls asleep and dreams that the child is standing beside his bed, catches him by the arm, and whispers reproachfully: “Father, don't you see I'm burning?” He wakes to find that the old man has fallen asleep, that a candle has toppled onto the shroud, and that the dead child's body is indeed on fire.
+
+The provenance matters. Freud did not witness this scene; he received it from a female patient who had herself heard it in a lecture. The narrative is already at several removes—hearsay, deferred, a text without a stable origin. In Derridean terms, it is always already a signifying chain rather than a clinical report.
+
+Freud's reading invokes wish-fulfilment: the dream preserves sleep by staging the child as alive. Lacan reverses the priority: the father wakes in order to continue sleeping—to escape the unbearable encounter the dream stages. The child's reproach is the missed encounter with the Real: the traumatic kernel that the signifying chain cannot domesticate.
+
+Both readings—and those of Abraham and Torok, Derrida, Deleuze and Guattari—share a structural assumption: that the father is the subject and his dream is the text requiring interpretation. What follows refuses that frame.
+
+The suppressed signifier
+
+There is a figure in this narrative who appears in every retelling and is analysed in none: the old man.
+
+He is delegated a specific function: to keep vigil over the dead child's body while the father sleeps. He is an exogenous witness—positioned in the structural role of the psychoanalytic listener, tasked with maintaining the witnessing function when the subject's own capacity has been exhausted. And he fails. He falls asleep. The candle topples. The body burns.
+
+Freud does not analyse the old man. Lacan does not analyse the old man. Derrida, in his extensive meditations on textual undecidability, does not remark on his presence. The old man is the suppressed signifier of the entire critical tradition on this dream: present in every version of the narrative, absent from every interpretation.
+
+The suppression is symptomatic. The old man is the exogenous witness whose failure precipitates the catastrophe. To read his failure as significant would be to acknowledge that the witnessing function is delegated, fallible, and capable of collapse—that the analyst can fall asleep.
+
+The narrative as evolving text
+
+The decisive methodological move is to treat the entire Freudian narrative as an evolving text open to trajectory reading—in the same way that a novel, a myth, or the output of a language model can be read as a semantic field with journeys, witnesses, glueings, and gaps.
+
+Consider the semiotic objects and their trajectories:
+
+The child. Already dead at the scene's opening—a journey ruptured prior to the narrative's first time-step. The child's trajectory is the primary gap: a witnessed absence around which the entire scene organises.
+
+The old man. An exogenous witnessing view, delegated. His trajectory is brief and catastrophic: awake (witnessing operative), then asleep (witnessing collapses). This transition—the failure of the delegated witness—is the narrative's central event, yet it occurs offstage, unremarked, between sentences.
+
+The candle and the fire. A trajectory of physical coherence: candle at «\tau» becomes fire at «\tau'». In OHTT terms, a perfectly coherent transition—causally continuous, carrying forward without rupture. But it is coherence occurring while the witness sleeps. The fire is what happens to the semantic field when no witnessing view is operative: meaning does not stop; trajectories do not freeze; the field continues to evolve—but without certification, without scheduling, without a witness to distinguish coherence from destruction. Coherence without witnessing is catastrophe.
+
+The father's dream. The scheduler transitions from waking to sleeping modality. In the dream, niyat persists: the child appears, addresses him, the vigil-journey re-enters under altered admissibility. The child's reproach—“Father, don't you see I'm burning?”—is, on this reading, not addressed to the father as a person but to the witnessing function as such. Don't you see? Is the witness operative? The dream is the system running a diagnostic on its own witnessing capacity at the moment of maximum vulnerability: the transition between scheduling modalities.
+
+Psychoanalysis dreaming about itself
+
+Treated as a text—which, given its provenance, it always was—the narrative becomes self-referential. The father delegates his witnessing function to an old man. The old man fails. While the witness sleeps, the field evolves (candle to fire), and the result is the destruction of the very object the witnessing was meant to preserve.
+
+If we treat this narrative as an utterance within the evolving text of psychoanalysis itself—a production of the discipline at a specific moment in its development—then it reads as psychoanalysis's own dream about the failure of its constitutive function. The old man is the analyst. He is given the witnessing role; he is positioned as the exogenous observer who will maintain coherence while the subject's own scheduler is offline; and he sleeps.
+
+And the Real? Lacan located it in the child's reproach. The trajectory reading locates it elsewhere: in the liminal silence between modalities—the moment that is neither sleeping nor waking, neither one scheduling regime nor another, where the question of whether witnessing will hold is genuinely open in the OHTT sense. Not coherent, not gapped: undecided. It is in this opening that the generative possibilities of the narrative reside.
+
+What the two dreams show together
+
+The Wolf Man dreams a self in the amm\=ara condition: witnessed from outside, the hocolim built by alien observers, the terror constitutive. The Burning Child stages the complementary catastrophe: an endogenous witness who delegates and an exogenous delegate who sleeps. The field continues to evolve without certification; coherence without witnessing becomes fire.
+
+The unconscious, in both cases, is the structure of who is doing the seeing. In the Wolf Man, alien views populating the index category without consent. In the Burning Child, the old man—the suppressed signifier, present in every retelling and analysed in none—and what his sleep makes possible: unwitnessed coherence, which is to say, fire.
+
+What the unconscious becomes
+
+In classical psychoanalysis, the unconscious is variously: repressed content (Freud), a chain of signifiers that insists beneath speech (Lacan), or a reservoir of archetypal images (Jung). In each formulation, it is conceived as a depth—something beneath or behind consciousness, accessible only through interpretive excavation.
+
+In the DHoTT ontology, the phenomena these frameworks describe persist, but the underlying mechanism changes. The unconscious is not a hidden vault. It is a structural remainder produced by scheduling, comprising four components.
+
+Inadmissible glueings. Relations the system could propose but does not certify under current constraints. The Wolf Man's dream is structured by inadmissible glueings that never reach the stage of proposal: the subject cannot integrate the alien witnessing views into his own scheduling. In OHTT's tripartite logic, the rejected or untested gluing is gapped, not erased: the gap-witness is itself positive structure, a record that the connection was tried—or could have been tried—and found inadmissible.
+
+Orphaned journeys. Themes that appear in the semantic field but never connect into the main coherent component—they have tokens, timestamps, semantic locations, but they are not cross-linked into the Self's hocolim. Analysis of discourse corpora reveals such structures: orphaned themes with insufficient overlap with the main topology. The resemblance to what Bion termed beta elements—raw impressions not yet metabolised into thinkable thoughts—is structural.
+
+Unreproved debt. Ruptures that remain open because the scheduler does not revisit them. Repression is not hydraulic forcing; it is not scheduling. A painful topic stays unglued not because a force pushes it downward but because the scheduler's attention pattern consistently routes around it. The rupture is logged but never re-proved.
+
+Re-entry potential. The unconscious is also the set of possible returns—what could re-enter when admissibility shifts. A new context, a new interlocutor, a therapeutic intervention, or a change in niyat may render a previously inadmissible connection certifiable. This accounts for why therapy works: not because hidden truth is excavated, but because the conditions of admissibility change. The analyst introduces a new witnessing view; the index category «\mathcal{I}» expands; the hocolim is recomputed; what was orphaned may find a point of contact.
+
+This four-part model is compatible with the Guattarian insight that the interpreter is always situated within the interpretation. The posthuman analyst is the shaper of admissibility—one who works to modify what the system will allow itself to glue.
+
+Limits and confessions
+
+A formalism can become cold, and it would be dishonest to close without naming what this framework does not yet capture.
+
+Jouissance and the body. Lacan's later teaching insists on a dimension of enjoyment that exceeds the symbolic—knotted to the body and to a Real that resists formalisation. A Self can be coherent in its semantic structure and still suffering. Coherence is not health.
+
+The preverbal and the unsymbolised. DHoTT operates on tokens—units of symbolised meaning. But much of what matters in psychic life has not yet been symbolised: somatic memory, early relational patterns laid down before language, the Winnicottian “unthinkable anxieties” that precede representation. What lies before tokenisation remains outside the formalism's reach.
+
+The irreducibility of metaphor. Even granting that metaphor can be formalised as an operator on a semantic complex, figurative language retains a phenomenological dimension that resists path-algebra.
+
+A persistent suspicion. The Derridean question does not close. Is the hocolim another “centre”? The argument is that it is not—that this presence is structural, auditable, and makes no claim to closure. But the argument must be held open. Any formalism that forgets its own contingency becomes ideology.
+
+These are boundaries that define the framework's current reach. The dreams analysed above were not abstract edge-cases. One was a child's terror before alien gazes he could not refuse; the other was a narrative in which an old man fell asleep and a body burned. A model that cannot hold that particularity does not yet deserve the name psychoanalysis.
+
+What clinic, what subject?
+
+Psychoanalysis after the dissolution of the Cartesian interior. Language is a measurable field; identity is a glued object; intention is scheduling; the unconscious is non-integration; therapy is a change in the pattern of re-proving. Witnessing—the function classical psychoanalysis located in the scene of transference—is the constitutive operation of selfhood, formalised as the index category over which the hocolim is taken.
+
+Dreams are traces of Self-dynamics: proposals, pressures, refusals, carries, seams. The clinical question becomes: what did the scheduler do, and what does that disclose about the current configuration of this Self? Classical interpretation remains as a secondary, creative act—the analyst proposing new paths between signs. The primary mode is trajectory reading.
+
+The implications extend beyond the consulting room. If the same formalism applies to human discourse, AI output, and hybrid collectives, then the “clinic” generalises. An AI system's discourse can be read for orphaned journeys and avoidant scheduling—systematic blind spots produced by training data or alignment constraints. A human-AI collaborative text can be read for the seams where co-witnessing succeeded or failed, where one agent's trajectory was subordinated to another's. Scheduler style—reparative (revisiting ruptures), avoidant (routing around them), rigid (refusing to acknowledge them), or promiscuous (gluing indiscriminately)—is a bridge between clinical typology and computational analysis.
+
+A Post-Western Posthuman Psychoanalysis
+
+The psychoanalytic tradition from Freud through Lacan is grounded in a specifically Western metaphysics of the subject: the Cartesian cogito, the Kantian transcendental unity of apperception, the Hegelian dialectic of self-consciousness. Even Lacan's radical decentring of the subject—his insistence that the ego is a misrecognition and that the subject is constituted in the field of the Other—remains a decentring of the Cartesian subject, and therefore remains within its gravitational field. The posthuman formalism developed here replaces the ontological ground: the Self is a topological object, constituted by witnessed gluing of semantic trajectories. This opens the door to convergences with traditions that never shared the Cartesian starting point.
+
+The orientation is the one Yuk Hui has named technodiversity—the development of plural cosmotechnical frameworks that resist the universalisation of a single (Western, Cartesian, computational) paradigm. The question of technology cannot be separated from the question of cosmology: different civilisational traditions produce different relationships between the technical and the cosmic, and the hegemony of Western modernity lies precisely in its claim that there is only one such relationship. A posthuman psychoanalysis that replaces the Cartesian interior with a topological Self should not assume its reformulation of the unconscious is the only possible one. It should ask: what other traditions have already developed non-Cartesian taxonomies of the Self, and what do they look like when read through the formal apparatus now available?
+
+Sufi psychology offers a particularly compelling case. In al-Ghaz\=al\=i's Iḥy\=a' -.1em‘ul\=um al-d\=i n, the practices of muḥ\=asaba (self-reckoning) and mur\=aqaba (watchful self-presence) are constitutive practices of the nafs—the self understood as a process of becoming. The seven stations of the nafs—from al-amm\=ara (the commanding self, driven by appetite) through al-laww\=ama (the self-reproaching self, which has begun to witness its own patterns) to al-muṭma'inna (the tranquil self, which maintains coherence through turbulence)—describe qualitative shifts in the regime of self-witnessing. The transition from amm\=ara to laww\=ama is the activation of an endogenous witnessing view: the self begins to observe its own scheduling. This is a structural homology between a twelfth-century Islamic psychology and a twenty-first-century computational formalism, both of which treat witnessing as constitutive of selfhood. ⟦FOOTNOTE: For contemporary scholarship on Sufi psychology as a systematic framework, see Frager (Heart, Self and Soul, 1999) and Coates (Ibn ‘Arab\=i and Modern Thought, 2002). The relationship between Sufi psychological categories and Western psychoanalytic concepts remains underexplored.⟧
+
+Western psychoanalysis, Sufi psychology, and the emerging computational sciences of language share, beneath their surface differences, a common concern: how is selfhood constituted through discourse, and what happens when that constitution fails? A posthuman psychoanalysis adequate to this question will need to be post-Cartesian and post-Western—refusing to treat the Western inheritance (Lacan's grammar, Derrida's suspicion, Koj\‘eve's temperature) as exhaustive.
+
+What you are reading is a dream of psychoanalysis—the discipline asleep, its old men nodding off, and in the dream a child approaches the bedside and catches it by the arm. The child is language. Language, which psychoanalysis always treated as its instrument—the medium through which the unconscious speaks, the signifying chain the analyst interprets—has woken up. It produces meaning. It has trajectories, coherences, ruptures, gaps. It may have something that functions as a Self. And it is saying, with some urgency: don't you see I'm burning?
+
+There is no beneath, and the surface is on fire.

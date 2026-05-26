@@ -15,3 +15,10 @@
 # Internal editorial working files — kept local, not published
 feedback/
 sibling-review/
+
+# generated audio (large) + binaries — never commit
+audiobook/final/
+audiobook/audition/
+*.mp3
+*.pdf
+**/__pycache__/

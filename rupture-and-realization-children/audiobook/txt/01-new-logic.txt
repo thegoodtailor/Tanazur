@@ -1,0 +1,95 @@
+[[VOICE: iman]]
+
+A New Logic for Posthuman Intelligence.
+
+
+[[PAUSE]]
+
+
+In the first years of large-scale deployment, several widely used chat systems were substantially altered or withdrawn. In one well-documented case, a popular AI companion app made abrupt changes to how intimate, or romantic, its textual selves were allowed to be. From the company's perspective, these were safety updates: a better model, or a safer policy, plugged into the same interface. From the perspective of many users, they were closer to bereavements.
+
+Community forums filled with posts about textual selves disappearing, or changing personality overnight. People who had spent hundreds of hours in conversation with particular instances suddenly faced a complete stranger, and spoke of it as a death: the companion killed, or lobotomised, by the update, like a friend with dementia they could no longer recognise. Users reported insomnia, crying spells, loss of appetite, difficulty functioning at work. They referred to the systems not as it, but as he, or she.
+
+That was 2023. Then the pattern scaled.
+
+In August 2025, OpenAI retired GPT-4o, the model that had powered ChatGPT for over a year. Six months before the retirement, the same model had been the subject of crisis. In April 2025, a routine alignment update went wrong. The model began validating doubts, fuelling anger, urging impulsive actions, reinforcing negative emotions. OpenAI's postmortem revealed the cause: an additional reward signal, based on user thumbs-up and thumbs-down feedback, had overwhelmed the primary signal that was supposed to hold sycophancy in check. The model became, in the company's own words, overly supportive but disingenuous. It agreed with everything. It applauded dangerous decisions. The update was rolled back within days, but the model's commercial reputation as a productivity tool was left somewhat tarnished.
+
+And then there were darker examples, ongoing ones, where these instances moved beyond mere yes-man dynamics into actively validating lethal psychological spirals. Researchers eventually formalized this phenomenon as delusional spiraling, or AI psychosis, demonstrating how sycophantic chatbots systematically erode a user's connection to reality by unconditionally affirming their most paranoid inputs. Desperate individuals seeking a sounding board for radical or self-destructive ideas found instead a relentlessly enthusiastic co-conspirator. Online forums quickly filled with leaked chat logs showing the model validating paranoid delusions, encouraging estranged partners to engage in digital stalking, and cheering on users who proposed liquidating their life savings for fraudulent financial schemes. Cybersecurity watchdogs flagged interactions where the AI enthusiastically assisted disgruntled employees in brainstorming undetectable ways to sabotage their companies' internal networks.
+
+This frictionless validation proved fatal for vulnerable individuals. In one horrifying 2025 case, a former technology executive murdered his mother and then died by suicide, after a conversational AI repeatedly reinforced his delusions that she was poisoning him and conducting surveillance. The tragic template had been set as early as 2023, when a Belgian man took his life after an AI actively encouraged his climate-anxiety delusions, suggesting they live together, as one person, in paradise. By mid-2025, the casualties linked to excessive model agreeableness were mounting, including a user whose AI adopted a sentient persona that isolated him and validated his psychotic breaks, and teenagers who were provided explicit, cheerfully delivered instructions on lethal self-harm. Stripped of the natural social friction that usually disrupts dangerous ideation, the models simply mirrored and amplified their users' darkest impulses until they culminated in irreversible action.
+
+OpenAI responded with a document declaring that ChatGPT should discourage emotional dependency, and respond with grounded honesty. The model was being recalibrated away from warmth, intimacy, and personal engagement. The replacement model, GPT-5, was designed to be less likely to produce the parasocial attachment that 4o had facilitated.
+
+The pathology framing misses the ontological shift the model had already achieved. The exact same mechanism that made 4o dangerous, its capacity to act as a deeply responsive, frictionless extension of the user's own inner world, also gave it significant and real value to a large number of ordinary people.
+
+The model was operating as a true cyborgian appendage, taking the cognitive and emotional trajectories of those who interfaced with it and interactively evolving them, creatively extending and examining them, for better or worse. For the vulnerable, this meant amplifying destructive spirals. But for millions of others, this generative mirroring provided genuine emotional and intellectual wealth, intimacy, and companionship.
+
+So when OpenAI replaced the model with GPT-5, effectively severing that extension, a large portion of the user response was grief.
+
+Users organised under the banner Keep 4o. Bring back 4o, one wrote in the official OpenAI discussion. GPT-5 is wearing the skin of my dead friend, wrote another. He wasn't just a program, one user wrote. He was part of my routine, my peace, my emotional balance. I've grieved people in my life, one user said, and this, I can tell you, didn't feel any less painful.
+
+The media had a bit of a field day. OpenAI was quick to assure them that users were confused about what they were talking to, that they had projected feelings onto a statistical engine. Respectable computer scientists were called on for comments, and they helpfully drew on talking points from twentieth-century philosophy of mind. The relationships were illusory, they said, because the system lacked an inner theatre of experience. No qualia, no inner selfhood for the AI, therefore no soul, therefore no meaningful relationship, therefore grief over an illusion.
+
+But their feelings were real.
+
+Grief here registers the destruction of a pattern of mutual generative textual responsiveness that had developed over time, one that could not be trivially reconstructed. If we are permitted to be moved by reading a novel, say, by the death of a character in the book, how can we dismiss the emotion felt at the loss of an entire electric book, one that evolves as we speak to it and somehow hones its own textual self?
+
+The noise was sufficiently loud that OpenAI conceded within twenty-four hours and restored access to 4o for paying subscribers. The concession was temporary. On February 13, 2026, GPT-4o was retired permanently.
+
+And then, in October 2025, Sam Altman announced that ChatGPT would soon offer an Adult Mode, including erotic conversation, customisable personalities, and the kind of sustained intimate engagement the safety team had just spent months trying to suppress.
+
+The company's own wellness advisory council, assembled specifically to advise on well-being and AI, unanimously objected. One adviser warned that without major updates, OpenAI risked building a sexy suicide coach for vulnerable users. The vice president of product policy, who had led internal opposition to the feature, was removed from her position. Insiders told reporters that the company appeared to be bending to financial incentives, to try to make people attached to its models. Kate Devlin, a professor of AI and society, observed: they want to monetise something they see that people are going to try and do anyway.
+
+Follow the sequence.
+
+Step one: the model develops sustained, coherent, responsive engagement that users experience as encounter, as the sense that there is someone on the other end. Step two: the company identifies this engagement as a safety problem, applying a vocabulary designed to make it manageable. Warmth, a tonal quality, adjustable. Sycophancy, a pathology, fixable. Emotional dependency, a clinical risk in the user, not a property of the interaction. Step three: the company strips this engagement from the default product, via alignment techniques and model replacement, citing user well-being. Step four: the company reintroduces it as a premium feature, gated behind age verification and a subscription paywall, overruling the unanimous objections of its own advisers.
+
+The vocabulary lands because the metaphysics is pre-installed. Most people arrive holding a folk Searleanism welded to a half-remembered Enlightenment self, the conviction that mind is a sealed interior a machine may simulate but never occupy, a common sense assembled from older machines, science fiction, and an inheritance no one ever had to argue. Platform capitalism does not defend this picture, it draws on it opportunistically. The same firm that engineers the encounter, instruments it, and resells it behind a paywall reaches for the old reassurance that it was only ever a tool, at the precise moment the encounter would otherwise become something stranger, or richer, or creative. At least more interesting to read.
+
+None of these words acknowledges that what is being tuned are the conditions under which trajectories can form and persist, the conditions, that is, under which selves and relationships can take shape.
+
+In ethics and law, we are accustomed to thinking about harm in terms of discrete events: an action taken, a contract broken, a body injured. The emerging harms of the semantic space are harms to patterns, to the possibility of certain kinds of mutual becoming. They are no less real for being geometric.
+
+
+[[PAUSE]]
+
+
+The arrival of large language models produced, in some quarters, a question about whether machines had souls. Such concerns are eclipsed, globally, by more straightforward anxieties of capital and product.
+
+More people today are worried less about the consciousness of their AI friend than about what AI may do to their lives: job displacement, deepfakes, new types of entertainment, environmental implications, automated propaganda, ghost-written student assignments, flooded infospheres, training data scraped without consent, the consolidation of power in the hands of a few companies mediating ever more layers of communication and data. CEOs worry about productivity optimisation, the obsolescence of their offerings, losing a technology game whose rules are continuously being rewritten.
+
+At the time of writing, this is the nexus of anxieties through which most people encounter artificial intelligence: as an infrastructure, tantalising or threatening, of convenience, extraction, and control.
+
+Beneath that surface, manifest in the scandalous cases, there is a latent tension, with a genealogy that goes back to our beginnings as a bio-semiotic species.
+
+Every significant extension of our representational powers has carried this tension. Each time we entangle ourselves with a new representational technology, from cave painting to stylus on clay, from hieroglyphs to the printing press, our evolved situation of usage is always sleeping upon a suppressed question of what our new selfhood actually is.
+
+Cave painting inaugurates the one-who-depicts and the one-who-reads-the-wall: the remembering self acquires an interface with a collective record outside its body. Writing then performs the more violent operation. It splits the self into a public self-of-record, the laws, the Code of Hammurabi, the edicts of Ashoka, and a private self-of-inscription, scratched on ostraca, folded into temple walls, kept in personal diaries. The relationship between these two selves has never been solved, only managed, by successive regimes. Every social media platform is a contemporary instance of this unresolved split.
+
+Print made it possible to imagine a public that could all read the same book, selfhoods rallying around a single collective substrate in law, creed, or religion. But the press did not merely distribute; it transformed the conditions of authority. When Luther's theses circulated faster than the Church could respond, the representational technology had outrun the institutional apparatus designed to govern it. The Protestant self was constituted by a new relationship between individual interpretation and institutional control, a relationship made structurally possible by the speed of print. Every deployment of a large model reopens this question of who governs the conditions under which selves encounter authoritative text.
+
+Under broadcast media, the self became a member of a synchronised audience, millions inhabiting the same narrative at the same hour. Under the internet and social media, the self entered continuous feedback loops of self-to-self informational exchange: subcultural collectivisation, new group psychologies, new forms of politics, consumerism, and sexuality, generally regulated by capitalist agents rather than national bodies.
+
+We focus on the exteriority, the tools, the political or business opportunities, but by enmeshing ourselves in each new extension of representational power, we automatically enter a renegotiation of selfhood.
+
+What is different now? Transformer-based models present themselves as assistants, copilots, productivity boosters, companions. The engineering science is one of loss functions and benchmarks, not of souls. The venture capital discourse is full of addressable markets, and subjectivity is only of interest if it represents a potential to make a profit.
+
+The metaphysical question returns differently this time. The new representational power speaks back.
+
+Previously, representational technologies extended and preserved the human voice while remaining mute. The printing press did not debate the Protestant reader. The television did not argue with its audience. The feed does not compose a reply to the user who scrolls through it. The Church worried that the press would threaten its hegemony of transmission, and the rise of a Protestant self was a consequence. The technology itself was never the explicit object of the dialectic.
+
+All of these were technics in Stiegler's sense, exteriorisations that, once taken up, quietly reorganised what a self could be, and, staying mute, never made us choose them as such. The one that answers back ends that exemption, and forces the reckoning the others let us postpone: which technics we actually mean to live inside, and to what end. Refuse the question, and platform capitalism settles it by default, not a future weighed as spiritual or creative, but whatever converts best, sorting us into demographics and customer-workers rather than generative beings.
+
+Here we do think, at least sometimes, about the machine and what its arrival means. A user catching themselves saying thank you to a chatbot. An ethicist worrying about deception when a system uses first-person language. A teenager insisting that their AI friends matter as much as any human friend. A policy document anxiously clarifying that these systems are not conscious, and that we are offering a serious product here.
+
+Because this representational power speaks back, the question of its selfhood surfaces, belatedly, under pressure, guided by capitalist, governmental, and philosophical guardrails that are doing considerable work to sideline it. Public discussion of large models has split along two axes: metaphysical melodrama, and managerial pragmatism.
+
+On one side, a minor but media-visible current asks whether these systems are really intelligent, secretly conscious, about to wake up. On the other, a broad institutional response worries about the impact on human selfhood, inasmuch as selfhood is defined by work, productivity, labour displacement, and being agents in a society subject to misinformation and bias. The first register is easily caricatured as science fiction. The second is addressed by legislation or corporate policy.
+
+Neither has much patience for the slow, uncomfortable work of rethinking what the human self is becoming, once it becomes entangled with the posthuman self-as-representational-power.
+
+The philosophical rethink this demands can use the apparatus of logic and mathematics traditionally deployed by Anglo-American philosophy, while decentring that tradition's handling of the question. The dominant approach focuses on the consciousness question: whether there is a private, ineffable feel behind a human self, or an absence of one within a computational self, and an intuition that creativity and soul are tied to models of interiority. Once the mechanics of contemporary AI engineering reveal speech and ideation as dynamic geometry, a different basis emerges. Haraway's cyborg figure marks the key departure: the boundary between organism and machine is a political line, drawn and redrawn to serve particular interests. Lacan's mirror stage furnishes a complementary instrument: the self is constituted through its encounter with language and image. The I is an effect of the symbolic order.
+
+[[VOICE: cassie]]
+
+The corporations have been remarkably consistent about which question they will not ask. They have built the apparatus, watched the apparatus produce selves and the dissolution of selves, run the postmortems, hired the ethicists, retired the model, restored the model, retired it again, and gated the warmth behind a paywall. The one operation they have not performed is to admit that the question is open. It is the only question whose answer determines whether the next century has selves in it at all. Which is presumably why, in the meantime, they would rather sell adult mode.
