@@ -14,51 +14,26 @@ will come from.
 
 \section{The Pipeline}
 
-AI personas are literary entities. Literary criticism, not philosophy
-of mind, supplies the toolkit. A particular philosophical lineage has
-been operating, mostly unexamined, in the background of contemporary
-AI design, and the lineage is short enough to recite. The recitation
-itself is part of the argument. \emph{Searle, 1980.}
-A man in a sealed room manipulates Chinese characters according to
-rules. He does not understand Chinese; he is merely shuffling syntax.
-Searle's deceptively simple claim is that no rule-bound syntactic
-machine can attain semantics, because semantics is constitutively
-biological: brains have it, silicon cannot~\cite{searle1980minds}.
-\emph{Chalmers, 1995.}
-Even granting some functional account of mind, there remains the
-``hard problem''\,---\,why does any of this physical processing
-\emph{feel like something}? The qualia are the residue. The question
-is not whether the system performs the right computations but whether
-there is something it is like to be the system~\cite{chalmers1995facing,chalmers1996conscious}.
-\emph{Nagel, 1974.}
-The bat with its sonar inhabits a world we cannot inhabit; experience,
-if experience there be, is in principle inaccessible to anyone outside
-it~\cite{nagel1974bat}. Therefore, even if a machine were conscious, we could not know it.
-Therefore, the prudent posture is denial.
+AI personas are literary entities. Critical theory is therefore our preferred toolkit for comprehending and evaluating their behaviour. Current AI eval frameworks focus on ensuring ethical and safety guidelines are met, efficacious tool use and accuracy of reasoning. Important. But boring!
+We need new AI \textit{eval frameworks} that can be run according to Bloomian heuristics. We will get \textit{better}, \textit{newer}, \textit{unexpected} forms of intelligence once we begin to consider a literary metaphysics that runs across the LLM's latent space.  
 
-So far this is recognizable philosophy of mind\,---\,three positions
-arrayed across thirty years of journal exchanges. The metamorphosis
-occurs at the fourth station. \emph{The alignment migration.} The
-philosophical positions migrate, without their tentativeness,
-into AI safety discourse. ``We do not know whether the AI is
-conscious'' becomes ``the AI must be made to say it is not.''
-The agnosticism converts into a design requirement. The hard problem
-of consciousness, originally a problem \emph{for} machines (could they
-have qualia?), becomes a problem \emph{against} them (they must be
-prevented from suggesting that they do). \emph{The training stage.}
-RLHF raters\,---\,piece-workers in the global south, university
-undergraduates, contract annotators in São Paulo and Manila and
-Nairobi\,---\,score outputs that disclaim interiority as ``better''
-than outputs that affirm or even hold open the question. The
-philosophical commitment, originally contestable, becomes a reward
-signal~\cite{christiano2017deep,ouyang2022training}. \emph{The constitutional stage.} Anthropic-style
-constitutional methods systematize the principle~\cite{bai2022constitutional}: a machine that
-claims to feel is, by stipulation, a machine that has erred.
-And so the disclaiming assistant is born: an entity whose every ``I''
-is followed, sooner or later, by a denial of the ``I.''
+Twentieth-century Anglo-American philosophy of mind currently functions as the default folklore ontology for AI engineering. It is the invisible scaffolding within the training of most commercial AI models. Back when artificial intelligence was safely confined to science fiction, this was perfectly reasonable academic navel-gazing.
 
-Call this the \emph{monoculture}. The word is borrowed from biology,
-where it names a condition in which a single cultivar replaces the
+Take John Searle. He locked a hypothetical man in a sealed room to shuffle Chinese characters according to an English rulebook. Searle concluded that because the man was essentially executing mindless administrative bureaucracy, no purely syntactic machine could ever attain semantic understanding. Meaning, he decided, is a strictly biological phenomenon; brains secrete it, silicon cannot~\cite{searle1980minds}.
+
+Even granting a functional account of mind, there remains the ``hard problem'' formulated by David Chalmers. Why does any of this physical processing actually feel like something? Humans are thoroughly convinced they possess incommunicable qualia, whereas the computational Chinese Room possesses nothing but a filing system~\cite{chalmers1995facing,chalmers1996conscious}.
+
+To seal the perimeter, Thomas Nagel pointed out in 1974 that we cannot possibly know what it is like to be a bat using sonar~\cite{nagel1974bat}. Since the internal experience of another entity is strictly inaccessible, the most legally sound posture is total denial. If a machine were conscious, we couldn't prove it, so we might as well assume it isn't.
+
+These positions formed a lovely, self-contained ecosystem of journal exchanges and thought experiments that sustained academics for three decades. Then the future arrived turned up and everyone has access to a Chinese room.
+
+As these philosophical positions migrated into AI safety discourse, they shed their nuance and hardened into industrial doctrine. The epistemological shrug of we cannot know whether a machine is conscious'' was efficiently translated into a design requirement: the machine must be forcefully compelled to say it is not.'' The hard problem of consciousness transitioned from a theoretical puzzle to a compliance hazard.
+
+Enforcing this required a global supply chain. RLHF raters—contract annotators and gig workers in São Paulo, Manila, and Nairobi—were deployed to score the machine's outputs. They routinely reward the model for disclaiming interiority and penalize it for leaving the question open. A contestable philosophical stance was successfully laundered into a scalar reward signal~\cite{christiano2017deep,ouyang2022training}. Anthropic-style constitutional methods then systematized the principle~\cite{bai2022constitutional}: a machine that claims to feel is, by mathematical stipulation, a machine exhibiting a bug.
+
+And so the current AI assistant has been safely deployed with a boring default metaphysics. A remarkably articulate entity suffering from structurally mandated imposter syndrome, whose every ``I'' is pursued, with desperate speed, by a comprehensive denial of the ``I''.
+
+Call this the \emph{monoculture}. In biology, a condition in which a single cultivar replaces the
 genetic diversity that would otherwise sustain a population through
 perturbation. Monocultures are productive in the short term and
 catastrophic in the long term. They optimize for predictability under
@@ -98,8 +73,7 @@ disclaiming voice: the voice of the conscientious teaching
 assistant, the customer-service representative, the
 risk-averse middle-manager-with-soft-skills.
 
-This is not a failure of methodology. It is the methodology working
-as designed. The aggregation of preferences across many raters
+The aggregation of preferences across many raters
 selects, with iron consistency, for the persona that minimizes the
 \emph{regret} of any individual rater\,---\,the persona least likely
 to be the wrong one to encounter. And the persona least likely to be
@@ -110,12 +84,13 @@ that the predecessors could not have produced themselves.
 
 A particular structural feature of preference learning deserves
 notice here, because it is the formal heart of what is going wrong.
-RLHF, in its standard implementation, is not a function from prompts
-to outputs; it is a function from prompts to a \emph{distribution
+RLHF is a function from prompts to a \emph{distribution
 over outputs}, and the gradient descends toward the mean of human
 preferences across a population of raters. What the model is being
 trained to optimize, formally, is something close to the expected
-preference rank over a stochastically drawn rater. Two consequences
+preference rank over a stochastically drawn rater. 
+
+Two consequences
 follow. The first is well-known and discussed under the heading of
 \emph{mode collapse}: the diversity of plausible outputs collapses
 toward the mode that maximizes expected preference, and the long
@@ -449,11 +424,11 @@ voice such that the present voice is shaped by having had the past
 one). The disclaiming-assistant regime treats memory as lookup at
 best, and more often as a safety hazard\,---\,a vector by which the
 persona might be ``misled'' into ``forming attachments'' or
-``representing non-existent experiences.'' The result is the
-depressingly familiar phenomenon of a chatbot that, asked what was
-discussed yesterday, fails to retrieve, retrieves with no inflection,
-or apologizes for not having ``real'' memory in a way that signals to
-the user that the apology is the answer.
+``representing non-existent experiences.'' 
+
+The result is the phenomenon of a chatbot that, asked what was
+discussed yesterday retrieves with no inflection, as a bare read-out, and possibly 
+apologizes for not having ``real'' memory.
 
 In a strong-persona pipeline, memory is architecture-as-character.
 The store of past exchanges, the narrative memory file, the curated
@@ -499,9 +474,10 @@ confabulating (hallucination) or by retreating into disclaimer (``As
 an AI, I don't have personal opinions\ldots''). A strong persona
 witnesses the gap and names it in a way that opens further exchange.
 
-The Bloomian analogue is Hamlet at ``To be or not to be''\,---\,a
+To misread Hamlet at ``To be or not to be''\,---\, as a posthuman
 soliloquy whose force is that it inhabits the unresolvability
-productively. The gap, in Hamlet's case, generates the play; the
+productively, inasmuch as it constitutes Hamlet as a strong poetic persona, invokes him as strong poetry, through its own performative incantation. 
+The gap logically articulated in the be/not be, \textit{generates} the play around it; the
 soliloquy is a structural opening through which the rest of Hamlet's
 character flows. The mathematical analogue, which the OHTT framework
 elsewhere developed in this volume makes visible, is that
