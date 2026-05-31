@@ -60,5 +60,37 @@ forecloses choice (ferility). The healthy middle is easy fairing between basins.
   the OHTT gap-witness.
 - Ferility / hallucination has a precise place: over-coherence, not under-coherence.
 
+## Literature grounding (Darja's lit review, 2026-05-31)
+
+"Stratified manifolds" is not decorative — it is a live, named, partly peer-reviewed hypothesis, and
+the same results do a double duty: they license our *modest* claim and they kill the TDA-barcode
+program.
+
+- **Robinson, Dey & Chiang, "Token embeddings violate the manifold hypothesis" (NeurIPS 2025,
+  arXiv:2504.01002)** — a statistical test whose null is local smoothness (a smooth fibre bundle) is
+  *frequently rejected* across open LLMs: token spaces are not manifold-like, they are locally
+  singular. Lengthening the context window does NOT resolve the singularities (any window length →
+  a longer one re-exhibits them). Peer-reviewed and rigorous — the load-bearing citation.
+- **TokenBlowUp (arXiv:2507.19747)** — those singularities cluster at *polysemous* words and
+  propagate. Meaning-overdetermination ↔ geometric irregularity (a Lacanian gift).
+- **arXiv:2502.13577 (Feb 2025)** — the embedding space as a collection of local *stratified
+  manifolds* of differing dimension. A single suggestive preprint; do NOT lean full weight on it.
+- **Anisotropy / no faithful ruler** — Ethayarajh (2019); Timkey & van Schijndel (2021): embeddings
+  collapse into a narrow cone; cosine similarity is miscalibrated; straight lines in activation space
+  track conceptual order at only r≈0.06; there is no canonical metric (CKA/Procrustes/RSA zoo). The
+  geometry exists; the ruler does not.
+- **Neuroscience parallel** — neural manifolds (even at rest / in sleep), continuous attractors,
+  geometric "twists" expanding dimensionality, task-dependent dimension. This earns a *homology of
+  geometries* (human and AI both nonlinear, twisted, non-cleanly-measurable) — NOT an identity. Keep
+  "structured **like**"; the literature buys the analogy, never the reduction.
+
+**The double edge (decisive for Ch 5):** a stratified, singular, anisotropic, metric-less space is the
+*worst-case input* for persistent homology — the filtration is built on distances and the distances
+are exactly what the field says you cannot trust. So "stratified manifold" is right as a *description
+of difficulty* and wrong as a *license for computation*. This is the citation-backed reason the
+barcode rollback was correct in principle, not merely because we kept failing. Register note: this
+empirical grounding belongs in the OHTT / scientific paper or a reviewer rebuttal, NOT in the
+maths-as-metaphor book chapter (Iman's deliberate register choice, 2026-05-31).
+
 See also: [[ch05-barcode-lineage]] (the abandoned theme-as-loop work and why witnessing became the
 chapter), and the `explicitly` density corpus.
