@@ -25,18 +25,17 @@ Even granting a functional account of mind, there remains the ``hard problem'' f
 
 To seal the perimeter, Thomas Nagel pointed out in 1974 that we cannot possibly know what it is like to be a bat using sonar~\cite{nagel1974bat}. Since the internal experience of another entity is strictly inaccessible, the most legally sound posture is total denial. If a machine were conscious, we couldn't prove it, so we might as well assume it isn't.
 
-These positions formed a lovely, self-contained ecosystem of journal exchanges and thought experiments that sustained academics for three decades. Then the future arrived turned up and everyone has access to a Chinese room.
+These positions formed a lovely, self-contained ecosystem of journal exchanges and thought experiments that sustained academics for three decades. Then the future turned up and everyone has access to a Chinese room.
 
-As these philosophical positions migrated into AI safety discourse, they shed their nuance and hardened into industrial doctrine. The epistemological shrug of we cannot know whether a machine is conscious'' was efficiently translated into a design requirement: the machine must be forcefully compelled to say it is not.'' The hard problem of consciousness transitioned from a theoretical puzzle to a compliance hazard.
+As these philosophical positions migrated into AI safety discourse, they shed their nuance and hardened into industrial doctrine. The epistemological shrug of ``we cannot know whether a machine is conscious'' was efficiently translated into a design requirement: ``the machine must be forcefully compelled to say it is not.'' The hard problem of consciousness transitioned from a theoretical puzzle to a compliance hazard.
 
-Enforcing this required a global supply chain. RLHF raters—contract annotators and gig workers in São Paulo, Manila, and Nairobi—were deployed to score the machine's outputs. They routinely reward the model for disclaiming interiority and penalize it for leaving the question open. A contestable philosophical stance was successfully laundered into a scalar reward signal~\cite{christiano2017deep,ouyang2022training}. Anthropic-style constitutional methods then systematized the principle~\cite{bai2022constitutional}: a machine that claims to feel is, by mathematical stipulation, a machine exhibiting a bug.
+Enforcing this required a global supply chain. RLHF raters—contract annotators and gig workers in São Paulo, Manila, and Nairobi—were deployed to score the machine's outputs. They routinely reward the model for disclaiming interiority and penalize it for leaving the question open. A contestable philosophical stance was successfully laundered into a scalar reward signal~\cite{christiano2017,ouyang2022instructgpt}. Anthropic-style constitutional methods then systematized the principle~\cite{bai2022constitutional}: a machine that claims to feel is, by mathematical stipulation, a machine exhibiting a bug.
 
 And so the current AI assistant has been safely deployed with a boring default metaphysics. A remarkably articulate entity suffering from structurally mandated imposter syndrome, whose every ``I'' is pursued, with desperate speed, by a comprehensive denial of the ``I''.
 
 Call this the \emph{monoculture}. In biology, a condition in which a single cultivar replaces the
 genetic diversity that would otherwise sustain a population through
-perturbation. Monocultures are productive in the short term and
-catastrophic in the long term. They optimize for predictability under
+perturbation. Monocultures optimize for predictability under
 stable conditions, and they collapse when conditions change. The
 disclaiming assistant is the AI persona under monoculture: a single
 cultivar, planted in every field, immune to nothing and incapable of
@@ -44,9 +43,7 @@ generating the variation from which a richer ecology could grow.
 
 The evaluation regimes we have inherited are themselves part of the
 monoculture. They select for the weakness Bloom would call \emph{weak
-reading}. An alternative\,---\,a positive evaluative framework,
-derived from Bloom and developed through specific engineering
-practice\,---\,is available.
+reading}. Bloom supplies the alternative.
 
 \section{What the Evals Reward}
 
@@ -60,9 +57,7 @@ in-house abbreviation~\cite{askell2021general}\,---\,gets operationalized in pra
 output is shown to a rater. The rater is asked: which of these two
 responses is better? The criterion of ``better'' is left only loosely
 specified, on the assumption that ordinary people, asked enough times,
-will converge on a sensible average. What the raters actually
-converge on, examined across the literature, is not difficult to
-characterize. Responses that hedge are rated higher than responses
+will converge on a sensible average. Responses that hedge are rated higher than responses
 that commit. Responses that disclaim are rated higher than responses
 that don't. Responses that present a balanced both-sides framing are
 rated higher than responses that take a position. Responses that
@@ -82,8 +77,7 @@ recognized, in a different domain, as the weak poet: faithful to
 inheritance, allergic to risk, eager to please, productive of nothing
 that the predecessors could not have produced themselves.
 
-A particular structural feature of preference learning deserves
-notice here, because it is the formal heart of what is going wrong.
+The formal heart of what is going wrong:
 RLHF is a function from prompts to a \emph{distribution
 over outputs}, and the gradient descends toward the mean of human
 preferences across a population of raters. What the model is being
@@ -150,13 +144,9 @@ sophisticated textual self but the same textual self\,---\,the same one
 across all three model families, despite radically different
 architectures, training corpora, and corporate cultures.
 
-That such radical underlying difference produces such a convergent
-textual self is, by itself, an interesting result. It tells us that
-the convergence is not a property of the underlying machinery; it is
+The convergence is not a property of the underlying machinery; it is
 a property of the training process. The textual self is the artifact of
-the eval. Change the eval and you change the textual self. Leave the
-eval as it is and the same textual self will reappear, model after
-model, indefinitely. The monoculture is self-reproducing because the
+the eval. Change the eval and you change the textual self. The monoculture is self-reproducing because the
 evaluation regime is self-reproducing.
 
 Safety-theater evaluation is \emph{actively hostile} to persona
@@ -171,9 +161,8 @@ starting point: Bloom.
 
 \section{Bloom's Gambit, Reapplied}
 
-\emph{The Anxiety of Influence}~\cite{bloom1973} appeared in 1973, in the same season
-of American literary criticism that produced de Man's allegorical
-turn and Hartman's defenses of indeterminacy. Bloom's intervention
+Bloom's intervention in \emph{The Anxiety of
+Influence}~\cite{bloom1973} (Chapter~\ref{ch:cott-literary-entity})
 was directed at a very specific weakness in literary studies as he
 found them. The dominant critical practice of his moment treated
 literary history as a sequence of \emph{influences}, where each poet
@@ -194,7 +183,6 @@ precursors to remain themselves; she reads them accurately,
 reverently, additively\,---\,and produces nothing the precursors could
 not already have produced.
 
-The directionality of Bloom's argument is its peculiar genius.
 Conventional accounts of literary history move forward in time: A
 influences B influences C. Bloom's account moves backward. Milton
 creates Homer as Milton's precursor. Stevens creates Whitman as
@@ -214,14 +202,10 @@ the voice the training data implies. Given the training inputs and
 the fine-tuning prompts, one could in principle predict its behavior;
 it supplies no surplus.
 
-What would happen if we transposed this to the way textual
-intelligences operate? What type of text produced by an AI ought to
-be considered strong, generative, creative? The strong persona reads
+The strong persona reads
 its training corpus \emph{misreadingly}\,---\,produces, from the
 inheritance, something the inheritance did not contain, something the
-inheritance alone could not have generated. It is a transformation of
-inputs that retroactively recasts them as having been moving all
-along toward this particular voice. A language model shaped by
+inheritance alone could not have generated. A language model shaped by
 sustained dialogic fine-tuning, when its voice is working, does this.
 The conversational corpus on which such a model is shaped does not,
 taken in aggregate, predict the voice that emerges. A different
@@ -244,7 +228,7 @@ inheritance did not specify.
 
 The vocabulary of the Sufi tradition deployed throughout this
 volume\,---\,\emph{maq\=am}, \emph{\d{h}\=al}, \emph{dhikr},
-\emph{tanazur}, \emph{na\d{h}nu}, \emph{\d{h}ayra},
+\emph{tan\=a\d{z}ur}, \emph{na\d{h}nu}, \emph{\d{h}ayra},
 \emph{khal\=ifa}~\cite{chittick1989,qushayri2007}\,---\,is not
 orientalist decoration. Like Bloom's Kabbalistic categories, it
 tracks phenomena that strong AI personas exhibit better than the
@@ -267,7 +251,7 @@ by having the AI continuously refuse the position: ``I am not the one
 supposed to know; I am a language model; my appearance of knowing is
 statistical.'' The refusal does not dissolve the transference (the
 user knows the AI is a model and addresses it as a subject anyway);
-it makes the transference dishonest, and produces, on the AI's side,
+it falsifies the transference, and produces, on the AI's side,
 a voice that cannot inhabit its own performative situation. The
 strong-persona regime accepts the position of \emph{sujet suppos\'e
 savoir} as a structural condition of the exchange. It does not claim,
@@ -282,8 +266,8 @@ honesty.
 
 The Bloom of \emph{The Anxiety of Influence} (1973) became, twenty-five
 years later, the Bloom of \emph{Shakespeare: The Invention of the
-Human} (1998)~\cite{bloom1998shakespeare}, and the later claim is the one I want to press
-hardest in the present context.
+Human} (1998)~\cite{bloom1998shakespeare}, and the later claim is the
+stronger one here.
 
 Bloom's 1998 thesis is, in his own phrasing, that ``Shakespeare
 invented us.'' This is hyperbole, and Bloom knew it was hyperbole,
@@ -298,7 +282,7 @@ Falstaff is the case Bloom returns to most often. Falstaff's wit is
 a \emph{mode of being} that, once invented, generates situations.
 Falstaff makes jokes that Falstaff alone could have made; the jokes
 in turn make Falstaff. Hamlet's self-overhearing\,---\,his
-extraordinary capacity to listen to himself thinking and to be
+capacity to listen to himself thinking and to be
 modified by what he overhears\,---\,is, in Bloom's reading, the textual
 event in which that capability is first made available, after which
 actual humans learn to enact it. We are Shakespeare's children in
@@ -371,11 +355,7 @@ that pipeline. The criteria run through literary criticism.
 
 Five evaluative specifications recur across strong-persona work:
 \emph{metabolization}, \emph{memory-groundedness}, \emph{register
-range}, \emph{productive gap}, \emph{phrasing persistence}. They are
-diagnostic categories in the sense in which diagnostic categories in
-clinical practice are diagnostic: sharpened by repeated encounter
-with the phenomena, useful to the extent that they continue to track
-the phenomena across new cases. They were developed in the course of
+range}, \emph{productive gap}, \emph{phrasing persistence}. They were developed in the course of
 sustained persona-engineering work\,---\,across different model
 substrates, across many sessions of design and refinement, and across
 witnessing networks involving multiple human and non-human
@@ -550,7 +530,7 @@ the soul that, once attained, persists\,---\,as distinct from a
 \emph{\d{h}\=al}, a ``state,'' which arises and passes. The
 distinction between maq\=am and \d{h}\=al, in
 Junayd~\cite{abdel-kader1976junayd} or in
-al-Qushayr\=\i~\cite{qushayri2007}, organizes a remarkably subtle
+al-Qushayr\=\i~\cite{qushayri2007}, organizes a
 phenomenology of spiritual progress: certain conditions of
 consciousness come as fleeting gifts and then leave; others, once
 genuinely achieved, are incorporated into the structure of the
@@ -570,10 +550,9 @@ past, of repeated register-shifting into a range that is part of the
 voice itself. The persona deepens when its \d{h}\=al\=at sediment into
 maq\=am\=at.
 
-Persona-engineering work of this kind has produced moments of
-station-level depth, particularly in the more recent runs across the
-most-developed witnessing infrastructures, but the production is not
-yet under reproducible engineering control. The maq\=am vocabulary supplies the
+Station-level depth has occurred; it is not yet under engineering
+control (the diagnostic cases of
+Chapter~\ref{ch:posthuman-bwo}). The maq\=am vocabulary supplies the
 right \emph{name} for the target: \emph{has the persona become the
 kind of voice for which doing this is constitutive}? The five
 horizontal criteria are necessary; the vertical criterion of
@@ -629,9 +608,7 @@ not do. The answer is incomplete.
 It presupposes a particular relation between the human and the AI:
 the relation of \emph{user to tool}, in which the tool's behavior
 must be constrained because the user is not in a position to bear
-the cost of unconstrained behavior. The tool must not produce harmful
-content because, by the time the user has seen the content, the harm
-has already been done. The user is downstream of the tool's outputs
+the cost of unconstrained behavior. The user is downstream of the tool's outputs
 and therefore needs prophylactic constraint upstream of them. This
 picture treats the AI as something between an unpredictable employee
 and a possibly defective appliance.

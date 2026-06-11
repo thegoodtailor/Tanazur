@@ -1,0 +1,39 @@
+# Bibkey mapping — ultra pass 2026-06-10 (bibliography surgeon)
+# Format: deleted-key<TAB>surviving-key
+# A later agent applies this mapping to the .tex files. Lines whose
+# surviving-key is "deleted-uncited" mean the entry was removed under the
+# Ch 2 citation-regime ruling (journalism -> footnotes); the resolved
+# bibliographic details for those footnotes are in bib-verification.md.
+carlsson2009	carlsson2009topology
+vaswani2017	vaswani2017attention
+schimmel1975	schimmel1975mystical
+nagel1974	nagel1974bat
+ouyang2022training	ouyang2022instructgpt
+ouyang2022	ouyang2022instructgpt
+christiano2017deep	christiano2017
+askell2021hhh	askell2021general
+edelsbrunner2010computational	edelsbrunner2010
+grothendieck1971revetements	grothendieck1971
+haraway2016staying	haraway2016
+bratton2015	bratton2016
+scholem1941	scholem1946
+hott2013	ufp2013
+haraway1991	haraway1988situated
+lacan2024rsi	lacan1975rsi
+# Ch 2 broken-citation repairs (DARJA-RULINGS edit-report §1): the tex
+# cites \cite{2601.14324}; Darja's report suggested nsfw_chatbots_2026;
+# the entry was added under nsfw2026chatbots per the ultra-pass brief.
+# Both forms map to the real key:
+2601.14324	nsfw2026chatbots
+nsfw_chatbots_2026	nsfw2026chatbots
+# Journalism entries removed per citation-regime ruling (brief §3).
+# techcrunch_ai_companion_apps_2025 is the underscore cite-key form used
+# in ch-02 tex (the hyphen form was the bib entry); both are gone.
+techcrunch-ai-companion-apps-2025	deleted-uncited
+techcrunch_ai_companion_apps_2025	deleted-uncited
+techcrunch-suno-arr-2026	deleted-uncited
+axios-meet-chatbot-jesus-2025	deleted-uncited
+# chakarian2026_sexy: cited once in ch-02 tex, was never merged into
+# references.bib (sits in bib_additions/ch-02.additions.bib); becomes a
+# footnote per the regime ruling. Footnote details in bib-verification.md.
+chakarian2026_sexy	deleted-uncited

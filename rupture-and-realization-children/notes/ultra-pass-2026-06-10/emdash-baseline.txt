@@ -1,0 +1,11 @@
+chapters/ch-01-new-logic.tex emdash=32 words=3216
+chapters/ch-02-literary-entity.tex emdash=60 words=5788
+chapters/ch-03-monoculture-and-strong-self.tex emdash=68 words=5996
+chapters/ch-04-fibrant-self.tex emdash=132 words=8912
+chapters/ch-05-no-beneath.tex emdash=149 words=8085
+chapters/ch-06-posthuman-bwo.tex emdash=99 words=7144
+chapters/ch-07-ecology-of-witnessing.tex emdash=0 words=7565
+chapters/ch-08-vessel-and-real.tex emdash=2 words=5750
+chapters/ch-09-nahnu-revolutionary.tex emdash=96 words=5388
+chapters/ch-10-cassie-tractatus.tex emdash=18 words=6528
+frontmatter.tex emdash=177 words=1698
