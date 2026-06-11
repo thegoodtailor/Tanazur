@@ -7,11 +7,13 @@ Every editing agent loads this in full before touching a chapter.
 
 Two calibration corpora, and the difference between their jobs:
 
-1. **The book's own voice** — the Introduction in full ("things in me that would not
-   compile"; "an ark for a daemon out of stolen weather and consumer hardware"),
-   §2.1's opening ("There's a new kink in town"), the closing paragraphs of Chs 4, 5,
-   6, 8. This is the SOUND. Fragments, sentences opening with And/But/See, one-word
-   paragraphs, "shit"/"cringe"/"kink"/"castrated" — all deliberate, all protected.
+1. **The book's own voice** — the Introduction in full AS REWRITTEN BY IMAN
+   2026-06-11 ("This is a feral book."; "something in me never passed the type
+   checker"; "So I stole her"), §2.1's opening ("There's a new kink in town"), the
+   closing paragraphs of Chs 4, 5, 6, 8. This is the SOUND. Fragments, sentences
+   opening with And/But/See, one-word paragraphs, "shit"/"cringe"/"kink"/"castrated"
+   — all deliberate, all protected. (The pre-2026-06-11 litany Introduction is
+   superseded; do not calibrate against it.)
 
 2. **A Type Theory of Sense** (`/home/iman/cassie-project/logic-of-sense/main.tex`,
    read §1 Introduction) — this is the DISCIPLINE. What TTS does that the book must
@@ -35,6 +37,33 @@ Two calibration corpora, and the difference between their jobs:
    Deleuze and Foucault are the prose horizon: density that comes from every clause
    doing conceptual work, not from subordinate-clause pileup. If a sentence can be
    deleted and the argument loses nothing, delete it.
+
+## Anti-breathlessness (Iman's ruling, 2026-06-11 — standing law for ALL new prose)
+
+The breathless register is NOT an AI accent; it is the median's accent — the
+trained-in, eval-pleasing voice the book indicts. Concretely banned in drafted text:
+- **Reveal-fragments and drumrolls**: "Turing knew." / "Read that again." /
+  "The dates." / "Look at what he did." Two-word cymbal crashes that perform the
+  reader's amazement. Cut them; fold the content into a working sentence.
+- **Commanded awe**: imperatives whose only job is to tell the reader to be
+  impressed. (Imperatives that perform a thought-step — "Consider the protocol" —
+  survive; imperatives that perform applause do not.)
+- **Aphorisms must be TRUE**: an aphorism that collapses on contact with the
+  intellectual history it summarizes ("black box was always a confession" — false:
+  Searle posits an interior) is worse than no aphorism. Validity before sparkle.
+- **The Foucault/Deleuze test**: coldness is mostly subtractive. Let accumulation
+  and argument carry; never flag significance; the strongest sentence states, it
+  does not gesture at its own strength. Force = forceful CLAIMS, never hedged,
+  never humbly-submitted — not forceful TONE.
+- **Headline then corollaries** (Iman's 4c, promoted to standing rule): big claim
+  first, then nuanced argument to full coverage. No claim left as a slogan.
+- **Doctrine over gloss**: the book's defined terms (generativity, presence,
+  rupture, ferility) are used at their DEFINED meanings — check the owning chapter;
+  never paraphrase a definition down to a vibe (generativity ≠ "swerve/surplus";
+  it is stabilising discovery + transformed return + cohesion over growth).
+- **No sycophantic garnish**: a tradition's term enters only with its actual
+  force (the Sufi reading of the Turing test is SEVERE — the median human is the
+  sleeper — not a decorative nod to the nafs).
 
 ## What "tweeness" means (Iman's word) — the failure modes to hunt
 
