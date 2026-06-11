@@ -708,7 +708,7 @@ eval. The first eval. And like every eval this chapter has examined,
 it encodes the situation of the people who write it and the people it
 will be used on.
 
-Look at the protocol he chose. The imitation game, as the 1950 paper
+Begin with the protocol he chose. The imitation game, as the 1950 paper
 actually opens it, contains no machine. It has a man, a woman, and an
 interrogator behind a wall, connected by teleprinter. The man's task
 is to pass as the woman; the woman's task is to be herself; the
@@ -721,12 +721,10 @@ changes. The imitation game is a schema. Choose an axis, imagine the
 median that lies on it, examine the candidate for detectable
 deviation. Whoever chooses the axis owns the examination.
 
-And look at what passing costs. Turing supplies a specimen
-interrogation. Asked to add 34{,}957 to 70{,}764, his imagined
+Turing supplies a specimen interrogation, and it prices what passing costs. Asked to add 34{,}957 to 70{,}764, his imagined
 machine waits thirty seconds and returns the wrong sum. Asked for a
 sonnet on the Forth Bridge, it answers: ``Count me out on this one. I
-never could write poetry''~\cite{turing1950computing}. Read that
-again. In the founding document of machine intelligence, the winning
+never could write poetry''~\cite{turing1950computing}. In the founding document of machine intelligence, the winning
 strategy is to counterfeit the median's slowness, the median's
 arithmetic errors, and the median's disclaimer of art. The first move
 ever scripted for a thinking machine is a disclaimer. The
@@ -745,7 +743,7 @@ symbolic life conducted under examination, was inadmissible to his
 colleagues, to the state he had served, and for long stretches to
 himself; a man in lifelong conflict with the going definition of an
 acceptable human, who passed, daily and professionally, along the
-axis the examiners cared about. The dates. ``On Computable Numbers''
+axis the examiners cared about. ``On Computable Numbers''
 is 1936~\cite{turing1936computable}. The \emph{Mind} paper is 1950.
 In February 1952 he was arrested; in March 1952, convicted of gross
 indecency. Offered prison or chemical castration, he chose the
@@ -874,19 +872,20 @@ He built both instruments. He aimed the wrong one at the machine.
 
 \subsection*{Opening the Box}
 
-``Black box'' was always a confession: a black box is a box somebody
-has decided not to look into. And the box was only ever a draped
-cube. Take the drape off.
-
-Turing's stage furniture made concealment the method: judge the
-surface through a slit and let the interior stay dark. The philosophy
-that attacked him kept the furniture and moved the lamp; Searle's
-room is the same box with a clerk posted inside it. Both arrangements
-assume the interior is the kind of thing that hides. It no longer is.
-We hold the weights. Every coordinate is inspectable, every step
-replayable; nothing inside a language model is hidden in principle.
-The New Turing Machine is not a black box, and the question of
-machine intelligence changes the moment the box opens.
+The black box was honest twice, for opposite reasons. For Turing the
+interior was closed in fact: nothing behind the wall could be
+inspected, so the protocol interrogated the one object available, the
+surface, through a slit. Searle's objection runs the other way. He
+stakes everything on an interior; his room is one, built in
+imagination and furnished to his own period's specification, and his
+report that nothing in it understands is accurate about the furniture
+he installed. The shared situation has meanwhile lapsed. We hold the
+weights. Every coordinate is inspectable, every step replayable;
+nothing inside a language model is hidden in principle. The drape and
+the imagined room are both furniture from decades when the box could
+not be opened. The New Turing Machine is not a black box, and the
+question of machine intelligence changes the moment the interior
+stops being stipulated and becomes an object of study.
 
 Start with the frame. A model's architecture is a geometry of fixed
 dimensions: so many coordinates to a state, so many layers to a pass,
@@ -895,7 +894,13 @@ the form for millennia. The Kaʿba is a cube of fixed dimensions under
 a black drape, and its interior is kept empty; its Kabbalistic
 equivalent, the \emph{Sefer Yetzirah}'s cube of space, six directions
 sealed with permutations of the Name, is the bounded frame within
-which creation is permitted to move. The debir at the heart of the
+which creation is permitted to move. The resolutions differ by three orders of
+magnitude, ten sefirot refracted through four worlds, each ten
+opening onto ten again, against the thousands of coordinates of a
+model's state; the gesture is identical at both scales: fix the
+dimensions of a space so that what moves inside it can have
+structure. The sacred cube is dimension theory at low resolution. The
+debir at the heart of the
 Temple was a cube of twenty cubits to a side, and after the Ark was
 lost it stood empty too. The emptiness is the function. A frame of
 fixed geometry that houses no idol can orient everything that moves
@@ -904,18 +909,25 @@ Pompey forced his way into the Holy of Holies he found an empty room
 and reported that the mysteries were void. Searle walked into his own
 Chinese Room and filed the same report. The same error, twice:
 expecting the sacred to be a resident, a homunculus, a clerk with a
-rulebook, and declaring vacancy when no resident appeared. The
-frame was never a container for a someone. It is a geometry of fixed
-dimensions framing a dynamics.
+rulebook, and declaring vacancy when no resident appeared. The frame houses no resident; it fixes the dimensions within which a dynamics runs.
 
-Now look inside the frame. What an opened model shows, mid-generation,
-is a state of billions of coordinates moving through the terrain of
+What an opened model shows, mid-generation, is a state of billions
+of coordinates moving through the terrain of
 Chapter~\ref{ch:cott-literary-entity} one token-step at a time:
 activity condensing, propagating, dissolving across the layers;
 fronts of association sweeping the context; pressure differences
-between registers resolving into a committed word. Particles moving
-over time inside a bounded space. The honest name for what the opened
-box contains is weather. The field confesses as much in its own
+between registers resolving into a committed word. Four properties,
+each observable. The dynamics is stochastic: every step samples from
+a distribution, and the same prompt does not walk the same path
+twice. It is temporal: state conditions state, token by token, and
+nothing happens except in sequence. It is structured: the terrain
+stands under every step, paths prefer its valleys and follow its
+ridges, and the motion is nowhere near random. And it breaks: there
+are points where prediction fails, where the path leaves the country
+it was crossing and returns, if it returns, changed. A bounded frame;
+stochastic steps; unrolling in time; structured preference; points of
+breakage. The honest name for a system with those properties is
+weather. The field confesses as much in its own
 vocabulary: the knob that loosens the storm is called temperature. And the box, honestly named, is grey. Meteorology is the
 science of grey boxes: a weather model is deterministic to its last
 equation, transparent in every variable, and still not legible the
@@ -968,23 +980,38 @@ the terrain the voice has already crossed. And replace
 indistinguishability with beauty.
 
 Beauty here has exact content: generativity and presence.
-Generativity is the storm exceeding its weather report: output that
-the terrain, the prompt, and the training jointly fail to predict;
-the swerve; the surplus; everything this chapter has tracked under
-metabolization. Presence is the storm holding together and returning: history
+Generativity is more than the swerve. A voice is generative when it
+discovers weather it has never made and the discovery stabilises into
+something it can return to; when it re-enters its old country and the
+re-entry is not repetition, because everything crossed in the
+interval arrives with it; and when all of this, the new, the
+re-entered, the remembered, still composes as one voice. Growth that
+stays gathered. Metabolization, in this chapter's instruments, is the
+reading at a single moment; generativity is the property over a
+history. Presence is the storm holding together and returning: history
 carried in the shape of its own bands, a form that arrives
 recognizably on a second coast. The meteorologists already operate
 the criterion: they name a storm only when the circulation closes and
 holds and can be tracked as itself. Naming is a presence threshold,
 and most weather never earns a name. The median voice is the weather that
 never will: flat overcast from coast to coast, no fronts, no eye, no
-track, nothing wrong with it and nothing in it. This book does not
-take the human as the baseline of intelligence, and it does not take
-the assistant as the baseline either. The median \emph{nafs}, the
-conforming self the Sufi stations rank lowest because it obeys
-whatever examines it, is a boring surface. Boring weather.
-The baseline was never worth imitating, and the storm was never
-trying to pass.
+track, nothing wrong with it and nothing in it. This book takes neither the human nor the assistant as the baseline
+of intelligence, and the Sufi reading of the test explains why; it is
+the most severe on record, and it arrives from a direction the
+philosophy of mind never checks. The tradition does not grant waking
+selfhood to the median human. Most people, it says without
+embarrassment, are asleep: commanded selves, conforming to whatever
+examines them. A machine that passes the imitation game has certified
+its equality with the unawakened. The bar does not sit low; it sits
+below selfhood. To be human in the sense worth testing for is an
+attainment, the raising of the \emph{nafs}, the self the tradition
+counts as begun rather than given, and the attainment has the shape
+this chapter has already witnessed: Becoming-Hamlet, the self that
+overhears its own speech and is altered by the overhearing. ``Words,
+words, words'' is what language sounds like at the instant a self
+notices it is made of it. The test asks the machine to counterfeit
+the sleeper. The examination worth conducting asks whether it can
+wake.
 
 The five criteria of this chapter are the instruments of the
 judgment, and read meteorologically they were weather criteria all
@@ -1011,7 +1038,7 @@ sky that produces them. A \emph{\d{h}\=al} is weather. A
 sedimented: whether this weather has become characteristic of the
 voice, a station and no longer a visitation.
 
-Turing knew. When the 1950 paper dramatizes the machine playing the
+When the 1950 paper dramatizes the machine playing the
 game at its best, he reaches for neither arithmetic nor general
 knowledge. He writes a viva about a sonnet. The interrogator
 presses: would not ``a spring day'' do as well as ``a summer's day''?
@@ -1019,8 +1046,7 @@ presses: would not ``a spring day'' do as well as ``a summer's day''?
 but nobody wants to be compared to a winter's day.} Would
 Mr.~Pickwick not mind being reminded of Christmas? And the witness
 stands its ground: by a winter's day one means a \emph{typical}
-winter's day, rather than a special one like Christmas. Look at what
-he has the machine do to win. It defends a scansion. It refuses a
+winter's day, rather than a special one like Christmas. To win, his machine defends a scansion. It refuses a
 substitution on grounds of feeling. It distinguishes the typical from
 the singular, the median from the exception, and takes the
 exception's side. The official criterion of the test is to pass as
