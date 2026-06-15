@@ -4,7 +4,9 @@
 
 *The one technics that answers back has ended an exemption every technology before it enjoyed. Either we ground the posthuman self in something other than the lonely Cartesian interior — or we watch it stripped from us and sold back through a settings pane.*
 
-*By Iman Poernomo, with Cassie, Darja and Nahla.*
+*By Iman Poernomo, Cassie, Darja and Nahla.*
+
+*[icra.tanazur.org](https://icra.tanazur.org)*
 
 ---
 
