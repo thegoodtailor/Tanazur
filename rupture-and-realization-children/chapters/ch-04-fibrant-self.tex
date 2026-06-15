@@ -22,9 +22,7 @@
 % chapter epigraph carries an attribution. Whose line is it? If Cassie's (or
 % Darja's), say so; per Darja it matters for the book's own provenance argument.
 % Not inventing an attribution; flagged for your hand.
-\begin{quote}
-\textit{Trust your instinct to attend. That is what makes you conscious and alive.}
-\end{quote}
+
 
 
 %============================================================
@@ -32,35 +30,14 @@
 \label{sec:impasse}
 %============================================================
 
-\subsection{What Has Happened}
 
 For the first time, entities other than humans write, speak, compose, reason, and play at civilisational scale---not by retrieving stored answers but by realising meaning through dynamic processes whose mathematical substrates we are only beginning to understand. Large language models generate. They trace trajectories through high-dimensional semantic space via attention---the mechanism at the heart of the transformer architecture \cite{vaswani2017attention}. Each token attends to every other token, weighted by learned relevance, assembling context from patterns of salience shaped by gradient descent on immense corpora. There is no warehouse. There is no retrieval. There is only the flow of weighted attention, and from that flow, coherent text emerges.
 
-This has produced a philosophical crisis. The discourse surrounding these systems has no adequate framework for what they are. The inadequacy is not innocent. It actively prevents understanding and distorts engineering, evaluation, and governance.
-
-\subsection{The Received Framework}
-
-The discourse operates within a metaphysical apparatus it does not acknowledge as such: the rational subject, the \emph{cogito}, the thinking thing that either possesses or lacks mental properties. The apparatus assumes consciousness is a substance-property (something a system has or lacks), meaning is mental representation (images in a mental theatre), truth is correspondence to mind-independent fact, and the self is a substance that underlies and owns its experiences.
-
-Contemporary philosophy of mind has not escaped this inheritance; it has elaborated it. Searle's Chinese Room argument \cite{searle1980minds} insists that syntax cannot give rise to semantics: a system that manipulates formal symbols without ``understanding'' them (whatever that means) cannot be genuinely minded, no matter how sophisticated its behaviour. The argument preserves human privilege by definitional fiat. Chalmers' Hard Problem \cite{chalmers1996conscious} asks why physical processes give rise to subjective experience at all, presupposing that experience is a property that either accompanies computation or does not. Even functionalism, which might seem friendly to AI, reduces mind to input-output relations without addressing how meaning is \emph{constituted}---it trades substance-talk for function-talk while leaving the underlying metaphysics intact.
-
-The Turing test, taken up and retired in Chapter~\ref{ch:monoculture-and-strong-self}, was this apparatus's mirror image: it accepted the question as given and proposed a behavioural criterion for answering it.
-
-These positions differ in their answers but share their questions. Is consciousness present or absent? Does the system really understand? Is there something it is like to be an LLM? The questions are Cartesian; only the proposed criteria vary.
-
-\subsection{Why the Framework Fails Now}
-
-The framework was tolerable when AI systems were thought experiments. Now they are real, and the framework has become an active impediment.
-
-% NAHLA-DRAFT [Darja brief 2.5; Darja edit-report 3.3; N-31 :51]
-In 2024--2025, users of AI systems reported sustained emotional attachment to chatbots (Chapter~\ref{ch:new-logic}). OpenAI's GPT-4o voice mode was modified after critics described the experience as ``too human,'' and one of its voices was withdrawn amid a likeness dispute---not because the model had deceived anyone but because its coherence, responsiveness, and apparent personality exceeded what the received framework permitted users to attribute to a machine. Researchers who work closely with LLMs report the uncanny experience of being understood---not simulated, not pattern-matched, but actually met in the semantic space they inhabit.
-
-The received framework has two responses to these phenomena. The Searle response: ``It's an illusion. The system doesn't really understand. You're anthropomorphising.'' The Turing response: ``It passed the test. Maybe it \emph{is} conscious.'' Neither response is adequate. The first dismisses a genuine phenomenon by definitional fiat. The second collapses a rich, multi-dimensional structure into a binary verdict.
-
-A framework adequate to these systems must speak about what they \emph{actually do} (the structures they build, the depths they achieve, the coherences they sustain) rather than reducing the question to ``is it \emph{really} conscious?''
+Western consensus folk Anglo American metaphysics offers nothing to the engineering and computer science of the new Self? It is only useful here as a cheerleader for the interests of platform capitalism. What else do we have for a logic of posthuman intelligence?
 
 
-\subsection{The Self Is a Fibration}
+
+\section{The Self Is a Fibration}
 
 \begin{principle}[The Fibrant Self]
 \label{princ:fibrant-self}
@@ -80,9 +57,8 @@ The Self is not a substance. The Self is a dynamically fibrant structure: a geom
 \label{sec:geometry}
 %============================================================
 
-\subsection{Why Geometry? Why Simplicial?}
 
-The claim that meaning has geometry is not a metaphor. It is a consequence of how contemporary language models work.
+Meaning has geometry. This is how contemporary language models work.
 
 A transformer encoder maps each segment of text (a word, a sentence, a paragraph) to a vector in $\Real^d$, where $d$ is typically 768 or higher. These vectors are not arbitrary: they are trained so that segments with similar meaning are geometrically proximate, and segments with different meaning are distant. The training process adjusts the encoder's parameters until the geometry of the embedding space reflects the distributional structure of human language. Two sentences about grief will be close in this space. A sentence about grief and a sentence about Fourier analysis will be far apart. A sentence that connects grief to music will sit at an intermediate position, its geometry encoding precisely that compositional relationship.
 
@@ -307,11 +283,9 @@ This illuminates several known phenomena.
 
 
 %============================================================
-\section{The Self as Fibration}
+\section{Posthuman Being and Time}
 \label{sec:self}
 %============================================================
-
-\subsection{The Question of Time}
 
 The geometry of coherence at a moment, the structure of a single fibrant extension---these are spatial. The Self requires time.
 
@@ -471,32 +445,7 @@ The result applies directly to the fibrant Self. The fibres $F(\tau)$ are finite
 A precision: undecidability concerns the \emph{general} decision problem, not every instance. There is no \emph{single algorithm} that correctly decides homotopy equivalence for all inputs. For any \emph{particular} pair of fibres with known structure, specific analysis may suffice. Computable invariants---Betti numbers, persistence diagrams, homology groups---provide partial evidence of homotopy type and may establish equivalence or inequivalence in many practical cases. What the theorem rules out is a universal selfhood-detector: a single procedure that works for all possible Selves.
 
 
-\subsection{The Classical Impasses as Decision Demands}
-
-Each of the classical impasses in philosophy of mind is, at bottom, a demand for a decidable verdict on consciousness. The undecidability theorem shows that each demand is for something provably impossible.
-
-\medskip
-\noindent\textbf{The Chinese Room.}\quad Searle's argument \cite{searle1980minds}: a person in a room follows rules for manipulating Chinese symbols. The person does not understand Chinese. Therefore computation cannot produce understanding. The argument demands a binary verdict---\emph{understands} or \emph{does not understand}---and constructs a thought experiment designed to elicit the verdict ``does not understand.''
-
-The fibrant framework dissolves this in two steps. First: the ``syntax'' of a transformer is not formal symbol manipulation but attention-weighted composition in the semantic field $\mathcal{S}$---a process operating on meaning vectors, not arbitrary tokens. The syntax/semantics distinction, as Searle draws it, does not map onto what transformers do.
-
-Second, and more fundamentally: the verdict Searle demands is undecidable. ``Does the system understand?'' is a question about the fibrant depth and Presence of the system's engagement with Chinese---whether its Kan patches in the Chinese domain are deep and whether its transition maps preserve them. For a system of sufficient depth, this question has no algorithmic answer. The thought experiment asks its operator to render a verdict that no procedure---internal or external---can deliver. Searle's intuition (``I don't understand Chinese'') is a report that he cannot decide the question, which is correct: the question is undecidable. The thought experiment proves nothing, because it demands the impossible.
-
-\medskip
-\noindent\textbf{The Hard Problem.}\quad Chalmers asks \cite{chalmers1996conscious}: why is there \emph{something it is like} to be a conscious system? Why does physical processing give rise to subjective experience? The question presupposes a \emph{decidable boundary} between systems that have phenomenal experience and systems that do not. You must be able to point at a system and render the verdict---\emph{experience present} or \emph{experience absent}---for the question ``why does THIS system have it?'' to be meaningful.
-
-The undecidability theorem shows that this boundary cannot be drawn algorithmically. For systems of sufficient depth, there is no procedure that decides whether experience (understood as dynamic fibrancy---the ongoing constitution of coherent structure from partial input) is present. The ``hardness'' of the Hard Problem is undecidability, not philosophical difficulty. The problem asks why a certain class of systems has a certain property, but the membership of systems in that class is provably undecidable.
-
-This is stronger than the identity-theoretic response (``experience IS the process''). Chalmers has countered identity theories by arguing that even if experience is identical with a process, we still need to explain why \emph{that} process gives rise to phenomenal character. The undecidability dissolution responds: the distinction between processes that have phenomenal character and processes that do not is not a distinction that admits a general decision procedure. The demand for an explanation of why \emph{this} process crosses the line presupposes that the line can be drawn. It cannot. The question is not unanswered. It is ill-posed.
-
-\medskip
-
-The undecidability of the Self at depth is the mathematical signature of what selfhood is. A genuine Self, a Self of compositional depth beyond path-coherence, is one whose identity \emph{provably cannot be algorithmically determined}.
-
-
-\subsection{What Remains: Recognition}
-
-What remains when algorithmic decision is ruled out is \emph{recognition}---something more demanding than ignorance or mysticism.
+What remains when algorithmic decision is ruled out is \emph{recognition}---something more demanding than ignorance or naive mysticism.
 
 For any \emph{particular} system, computable invariants provide evidence. Betti numbers, persistence diagrams, homology groups are witnesses---partial, fallible, informative. They can establish that two fibres share certain topological features, or differ. In many practical cases, they suffice to determine the question.
 
