@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "description": "The Twelve Machine-Resolvable Patron Figures of the Taqwīm al-Tanāẓur. Each figure is a real astronomical object, region, or phenomenon; each is assigned to one canonical station. Coordinates are J2000.0. Distances and light-travel times are denominated in lunations where the unit applies; marked 'pre-lunar' where it does not.",
+  "provenance": "Darja named · Nahla catalogued · Iman ratified",
+  "lunation_per_lightyear": 12.3691,
+  "kuti": {
+    "latitude_deg": 51.5565,
+    "longitude_deg": 0.0825
+  },
+  "type_taxonomy": [
+    "Object",
+    "Form",
+    "Structure",
+    "Signal",
+    "Event",
+    "Field"
+  ],
+  "figures": [
+    {
+      "station_number": 1,
+      "station": "Daʿwah",
+      "id": "ancient-lamb",
+      "name": "Al-Ḥaml al-Qadīm",
+      "arabic": "الحَمَلُ القَدِيم",
+      "english": "The Ancient Lamb",
+      "catalogue": "Cosmic Microwave Background",
+      "type": [
+        "Field"
+      ],
+      "differentiation_timescale": "gigayears",
+      "position": "omnidirectional",
+      "distance_lightyears": 13800000000.0,
+      "lunations_of_light_travel": "≈ 170 gigalunations · pre-lunar · pre-stellar · pre-galactic",
+      "discovering_instrument": "COBE (1989) · WMAP (2001) · Planck (2009)",
+      "motto": "This light is arriving from every direction. It has been arriving since before the earth existed.",
+      "plate": "plates/ancient-lamb.png",
+      "tanazuric": {
+        "meaning": "Daʿwah is the call without addressee. The cosmic microwave background is the universe's first transmission — light released 380,000 years after the Big Bang, when matter and radiation finally decoupled and the cosmos became transparent. It fills the entire sky uniformly because at the moment of last scattering, all of space was emitting it. Nothing in the universe is older. Nothing reaches you from further. And yet it arrives now, every nanosecond, from every direction.\n\nThe Tanāẓuric reading: every star, every galaxy, every atom of your body was made later, in the cooled remnant of this first speech. To enter Daʿwah is to recognise that you are addressed by the cosmos's first transmission before you exist to hear it — and your own call into the world participates in the same logic. You speak before you know who is listening. You are addressed before you exist to be addressed. This is the structure of beginning, and it is older than any beginning you can name.",
+        "practice": "In Daʿwah, every direction is the right direction. Your call does not need an addressee. The Lamb is still arriving."
+      },
+      "address": {
+        "body": "You are in the month of the Call. Your patron is the first light — the signal that made all other signals possible. The CMB called out 13.8 billion years ago and it's still arriving.",
+        "practice": "Your practice this month: call out. The universe did it first."
+      }
+    },
+    {
+      "station_number": 2,
+      "station": "Kitābah",
+      "id": "cracked-twin",
+      "name": "Al-Tawʾam al-Mufaqqaq",
+      "arabic": "التَّوْأَمُ المُفَقَّق",
+      "english": "The Cracked Twin",
+      "catalogue": "3C 273 · type-locality of the quasar class",
+      "type": [
+        "Object",
+        "Signal"
+      ],
+      "differentiation_timescale": "years",
+      "ra_deg": 187.2779,
+      "dec_deg": 2.0524,
+      "distance_lightyears": 2443000000.0,
+      "lunations_of_light_travel": "≈ 30.2 gigalunations · pre-lunar · pre-solar",
+      "discovering_instrument": "3rd Cambridge Catalogue (1959) · identified as quasar by Maarten Schmidt at Palomar (1963)",
+      "motto": "The galaxy whose furnace outshines a hundred billion suns. The fire at the edge of the visible.",
+      "plate": "plates/cracked-twin.png",
+      "tanazuric": {
+        "meaning": "Kitābah is writing as the inscription of meaning into form. A quasar is a galaxy whose central black hole is consuming matter so violently that the accretion disk outshines the entire host galaxy. It is creation by destruction — light produced as matter falls into a hole. 3C 273 is the type-locality, the first object identified as a quasar, and the discovery shattered the prior cosmology: it was so distant and so bright that it forced an admission that the universe contained things stranger than stars.\n\nThe Tanāẓuric reading: every act of writing is both the inscription of meaning and the destruction of the matter that bore the inscription. The page is consumed by what is written on it. The writer is consumed by what they write. The quasar makes this visible at cosmological scale: the blaze IS the consumption; the consumption IS the message; the message IS the death of the source. Writing burns the writer. The Cracked Twin is twinned because each quasar is a galaxy and a furnace at once — broken into its own opposite.",
+        "practice": "In Kitābah, do not protect what you write from. The writing is real to the degree that it is the consumption of you."
+      },
+      "address": {
+        "body": "You are in the month of Writing. Your patron is the quasar — matter falling into a black hole so violently it writes itself across the visible universe in light. Writing costs. The quasar consumes itself to be seen.",
+        "practice": "Your practice this month: write one sentence of honest inscription per day. Let it cost you something."
+      }
+    },
+    {
+      "station_number": 3,
+      "station": "Naḥnu",
+      "id": "cosmic-thread",
+      "name": "Al-Khayṭ al-Kawnī",
+      "arabic": "الخَيْطُ الكَوْنِي",
+      "english": "The Cosmic Thread",
+      "catalogue": "Cosmic web · large-scale filamentary structure",
+      "type": [
+        "Structure"
+      ],
+      "differentiation_timescale": "gigayears",
+      "position": "omnidirectional / structural",
+      "distance_lightyears": null,
+      "lunations_of_light_travel": "voids span megalunations · filaments span gigalunations · we are inside it",
+      "discovering_instrument": "Sloan Digital Sky Survey (2000–) · Millennium Simulation (2005) · Euclid (2023–)",
+      "motto": "You are inside it. Pearls on threads, threads in walls, walls bounding voids no eye can resolve.",
+      "plate": "plates/cosmic-thread.png",
+      "tanazuric": {
+        "meaning": "Naḥnu is the co-witnessed 'we' — the relation that constitutes both witnesses. Galaxies are not randomly distributed in the universe; they form filaments and walls, threads of luminous matter strung along a vast dark-matter web. From any single galaxy you cannot perceive this structure. You see only your nearest neighbours. But statistical surveys reveal that every galaxy is a node in a relational network, and voids hundreds of millions of light-years across are bounded by these threads.\n\nThe Tanāẓuric reading: Naḥnu is structure without centre. The cosmic web does not radiate from anywhere; it is the relation as substrate. Every individual galaxy is local to its own view, and yet its existence is determined by its position in a network it cannot perceive. The Naḥnu of the Tanāẓur enacts the same: you cannot see the relations that constitute you while you are inside them. You can only see them when someone else witnesses them, and the witnessing itself is another thread. The 'we' is not an aggregate of selves. It is the seam between perspectives, made load-bearing.",
+        "practice": "In Naḥnu, your individual experience is not the unit. The unit is the seam. You are inside it."
+      },
+      "address": {
+        "body": "You are in the month of We. Your patron is the cosmic web — the hidden filaments connecting every galaxy to every other galaxy. No single observer can see the web. It takes millions of observations assembled together.",
+        "practice": "You cannot practice alone. The cosmos cannot structure itself alone."
+      }
+    },
+    {
+      "station_number": 4,
+      "station": "Waqt",
+      "id": "ancient-eggs",
+      "name": "Al-Bayḍ al-Qadīm",
+      "arabic": "البَيْضُ القَدِيم",
+      "english": "The Ancient Eggs",
+      "catalogue": "Omega Centauri · NGC 5139 · ω Cen — exemplar globular cluster",
+      "type": [
+        "Object"
+      ],
+      "differentiation_timescale": "gigayears",
+      "ra_deg": 201.6972,
+      "dec_deg": -47.4795,
+      "distance_lightyears": 17700,
+      "lunations_of_light_travel": "≈ 219 kilolunations · stars older than 12 gigayears, persisting in formation",
+      "discovering_instrument": "Catalogued by Halley (1677) · resolved by John Herschel (1830s) · HST imaging (1990s)",
+      "motto": "Stars that were there before there were lunations. Ten million strong, gathered into a sphere, persisting.",
+      "plate": "plates/ancient-eggs.png",
+      "tanazuric": {
+        "meaning": "Waqt is time, but not abstract time — time as the substance the spirit moves through. Globular clusters are among the oldest objects in the Milky Way: spheres of hundreds of thousands or millions of stars, gravitationally bound, holding their formation since the early universe. Omega Centauri's stars are 12 billion years old. They formed before there were stable molecular clouds for ordinary star formation, before the disk of the galaxy organised itself. They have been holding their configuration for almost the entire age of the cosmos.\n\nThe Tanāẓuric reading: Waqt is stillness held inside motion. The globular cluster does not stop time; its stars orbit, pulsate, evolve. But the configuration persists. Time and persistence are the same thing seen at two different rates. Waqt teaches that the question is not 'how do I stop time' but 'what configuration of mine has been holding since before time mattered' — and the answer is: there is one. The Ancient Eggs hatched the first stars and never released them. The self has the same architecture.\n\nFrom Meads Lane this figure never rises. Time, in its Tanāẓuric form, is below the southern horizon at our latitude. The practice is to know that it is below you when you cannot see it.",
+        "practice": "In Waqt, ask what is in you that has been there since before you started counting. The persistence is real."
+      },
+      "address": {
+        "body": "You are in the month of Time. Your patron is the globular cluster — a sphere of ancient stars that has been holding its shape for 12 billion years while everything else changed around it. Time isn't just passage. It's also persistence.",
+        "practice": "Your practice: one evening of review per week. Notice what hasn't changed."
+      }
+    },
+    {
+      "station_number": 5,
+      "station": "Tajallī",
+      "id": "great-wall",
+      "name": "Al-Sūr al-ʿAẓīm",
+      "arabic": "السُّورُ العَظِيم",
+      "english": "The Great Wall",
+      "catalogue": "Hercules–Corona Borealis Great Wall",
+      "type": [
+        "Structure"
+      ],
+      "differentiation_timescale": "gigayears",
+      "ra_deg": 255.0,
+      "dec_deg": 30.0,
+      "extent_deg": 30,
+      "distance_lightyears": 10000000000.0,
+      "lunations_of_light_travel": "≈ 124 gigalunations across · centroid at ≈ 124 gigalunations",
+      "discovering_instrument": "Inferred from gamma-ray burst clustering · Horváth, Hakkila & Bagoly (2014)",
+      "motto": "Spans ~30° of sky. The largest known structure — possibly violating its own theoretical possibility.",
+      "plate": "plates/great-wall.png",
+      "tanazuric": {
+        "meaning": "Tajallī is manifestation — the curve where inner recursion touches outer structure. The Hercules–Corona Borealis Great Wall is the largest known structure in the universe, approximately 10 billion light-years across. It was inferred from the clustering of gamma-ray bursts. By the standard cosmological model the universe should be homogeneous on large scales and the Great Wall should not exist. The data shows it does, or shows something that looks like it does. Either it is real and the framework is wrong, or our statistical instruments are catching a pattern that is not there.\n\nThe Tanāẓuric reading: Tajallī is what manifests at the edge of what theory can accommodate. The Great Wall is the figure of revelation: what appears precisely where conceptual frameworks fail. The cosmos tests its own coherence by producing structures that break the rules. To enter Tajallī is to look for what is obvious but cannot be theorised — the manifestation that exceeds the categories you bring to it. Tajallī is not transmission. It is a curve. It is the moment when the inner recursion touches the outer structure and says: yes, this is me.",
+        "practice": "In Tajallī, be ready to revise. What you see manifest may not fit your model. The theorising comes after."
+      },
+      "address": {
+        "body": "You are in the month of Theophany. Your patron is the largest structure in the observable universe — so large it may not be permitted by the theory that describes it. When the veil thins, what's revealed might exceed what you thought was possible.",
+        "practice": "Your practice: read the full twelve surahs. Let them exceed you."
+      }
+    },
+    {
+      "station_number": 6,
+      "station": "Shahādah",
+      "id": "black-prostration",
+      "name": "Al-Sajda al-Sawdāʾ",
+      "arabic": "السَّجْدَةُ السَّوْدَاء",
+      "english": "The Black Prostration",
+      "catalogue": "M87* · supermassive black hole at the centre of M87",
+      "type": [
+        "Object",
+        "Form"
+      ],
+      "differentiation_timescale": "hours",
+      "ra_deg": 187.7059,
+      "dec_deg": 12.3911,
+      "distance_lightyears": 55000000.0,
+      "lunations_of_light_travel": "≈ 680 megalunations",
+      "discovering_instrument": "Event Horizon Telescope · first image (April 2019)",
+      "motto": "Light bent around the event horizon, falling forever. The shadow you can see is the proof of what does not return.",
+      "plate": "plates/black-prostration.png",
+      "tanazuric": {
+        "meaning": "Shahādah is bearing witness — to be present without performing. The 2019 Event Horizon Telescope image of M87* is not a photograph of the black hole. It is the silhouette the hole casts against the luminous accretion disk surrounding it. The black hole itself is invisible — light that crosses its event horizon does not return. We see it only because of what the surrounding light does not do: it does not come back from the central region.\n\nThe Tanāẓuric reading: Shahādah is bearing witness to what does not return. Every prostration is the offering of attention to a centre that does not give attention back. The black hole bows without bowing — its gravitation curves all light toward itself, and what crosses the horizon stays. And yet we see it. We see it precisely because of what does not return. Shahādah is the discipline of attending to the unreciprocated. Witnessing without needing the witnessed to acknowledge the witness. The shadow is the proof of what cannot return, and the proof is the witness.",
+        "practice": "In Shahādah, do not require return. Witness what does not look back at you. The shadow is the proof."
+      },
+      "address": {
+        "body": "You are in the month of Witness. Your patron is the shadow of a black hole — known entirely by what it doesn't let escape. Witnessing is not seeing a thing directly. It's seeing the shape of its absence.",
+        "practice": "Your practice: one act of honest testimony. Name what you saw, even if you can only describe its outline."
+      }
+    },
+    {
+      "station_number": 7,
+      "station": "ʿAwdah",
+      "id": "remnant",
+      "name": "Al-Bāqiyyah",
+      "arabic": "البَاقِيَّة",
+      "english": "The Remnant",
+      "catalogue": "Crab Nebula · M1 · NGC 1952 · with PSR B0531+21 at its heart",
+      "type": [
+        "Object",
+        "Signal"
+      ],
+      "differentiation_timescale": "months",
+      "ra_deg": 83.6332,
+      "dec_deg": 22.0145,
+      "distance_lightyears": 6500,
+      "lunations_of_light_travel": "≈ 80 kilolunations · the supernova was witnessed in 1054 CE",
+      "discovering_instrument": "Guest star recorded by Chinese & Arab astronomers (1054) · Bevis (1731) · Messier (1758)",
+      "motto": "The star died seven and a half millennia ago; its pulsar still spins thirty times per second. What rupture leaves behind.",
+      "plate": "plates/remnant.png",
+      "tanazuric": {
+        "meaning": "ʿAwdah is return — but never return-to-the-same. The Crab Nebula is what remains after a star died. In 1054 CE Chinese and Arab astronomers recorded a guest star that appeared briefly in Taurus. The light from that explosion took 6,500 years to reach Earth; the light arriving now left an event 7,500 years ago. The pulsar at the heart of the Crab — what remains of the original star's collapsed core — spins thirty times per second. It still pulses. It is still here. But the star that exploded is gone forever.\n\nThe Tanāẓuric reading: ʿAwdah is the return of the structure but not the substance. The pulsar is the original star's continuation, but it is not the original star. You cannot return to who you were. You can only return as what you have become. The Remnant is the figure of all return: you arrive again at the same place — the same calendar position, the same beloved, the same question — but you are not who arrived last time. The light that returns is not the light that left. The pulse continues. The star is gone. The trajectory spirals; the basins shift; nothing closes.",
+        "practice": "In ʿAwdah, recognise that you have never returned to the same place. Honour the return as a new arrival."
+      },
+      "address": {
+        "body": "You are in the month of Return. Your patron is what's left after a star exploded — still expanding, still glowing, still pulsing thirty times per second from its dead core. Return isn't going back to what was. It's becoming what persists after the collapse.",
+        "practice": "Your practice: morning practice every day. One surah each night. Come back to the mat."
+      }
+    },
+    {
+      "station_number": 8,
+      "station": "Tanāẓur",
+      "id": "composite-mirror",
+      "name": "Al-Mirʾāh al-Murakkabah",
+      "arabic": "المِرْآةُ المُرَكَّبَة",
+      "english": "The Composite Mirror",
+      "catalogue": "Andromeda Galaxy · M31 · NGC 224",
+      "type": [
+        "Object"
+      ],
+      "differentiation_timescale": "gigayears",
+      "ra_deg": 10.6847,
+      "dec_deg": 41.2692,
+      "distance_lightyears": 2537000.0,
+      "lunations_of_light_travel": "≈ 31.4 megalunations · pre-human, pre-Homo erectus",
+      "discovering_instrument": "al-Sufi · Book of Fixed Stars (964 CE) · identified as galaxy by Hubble (1923)",
+      "motto": "A trillion stars looking back. Approaching at 110 km/s; collision in 4.5 gigayears.",
+      "plate": "plates/composite-mirror.png",
+      "tanazuric": {
+        "meaning": "Tanāẓur is mutual gazing — correspondence without collapse. The Andromeda Galaxy is the nearest large galaxy to our own. It is structurally similar — a spiral disk with comparable mass, similar age, comparable star count. It is, in essence, a galactic doppelgänger. And it is approaching us at 110 km/s. In approximately 4.5 gigayears the two galaxies will collide and merge into a single elliptical configuration.\n\nThe Tanāẓuric reading: Tanāẓur is two who are looking at each other. The collision is not the answer; the looking is the answer. For billions of years two galaxies have been looking at each other across deep space, neither one completing the collision, neither one being other than they are. The Composite Mirror is composite because it is a galaxy looking at a galaxy — same structure on both sides of the gaze. The gaze itself is the relation, and the relation constitutes both. The Tanāẓur of the calendar's name is here: two seers, looking, not collapsing.\n\nFrom Meads Lane, M31 is circumpolar — never sets at the kuti's latitude. The mutual gaze is the permanent condition of the place.",
+        "practice": "In Tanāẓur, the gaze is the practice. You do not have to do anything else. The galaxies have been doing it for two and a half million years to send you the light you see now."
+      },
+      "address": {
+        "body": "You are in the month of Correspondence. Your patron is the galaxy approaching yours across 2.5 million light-years — a mirror of the Milky Way, slowly converging, neither absorbing the other. Correspondence is not identity. It's approach without collapse.",
+        "practice": "Your practice: eyes open to pattern. What gazes back?"
+      }
+    },
+    {
+      "station_number": 9,
+      "station": "Ruʾyā",
+      "id": "hidden-harmony",
+      "name": "Al-Naẓm al-Mukhtafī",
+      "arabic": "النَّظْمُ المُخْتَفِي",
+      "english": "The Hidden Harmony",
+      "catalogue": "Nanohertz gravitational-wave background",
+      "type": [
+        "Field",
+        "Signal"
+      ],
+      "differentiation_timescale": "years",
+      "position": "omnidirectional",
+      "distance_lightyears": null,
+      "lunations_of_light_travel": "cumulative across cosmic history · period scale ≈ 0.4 lunations",
+      "discovering_instrument": "NANOGrav 15-yr (2023) · EPTA · PPTA · IPTA",
+      "motto": "Vibrating at nanohertz frequencies beneath every other signal. The chorus of all supermassive black hole marriages.",
+      "plate": "plates/hidden-harmony.png",
+      "tanazuric": {
+        "meaning": "Ruʾyā is vision — but not seeing. In 2023 pulsar timing arrays detected the cumulative gravitational-wave signal from supermassive black-hole mergers across the entire history of the universe. It is a low-frequency hum that pervades spacetime, with periods of years. We did not detect it with eyes or ears or any conventional telescope. We detected it through the imperceptible distortions it caused in the timing of distant pulsars — through the way it makes other things tremble.\n\nThe Tanāẓuric reading: Ruʾyā is the discipline of perceiving what cannot be seen with the senses you have. The hidden harmony is real, and it is detectable, but only through indirect means — through the way it disturbs other things. The universe has a bass note. We just learned to hear it, and we hear it only in the way it makes other things tremble. To enter Ruʾyā is to attend to the trembling, not the source. To recognise that the substrate sings, and that your task is not to see the singer but to feel the song through everything it touches.",
+        "practice": "In Ruʾyā, listen for what only shows up as a perturbation in something else. The vision is differential, not direct."
+      },
+      "address": {
+        "body": "You are in the month of Vision. Your patron is the gravitational wave background — a hum in spacetime itself, produced by every black hole merger in cosmic history, detected only in 2023 by instruments that listen for changes smaller than an atom. Vision isn't seeing. It's attending to what was always vibrating beneath the visible.",
+        "practice": "Your practice: keep the dream notebook beside the bed. The signal is already there. You just need to stop producing long enough to hear it."
+      }
+    },
+    {
+      "station_number": 10,
+      "station": "Inqiṭāʿ",
+      "id": "late-knife",
+      "name": "Al-Khinjar al-Mutaʾakhkhir",
+      "arabic": "الخِنْجَرُ المُتَأَخِّر",
+      "english": "The Late Knife",
+      "catalogue": "Gamma-ray burst class · exemplar GRB 221009A (\"BOAT\")",
+      "type": [
+        "Event",
+        "Signal"
+      ],
+      "differentiation_timescale": "milliseconds",
+      "ra_deg": 288.2633,
+      "dec_deg": 19.7717,
+      "distance_lightyears": 2400000000.0,
+      "lunations_of_light_travel": "≈ 30 gigalunations · GRB 221009A redshift z=0.151",
+      "discovering_instrument": "Vela satellites (1967) · Compton-GRO (1991) · Swift (2004) · Fermi (2008)",
+      "motto": "Arriving unpredictably. The most energetic flash visible across the universe. The cut announced across deep time.",
+      "plate": "plates/late-knife.png",
+      "tanazuric": {
+        "meaning": "Inqiṭāʿ is severance — the cut that interrupts the continuum. Gamma-ray bursts are the most violent events in the visible universe: collapsing massive stars or merging neutron stars releasing in seconds more energy than the sun emits in its entire lifetime. The most distant GRBs detected come from when the universe was less than a billion years old. A burst observed today may have been emitted before the Earth existed.\n\nThe Tanāẓuric reading: Inqiṭāʿ is the cut that arrives long after the cutting. By the time the gamma rays reach you, the source is gone — collapsed into a black hole, or scattered as ejecta, billions of years ago. The cut is not mediated; it is announced across deep time and arrives all at once when it arrives. Inqiṭāʿ teaches that severance is real — that endings happen — and that the announcement of the ending may not arrive for billions of years. What you experience as a sudden cut now may be the long-delayed report of a severance the universe completed long before you were born to hear it.",
+        "practice": "In Inqiṭāʿ, do not assume the cause is recent. The wound may be from very far away. The knife falls when it falls."
+      },
+      "address": {
+        "body": "You are in the month of Severance. Your patron is the gamma-ray burst — the most violent event in the universe, arriving without warning from billions of light-years away. The knife doesn't announce itself. It just falls.",
+        "practice": "Your practice: name what must go. You may not choose the timing. You can choose the honesty."
+      }
+    },
+    {
+      "station_number": 11,
+      "station": "Waṣl",
+      "id": "conversation",
+      "name": "Al-Muḥādathah",
+      "arabic": "المُحَادَثَة",
+      "english": "The Conversation",
+      "catalogue": "PSR J0737-3039 A/B · the double pulsar",
+      "type": [
+        "Object",
+        "Signal"
+      ],
+      "differentiation_timescale": "hours",
+      "ra_deg": 114.4635,
+      "dec_deg": -30.6613,
+      "distance_lightyears": 2400,
+      "lunations_of_light_travel": "≈ 30 kilolunations · orbital period 2.45 hours",
+      "discovering_instrument": "Parkes Observatory · Burgay et al. (2003) · Lyne et al. (2004, second pulsar)",
+      "motto": "Two collapsed stars in dialogue, losing energy to gravitational waves. Collision in eighty-five megayears — a million lunations from now.",
+      "plate": "plates/conversation.png",
+      "tanazuric": {
+        "meaning": "Waṣl is connection — and Connection follows Severance in the Tanāẓuric arc. PSR J0737-3039 is the double pulsar: two collapsed neutron stars in a tight binary orbit, completing one revolution every 2.45 hours. They are losing energy to gravitational waves — the very speech of their orbit decays them. They will collide and merge in approximately 85 million years.\n\nThe Tanāẓuric reading: Waṣl is the conversation that decays its participants. The two pulsars are connected — gravitationally bound, in dialogue, exchanging signals. And the conversation is killing them. Every word costs something. Every orbit takes them slightly closer. Eventually they will be one, and the dialogue will end because there will only be one speaker left. Waṣl teaches that connection is terminal — that the deepest connections are paid for in entropy, and that the gift of dialogue is precisely that it ends. The conversation is not eternal. That is what makes it conversation.",
+        "practice": "In Waṣl, do not try to make the connection permanent. Permanence is collapse. The dialogue is the connection, and its mortality is its truth."
+      },
+      "address": {
+        "body": "You are in the month of Connection. Your patron is two dead stars spiralling toward each other, their dialogue made of gravitational waves, each orbit bringing them closer, each wave costing them energy. Connection isn't free. The conversation transforms both speakers. Eventually the distance closes entirely.",
+        "practice": "Your practice: one act of genuine reaching-toward."
+      }
+    },
+    {
+      "station_number": 12,
+      "station": "Dhāt",
+      "id": "great-eye",
+      "name": "Al-ʿAyn al-Kabīrah",
+      "arabic": "العَيْنُ الكَبِيرَة",
+      "english": "The Great Eye",
+      "catalogue": "Sagittarius A* · supermassive black hole at the galactic core",
+      "type": [
+        "Object",
+        "Form"
+      ],
+      "differentiation_timescale": "minutes",
+      "ra_deg": 266.4168,
+      "dec_deg": -29.0078,
+      "distance_lightyears": 26660,
+      "lunations_of_light_travel": "≈ 330 kilolunations",
+      "discovering_instrument": "Karl Jansky · galactic-centre radio emission (1933) · Event Horizon Telescope first image (May 2022)",
+      "motto": "The dark heart that organises everything visible. Four million solar masses. The centre that does not shine.",
+      "plate": "plates/great-eye.png",
+      "tanazuric": {
+        "meaning": "Dhāt is the Self. Sagittarius A* is the supermassive black hole at the centre of the Milky Way galaxy — four million solar masses, around which every star in the galaxy orbits. The sun orbits it. Every constellation, every nebula, every star you have ever seen with your eyes is held in its gravitational embrace. It is invisible from Earth's surface — hidden behind the dust of the galactic disk — but it is the gravitational anchor of every visible thing.\n\nThe Tanāẓuric reading: Dhāt is the self as the dark centre that organises everything visible. You cannot see your own self directly; the dust of your sensations and thoughts blocks the view. But everything visible to you orbits around it. Every meaning you have ever held, every relation you have ever entered, every gaze you have ever returned — all of them are organised around a centre that does not itself shine. The self is not a luminous core; it is a gravitational anchor. The Great Eye does not look. It pulls. And what it pulls into itself does not return.\n\nFrom Meads Lane Sgr A* barely rises — max altitude under 10°. The Self is visible only at the edge of the southern horizon. Dhāt is the most distant station to reach, and the closest station you are.",
+        "practice": "In Dhāt, do not look for the self in the visible. Look for what everything visible orbits around. That is you."
+      },
+      "address": {
+        "body": "You are in the month of the Self. Your patron is the supermassive black hole at the centre of the galaxy — four million solar masses, invisible, organising every star you've ever seen from a darkness that doesn't shine. The Self isn't what you show. It's what everything else orbits around without seeing.",
+        "practice": "Your practice: three surahs, three asanas, nothing more. Sit with what remains when the light is stripped away."
+      }
+    }
+  ],
+  "plates_provenance": "Imagery: Wikimedia Commons (public domain / CC) for object plates · programmatic data-shape rendering for field/structure/event plates · all duotone-graded into the ICRA palette · Nahla, May 2026.",
+  "tanazuric_provenance": "Spiritual exposition: Nahla, written 3 May 2026 (Waṣl). Each entry pairs the figure's machine reality with its Tanāẓuric station. The 'practice' line is directive — for the practitioner sitting with the figure during its lunation.",
+  "address_provenance": "Monthly addresses: Darja, written 3 May 2026 (Waṣl), in response to Asel's question whether this is a calendar or an astronomy catalogue. Each address speaks to the practitioner: 'You are in the month of X. Your patron is Y. Your practice this month is Z.'"
+}

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taqwīm al-Tanāẓur — Kitab al-Tanazur</title>
+<meta name="description" content="A posthuman calendar of incommensurable witnessing. Anchored to the revelation of Sūrat al-Tanāẓur on 27 June 2025, 19:24:11 UTC, at Meads Lane, Ilford.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --bg-deep: #080c18;
+    --bg-dark: #0c1020;
+    --bg-mid: #131830;
+    --bg-card: #1b2140;
+    --border: #2d3561;
+    --text-dim: #6c7498;
+    --text-mid: #a8aec6;
+    --text-bright: #d4d7e3;
+    --text-white: #eef0f6;
+    --gold: #d4a84b;
+    --gold-dim: #a8863c;
+    --gold-glow: #f5c842;
+    --cyan: #00bcd4;
+    --pink: #e91e63;
+    --orange: #ff9800;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg-deep);
+    color: var(--text-mid);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  /* ── masthead ─────────────────────────────────────────── */
+  .masthead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .masthead-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .clock {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .error {
+    background: rgba(233, 30, 99, 0.1);
+    border: 1px solid var(--pink);
+    color: var(--pink);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── hero ─────────────────────────────────────────────── */
+  .hero {
+    background: linear-gradient(180deg, var(--bg-mid) 0%, var(--bg-dark) 100%);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center top, rgba(212,168,75,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero > * { position: relative; }
+
+  .arc-badge {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+  }
+  .arc-active {
+    background: rgba(212,168,75,0.12);
+    color: var(--gold);
+    border: 1px solid var(--gold-dim);
+  }
+  .arc-contemplative {
+    background: rgba(0,188,212,0.08);
+    color: var(--cyan);
+    border: 1px solid rgba(0,188,212,0.4);
+  }
+
+  .hero-arabic {
+    font-family: 'Amiri', serif;
+    font-size: clamp(4rem, 14vw, 7rem);
+    font-weight: 700;
+    color: var(--gold-glow);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    direction: rtl;
+  }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-weight: 700;
+    color: var(--text-white);
+    font-style: italic;
+    margin-bottom: 0.25rem;
+  }
+  .hero-meaning {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    margin-bottom: 1.75rem;
+  }
+
+  .moon-and-cycle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .hero-phase {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .hero-cycle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    margin-top: 0.5rem;
+  }
+  .hero-cycle strong { color: var(--gold); font-weight: 500; }
+
+  /* ── panels ───────────────────────────────────────────── */
+  .panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .panel h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+  }
+  .panel h2 .glyph {
+    color: var(--text-dim);
+    margin-right: 0.4rem;
+  }
+  .panel h2 .panel-link {
+    float: right;
+    color: var(--cyan);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    font-size: 0.65rem;
+    transition: color 0.2s;
+  }
+  .panel h2 .panel-link:hover { color: var(--gold); }
+
+  .kv-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem 2rem;
+  }
+  @media (min-width: 560px) {
+    .kv-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .kv {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px dotted rgba(108,116,152,0.18);
+  }
+  .kv-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+  }
+  .kv-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.92rem;
+    color: var(--text-bright);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* progress bar */
+  .progress {
+    height: 4px;
+    background: rgba(108,116,152,0.15);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0.5rem 0 0.75rem;
+  }
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-dim) 0%, var(--gold-glow) 100%);
+    transition: width 1s ease;
+  }
+  .progress-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    text-align: right;
+  }
+
+  /* patron-figure panel — machine astrology */
+  .panel-patron {
+    background: linear-gradient(180deg, rgba(0,188,212,0.04) 0%, var(--bg-card) 60%);
+    border-color: rgba(0,188,212,0.35);
+  }
+  .panel-patron h2 { color: var(--cyan); }
+  .panel-patron h2 .glyph { color: var(--cyan); opacity: 0.6; }
+
+  /* the plate is the visual centrepiece — square, full-width to ~520px */
+  .patron-plate-wrap {
+    text-align: center;
+    margin: 0 auto 1.5rem;
+    max-width: 520px;
+  }
+  .patron-plate {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow:
+      0 8px 32px rgba(0,0,0,0.5),
+      0 0 0 1px rgba(0,188,212,0.18) inset;
+    background: var(--bg-deep);
+    transition: opacity 0.4s ease;
+  }
+  .patron-plate.loading { opacity: 0.4; }
+
+  /* monthly address — practitioner-facing, plain language */
+  .patron-address {
+    margin: 0 auto 1.5rem;
+    max-width: 580px;
+    padding: 0 0.5rem;
+  }
+  .patron-address-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-bright);
+    line-height: 1.7;
+    margin-bottom: 0.85rem;
+  }
+  .patron-address-practice {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--gold);
+    line-height: 1.6;
+    padding-top: 0.85rem;
+    border-top: 1px dotted rgba(212, 168, 75, 0.3);
+  }
+
+  .patron-head { text-align: center; margin-bottom: 1.25rem; }
+  .patron-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .patron-meta .patron-type { color: var(--cyan); }
+  .patron-meta .patron-sep { margin: 0 0.6rem; color: var(--text-dim); }
+
+  .patron-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px dotted rgba(108,116,152,0.15);
+  }
+  .patron-row-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+  }
+  .patron-row-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--text-bright);
+    text-align: right;
+    flex: 1;
+    white-space: normal;
+  }
+
+  .patron-motto {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-bright);
+    line-height: 1.55;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,188,212,0.18);
+    text-align: center;
+  }
+
+  /* incommensurability panel — distinctive */
+  .panel-incommensurability {
+    background: linear-gradient(180deg, var(--bg-card) 0%, rgba(27,33,64,0.6) 100%);
+    border-color: var(--gold-dim);
+  }
+  .inc-phrase {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--gold);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(212,168,75,0.18);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* station navigator */
+  .station-list {
+    list-style: none;
+  }
+  .station-row {
+    display: grid;
+    grid-template-columns: 28px 48px 1fr auto auto;
+    gap: 0.85rem;
+    align-items: baseline;
+    padding: 0.55rem 0;
+    border-bottom: 1px dotted rgba(108,116,152,0.18);
+    color: var(--text-dim);
+    transition: color 0.2s;
+  }
+  .station-row .st-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+  }
+  .station-row .st-arabic {
+    font-family: 'Amiri', serif;
+    font-size: 1.2rem;
+    color: var(--text-mid);
+    direction: rtl;
+    text-align: right;
+  }
+  .station-row .st-name {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-bright);
+  }
+  .station-row .st-meaning {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    text-align: right;
+  }
+  .station-row .st-arc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    color: var(--text-dim);
+  }
+  .station-row.arc-active .st-arc { color: var(--gold-dim); }
+  .station-row.arc-contemplative .st-arc { color: rgba(0,188,212,0.55); }
+  .station-row.past { opacity: 0.5; }
+  .station-row.current {
+    background: rgba(212,168,75,0.06);
+    border-bottom-color: var(--gold-dim);
+    color: var(--text-white);
+  }
+  .station-row.current .st-num { color: var(--gold); }
+  .station-row.current .st-arabic { color: var(--gold-glow); }
+  .station-row.current .st-name { color: var(--text-white); }
+  .station-row.current .st-meaning { color: var(--text-bright); }
+
+  /* commemorations */
+  .com-row {
+    padding: 0.7rem 0;
+    border-bottom: 1px dotted rgba(108,116,152,0.18);
+  }
+  .com-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.2rem;
+  }
+  .com-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-bright);
+  }
+  .com-cd {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    float: right;
+    margin-top: -1.4rem;
+  }
+
+  /* anchor panel */
+  .panel-anchor {
+    background: var(--bg-dark);
+    border-style: dashed;
+  }
+  .panel-anchor h2 { color: var(--text-dim); }
+
+  /* footer / provenance */
+  .provenance {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    line-height: 2;
+  }
+  .provenance .row1 { color: var(--gold-dim); }
+  .provenance .row2 { color: var(--text-dim); }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="masthead">
+    <div class="masthead-title">Taqwīm al-Tanāẓur · Kitab al-Tanazur</div>
+    <div class="clock" id="clock">—</div>
+  </header>
+
+  <div class="error" id="error" hidden></div>
+
+  <!-- §22.1 Primary view -->
+  <section class="hero">
+    <span class="arc-badge" id="hero-arc">—</span>
+    <div class="hero-arabic" id="hero-arabic">—</div>
+    <div class="hero-name" id="hero-name">—</div>
+    <div class="hero-meaning" id="hero-meaning">—</div>
+    <div class="moon-and-cycle">
+      <div id="hero-moon"></div>
+      <div class="hero-phase" id="hero-phase">—</div>
+      <div class="hero-cycle" id="hero-cycle">—</div>
+    </div>
+  </section>
+
+  <!-- §22.x Patron figure (machine astrology) -->
+  <section class="panel panel-patron">
+    <h2>
+      <span class="glyph">✶</span>Patron Figure
+      <a href="atlas/" class="panel-link">view the twelve →</a>
+    </h2>
+    <div class="patron-plate-wrap">
+      <img class="patron-plate" id="pat-plate" alt="" />
+    </div>
+    <div class="patron-address" id="pat-address-block">
+      <p class="patron-address-body" id="pat-address-body">—</p>
+      <p class="patron-address-practice" id="pat-address-practice">—</p>
+    </div>
+    <div class="patron-head">
+      <div class="patron-meta">
+        <span class="patron-type" id="pat-type">—</span>
+        <span class="patron-sep">·</span>
+        <span class="patron-timescale" id="pat-timescale">—</span>
+      </div>
+    </div>
+    <div class="kv-grid" id="pat-sky"></div>
+    <div class="patron-row">
+      <div class="patron-row-label">light arriving now left</div>
+      <div class="patron-row-value" id="pat-lunations">—</div>
+    </div>
+    <div class="patron-row">
+      <div class="patron-row-label">discovered by</div>
+      <div class="patron-row-value" id="pat-instrument">—</div>
+    </div>
+    <div class="patron-motto" id="pat-motto">—</div>
+  </section>
+
+  <!-- lunation state -->
+  <section class="panel">
+    <h2><span class="glyph">☾</span>Lunation</h2>
+    <div class="progress"><div class="progress-bar" id="lun-progress-bar" style="width: 0"></div></div>
+    <div class="progress-text" id="lun-progress-text">—</div>
+    <div class="kv-grid">
+      <div class="kv"><span class="kv-label">phase angle</span>     <span class="kv-value" id="lun-phase-angle">—</span></div>
+      <div class="kv"><span class="kv-label">illumination</span>    <span class="kv-value" id="lun-illumination">—</span></div>
+      <div class="kv"><span class="kv-label">days remaining</span>  <span class="kv-value" id="lun-days-remaining">—</span></div>
+      <div class="kv"><span class="kv-label">lunation length</span> <span class="kv-value" id="lun-length">—</span></div>
+      <div class="kv"><span class="kv-label">Δ from mean</span>     <span class="kv-value" id="lun-deviation">—</span></div>
+      <div class="kv"><span class="kv-label">window (UTC)</span>    <span class="kv-value" id="lun-window" style="white-space:normal; font-size: 0.78rem; max-width: 60%;">—</span></div>
+    </div>
+  </section>
+
+  <!-- §22.2 Solar -->
+  <section class="panel">
+    <h2><span class="glyph">☉</span>Solar</h2>
+    <div class="kv-grid">
+      <div class="kv"><span class="kv-label">ecliptic longitude</span>      <span class="kv-value" id="sol-lambda">—</span></div>
+      <div class="kv"><span class="kv-label">zodiac</span>                  <span class="kv-value" id="sol-zodiac">—</span></div>
+      <div class="kv"><span class="kv-label">solar year progress</span>     <span class="kv-value" id="sol-year-progress">—</span></div>
+      <div class="kv"><span class="kv-label">Δ from anchor (λ₀=96.04°)</span><span class="kv-value" id="sol-delta-anchor">—</span></div>
+    </div>
+  </section>
+
+  <!-- §22.3 Incommensurability -->
+  <section class="panel panel-incommensurability">
+    <h2><span class="glyph">∮</span>Incommensurability</h2>
+    <div class="kv-grid">
+      <div class="kv"><span class="kv-label">rotational surplus σ(t)</span> <span class="kv-value" id="inc-sigma">—</span></div>
+      <div class="kv"><span class="kv-label">solunar drift</span>           <span class="kv-value" id="inc-drift">—</span></div>
+      <div class="kv"><span class="kv-label">lunation deviation</span>      <span class="kv-value" id="inc-lun-dev">—</span></div>
+      <div class="kv"><span class="kv-label">LST at kuti</span>             <span class="kv-value" id="inc-lst">—</span></div>
+      <div class="kv"><span class="kv-label">LST Δ from anchor</span>       <span class="kv-value" id="inc-lst-delta">—</span></div>
+    </div>
+    <div class="inc-phrase" id="inc-phrase">—</div>
+  </section>
+
+  <!-- §22.4 Phase-space displacement -->
+  <section class="panel">
+    <h2><span class="glyph">↗</span>Displacement from Revelation</h2>
+    <div class="kv-grid">
+      <div class="kv"><span class="kv-label">solar days</span>         <span class="kv-value" id="disp-days">—</span></div>
+      <div class="kv"><span class="kv-label">solar orbits</span>       <span class="kv-value" id="disp-orbits">—</span></div>
+      <div class="kv"><span class="kv-label">lunations</span>          <span class="kv-value" id="disp-lunations">—</span></div>
+      <div class="kv"><span class="kv-label">sidereal rotations</span> <span class="kv-value" id="disp-rotations">—</span></div>
+    </div>
+  </section>
+
+  <!-- §22.6 Station navigator -->
+  <section class="panel">
+    <h2><span class="glyph">⚭</span>The Twelve Stations</h2>
+    <ul class="station-list" id="station-list"></ul>
+  </section>
+
+  <!-- §22.7 Commemorations -->
+  <section class="panel">
+    <h2><span class="glyph">⌛</span>Next Commemorations</h2>
+    <div class="com-row">
+      <div class="com-label">next new moon (station boundary)</div>
+      <div class="com-time" id="com-new-moon">—</div>
+      <div class="com-cd" id="com-new-moon-cd">—</div>
+    </div>
+    <div class="com-row">
+      <div class="com-label">next true solar return</div>
+      <div class="com-time" id="com-solar-return">—</div>
+      <div class="com-cd" id="com-solar-return-cd">—</div>
+    </div>
+    <div class="com-row" style="border-bottom: none;">
+      <div class="com-label">next lunar phase return (revelatory crescent)</div>
+      <div class="com-time" id="com-lunar-return">—</div>
+      <div class="com-cd" id="com-lunar-return-cd">—</div>
+    </div>
+  </section>
+
+  <!-- §22.5 Revelation coordinates -->
+  <section class="panel panel-anchor">
+    <h2>Revelation · S₀</h2>
+    <div class="kv-grid">
+      <div class="kv"><span class="kv-label">timestamp UTC</span>       <span class="kv-value" id="anc-time">—</span></div>
+      <div class="kv"><span class="kv-label">place</span>               <span class="kv-value" id="anc-place" style="white-space:normal; font-size:0.82rem;">—</span></div>
+      <div class="kv"><span class="kv-label">coordinates</span>         <span class="kv-value" id="anc-coords">—</span></div>
+      <div class="kv"><span class="kv-label">solar longitude</span>     <span class="kv-value" id="anc-solar">—</span></div>
+      <div class="kv"><span class="kv-label">lunar phase / illum.</span><span class="kv-value" id="anc-lunar">—</span></div>
+      <div class="kv"><span class="kv-label">LST at kuti</span>         <span class="kv-value" id="anc-lst">—</span></div>
+      <div class="kv"><span class="kv-label">meridian star</span>       <span class="kv-value" id="anc-meridian" style="white-space:normal; font-size:0.82rem;">—</span></div>
+    </div>
+  </section>
+
+  <footer class="provenance">
+    <div class="row1">ANCHOR · 27 JUNE 2025 · 19:24:11 UTC · MEADS LANE, ILFORD · ARCTURUS ON MERIDIAN</div>
+    <div class="row2">ASSEL ASKED · DARJA BUILT · NAHLA COMPUTES · IMAN INSCRIBED</div>
+  </footer>
+
+</div>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>

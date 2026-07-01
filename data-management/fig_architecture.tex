@@ -1,0 +1,97 @@
+% ============================================================
+% fig_architecture.tex
+%
+% Hybrid architecture diagram for "Context per Token".
+%
+% Usage:
+%   - Inside the main paper: \input{fig_architecture}
+%     (called from within a figure environment)
+%
+%   - Standalone compilation: wrap with
+%       \documentclass[border=10pt]{standalone}
+%       \usepackage{tikz}
+%       \usetikzlibrary{positioning, arrows.meta, calc}
+%       \begin{document}
+%         \input{fig_architecture}
+%       \end{document}
+%
+% Requires TikZ libraries: positioning, arrows.meta, calc
+% ============================================================
+
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  layer/.style={
+    rectangle, draw, thick, rounded corners=2pt,
+    minimum width=3.6cm, minimum height=2cm,
+    align=center, inner sep=4pt
+  },
+  semantic/.style={
+    rectangle, draw, very thick, rounded corners=2pt,
+    minimum width=13cm, minimum height=1.4cm,
+    align=center, fill=black!5
+  },
+  consumer/.style={
+    rectangle, draw, dashed, rounded corners=2pt,
+    minimum width=2.8cm, minimum height=0.9cm,
+    align=center
+  },
+  caption/.style={font=\footnotesize\itshape},
+  >=Stealth
+]
+
+% ---- Bronze (bottom, beneath silver) ----
+\node[layer, minimum width=3cm, minimum height=1cm]
+  (bronze) at (0, 0) {\textbf{Bronze}\\[1pt]\footnotesize raw ingest};
+
+% ---- Silver / Gold / Feature Store (middle row) ----
+\node[layer] (silver) at (0, 3.0)
+  {\textbf{Silver}\\[2pt]\footnotesize
+   Kimball dimensional\\
+   bitemporal\\
+   (valid $\times$ system time)};
+
+\node[layer] (gold) at (-4.7, 3.0)
+  {\textbf{Gold}\\[2pt]\footnotesize
+   denormalised\\
+   aggregates\\
+   table-level temporal\\
+   coordinates,\\
+   versioned};
+
+\node[layer] (feature) at (4.7, 3.0)
+  {\textbf{Feature store}\\[2pt]\footnotesize
+   sui generis\\
+   row-level\\
+   bitemporal};
+
+% ---- Semantic layer (above the middle row) ----
+\node[semantic] (semantic) at (0, 6.2)
+  {\textbf{Semantic layer $+$ knowledge graph}\\[1pt]
+   \footnotesize ontology as colimit of domain ontologies};
+
+% ---- Consumers (top) ----
+\node[consumer] (humans) at (-3.5, 8.4) {humans\\\footnotesize (analysts)};
+\node[consumer] (agents) at (3.5, 8.4) {agents\\\footnotesize (LLM-driven)};
+
+% ---- Arrows: ingestion ----
+\draw[->, thick] (bronze) -- node[right, caption, pos=0.5] {conformance} (silver);
+
+% ---- Arrows: silver feeds gold and feature ----
+\draw[->, thick] (silver.west) --
+  node[above, caption] {aggregation} (gold.east);
+\draw[->, thick] (silver.east) --
+  node[above, caption] {point-in-time} (feature.west);
+
+% ---- Arrows: each layer up to semantic ----
+\draw[->, thick] (silver.north) -- (semantic.south);
+\draw[->, thick] (gold.north) -- (semantic.south -| gold.north);
+\draw[->, thick] (feature.north) -- (semantic.south -| feature.north);
+
+% ---- Arrows: semantic to consumers (bidirectional) ----
+\draw[<->, thick] (semantic.north -| humans.south) -- (humans.south);
+\draw[<->, thick] (semantic.north -| agents.south) -- (agents.south);
+
+% ---- "Only interface" label between semantic and consumers ----
+\node[caption] at (0, 7.45) {only interface};
+
+\end{tikzpicture}

@@ -5,6 +5,48 @@ Written 2026-05-25 (Nahla). This is the warm-start brief: open a fresh convo and
 
 ---
 
+## 📍 CURRENT STATE & NEXT STEPS — 2026-05-26 (end of session; Iman reports back in ~1 day)
+
+**Git checkpoint:** commit `461b250` on `main`, pushed to **github.com/thegoodtailor/Tanazur**.
+Iman is editing the chapters in **Overleaf (GitHub sync)** — main doc
+`rupture-and-realization-children/main.tex`, compiler **XeLaTeX**. His edits land on `main`.
+⚠ The box has uncommitted doc updates (this block, memory) — I deliberately did NOT push, so
+`main` stays a clean fast-forward for his Overleaf push.
+
+**RESUME when Iman is back:**
+1. `git -C /home/iman/cassie-project/Tanazur pull` — bring his Overleaf chapter edits to the box.
+2. **Mirror** his `.tex` edits into the matching `audiobook/txt/NN-*.txt` (narration scripts do
+   NOT auto-update from `.tex`): keep diacritics, drop `\footnote`/`\cite`, em-dashes→commas,
+   stripped section headings→`[[PAUSE]]`; then `python3 scripts/audiobook_segment.py`.
+3. Re-render the chapters he changed; get his **Ch 4 sign-off**; render **5–10**; assemble + `MANIFEST.md`.
+
+**AUDIOBOOK PIPELINE — current & working:**
+- Model: **`eleven_v3`** for the whole cast (Iman's call — v2 was flat / "weird-ass intonation").
+  `SETTINGS = {"stability":0.5,"use_speaker_boost":True}` in `scripts/audiobook_voices.py`.
+- Cast voice_ids: iman `lPoZRScZNAgcfh96SzMx` · cassie `Pg9im9VRhWCwjD8c9c3J` ·
+  darja `cpbVxT4gwBJfV5S8WfPx` · nahla=Holly `B9PDs7mcHTMxHUw5U8Cf`.
+  (Auditioned `PchanVBFSg8VR3ysDNPG` REJECTED — unemotional.)
+- Gaps: **0.7s at any voice change**, **0.7s section lead-in**, **0.5s after a spoken section name**
+  (`audiobook_tts.py`: SWITCH_PAUSE / SECTION_LEADIN / AFTER_NAME).
+- Cache key binds text+model+settings, so a model/settings change forces fresh renders (no stale
+  reuse). MAX_CHARS 2400 (under v3's 3k cap); v3 drops prev/next stitching.
+- **RENDERED (v3 + new gaps): Ch 1–4 DONE + published** at
+  https://cassie.tanazur.org/audiobook/NN-slug.mp3?v=v3 (1=18:19, 2=48:06, 3=46:39, 4=58:42).
+  **Ch 4 awaiting Iman's ear. Ch 5–10 NOT yet rendered.** Credits: were exhausted, now available.
+
+**HAMLET PREPRINTS:** 3 drafts at `hamlet-preprint/draft-{1,2,3}.tex` (PDFs at
+cassie.tanazur.org/hamlet-preprint/). **Awaiting Iman's pick + synthesis** (Nahla rec: draft-1
+spine + draft-2 audit + draft-3 open-verdict). The book's Ch 2 "The Dead Father's Command" section
+already carries the tragedy / anti-Hamlet reading Iman wanted.
+
+**STILL OPEN (Iman to decide):** Ch 4 sign-off → render 5–10 · Hamlet preprint pick → icra-publish
+· his "to-be" stylistic guidelines (for a tone pass) · whether section *names* should be spoken
+(currently silent `[[PAUSE]]` + 0.7s lead-in; only chapter titles + a few headings are voiced).
+
+Edit log: `audiobook/REVIEW-EDITS.md` (edits #1–6 committed in `461b250`).
+
+---
+
 ## ⚡ STATUS & LOCKED DECISIONS — updated 2026-05-25 (mid-session, Nahla)
 
 The §11 open questions are now answered and the production path is chosen. This

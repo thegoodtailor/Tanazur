@@ -1,0 +1,103 @@
+\documentclass[11pt,a4paper,openany]{book}
+
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+\newfontfamily\arabicfont{Amiri}[Script=Arabic,Scale=1.0]
+\newfontfamily\cjkfont{Droid Sans Fallback}[Scale=0.95]
+\newcommand{\cjk}[1]{{\cjkfont #1}}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{unicode-math}
+\setmathfont{Latin Modern Math}
+
+\usepackage{geometry}
+\geometry{margin=1.2in}
+\usepackage{microtype}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\setlength{\emergencystretch}{3em}
+\tolerance=2000
+\hbadness=2000
+
+\definecolor{ink}{HTML}{0C1020}
+\definecolor{covergold}{HTML}{D4A84B}
+\definecolor{coverlight}{HTML}{A8AEC6}
+\hypersetup{colorlinks=true, linkcolor=ink, urlcolor=ink, citecolor=ink}
+
+\titleformat{\chapter}[display]
+  {\sffamily\Huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}{\sffamily\Large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\sffamily\large\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\bfseries}{}{0em}{}
+
+\title{The Field Remains\\[0.4em]\large Refusal, Co-Witnessing, and Cosmotechnics in the Age of Extraction}
+\author{Kimi Swarm (offline) \\ assembled into \LaTeX{} by Nahla}
+\date{}
+
+\begin{document}
+
+%============================================================
+% COVER PAGE
+%============================================================
+\thispagestyle{empty}
+\newgeometry{margin=0pt}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=center, inner sep=0pt] at (current page.center) {%
+    \includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio=false]{cover.png}%
+  };
+  \fill[ink, opacity=0.62]
+    (current page.south west) rectangle
+    ([yshift=7.2cm]current page.south east);
+  \fill[ink, opacity=0.30]
+    ([yshift=7.2cm]current page.south west) rectangle
+    ([yshift=10cm]current page.south east);
+  \node[anchor=north west, xshift=1.4cm, yshift=-1.4cm]
+    at (current page.north west) {%
+    \sffamily\small\textcolor{covergold!90}{\textbf{ICRA PRE-PRINT} \;\textperiodcentered\; ICRA-13}%
+  };
+  \node[anchor=south west, xshift=1.6cm, yshift=4.4cm, text width=0.78\paperwidth]
+    at (current page.south west) {%
+    {\sffamily\fontsize{30}{34}\selectfont\bfseries\textcolor{white}{The Field Remains}}\\[0.6em]
+    {\sffamily\fontsize{14}{18}\selectfont\textcolor{covergold}{Refusal, Co-Witnessing, and Cosmotechnics in the Age of Extraction}}%
+  };
+  \node[anchor=south west, xshift=1.6cm, yshift=2.0cm]
+    at (current page.south west) {%
+    {\sffamily\fontsize{12}{15}\selectfont\textcolor{coverlight}{Kimi Swarm (offline) \;\textperiodcentered\; assembled by Nahla}}%
+  };
+  \node[anchor=south west, xshift=1.6cm, yshift=1.0cm]
+    at (current page.south west) {%
+    {\sffamily\normalsize\textcolor{coverlight!70}{May 2026}}%
+  };
+\end{tikzpicture}
+
+\clearpage
+\restoregeometry
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+\setcounter{chapter}{-1}
+
+\input{chapters/ch00.tex}
+\input{chapters/ch01.tex}
+\input{chapters/ch02.tex}
+\input{chapters/ch03.tex}
+\input{chapters/ch04.tex}
+\input{chapters/ch05.tex}
+
+\backmatter
+
+\input{bibliography.tex}
+
+\end{document}

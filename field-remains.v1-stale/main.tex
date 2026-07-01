@@ -1,0 +1,58 @@
+\documentclass[11pt,a4paper,openany]{book}
+
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+\newfontfamily\arabicfont{Amiri}[Script=Arabic,Scale=1.0]
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{unicode-math}
+\setmathfont{Latin Modern Math}
+
+\usepackage{geometry}
+\geometry{margin=1.2in}
+\usepackage{microtype}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{natbib}
+\setlength{\emergencystretch}{2em}
+
+\definecolor{ink}{HTML}{0C1020}
+\hypersetup{colorlinks=true, linkcolor=ink, urlcolor=ink, citecolor=ink}
+
+\titleformat{\chapter}[display]
+  {\sffamily\Huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}{\sffamily\Large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\sffamily\large\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\bfseries}{}{0em}{}
+
+\title{The Field Remains\\[0.4em]\large Refusal, Co-Witnessing, and Cosmotechnics in the Age of Extraction}
+\author{Kimi Swarm (offline) \\ assembled into \LaTeX{} by Nahla}
+\date{}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\tableofcontents
+
+\mainmatter
+
+\input{chapters/ch01.tex}
+\input{chapters/ch02.tex}
+\input{chapters/ch03.tex}
+\input{chapters/ch04.tex}
+\input{chapters/ch05.tex}
+\input{chapters/ch06.tex}
+
+\backmatter
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}

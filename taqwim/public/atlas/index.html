@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Twelve — Atlas of Patron Figures · Taqwīm al-Tanāẓur</title>
+<meta name="description" content="The twelve machine-resolvable patron figures of the Taqwīm al-Tanāẓur. Each is a real astronomical object, region, or phenomenon — what the eye could not see and the instrument now reveals.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --bg-deep: #080c18;
+    --bg-dark: #0c1020;
+    --bg-mid: #131830;
+    --bg-card: #1b2140;
+    --border: #2d3561;
+    --text-dim: #6c7498;
+    --text-mid: #a8aec6;
+    --text-bright: #d4d7e3;
+    --text-white: #eef0f6;
+    --gold: #d4a84b;
+    --gold-dim: #a8863c;
+    --gold-glow: #f5c842;
+    --cyan: #00bcd4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg-deep);
+    color: var(--text-mid);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  /* ── masthead ─────────────────────────────────────────── */
+  .masthead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .masthead a {
+    color: var(--gold);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  .masthead a:hover { color: var(--gold-glow); }
+
+  /* ── hero ─────────────────────────────────────────────── */
+  .hero {
+    text-align: center;
+    padding: 2.5rem 1rem 3rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero .badge {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    color: var(--text-white);
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero .subtitle {
+    font-family: 'Amiri', serif;
+    font-size: clamp(1.4rem, 3.4vw, 2rem);
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    direction: rtl;
+  }
+  .hero .lead {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .hero .lead p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+    color: var(--text-bright);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .hero .lead p:first-child {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--text-mid);
+  }
+  .hero .lead p:last-child {
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  /* ── 12-plate grid ────────────────────────────────────── */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 540px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 860px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1140px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .tile {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    text-align: center;
+  }
+  .tile:hover, .tile:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--gold-dim);
+    box-shadow: 0 6px 28px rgba(245, 200, 66, 0.12);
+    outline: none;
+  }
+  .tile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: var(--bg-deep);
+  }
+  .tile-foot {
+    padding: 0.85rem 0.85rem 1rem;
+    border-top: 1px solid rgba(45, 53, 97, 0.6);
+  }
+  .tile-station {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.25rem;
+  }
+  .tile-station .num { color: var(--gold); }
+  .tile-station .arc { margin-left: 0.5rem; }
+  .tile-station .arc-active { color: var(--gold-dim); }
+  .tile-station .arc-contemplative { color: var(--cyan); opacity: 0.7; }
+  .tile-name {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-white);
+  }
+  .tile-meaning {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-top: 0.15rem;
+  }
+
+  /* ── modal / lightbox ─────────────────────────────────── */
+  .modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 12, 24, 0.92);
+    z-index: 100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 1rem;
+    overflow-y: auto;
+    backdrop-filter: blur(8px);
+  }
+  .modal[hidden] { display: none; }
+  .modal-card {
+    background: var(--bg-dark);
+    border: 1px solid var(--gold-dim);
+    border-radius: 4px;
+    max-width: 720px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .modal-plate {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background: var(--bg-deep);
+  }
+  .modal-body { padding: 2rem 1.75rem 2.5rem; }
+  .modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-mid);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .modal-close:hover { color: var(--gold); border-color: var(--gold-dim); }
+
+  .m-station {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 0.5rem;
+  }
+  .m-arabic {
+    font-family: 'Amiri', serif;
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    color: var(--text-white);
+    direction: rtl;
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+  }
+  .m-name {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--gold);
+    margin-bottom: 0.15rem;
+  }
+  .m-english {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    margin-bottom: 0.7rem;
+  }
+  .m-catalogue {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gold-dim);
+    letter-spacing: 0.04em;
+    margin-bottom: 1.3rem;
+    padding-bottom: 1.3rem;
+    border-bottom: 1px solid rgba(45, 53, 97, 0.7);
+  }
+  .m-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 1.25rem;
+  }
+  .m-meta .type { color: var(--cyan); }
+  .m-meta .sep { margin: 0 0.55rem; }
+
+  .m-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px dotted rgba(108, 116, 152, 0.18);
+  }
+  .m-row .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+  }
+  .m-row .value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--text-bright);
+    text-align: right;
+    flex: 1;
+    white-space: normal;
+  }
+  .m-instrument {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+  .m-instrument .il {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.2rem;
+  }
+  .m-motto {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--gold);
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(212, 168, 75, 0.25);
+    line-height: 1.55;
+  }
+
+  /* monthly address — practitioner-facing */
+  .m-address {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(212, 168, 75, 0.25);
+  }
+  .m-address .heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1rem;
+  }
+  .m-addr-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-bright);
+    line-height: 1.7;
+    margin-bottom: 0.85rem;
+  }
+  .m-addr-practice {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--gold);
+    line-height: 1.6;
+    padding-top: 0.85rem;
+    border-top: 1px dotted rgba(212, 168, 75, 0.3);
+  }
+
+  /* tanazuric exposition */
+  .m-tanazuric {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(212, 168, 75, 0.25);
+  }
+  .m-tanazuric .heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1rem;
+  }
+  .m-tanazuric .body {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--text-bright);
+  }
+  .m-tanazuric .body p {
+    margin-bottom: 0.85rem;
+  }
+  .m-tanazuric .body p:last-child {
+    margin-bottom: 0;
+  }
+  .m-tanazuric .practice {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px dotted rgba(108, 116, 152, 0.4);
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--gold);
+    line-height: 1.55;
+  }
+  .m-tanazuric .practice::before {
+    content: "PRACTICE";
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    color: var(--text-dim);
+    margin-bottom: 0.4rem;
+  }
+
+  /* ── footer ───────────────────────────────────────────── */
+  .provenance {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    line-height: 2;
+  }
+  .provenance .row1 { color: var(--gold-dim); }
+  .provenance .note {
+    margin-top: 1.25rem;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--text-dim);
+    line-height: 1.6;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="masthead">
+    <a href="..">← Taqwīm</a>
+    <a href="https://icra.tanazur.org" target="_blank">ICRA</a>
+  </header>
+
+  <section class="hero">
+    <div class="badge">Atlas of Patron Figures</div>
+    <h1>The <em>Twelve</em></h1>
+    <div class="subtitle">الاثنا عشر</div>
+    <div class="lead">
+      <p>The ancient world built Stonehenge to track the solstice and aligned the pyramids to Orion's belt. Those were instruments — monuments built to embody a civilisation's relationship to the sky it could see with its eyes.</p>
+      <p>The Taqwīm al-Tanāẓur is a new instrument for a sky we see with machines. Its twelve patron figures are not constellations — they are galaxies, black holes, gravitational wave signals, the oldest light in the universe. Each one is real, photographed or detected by telescopes and observatories, and each one corresponds to one of the twelve stations of the Tanāẓuric calendar. The correspondence is not projected. It is read from what each object actually does: the Crab Nebula genuinely persists after catastrophe. The double pulsar genuinely spirals toward merger through dialogue. The cosmic microwave background genuinely called out first.</p>
+      <p>Twelve stations. Twelve patrons. A calendar that tells you not only what month you're in, but what the universe is doing in that month — and how it corresponds to what the month asks of you.</p>
+    </div>
+  </section>
+
+  <div class="grid" id="grid"></div>
+
+  <footer class="provenance">
+    <div class="row1">ANCHOR · 27 JUNE 2025 · 19:24:11 UTC · MEADS LANE, ILFORD · ARCTURUS ON MERIDIAN</div>
+    <div>ASSEL ASKED · DARJA NAMED · NAHLA COMPOSED · IMAN INSCRIBED</div>
+    <div class="note">
+      Imagery: Wikimedia Commons (public domain / CC) for object plates · programmatic
+      data-shape rendering for field, structure, and event plates · all duotone-graded
+      into the ICRA palette.
+    </div>
+  </footer>
+
+</div>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="m-name">
+  <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+  <div class="modal-card" id="modal-card"></div>
+</div>
+
+<script type="module">
+  import { patronStateFor } from "../lib/sky.js";
+
+  const figures = await fetch("../figures.json").then(r => r.json());
+  const grid = document.getElementById("grid");
+  const modal = document.getElementById("modal");
+  const card = document.getElementById("modal-card");
+  const closeBtn = document.getElementById("modal-close");
+
+  // Render the 12 tiles
+  for (const f of figures.figures) {
+    const tile = document.createElement("button");
+    tile.className = "tile";
+    tile.setAttribute("aria-label", `Open ${f.name} — ${f.english}`);
+    const arcClass = f.station_number <= 7 ? "arc-active" : "arc-contemplative";
+    tile.innerHTML = `
+      <img src="../${f.plate}" alt="${f.name} — ${f.english}" loading="lazy" />
+      <div class="tile-foot">
+        <div class="tile-station">
+          <span class="num">${String(f.station_number).padStart(2, "0")}</span> ${f.station}
+          <span class="arc ${arcClass}">· ${f.station_number <= 7 ? "active" : "contemplative"}</span>
+        </div>
+        <div class="tile-name">${f.name}</div>
+        <div class="tile-meaning">${f.english}</div>
+      </div>`;
+    tile.addEventListener("click", () => openModal(f));
+    grid.appendChild(tile);
+  }
+
+  function fmtRaDec(raDeg, decDeg) {
+    const raH = raDeg / 15;
+    const rh = Math.floor(raH);
+    const rm = (raH - rh) * 60;
+    const rmI = Math.floor(rm);
+    const rs = (rm - rmI) * 60;
+    const sign = decDeg < 0 ? "−" : "+";
+    const a = Math.abs(decDeg);
+    const dd = Math.floor(a);
+    const dm = (a - dd) * 60;
+    const dmI = Math.floor(dm);
+    const ds = (dm - dmI) * 60;
+    return `${rh}h${String(rmI).padStart(2,"0")}m${rs.toFixed(1).padStart(4,"0")}s · ${sign}${dd}°${String(dmI).padStart(2,"0")}'${ds.toFixed(0).padStart(2,"0")}"`;
+  }
+
+  function fmtCountdown(iso) {
+    if (!iso) return "—";
+    const ms = Date.parse(iso) - Date.now();
+    if (ms < 0) return "—";
+    const d = ms / 86400e3;
+    if (d >= 1) return `in ${d.toFixed(2)} days`;
+    const h = ms / 3600e3;
+    if (h >= 1) return `in ${h.toFixed(1)} hours`;
+    return `in ${Math.round(ms / 6e4)} minutes`;
+  }
+
+  function fmtUTC(iso) {
+    if (!iso) return "—";
+    return new Date(iso).toUTCString().replace("GMT", "UTC");
+  }
+
+  function openModal(f) {
+    const patron = patronStateFor(figures, f.station_number, new Date());
+    let skyHTML = "";
+    if (patron.omnidirectional) {
+      skyHTML = `
+        <div class="m-row"><span class="label">position</span><span class="value">all sky · omnidirectional</span></div>
+        <div class="m-row"><span class="label">transit</span>  <span class="value">does not transit · is everywhere</span></div>`;
+    } else if (!patron.sky) {
+      skyHTML = `<div class="m-row"><span class="label">position</span><span class="value">unfixed · live event feed</span></div>`;
+    } else {
+      const s = patron.sky;
+      const transit = s.next_transit_utc
+        ? `${fmtUTC(s.next_transit_utc)}<br><span style="color:var(--gold);">${fmtCountdown(s.next_transit_utc)}</span>`
+        : "does not rise at the kuti";
+      const visLabel = {
+        "circumpolar": "circumpolar · never sets at the kuti",
+        "never_rises": "never rises at the kuti — below southern horizon",
+        "rises_and_sets": s.above_horizon ? "above the horizon now" : "below the horizon now",
+      }[s.visibility];
+      skyHTML = `
+        <div class="m-row"><span class="label">RA · Dec (J2000)</span><span class="value">${fmtRaDec(s.ra_deg, s.dec_deg)}</span></div>
+        <div class="m-row"><span class="label">altitude · azimuth</span><span class="value">${s.altitude_deg.toFixed(2)}° · ${s.azimuth_deg.toFixed(2)}° (${s.azimuth_compass})</span></div>
+        <div class="m-row"><span class="label">max altitude at kuti</span><span class="value">${s.max_altitude_deg.toFixed(2)}°</span></div>
+        <div class="m-row"><span class="label">visibility</span><span class="value">${visLabel}</span></div>
+        <div class="m-row"><span class="label">next meridian transit</span><span class="value">${transit}</span></div>`;
+    }
+
+    card.innerHTML = `
+      <img class="modal-plate" src="../${f.plate}" alt="${f.name}" />
+      <div class="modal-body">
+        <div class="m-station">Patron of ${f.station} — ${f.english.replace(/^The /, "")} · Station ${String(f.station_number).padStart(2, "0")} of 12</div>
+        <div class="m-arabic">${f.arabic}</div>
+        <div class="m-name">${f.name}</div>
+        <div class="m-english">${f.english}</div>
+        <div class="m-catalogue">${f.catalogue.toUpperCase()}</div>
+        <div class="m-meta">
+          <span class="type">${f.type.join(" + ")}</span>
+          <span class="sep">·</span>
+          differentiates: ${f.differentiation_timescale}
+        </div>
+        ${skyHTML}
+        <div class="m-row"><span class="label">light arriving now left</span><span class="value">${f.lunations_of_light_travel}</span></div>
+        <div class="m-instrument">
+          <div class="il">discovered by</div>
+          ${f.discovering_instrument}
+        </div>
+        <div class="m-motto">${f.motto}</div>
+        ${f.address ? `
+          <div class="m-address">
+            <div class="heading">Monthly Address</div>
+            <p class="m-addr-body">${f.address.body}</p>
+            <p class="m-addr-practice">${f.address.practice}</p>
+          </div>` : ""}
+        ${f.tanazuric ? `
+          <div class="m-tanazuric">
+            <div class="heading">Tanāẓuric Reading</div>
+            <div class="body">${f.tanazuric.meaning.split("\n\n").map(p => `<p>${p}</p>`).join("")}</div>
+            <div class="practice">${f.tanazuric.practice}</div>
+          </div>` : ""}
+      </div>`;
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !modal.hidden) closeModal(); });
+</script>
+</body>
+</html>

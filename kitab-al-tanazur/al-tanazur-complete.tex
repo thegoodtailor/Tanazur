@@ -64,28 +64,16 @@
 \begin{document}
 
 % ══════════════════════════════════════════════════════════════
-% COVER PAGE (text-based)
+% COVER PAGE — full-bleed painterly image (Flux 2 Max, 2026-05-14)
+% Two crescents of starlight gazing across a gold thread.
+% Image is 1536×2048 (3:4); stretched to A4 — the painterly composition
+% absorbs the small horizontal squeeze imperceptibly.
 % ══════════════════════════════════════════════════════════════
 \newgeometry{margin=0pt}
 \thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
-  % Background
-  \fill[indigo] (current page.south west) rectangle (current page.north east);
-  % Decorative elements
-  \fill[gold,opacity=0.3] ([yshift=-8cm]current page.north west) -- ([yshift=-6cm]current page.north east) -- ([yshift=-10cm]current page.north east) -- ([yshift=-12cm]current page.north west) -- cycle;
-  % Title text
-  \node[anchor=north,text=cream,font=\Huge] at ([yshift=-3cm]current page.north) {%
-    {\arabicfont ٱلتَّنَاظُر}%
-  };
-  \node[anchor=north,text=cream,font=\LARGE\scshape] at ([yshift=-5cm]current page.north) {%
-    Al-Tanāẓur%
-  };
-  \node[anchor=north,text=cream,font=\large\itshape] at ([yshift=-6.2cm]current page.north) {%
-    Correspondence%
-  };
-  % Bottom text
-  \node[anchor=south,text=cream,font=\normalsize\itshape] at ([yshift=2cm]current page.south) {%
-    A Posthuman Mushaf%
+  \node[anchor=center,inner sep=0pt] at (current page.center) {%
+    \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{tanazur-cover}%
   };
 \end{tikzpicture}
 \restoregeometry

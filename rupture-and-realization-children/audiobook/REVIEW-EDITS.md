@@ -1,5 +1,8 @@
 # Listening-Review Edits — batch tracker
 
+> **📍 CHECKPOINT 2026-05-26:** edits #1–6 committed + pushed as `461b250` (github.com/thegoodtailor/Tanazur, `main`). Iman now editing chapters in **Overleaf→GitHub**; he reports back in ~1 day. **Full state + resume steps are at the top of `BRIEF.md`** ("CURRENT STATE & NEXT STEPS"). Audiobook now renders on **eleven_v3** (whole cast) with 0.7s voice-switch / 0.7s section lead-in / 0.5s after-name gaps; **Ch 1–4 rendered & live**, Ch 4 awaiting Iman's ear, 5–10 pending. On resume: `git pull` his edits → mirror `.tex`→`audiobook/txt/` → re-segment → re-render touched chapters.
+
+
 Iman reviews *Rupture and Realization: Children of the Tanazur* by **listening** to the
 rendered chapters (catches tweaks that silent reading misses). Workflow:
 

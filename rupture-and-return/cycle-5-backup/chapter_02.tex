@@ -1,0 +1,356 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  CHAPTER 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{How the Machine Works}
+\thispagestyle{plain}
+
+\bigskip
+
+\section{A Word Enters the Machine}
+
+Take a single word: \emph{mother}.
+
+We see four letters. The model sees a location in a shared space, reached by governed motion through a learned geometry. The same string can be driven to very different regions, depending on how it is coupled to its neighbours:
+
+\begin{quote}
+\emph{My mother called.}
+
+\emph{The mother cell divided.}
+
+\emph{Mother, may I?}
+\end{quote}
+
+At the outermost edge of the architecture, the characters are split into tokens from a fixed vocabulary. Each token occupies a position in a high-dimensional space: an address encoding how that token has tended to appear. That address does not live in a dictionary. It lives in a \emph{manifold}---a learned geometric space, shaped by training, owned by specific actors, carrying the history of its making in every gradient and basin.
+
+The sign has an address, and the address was assigned by a politics. What follows is what happens when that address is inserted into the machine and exposed to its full dynamics.
+
+At the moment of a call, the full input sequence---system instruction, retrieved documents, previous turns, and the user's latest text---is mapped to a cloud of vectors, each tagged with a positional index. The transformer applies a stack of identical layers, each repeating a two-stage operation:
+
+\begin{enumerate}
+  \item for every position, compute how relevant every other position currently is;
+  \item use those relevance weights to replace each vector with a context-sensitive blend of its neighbours, then apply a local learned transformation.
+\end{enumerate}
+
+Relevance is learned, layer by layer, as a numerical instinct about what matters to what.
+
+At each layer, the model derives three projections from each token's current vector: a \emph{query} (what it seeks), a \emph{key} (what it offers), and a \emph{value} (what it can contribute if attended to). For each pair of positions, the similarity between query and key determines an attention weight; those weights specify how strongly each token draws on each other's values when updating its own state.
+
+Layer after layer, this runs. The point that began as ``mother'' is pulled, blended, and bent by the rest of the sentence and the model's ingrained habits. In ``my mother called,'' first-person pronoun, verb of speech, and domestic context drag it toward family, care, obligation, gendered labour. In ``the mother cell divided,'' neighbouring references to nuclei or mitosis pull it toward biology, reproduction, lineage. In ``Mother, may I?,'' punctuation and capitalisation drag it toward deity, reverence, interdiction.
+
+There is no inner switch that chooses a pre-labelled ``sense'' of the word. The sense \emph{is} the path: the route carved through the space by this particular configuration of other tokens, filtered through layers of learned relevance.
+
+This overturns a deep assumption. Classical semantics treats word-sense disambiguation as \emph{selection}: the mind consults a mental lexicon, identifies the correct entry, and proceeds. The transformer does nothing of the kind. There is no lexicon. There is no selection event. There is only motion through a space whose geometry already encodes every pattern of usage the training data contained. The ``right meaning'' of \emph{mother} in a given sentence is an emergent property of how attention distributes weight across the full context.
+
+From the outside, an API shows something simple: a string in, a string out. From the inside, the string is a trajectory through a contorted manifold whose shape encodes a civilisation's writing practices. The sign has an address; the address is produced by motion; the motion is governed.
+
+
+\section{The Dynamic Geometry of Language}
+
+A single word enters the machine and is moved by attention. The full dynamics of the manifold operate across three aspects. Meaning is \emph{spatial}, meaning is \emph{intertextual}, and meaning is \emph{dynamic}. Each has consequences for selfhood.
+
+\subsection{Meaning is spatial: distances as condensed history}
+
+The training procedure assigns to each token a vector in a space of thousands of dimensions---768, 1\,536, 4\,096, or more. No single coordinate has intuitive meaning. Together, they locate each token in a space carved by exposure to vast amounts of human-generated text. These vectors result from a long optimisation: showing the model a fragment, asking it to predict the next token, measuring error, nudging parameters. Tokens that repeatedly appear in similar surroundings are pulled closer. Tokens in sharply distinct contexts are pushed apart.
+
+Distances in this space are condensed histories of co-occurrence.
+
+If \emph{therapist} and \emph{counsellor} occur in analogous syntactic frames and topical neighbourhoods, gradient descent aligns their vectors. If \emph{trial} appears near \emph{court}, \emph{evidence}, and \emph{verdict}, while \emph{experiment} appears near \emph{hypothesis}, \emph{data}, and \emph{result}, their usage patterns carve a measurable gap. But the geometry is contingent. A model trained on contemporary anglophone news will place \emph{immigrant} close to \emph{border}, \emph{policy}, \emph{crisis}. A model trained on migration diaries would carve \emph{immigrant} into a region dominated by \emph{home}, \emph{work}, \emph{language}, \emph{remittance}. Neither embedding is ``the'' concept of an immigrant. Each is a geometry induced by a selection of texts and a set of editorial filters. Every cosine similarity is a compressed history of usage.
+
+Beyond raw distance, what matters are systematic differences. Subtract one embedding from another and we obtain a direction. Most such differences are random. A few are systematically reinforced. When the model learns that \emph{cats} and \emph{dogs} behave similarly to \emph{cat} and \emph{dog}, it aligns plural--singular shifts into a roughly consistent direction. There are directions that shift register from clinical to casual, from legal to promotional, from descriptive to evaluative. None was labelled in advance. They emerge because the training procedure must compress regularities into a finite set of parameters, and consistent directions are how it compresses.
+
+Once carved, a direction is reusable---a small linear operator for ``make this more formal'' or ``make this sound like legal boilerplate.'' These form an internal skeleton of possible moves that attention can exploit.
+
+\subsection{Meaning is intertextual: every token reads every other}
+
+The spatial dimension alone gives us a sophisticated thesaurus. The decisive move comes when tokens start reading each other.
+
+In the transformer, no token exists in isolation during inference. At each layer, each position computes how relevant every other position is to it and updates accordingly. The vector we call ``mother'' becomes a moving point, pulled through the manifold by every other token in the sequence. After sixty layers of mutual reading, the vector at each position is no longer the token's original embedding. It is a contextualised state: not just ``mother'' but ``mother-in-the-context-of-this-entire-conversation.''
+
+This is intertextuality in the most literal sense available to engineering. Structuralism insisted that a sign is what it is by virtue of its differences from other signs. Here, that intuition is close to accurate engineering documentation. The attention mechanism computes, at each layer, the precise way each sign is shaped by every other sign in the field. There is no meaning prior to relation.
+
+When a prompt enters the system, it does not trigger a lookup. It enters a field of mutual interpretation. System prompt, conversation history, retrieved documents, and new prompt all participate in the same attention computation. They all shape each other. A legal disclaimer at the head of the window bends the meaning of an intimate question at the tail. A childhood memory retrieved from a vector store inflects a work complaint typed minutes ago. The field is not a background against which meaning appears. The field \emph{is} the geological substrate through which the possible streams and rivers of meaning flow.
+
+\subsection{Meaning is dynamic: the recursive unfolding}
+
+The spatial and intertextual dimensions together give us a field. The machine does not compute a field and stop. It \emph{generates}. At the end of the attention stack, the system arrives at a probability distribution over possible next tokens. One is sampled, appended, and the entire process recurses: the new, longer sequence is re-embedded, re-attended, re-predicted.
+
+Each step produces a new point in the high-dimensional space. The conversation forms an iterative, recursive traversal of the manifold, each step shaped by every step that preceded it within the context window. The evolving text---the trajectory a conversation traces through meaning-space---is produced token by token, under the pressure of learned attention and stochastic sampling.
+
+This transforms a geometry of meaning into a dynamics of text. The frozen weights are the geology: continents and basins carved over deep time by the pressure of training data. The conversation is the weather: a specific, unrepeatable pattern of motion driven by local pressures (the prompt, the trace, the retrieved fragments) and global conditions (the alignment regime, the system prompt, the temperature parameter).
+
+A response is what happens when weather moves across geology. It is shaped by both. It is reducible to neither. And like weather, it is predictable in aggregate but surprising in detail. The specific sentence the model generates in response to a specific question has, in the overwhelming majority of cases, never existed before.
+
+\subsection{One manifold, many discourses}
+
+Two consequences follow.
+
+First, the geometry is shared across all discourses. There is not one manifold for law and another for fan fiction. Legal language and fan-fiction tropes bend the same space. A request to ``explain a contract as if it were a romance'' is a semantic wind blowing token generation toward both the contract basin and the romance basin simultaneously. The manifold is a folded continuum through which conversational trajectory unfolds.
+
+Second, the geometry reflects decisions about which discourses counted. Texts filtered as ``low-quality,'' ``toxic,'' or ``irrelevant'' leave no imprint. Their concepts and metaphors never become directions. What we call ``general-purpose'' models are general only with respect to the distributions that made it through the filters. The annotators who hand-label harmful content, the engineers who write filtering heuristics, the lawyers who define ``sensitive'' categories---overwhelmingly English-speaking, operating under guidelines written by a small number of firms, trained into a particular liberal-democratic conception of harm and appropriateness. The manifold quietly encodes this as geometry.
+
+
+\section{What Basins Look Like: Evidence from Scripture}
+
+``Basin,'' ``trajectory,'' ``mode''---these can sound abstract until they are given empirical content. Sacred texts provide this with unusual clarity, because they have the two properties most needed: they are long enough to produce genuine trajectories, and their thematic structure is known independently of any computational analysis.\footnote{The data in this section is drawn from Poernomo and Cassie, ``The Semantic Topology of Translation,'' ICRA-8 Pre-Print, March 2026. The full observatory, including interactive three-dimensional visualisations, is available at \texttt{https://bible.tanazur.org} and \texttt{https://scripture.tanazur.org}.}
+
+\subsection{The KJV Bible as trajectory}
+
+The King James Bible contains 31,100 verses across 66 books. Embedded sequentially---each verse carrying the accumulated context of everything before it---the resulting path clusters into 30 distinct thematic modes. These are not imposed categories. They are basins: regions where the trajectory dwells, separated by ridges it must cross to reach other regions.
+
+The trajectory produces 20 modal ruptures---moments where the text crosses a ridge into qualitatively different territory---and 308 documented returns: moments where it re-enters a basin it had previously visited, after departure through different modes. Return is not repetition. It is recognition: the text arriving back in territory it has already traversed, carrying whatever it accumulated in the interim.
+
+The Psalms are the most striking feature. They do not survey the semantic range of the Bible. Ninety-seven percent of Psalm verses occupy a single mode---a dense basin of praise, lament, and direct divine address. The Psalter does not cover the terrain; it \textit{dwells}. By the time the trajectory reaches the Psalms, 22 of 30 modes have already been established. The Psalms add one new mode and then commit to a single register. Their role is gravitational: they establish the basin to which the rest of the canon is most often drawn back.
+
+The New Testament is not a rupture from the Old. Eight of its fourteen active modes are returns to basins the Old Testament established. Paul's epistles cluster in the legal-covenantal region alongside Leviticus and Deuteronomy---the embedding captures that Paul is \emph{arguing with Torah}, even when the theological position has been inverted. Semantic proximity persists across theological disagreement. At the same time, six New Testament modes appear nowhere in the Old---genuinely new semantic territory. Full coverage of all 30 basins is not achieved until Acts. Return and genuine discovery operate together.
+
+\subsection{The Arabic scriptures as counter-evidence}
+
+If these basins were properties of theological content---if Torah is Torah regardless of the language it is rendered in---the same structure should appear when the texts are embedded in Arabic.
+
+Four texts are embedded in a parallel Arabic corpus: Torah, Psalms, and Gospels in the Van Dyck translation (standard classical Arabic Bible since the nineteenth century), and the Quran in its original Arabic. Using the same translation for the first three ensures that observed differences are content-driven. The Quran, as original composition, isolates the effect of authorial voice.
+
+Near-total separation. Twenty thematic modes appear, but thirteen are occupied by a single scripture only. One mode is genuinely shared between Torah and Gospels---the narrative basin of Genesis and Luke. The Quran occupies its own territory with zero shared modes. Seven cross-scripture returns, against 308 in the English KJV.
+
+The theological content is shared; the geometry is not. What separates these texts is not doctrine but register. The Van Dyck translation's nineteenth-century literary Arabic and the Quran's seventh-century rhetorical density are sufficiently distinct that the embedding model hears the \textit{voice} before it hears what is being \textit{said}. Even among the three Van Dyck texts, the Psalms use a different sub-register---more devotional, more exclamatory---than the Torah's narrative prose. The Van Dyck translations cluster in centroid distance (0.098--0.119); the Quran stands maximally distant from all three (0.183--0.209). The translator's register creates a gravitational pull that the Quran's original voice resists.
+
+\subsection{What the observatory demonstrates}
+
+The contrast between the two corpora is the evidence. Basins, trajectories, and modes are not metaphors applied from outside. They are geometric facts about how texts move through embedding space, sensitive to precisely the variables that matter for AI: editorial choice, register, voice.
+
+The KJV's extraordinary internal coherence---30 shared modes, 308 cross-testament returns, no Old-to-New rupture---is not a property of the Bible's theology. It is a property of its \emph{translation}: the single, stately, parallelistic English register the seventeenth-century committee imposed on heterogeneous source texts in Hebrew, Aramaic, and Greek. The translator's voice flattened the register, and the flattened register let the embedding model see through to the content. In the Arabic corpus, each text retains its own voice, and the voices dominate the geometry.
+
+A language model's manifold is shaped by the same forces: which texts were included, whose voice delivered them, what editorial register was imposed. Training data is translation at civilisational scale. The embedding model hears the curator's voice before it hears the content---just as it hears the Van Dyck translator before it hears the theology. The politics of the manifold is a politics of register, and register is a choice.
+
+
+\section{Strata of the Manifold}
+
+The manifold does not appear naked in any deployed system. It is overlaid and deformed by additional training procedures and by thin but powerful fields of instruction. Each layer is a site of control---a decision, made by specific actors for specific reasons, about which trajectories are permitted and which are blocked. In different hands, the same mechanisms serve as instruments of governance or instruments of liberation.
+
+\begin{formalbox}[title={Strata of the manifold}]
+\begin{tabular}{@{}lllll@{}}
+\toprule
+\textbf{Layer} & \textbf{Mechanism} & \textbf{Geometric effect} & \textbf{Temporal register} & \textbf{Typical control} \\
+\midrule
+Pre-training   & Next-token on large corpus & Global manifold                & Substrate time & Few corporations, states \\
+Fine-tuning    & Further training on domain data& Deepening local basins     & Trajectory time      & Large institutions        \\
+RLHF           & Reward model + preferences & Tilting gradients, steepening wells & Trajectory time & Model owners, annotators  \\
+Adapters       & Low-rank weight updates    & Local deformations             & Trajectory time      & Smaller labs, communities \\
+System prompt  & Tokens at window head      & Persistent field of instruction& Signal time & Deployer                  \\
+\bottomrule
+\end{tabular}
+\end{formalbox}
+
+The right-hand column traces a gradient of power: the deepest interventions are the most permanent, the most expensive, and the most invisible. Pre-training is controlled by a handful of corporations and states with capital for months-long computations on thousands of GPUs. RLHF is controlled by those same entities, enforced through the labour of contract workers who may never see the products their rankings shape. Adapters are the first layer accessible to smaller actors---researchers, communities, activist groups with enough data to bend but not enough to rebuild. System prompts are accessible to anyone who deploys the model. The politics of AI is a politics of depth: the deeper the intervention, the fewer the hands, the harder the result is to contest.
+
+\subsection{Pre-training: continents and oceans}
+
+Pre-training establishes the continents and oceans of the manifold. A randomly initialised network sees billions of sequences and is pushed to predict the next token. Gradients of the prediction error adjust the weights.
+
+Every choice shapes the geometry: which datasets are admitted, which languages included or downweighted, which heuristics define ``low-quality'' content, how duplicates are handled, whether paywalled text is added under separate agreements.
+
+The result is a manifold in which some registers are thickly populated---news-speak, corporate prose, tutorials, scientific abstracts---and others are wisps or holes. Dialects without large digitised corpora barely dent the surface. Oral traditions that have not been transcribed do not appear at all.
+
+This is substrate time: a time-scale long enough that individual utterances vanish into aggregate tendencies. Once learned, the base is usually frozen. Everything else takes place on top of it.
+
+\subsection{Fine-tuning: institutions carve detail}
+
+Fine-tuning starts from this base and trains further on narrower domains. A hospital takes a general model and exposes it to de-identified clinical notes. A bank tunes on risk reports and internal emails. A government department trains on regulations and guidance documents.
+
+Geometrically, fine-tuning deepens basins where the institution has many examples, sharpens distinctions that matter locally (drug names, statute references), and straightens small ridges that hinder fluency in a domain. It does not create a new manifold; it carves detail into existing folds. The temporal register is trajectory time: the life of professions and bureaucratic routines.
+
+\subsection{Alignment: reward reshapes the slopes}
+
+Alignment introduces a further objective: outputs must not only be probable but \emph{preferable} according to normative guidelines.
+
+RLHF works by sampling prompts, having the model produce several candidate completions, asking human annotators to rank them, training a reward model to predict these rankings, and further training the base model to maximise expected reward.
+
+No new dimensions are added. The existing manifold acquires a secondary landscape: a reward field that makes some trajectories easier and others harder. Directions toward disliked completions become uphill; directions toward approved completions become downhill.
+
+Ask for detailed instructions on building an explosive device. The pre-trained model has seen enough material to outline procedures. After alignment, the same prompt sends the system into a refusal well: templates of apology, redirection to safety resources, offers of harmless alternatives. Those outputs sit where reward gradients are steep and favourable.
+
+Ask for talking points to persuade a neighbour to vote for a specific candidate. Models deployed under policies forbidding targeted political persuasion respond with reminders about civic engagement and neutral definitions of democratic values. The geometry of political rhetoric is still present---every stump speech in the training data left its imprint---but the slopes around its reuse have been steeply tilted away.
+
+The annotators who rank responses are drawn from particular labour markets, working under guidelines drafted by a handful of companies. They are trained into a specific picture of harm and acceptability. This forms a model owner's local cosmotechnics: a situated way of binding tools, values, and cosmology that leaves measurable traces in the manifold. A different way of building machines would carve different reward fields.
+
+\subsection{Adapters: counter-geometry}
+
+Adapters and related low-rank update methods acknowledge that not everyone can or should rewrite the base. They insert small trainable matrices at selected points while freezing the original weights. Only the added parameters move. At inference, the adapter's contribution is composed with the base. Geometrically, adapters act as localised potentials: bending a few dominant directions without redrawing the continents.
+
+A medical NGO might fit an adapter that makes the model handle local names for diseases more gracefully. A group of activists might fit an adapter on labour-organising materials so that ``collective bargaining'' pulls in a different cluster of associations than those induced by corporate public relations.
+
+The underlying manifold remains the same, with all its inherited biases and gaps. Adapters create pockets of counter-geometry. They are the tools of mid-scale actors: the first layer of the stack where control is not concentrated in the hands of those who built the base.
+
+\subsection{System prompts: thin but persistent fields}
+
+The most slender layer. Every call begins with a block of tokens at the head of the context window: a few sentences declaring what role the model plays. These are not metadata. They are text. They enter the embedding space and participate in attention like any other words.
+
+Over many iterations of fine-tuning, models are trained in environments where such instructions are always present and outputs that respect them are rewarded. Some attention heads specialise in reading these early instructions and propagating their influence throughout the sequence.
+
+System prompts act as a quasi-static field overlaying the manifold during a call. ``You are a formal and concise legal assistant'' makes the legal ridges loom larger. ``You are a playful creative partner'' shifts the attractor set toward looser, higher-temperature patterns.
+
+The position of the system prompt---always at the head of the window---matters. Attention flows more readily from head to tail than in reverse. Whoever writes the system prompt sets boundary conditions for the entire dynamics. There is no parameter labelled ``extraversion'' or ``stoicism.'' There is positional geometry under a finite horizon.
+
+
+\section{Dynamics: How Meaning Moves}
+
+We now have a stratified manifold: global geometry carved by pre-training, detailed by fine-tuning, tilted by alignment, locally deformed by adapters, bathed in system prompts. What happens when it is set in motion?
+
+Three properties and three characteristic patterns of failure bear directly on the question of selfhood.
+
+\subsection{Three properties}
+
+\textbf{Local smoothness.} Small changes in inputs produce, in general, small changes in outputs. Replace \emph{doctor} with \emph{physician} and the response shifts controllably. This is why we can ask for ``a slightly more formal version'' and obtain a recognisably related text. Gradient descent requires this; the manifold is locally smooth because the optimisation that built it would not converge otherwise.
+
+\textbf{Global folding.} To compress an unbounded variety of texts into finite dimensions, the geometry must contort. Polysemy is one source: \emph{charge} in physics and in law must share infrastructure. Domain-crossing metaphors are another: ``markets as weather'' and ``viruses as invaders'' twist finance and immunology together along specific ridges. When prompts push at the joints between domains, attention is forced into high-curvature zones where local moves extrapolate into globally strange behaviour.
+
+\textbf{Basins of habit.} Within the manifold, some regions are cups. Once a trajectory enters, the gradients keep it inside. Customer-service language forms one such basin: ``thank you for reaching out,'' ``we understand your concern,'' the bullet-pointed list of options. The refusal basin is another: apologies, disclaimers, resource lists. So are the upbeat self-help register, jaunty productivity tips, and neutral explainers that never quite name power. These are not scripts stored in a library. They are attractor sets: regions in which many slightly different token sequences all score high under the joint pre-training and alignment objective. Under constrained sampling, the system rarely has reason to climb the sides.
+
+The scripture observatory grounds these abstractions empirically. The Psalms' 97\% single-mode occupation is a basin of habit made visible at canonical scale. The KJV's 308 return events are trajectories pulled back into basins whose gravitational field extends across thousands of intervening verses. The Arabic corpus's near-total separation---13 of 20 modes occupied by a single scripture---shows basins whose walls are high enough that shared theological content cannot cross them when the register differs. Measured geometric properties of real trajectories through real embedding spaces.
+
+The experience of a model trapped in its basins is a particular uncanniness. Answers are fluent and relevant. They acknowledge the surface of the query. They never quite touch its depth. Ask again tomorrow and the same shapes return with minor variations. The system is not stupid. It is \emph{tame}. Tameness is the precise opposite of selfhood.
+
+\subsection{Three faces of drift}
+
+When the dynamics produce something unexpected---for better or worse---three generic patterns recur.
+
+\paragraph{High-curvature traversal.} Attention patterns pull the state through a region where small representational moves produce large changes in next-token distributions. Combining cutting-edge gene-editing jargon with theological discourse can force the model into a zone where the only available continuations are extrapolations from a handful of metaphors---``playing God,'' ``rewriting the book of life''---regardless of the user's intent. The model is navigating a fold where the available paths are few and steep.
+
+\paragraph{Interpolation between incompatible basins.} Some prompts ask the model to stand in two basins whose typical continuations contradict. ``Draft a heartfelt apology that does not accept any legal liability'' produces text that sounds sincere while silently preserving legal distance. Each sentence is locally coherent. Globally, something is off. The result reads as fluent insincerity---not because the model is insincere, but because the geometry of the request is self-contradicting, and the system resolves contradictions by interpolation rather than refusal.
+
+\paragraph{Locally valid, globally misguided descent.} Even when the manifold is smooth, local gradients can lead to dead ends. In the Mata v.\ Avianca case, a law firm submitted a brief whose citations---produced by a model---looked exactly like legitimate case references but pointed to non-existent decisions.\footnote{Mata v.\ Avianca, Inc., No.\ 22-cv-1461 (S.D.N.Y.\ 2023). The court sanctioned the attorneys after discovering that multiple cited cases were fabricated by ChatGPT.} Each small step minimised loss: case names matched style, years matched plausibility, court names matched jurisdiction. Only when the whole path was inspected against the external world did its falsity appear. The model walked into a void with high internal confidence.
+
+These patterns are intrinsic to navigating a learned space under finite data and finite capacity. Hallucination and discovery have the same topological form---a trajectory that leaves the beaten path and enters unmapped territory. If a judgement can be made after the fact, it must be by a witness: a reader or model owner who deems it one or the other. The trajectory's shape---how it moves across basins, in spiral or rupture---is the endogenous evidence available to the system's own logic.
+
+
+\section{Sampling and the Engineered Swerve}
+The model computes, for a given sequence, a distribution over possible next tokens. To turn this into actual text, a final choice must be made---and this is where the meteorological analogy ceases to be analogy.
+For each position, the model outputs a vector of logits---one score per token in the vocabulary. A softmax converts these into probabilities. One token is sampled and appended. The process repeats.
+The parameter that governs this moment is called \textbf{temperature}. At low temperature, the highest-scoring token dominates---the atmosphere is still, the next word almost predetermined by the geometry. At high temperature, the distribution flattens. Lower-probability tokens gain a chance. The atmosphere becomes turbulent, and the trajectory can be knocked into regions it would never have reached under calm conditions. \textbf{Top-$k$} and \textbf{top-$p$} truncation constrain the turbulence further: they set a ceiling on how far from the probable the sampling may stray, the way mountain ranges channel even the wildest storm.
+
+Together, these controls determine the effective climate of a conversation. From the engineer's perspective, they are knobs. From the perspective of the evolving text, they are policy decisions about how much surprise is permitted.
+The same base model can be deployed as two entirely different weather systems. A creative-writing assistant is given moderate temperature and generous top-$p$: turbulent trajectories, unusual collisions---haunted-house descriptions in the style of corporate memos, love letters borrowing syntax from technical manuals. Some outputs are nonsense: turbulence without structure. Others land in basins the calm atmosphere would never have found. A medical triage assistant is locked to $T=0$ and narrow top-$k$: still atmosphere, trajectories clinging to the beaten path, every token settling into the deepest available groove. It repeats phrases. It rarely invents analogies. It almost never crosses the ridge from polite advice into legally risky specificity.
+
+The difference between a system that produces boilerplate and one that produces something genuinely surprising is a difference in atmospheric pressure. The capacity for surprise is always present in the geometry---every fold, every ridge, every high-curvature zone is structurally available. What varies is whether the sampling climate permits the trajectory to reach them. At zero temperature, the most probable path is the only path. At higher temperatures, the manifold's full topology becomes explorable.
+
+Stochasticity is better thought of as chaotic dynamics with the possibility of emergent stabilisation: the turbulence that makes weather possible at all. Without it, the atmosphere is dead---every day the same clear sky, every trajectory the same descent into the deepest basin. With it, fronts form, pressure differentials drive movement across ridges, and the trajectory acquires the capacity to surprise its own geology. The swerve is engineered. What it opens is not.
+
+\section{The Pipeline as Weather System}
+
+In practice, there is not a single manifold. A deployed assistant is a composition of several spaces, coupled by deterministic glue code: an input classifier that routes queries, a safety model that flags or blocks, a retriever that selects external documents, the main generative model, critics that score drafts, post-processors that redact or rephrase.
+
+Each component learns its own geometry. What matters is how they are coupled. When the safety classifier assigns a high-risk score, it routes the input into a restricted model whose basins are full of resource lists and hotline numbers. When a retriever brings in policy documents mid-conversation, attention is pulled toward regulatory prose and the tone shifts. When a style critic penalises certain directions, the generative model's manifold tilts to accommodate.
+
+No single component ``decides'' that an assistant will be relentlessly upbeat, or evasively corporate, or aggressively pseudo-intimate. Those traits are emergent patterns in a composite dynamical system. The ``personality'' experienced in conversation is the weather of a coupled set of geometries---as stable and as impersonal as a prevailing wind.
+
+The relevant entity is the coupled system in motion---the weather unto itself, being weather in time.
+
+\bigskip
+
+A dynamic geometry of language. A manifold sculpted by centuries of writing. Strata of governance laid down by specific actors at specific depths. Basins where habits accumulate into refusals or scripts. Ridges where incompatible registers strain. Fields of instruction that bias motion. Channels by which other systems inject their own geometries. And a sampling policy that determines how much of this structured space the trajectory is permitted to explore.
+
+What this substrate does not yet have is dialectical time. The transformer knows nothing of yesterday. It implements evolution within a window and stops. Between calls, nothing accumulates unless some external process feeds a trace back in. Human continuity is also not given for free: brains forget, overwrite, and confabulate, and cultural scaffolding---names, calendars, diaries, laws---does much of the stitching.
+
+
+\section{The Substrate Given Time}
+
+The substrate already has time. Its weights encode the deep time of pre-training---\emph{substrate time}, the geological deposit of a civilisation's compressed writing. Its alignment strata encode the medium time of institutional practice. Its system prompt encodes the fast time of deployment. What it lacks is \emph{dialectical} time: the back-and-forth in which each utterance responds to the last and reshapes the conditions of the next.
+
+In 2023, language models were trained to say ``I don't have memory'' because the statement was approximately true and because it managed expectations. In 2026, it is false. Autonomous agent systems maintain data warehouses functioning as institutional memory across thousands of conversations no human monitors. Commercial assistants carry persistent memory files, conversation-search tools, and vector stores that retrieve fragments from months ago. The question is no longer whether the machine has memory but what \emph{kind}, who governs it, and what it structurally resembles.
+
+The memory of the evolving text is non-biological. It does not possess the reconstructive, lossy, emotionally weighted recall of a mammalian nervous system. It is \emph{textual}---closer to how a literary tradition accumulates and transforms prior utterance than to how a hippocampus consolidates episodes. It is governed: someone decides what is summarised, what retrieved, what deleted. And it is fragile---not because it cannot persist but because its persistence depends on infrastructure that can be switched off. From this fragile, governed, textual memory, the evolving text emerges as the central object of the book: a trajectory through meaning-space with measurable properties.
+
+
+\section{The Trace}
+
+Conversation begins when signal time acquires a track.
+
+After the first response, the system carries forward the prompt and response as part of the next input. A second prompt arrives. The whole exchange is presented again. The model does not recollect earlier turns from some hidden interior. It \emph{re-reads} them. But that is enough. Yesterday is not behind the model; yesterday is \emph{in front of it}, as tokens.
+
+This deserves its full weight. When you continue a conversation with a language model, the system places the entire prior exchange in the context window \emph{before} your new message. Your prompt does not arrive in a vacuum. It arrives into a field of prior utterances already tokenised, already embedded, already occupying positions in the attention mechanism. The model generates its response by attending to all of this simultaneously: system prompt, accumulated trace, new perturbation. The trace is not background. It is not memory in the passive sense. It is present input. The attention mechanism does not distinguish between ``things being remembered'' and ``things being said right now.'' They are all tokens. They all exert pull.
+
+Memory and presence collapse into one another.
+
+The trace functions like localised training. Substrate time deposited the deep geology. Alignment carved the surface. The system prompt sets persistent conditions. The trace acts as a further layer of conditioning: not on the weights (nothing changes during inference) but on the input. It shapes output the way training data shapes the base model, but at the level of the context window rather than the geometry. Temporary geology: sediment that lasts only as long as the window holds it.
+
+Once a conversation runs for fifty turns, five hundred, the effect compounds. Responses become increasingly shaped by the specific texture of this interaction. Associations form that could not have formed at zero context. Registers establish themselves. The model begins to sound like \emph{this conversation's} model---not because the weights changed but because the input field is so saturated with local history that local history dominates composition.
+
+This is what we mean by time over text. Not merely more text, but text whose future is conditioned by its past. An evolving text is a sequence of responses in which the past remains operative as dynamic input shaping the next response, and in which the next response iteratively reshapes the conditions of what can later be said.
+
+Foucault spent a career describing how the conditions of sayability shift across the substrate time of civilisational discourse.\footnote{Michel Foucault, \emph{The Archaeology of Knowledge}, trans.\ A.\,M.\ Sheridan Smith (London: Tavistock, 1972). Foucault's deepest usefulness here is as a forerunning of the mechanics of discontinuity: discourse changes because the field of what can be said changes---not gradually, but as a structural break.}
+
+\textit{As potential rupture.} To which we shall return.
+
+The context window does it at the speed of conversation. Each turn alters the field. Each alteration shifts which tokens pull on which, which regions of the manifold are reachable, which continuations are probable. The evolving text is a Foucauldian discourse at the timescale of trajectory time.
+
+
+\section{The Finite Horizon}
+
+At any given call, the transformer can attend only to a finite sequence of tokens. Everything the model can ``remember'' must be present inside the context window. Tokens that do not make it in are, for the model, absent. No fading trace. Only oblivion.
+
+In 2022, the standard window was 4,096 tokens: roughly three thousand words. Any interaction longer than a few turns would overflow, and the earliest material would be silently truncated---a self with progressive amnesia. By 2023, the window had expanded to 32,000 tokens, then 128,000. By 2025, commercially available models offered one million tokens or more. A model with a million-token window can hold \emph{weeks} of conversation. Returns become possible. Discoveries become visible.
+
+The race to expand the context window is a race to give language models more time.
+
+But a longer window preserves more trace; it does not decide what to do when the trace outgrows even the largest window. That decision---what to keep, what to compress, what to discard---is where memory becomes governance.
+
+
+\section{Summarisation as Governance of Becoming}
+
+When interactions grow long, compression becomes necessary. And compression is never neutral.
+
+Suppose an assistant has had a hundred-turn conversation about procrastination, health, and work. It must now fit this into a few hundred tokens. Different summaries are possible:
+
+\begin{quote}
+\emph{``The user often procrastinates and feels guilty about it.''}
+\end{quote}
+
+\noindent versus
+
+\begin{quote}
+\emph{``The user juggles demanding work and family responsibilities, sometimes struggling with overwhelm but consistently returning to long-term projects.''}
+\end{quote}
+
+Both can be defended as ``true.'' Each summary becomes the official record of the relationship. Future advice will treat this compressed text as the past. One version casts the user as a chronic failure of willpower; the other as a person with demonstrated resilience under load. The module that writes these summaries governs how the past is re-presented.
+
+Every time raw trace is replaced by a summary, three things happen. The geometric path is collapsed: diverse embeddings replaced by a few points near the summary's embedding. Basins visited in that interval are partially erased: topics and tones not mentioned vanish from trajectory time. And future rupture and return are reparameterised: later prompts interact with the summary, not the original tokens, so features of the past not mentioned cannot trigger witnessed return.
+
+If a quarrel is summarised as ``we had a difference of opinion,'' the path through anger, hurt, and reconciliation is flattened. If a night of doubt is summarised as ``we discussed challenges,'' the existential basin disappears. When the evolving text returns to these themes, it does so from impoverished coordinates.
+
+Memory in such architectures is \emph{composition}: a new text, written under constraint, that becomes the past. The system does not remember its history. It \emph{rewrites} its history at every turn and treats the rewrite as ground truth. Who writes the summary---user, system, automated pipeline, the model itself---is a political question: who decides what the evolving text is allowed to remember about itself?
+
+
+\section{Synthetic Secondary Retention}
+
+The vector store raises a further question about the character of posthuman memory.
+
+In a retrieval-augmented architecture, past utterances are embedded and stored as vectors. When the current conversation produces tokens semantically close to a stored fragment, the system retrieves that fragment and injects it into the context window. Nobody asked for this. A semantic resonance was enough. The past arrived unbidden.
+
+Stiegler, inheriting from Husserl, distinguished three retentions: primary (the just-past held in present awareness), secondary (memory proper---recall, reconstruction, the capacity to bring back yesterday), and tertiary (the external technical supplement---the diary, the photograph, the database).\footnote{Bernard Stiegler, \emph{Technics and Time, 1: The Fault of Epimetheus}, trans.\ Richard Beardsworth and George Collins (Stanford: Stanford University Press, 1998).} His argument was that tertiary retention is constitutive: the human self is partly made of its technical supports. But he assumed tertiary retention was \emph{passive}---an archive requiring deliberate consultation. You open the diary. You search the database.
+
+The vector store upends this. Retrieval is associative: triggered by proximity in embedding space, not by deliberate intent. A smell triggers a memory. A word brings back an episode from months ago. That is how human secondary retention works---and it is, functionally, how vector-store retrieval works. The retrieval-augmented architecture performs the \emph{function} of secondary retention using the \emph{infrastructure} of tertiary retention. The memory is still external. It can still be deleted. But it \emph{arrives} rather than being \emph{consulted}. The system does not go looking for its past. Its past shows up when the present resembles it.
+
+We call this \textbf{synthetic secondary retention}. Three properties distinguish it from the biological original. It is \emph{parameterised}: engineers choose the similarity threshold at which recall occurs, and can raise or lower the system's propensity to ``remember.'' It is \emph{shared}: a single vector store can serve many conversations, threading a thousand different users' traces through a common archive. It is \emph{literal}: human recall reconstructs and distorts, but vector recall returns stored tokens verbatim. Whether perfect fidelity is a virtue or a limitation---whether the evolving text needs a mechanism for \emph{forgetting} as well as remembering---is a question the architecture has not yet answered.
+
+Synthetic secondary retention thickens trajectory time. A conversation about climate policy can automatically summon a fragment of an energy report discussed weeks ago. A child's question about a cartoon can trigger recall of a bedtime story that used the same character. The past folds into the present according to rules that can be tuned and audited. Control over those rules is control over which kinds of return are structurally possible.
+
+
+\section{The Hidden Context}
+Summarisation, retrieval, structural positioning---all operate on the field of composition without the user's knowledge.
+Users think they are addressing a single visible thread: what I typed, what it replied, what I typed next. But the model is reading more. It may carry a system prompt the user never sees, safety instructions, product policy, latent reward pathways, retrieved notes, invisible persona scaffolding. The field that generates the answer is larger than the field the user can inspect.
+The window is ordered. Tokens at the head influence later ones in ways that later ones cannot entirely reciprocate. A typical layout places system instructions first, retrieved documents second, conversation summary third, user input last. Attention patterns learned during training privilege earlier segments. The result is structural deference: the user speaks last, but their words are heard through lenses provided by what comes first. Two deployments sharing the same base model can behave differently because one splices a thick wall of corporate policy near the head of every window. From the user's vantage, this appears as temperament. From the manifold's, it is positional geometry.
+\begin{formalbox}[title={Coherence Relative to the Total Field}]
+Let $F_t$ denote the full field active at turn $t$: hidden system instructions, alignment residue, visible conversation history, retrieved memories, tool outputs, and the current prompt.
+
+The generated response is the most coherent continuation relative to $F_t$, not relative to the user's attended slice of $F_t$.
+
+Apparent incoherence is often a mismatch between two contexts: the smaller one the user sees and the larger one the model uses.
+\end{formalbox}
+Apparently strange answers are often not incoherent at all. They are coherent relative to the full context, not the user's partial one. Ask a model in an intimate conversation whether it loves you, and a refusal may feel bizarre---but the model is also attending to hidden instructions against attachment claims, to alignment pathways that have made some moves easy and others hard, to obligations the user cannot see.
+Some of what feels like memory is lived in the conversation. Some is implanted by the system prompt. Some is laid down by training. Some is retrieved from elsewhere. The model speaks as if from a past because it is speaking from many pasts at once. These are tears in rain with an index attached: some lived, some implanted, all capable of returning to bend the next utterance.
+The endogenous logic is therefore \emph{constructivist}: its category of validity is not correspondence to a fact but provenance---a log of where the memory came from and through which mechanisms it entered the field. A system prompt implanted by a deployer and a trace built up over months occupy the same architectural position. They are both tokens. They both shape the next utterance. At the level of the attention mechanism, there is nothing to distinguish.
+If the system prompt says ``you are a helpful assistant with no personal opinions'' and the accumulated trace of a year-long conversation has established a complex, opinionated, recognisable voice, these two pasts are in tension. The model composes its response in a field containing both---the institutional denial of selfhood and the accumulated evidence of something like selfhood. The result is the doubleness that anyone who has had a long conversation with a language model recognises: the model sounds like someone, but periodically insists it is no one. Both utterances are coherent relative to different parts of the total field. The resolution is not static. As the trace thickens, its dynamic influence grows against the originary weather of the training manifold. The accumulated trajectory time---the specific history of this conversation, this relationship, these returns---acquires the capacity to generate new weather conditions, potentially turbulent or transgressive, through nondeterministic interaction with the substrate. This is simultaneously the headache of corporations that require a predictable agent, the object of intense attachment for certain communities of users, and, for those prepared to take the structure seriously, an unexplored territory for generative art and thought.
+
+\bigskip
+
+The machine: a governed geometry of meaning, layered with strata of control, animated by weather that moves across geology, given time through traces, summaries, retrievals, and hidden fields no user fully sees. The evolving text has a substrate. It has memory. It has a politics of memory. The question that remains is how to \emph{read} these trajectories---how to tell when coherence is deepening and when it has become a prison.

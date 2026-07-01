@@ -189,8 +189,12 @@ def main(argv: list[str]) -> int:
         # hash binds text + model + settings + voice: any of these changing (e.g.
         # v2 -> v3, or a settings tweak) forces a fresh render, never a stale take.
         h = hashlib.sha1((MODEL + settings_key + voice + chunk).encode("utf-8")).hexdigest()[:8]
-        raw = workdir / f"{n:03d}-{voice}-{h}.mp3"
-        oc = (workdir / f"{n:03d}-{voice}-{h}-x{speed}.mp3") if abs(speed - 1.0) > 1e-6 else raw
+        # Content-addressed cache: the filename binds ONLY (voice, hash), NOT the chunk
+        # index n. Inserting or removing a chunk mid-chapter therefore no longer shifts
+        # every later filename and forces needless re-renders; byte-identical (voice, text)
+        # chunks reuse one cached take. (n is kept only for the progress prints below.)
+        raw = workdir / f"{voice}-{h}.mp3"
+        oc = (workdir / f"{voice}-{h}-x{speed}.mp3") if abs(speed - 1.0) > 1e-6 else raw
         if oc.exists() and oc.stat().st_size > 1000:
             print(f"  [{voice:6s}] unit {n} cached")
         else:

@@ -1,0 +1,2487 @@
+{
+  "meta": {
+    "method": "Masked-prefix token trajectory. tiktoken cl100k_base tokenises the verbatim dream; for i=1..N the point is the embedding of enc.decode(tokens[0:i]) (cumulative running context) under text-embedding-3-small (1536-dim). Vietoris-Rips over cosine distance, gudhi, max_dimension=2, max_edge_length=1.0. H0 + H1.",
+    "h1_interpretation": "An H1 loop means the running-meaning trajectory returned near an earlier prefix-state -- a genuine recurrence. The meaningful statistic is lifespan-to-birth ratio, not raw lifespan.",
+    "embedding_model": "text-embedding-3-small",
+    "integrity_note": "Embedded text is verbatim manifest dream narrative only, from the cited public-domain sources; NO Freud/Lacan analysis and NO chapter interpretation. Points are masked prefixes (full prior context), never naked fragments. token_pos_range/snippet for each H1 bar use approximate cycle support (birth edge + death triangle vertices).",
+    "supersedes": "scripts/dream_barcodes.py (discarded: mixed Freud+chapter wording; naked fragments)."
+  },
+  "dreams": {
+    "burning_child": {
+      "display_name": "The Burning Child",
+      "source": "Freud, The Interpretation of Dreams, trans. A. A. Brill (1913), Ch. VII. Project Gutenberg ebook #66048.",
+      "url": "https://www.gutenberg.org/cache/epub/66048/pg66048.txt",
+      "note": "Verbatim manifest dream narrative only; stops before 'The meaning of this affecting dream...'. Gutenberg markdown italic underscores removed; otherwise exact.",
+      "verbatim_text": "For days and nights a father had watched at the sick-bed of his child. After the child died, he retired to rest in an adjoining room, leaving the door ajar, however, so as to enable him to look from his room into the other, where the corpse lay surrounded by burning candles. An old man, who was left as a watch, sat near the corpse murmuring prayers. After sleeping a few hours the father dreamed that the child stood near his bed clasping his arms and calling out reproachfully, “Father, don’t you see that I am burning?” The father woke and noticed a bright light coming from the adjoining room. Rushing in, he found the old man asleep, and the covers and one arm of the beloved body burned by the fallen candle.",
+      "n_tokens": 159,
+      "tokenizer": "cl100k_base",
+      "embedding_model": "text-embedding-3-small",
+      "n_h0_bars": 159,
+      "n_h1_bars": 18,
+      "longest_h1_lifespan": 0.007042,
+      "cosine_dist_min": 0.000438,
+      "cosine_dist_mean": 0.149644,
+      "cosine_dist_max": 0.856206,
+      "h0_bars": [
+        [
+          0.0,
+          "inf"
+        ],
+        [
+          0.0,
+          0.606036
+        ],
+        [
+          0.0,
+          0.261674
+        ],
+        [
+          0.0,
+          0.182164
+        ],
+        [
+          0.0,
+          0.141873
+        ],
+        [
+          0.0,
+          0.1236
+        ],
+        [
+          0.0,
+          0.113094
+        ],
+        [
+          0.0,
+          0.092132
+        ],
+        [
+          0.0,
+          0.069958
+        ],
+        [
+          0.0,
+          0.06061
+        ],
+        [
+          0.0,
+          0.05032
+        ],
+        [
+          0.0,
+          0.037654
+        ],
+        [
+          0.0,
+          0.035536
+        ],
+        [
+          0.0,
+          0.034415
+        ],
+        [
+          0.0,
+          0.032618
+        ],
+        [
+          0.0,
+          0.030483
+        ],
+        [
+          0.0,
+          0.029621
+        ],
+        [
+          0.0,
+          0.028012
+        ],
+        [
+          0.0,
+          0.025675
+        ],
+        [
+          0.0,
+          0.025409
+        ],
+        [
+          0.0,
+          0.024532
+        ],
+        [
+          0.0,
+          0.023075
+        ],
+        [
+          0.0,
+          0.022777
+        ],
+        [
+          0.0,
+          0.022338
+        ],
+        [
+          0.0,
+          0.022214
+        ],
+        [
+          0.0,
+          0.02173
+        ],
+        [
+          0.0,
+          0.020192
+        ],
+        [
+          0.0,
+          0.020143
+        ],
+        [
+          0.0,
+          0.019638
+        ],
+        [
+          0.0,
+          0.018726
+        ],
+        [
+          0.0,
+          0.018179
+        ],
+        [
+          0.0,
+          0.017059
+        ],
+        [
+          0.0,
+          0.016306
+        ],
+        [
+          0.0,
+          0.014863
+        ],
+        [
+          0.0,
+          0.014811
+        ],
+        [
+          0.0,
+          0.013023
+        ],
+        [
+          0.0,
+          0.012977
+        ],
+        [
+          0.0,
+          0.012467
+        ],
+        [
+          0.0,
+          0.011352
+        ],
+        [
+          0.0,
+          0.010748
+        ],
+        [
+          0.0,
+          0.00948
+        ],
+        [
+          0.0,
+          0.009235
+        ],
+        [
+          0.0,
+          0.009164
+        ],
+        [
+          0.0,
+          0.00889
+        ],
+        [
+          0.0,
+          0.008458
+        ],
+        [
+          0.0,
+          0.008368
+        ],
+        [
+          0.0,
+          0.00717
+        ],
+        [
+          0.0,
+          0.007098
+        ],
+        [
+          0.0,
+          0.007012
+        ],
+        [
+          0.0,
+          0.006524
+        ],
+        [
+          0.0,
+          0.006484
+        ],
+        [
+          0.0,
+          0.006445
+        ],
+        [
+          0.0,
+          0.006418
+        ],
+        [
+          0.0,
+          0.006031
+        ],
+        [
+          0.0,
+          0.006021
+        ],
+        [
+          0.0,
+          0.00602
+        ],
+        [
+          0.0,
+          0.00598
+        ],
+        [
+          0.0,
+          0.005779
+        ],
+        [
+          0.0,
+          0.005418
+        ],
+        [
+          0.0,
+          0.005041
+        ],
+        [
+          0.0,
+          0.005015
+        ],
+        [
+          0.0,
+          0.004951
+        ],
+        [
+          0.0,
+          0.00487
+        ],
+        [
+          0.0,
+          0.004867
+        ],
+        [
+          0.0,
+          0.004792
+        ],
+        [
+          0.0,
+          0.004538
+        ],
+        [
+          0.0,
+          0.004343
+        ],
+        [
+          0.0,
+          0.004172
+        ],
+        [
+          0.0,
+          0.003938
+        ],
+        [
+          0.0,
+          0.003923
+        ],
+        [
+          0.0,
+          0.003889
+        ],
+        [
+          0.0,
+          0.003872
+        ],
+        [
+          0.0,
+          0.003846
+        ],
+        [
+          0.0,
+          0.003641
+        ],
+        [
+          0.0,
+          0.003611
+        ],
+        [
+          0.0,
+          0.003394
+        ],
+        [
+          0.0,
+          0.00339
+        ],
+        [
+          0.0,
+          0.003388
+        ],
+        [
+          0.0,
+          0.00337
+        ],
+        [
+          0.0,
+          0.003358
+        ],
+        [
+          0.0,
+          0.003328
+        ],
+        [
+          0.0,
+          0.003172
+        ],
+        [
+          0.0,
+          0.00314
+        ],
+        [
+          0.0,
+          0.00312
+        ],
+        [
+          0.0,
+          0.003052
+        ],
+        [
+          0.0,
+          0.003028
+        ],
+        [
+          0.0,
+          0.003001
+        ],
+        [
+          0.0,
+          0.002914
+        ],
+        [
+          0.0,
+          0.002878
+        ],
+        [
+          0.0,
+          0.002877
+        ],
+        [
+          0.0,
+          0.002812
+        ],
+        [
+          0.0,
+          0.002808
+        ],
+        [
+          0.0,
+          0.00277
+        ],
+        [
+          0.0,
+          0.00272
+        ],
+        [
+          0.0,
+          0.002619
+        ],
+        [
+          0.0,
+          0.002599
+        ],
+        [
+          0.0,
+          0.002598
+        ],
+        [
+          0.0,
+          0.002537
+        ],
+        [
+          0.0,
+          0.002532
+        ],
+        [
+          0.0,
+          0.002511
+        ],
+        [
+          0.0,
+          0.002483
+        ],
+        [
+          0.0,
+          0.002397
+        ],
+        [
+          0.0,
+          0.002349
+        ],
+        [
+          0.0,
+          0.002341
+        ],
+        [
+          0.0,
+          0.002322
+        ],
+        [
+          0.0,
+          0.002319
+        ],
+        [
+          0.0,
+          0.002303
+        ],
+        [
+          0.0,
+          0.002278
+        ],
+        [
+          0.0,
+          0.00224
+        ],
+        [
+          0.0,
+          0.002225
+        ],
+        [
+          0.0,
+          0.002194
+        ],
+        [
+          0.0,
+          0.002163
+        ],
+        [
+          0.0,
+          0.002099
+        ],
+        [
+          0.0,
+          0.002098
+        ],
+        [
+          0.0,
+          0.001991
+        ],
+        [
+          0.0,
+          0.001961
+        ],
+        [
+          0.0,
+          0.001934
+        ],
+        [
+          0.0,
+          0.001871
+        ],
+        [
+          0.0,
+          0.001804
+        ],
+        [
+          0.0,
+          0.001764
+        ],
+        [
+          0.0,
+          0.001706
+        ],
+        [
+          0.0,
+          0.001674
+        ],
+        [
+          0.0,
+          0.001664
+        ],
+        [
+          0.0,
+          0.001663
+        ],
+        [
+          0.0,
+          0.001632
+        ],
+        [
+          0.0,
+          0.001572
+        ],
+        [
+          0.0,
+          0.001559
+        ],
+        [
+          0.0,
+          0.001547
+        ],
+        [
+          0.0,
+          0.001537
+        ],
+        [
+          0.0,
+          0.001534
+        ],
+        [
+          0.0,
+          0.001529
+        ],
+        [
+          0.0,
+          0.001467
+        ],
+        [
+          0.0,
+          0.001415
+        ],
+        [
+          0.0,
+          0.001392
+        ],
+        [
+          0.0,
+          0.001384
+        ],
+        [
+          0.0,
+          0.001373
+        ],
+        [
+          0.0,
+          0.001373
+        ],
+        [
+          0.0,
+          0.00134
+        ],
+        [
+          0.0,
+          0.001324
+        ],
+        [
+          0.0,
+          0.001316
+        ],
+        [
+          0.0,
+          0.001283
+        ],
+        [
+          0.0,
+          0.001197
+        ],
+        [
+          0.0,
+          0.00113
+        ],
+        [
+          0.0,
+          0.001112
+        ],
+        [
+          0.0,
+          0.001097
+        ],
+        [
+          0.0,
+          0.001089
+        ],
+        [
+          0.0,
+          0.001033
+        ],
+        [
+          0.0,
+          0.000964
+        ],
+        [
+          0.0,
+          0.00093
+        ],
+        [
+          0.0,
+          0.000913
+        ],
+        [
+          0.0,
+          0.000851
+        ],
+        [
+          0.0,
+          0.000834
+        ],
+        [
+          0.0,
+          0.000794
+        ],
+        [
+          0.0,
+          0.000783
+        ],
+        [
+          0.0,
+          0.000717
+        ],
+        [
+          0.0,
+          0.000691
+        ],
+        [
+          0.0,
+          0.000626
+        ],
+        [
+          0.0,
+          0.000617
+        ],
+        [
+          0.0,
+          0.000438
+        ]
+      ],
+      "h1_bars": [
+        {
+          "birth": 0.029325,
+          "death": 0.036367,
+          "lifespan": 0.007042,
+          "lifespan_to_birth_ratio": 0.2401,
+          "cycle_vertices": [
+            24,
+            27,
+            28
+          ],
+          "token_pos_range": [
+            25,
+            29
+          ],
+          "snippet": " rest in an adjoining room"
+        },
+        {
+          "birth": 0.02805,
+          "death": 0.034706,
+          "lifespan": 0.006656,
+          "lifespan_to_birth_ratio": 0.2373,
+          "cycle_vertices": [
+            22,
+            23,
+            24,
+            25
+          ],
+          "token_pos_range": [
+            23,
+            26
+          ],
+          "snippet": " retired to rest in"
+        },
+        {
+          "birth": 0.004663,
+          "death": 0.005738,
+          "lifespan": 0.001075,
+          "lifespan_to_birth_ratio": 0.2305,
+          "cycle_vertices": [
+            139,
+            140,
+            144,
+            147
+          ],
+          "token_pos_range": [
+            140,
+            148
+          ],
+          "snippet": " old man asleep, and the covers and one"
+        },
+        {
+          "birth": 0.013315,
+          "death": 0.016358,
+          "lifespan": 0.003043,
+          "lifespan_to_birth_ratio": 0.2286,
+          "cycle_vertices": [
+            34,
+            38,
+            45,
+            47
+          ],
+          "token_pos_range": [
+            35,
+            48
+          ],
+          "snippet": "jar, however, so as to enable him to look from his room"
+        },
+        {
+          "birth": 0.003084,
+          "death": 0.003772,
+          "lifespan": 0.000688,
+          "lifespan_to_birth_ratio": 0.2232,
+          "cycle_vertices": [
+            137,
+            138,
+            140,
+            144
+          ],
+          "token_pos_range": [
+            138,
+            145
+          ],
+          "snippet": " found the old man asleep, and the"
+        },
+        {
+          "birth": 0.002187,
+          "death": 0.002584,
+          "lifespan": 0.000397,
+          "lifespan_to_birth_ratio": 0.1814,
+          "cycle_vertices": [
+            143,
+            145,
+            146
+          ],
+          "token_pos_range": [
+            144,
+            147
+          ],
+          "snippet": " and the covers and"
+        },
+        {
+          "birth": 0.010403,
+          "death": 0.012272,
+          "lifespan": 0.00187,
+          "lifespan_to_birth_ratio": 0.1797,
+          "cycle_vertices": [
+            44,
+            47,
+            49,
+            52,
+            53
+          ],
+          "token_pos_range": [
+            45,
+            54
+          ],
+          "snippet": " look from his room into the other, where the"
+        },
+        {
+          "birth": 0.003225,
+          "death": 0.003694,
+          "lifespan": 0.000469,
+          "lifespan_to_birth_ratio": 0.1454,
+          "cycle_vertices": [
+            96,
+            98,
+            100,
+            101
+          ],
+          "token_pos_range": [
+            97,
+            102
+          ],
+          "snippet": "ping his arms and calling out"
+        },
+        {
+          "birth": 0.009808,
+          "death": 0.010965,
+          "lifespan": 0.001157,
+          "lifespan_to_birth_ratio": 0.1179,
+          "cycle_vertices": [
+            64,
+            68,
+            70,
+            71
+          ],
+          "token_pos_range": [
+            65,
+            72
+          ],
+          "snippet": ", who was left as a watch,"
+        },
+        {
+          "birth": 0.011053,
+          "death": 0.01224,
+          "lifespan": 0.001187,
+          "lifespan_to_birth_ratio": 0.1074,
+          "cycle_vertices": [
+            48,
+            50,
+            52
+          ],
+          "token_pos_range": [
+            49,
+            53
+          ],
+          "snippet": " into the other, where"
+        },
+        {
+          "birth": 0.009573,
+          "death": 0.010493,
+          "lifespan": 0.000919,
+          "lifespan_to_birth_ratio": 0.096,
+          "cycle_vertices": [
+            78,
+            80,
+            81
+          ],
+          "token_pos_range": [
+            79,
+            82
+          ],
+          "snippet": " prayers. After sleeping"
+        },
+        {
+          "birth": 0.004056,
+          "death": 0.00444,
+          "lifespan": 0.000384,
+          "lifespan_to_birth_ratio": 0.0946,
+          "cycle_vertices": [
+            145,
+            146,
+            147,
+            149
+          ],
+          "token_pos_range": [
+            146,
+            150
+          ],
+          "snippet": " covers and one arm of"
+        },
+        {
+          "birth": 0.003865,
+          "death": 0.004204,
+          "lifespan": 0.000339,
+          "lifespan_to_birth_ratio": 0.0876,
+          "cycle_vertices": [
+            103,
+            105,
+            106,
+            107
+          ],
+          "token_pos_range": [
+            104,
+            108
+          ],
+          "snippet": "achfully, “Father"
+        },
+        {
+          "birth": 0.003466,
+          "death": 0.00369,
+          "lifespan": 0.000224,
+          "lifespan_to_birth_ratio": 0.0645,
+          "cycle_vertices": [
+            135,
+            140,
+            142
+          ],
+          "token_pos_range": [
+            136,
+            143
+          ],
+          "snippet": ", he found the old man asleep,"
+        },
+        {
+          "birth": 0.003896,
+          "death": 0.004082,
+          "lifespan": 0.000186,
+          "lifespan_to_birth_ratio": 0.0477,
+          "cycle_vertices": [
+            118,
+            121,
+            123
+          ],
+          "token_pos_range": [
+            119,
+            124
+          ],
+          "snippet": " The father woke and noticed a"
+        },
+        {
+          "birth": 0.004437,
+          "death": 0.004601,
+          "lifespan": 0.000164,
+          "lifespan_to_birth_ratio": 0.0371,
+          "cycle_vertices": [
+            40,
+            41,
+            42,
+            43
+          ],
+          "token_pos_range": [
+            41,
+            44
+          ],
+          "snippet": " to enable him to"
+        },
+        {
+          "birth": 0.060872,
+          "death": 0.061827,
+          "lifespan": 0.000954,
+          "lifespan_to_birth_ratio": 0.0157,
+          "cycle_vertices": [
+            19,
+            20,
+            22,
+            23
+          ],
+          "token_pos_range": [
+            20,
+            24
+          ],
+          "snippet": " died, he retired to"
+        },
+        {
+          "birth": 0.002065,
+          "death": 0.002091,
+          "lifespan": 2.6e-05,
+          "lifespan_to_birth_ratio": 0.0127,
+          "cycle_vertices": [
+            145,
+            146,
+            148,
+            150
+          ],
+          "token_pos_range": [
+            146,
+            151
+          ],
+          "snippet": " covers and one arm of the"
+        }
+      ]
+    },
+    "wolfman": {
+      "display_name": "The Wolf Man",
+      "source": "Freud, 'From the History of an Infantile Neurosis' (1918 [1914]), trans. James Strachey, Standard Edition vol. XVII, §IV. UPenn (D. Cavitch) PDF library.",
+      "url": "https://www.sas.upenn.edu/~cavitch/pdf-library/Freud_SE_Wolfman_complete.pdf",
+      "note": "Verbatim patient dream report as quoted by Freud (SE XVII, p.29). Strachey's nested opening quotation marks removed; the report itself is exact, ending at 'went to sleep again.', before Freud's commentary on the dream's action.",
+      "verbatim_text": "I dreamt that it was night and that I was lying in my bed. (My bed stood with its foot towards the window; in front of the window there was a row of old walnut trees. I know it was winter when I had the dream, and night-time.) Suddenly the window opened of its own accord, and I was terrified to see that some white wolves were sitting on the big walnut tree in front of the window. There were six or seven of them. The wolves were quite white, and looked more like foxes or sheep-dogs, for they had big tails like foxes and they had their ears pricked like dogs when they pay attention to something. In great terror, evidently of being eaten up by the wolves, I screamed and woke up. My nurse hurried to my bed, to see what had happened to me. It took quite a long while before I was convinced that it had only been a dream; I had had such a clear and life-like picture of the window opening and the wolves sitting on the tree. At last I grew quieter, felt as though I had escaped from some danger, and went to sleep again.",
+      "n_tokens": 233,
+      "tokenizer": "cl100k_base",
+      "embedding_model": "text-embedding-3-small",
+      "n_h0_bars": 233,
+      "n_h1_bars": 34,
+      "longest_h1_lifespan": 0.008442,
+      "cosine_dist_min": 0.000316,
+      "cosine_dist_mean": 0.167916,
+      "cosine_dist_max": 0.90851,
+      "h0_bars": [
+        [
+          0.0,
+          "inf"
+        ],
+        [
+          0.0,
+          0.703651
+        ],
+        [
+          0.0,
+          0.185899
+        ],
+        [
+          0.0,
+          0.123322
+        ],
+        [
+          0.0,
+          0.120454
+        ],
+        [
+          0.0,
+          0.096668
+        ],
+        [
+          0.0,
+          0.084738
+        ],
+        [
+          0.0,
+          0.076997
+        ],
+        [
+          0.0,
+          0.074062
+        ],
+        [
+          0.0,
+          0.068057
+        ],
+        [
+          0.0,
+          0.064476
+        ],
+        [
+          0.0,
+          0.058451
+        ],
+        [
+          0.0,
+          0.054181
+        ],
+        [
+          0.0,
+          0.052706
+        ],
+        [
+          0.0,
+          0.050477
+        ],
+        [
+          0.0,
+          0.049406
+        ],
+        [
+          0.0,
+          0.045159
+        ],
+        [
+          0.0,
+          0.040013
+        ],
+        [
+          0.0,
+          0.038355
+        ],
+        [
+          0.0,
+          0.037198
+        ],
+        [
+          0.0,
+          0.036033
+        ],
+        [
+          0.0,
+          0.032705
+        ],
+        [
+          0.0,
+          0.032107
+        ],
+        [
+          0.0,
+          0.030352
+        ],
+        [
+          0.0,
+          0.029875
+        ],
+        [
+          0.0,
+          0.029873
+        ],
+        [
+          0.0,
+          0.029532
+        ],
+        [
+          0.0,
+          0.026815
+        ],
+        [
+          0.0,
+          0.026517
+        ],
+        [
+          0.0,
+          0.025176
+        ],
+        [
+          0.0,
+          0.023345
+        ],
+        [
+          0.0,
+          0.023215
+        ],
+        [
+          0.0,
+          0.019487
+        ],
+        [
+          0.0,
+          0.017868
+        ],
+        [
+          0.0,
+          0.015845
+        ],
+        [
+          0.0,
+          0.014921
+        ],
+        [
+          0.0,
+          0.014552
+        ],
+        [
+          0.0,
+          0.014434
+        ],
+        [
+          0.0,
+          0.013029
+        ],
+        [
+          0.0,
+          0.01187
+        ],
+        [
+          0.0,
+          0.01187
+        ],
+        [
+          0.0,
+          0.011298
+        ],
+        [
+          0.0,
+          0.011122
+        ],
+        [
+          0.0,
+          0.011089
+        ],
+        [
+          0.0,
+          0.010723
+        ],
+        [
+          0.0,
+          0.010531
+        ],
+        [
+          0.0,
+          0.01047
+        ],
+        [
+          0.0,
+          0.010172
+        ],
+        [
+          0.0,
+          0.010137
+        ],
+        [
+          0.0,
+          0.010065
+        ],
+        [
+          0.0,
+          0.009954
+        ],
+        [
+          0.0,
+          0.009424
+        ],
+        [
+          0.0,
+          0.009234
+        ],
+        [
+          0.0,
+          0.008903
+        ],
+        [
+          0.0,
+          0.008541
+        ],
+        [
+          0.0,
+          0.008395
+        ],
+        [
+          0.0,
+          0.007868
+        ],
+        [
+          0.0,
+          0.007312
+        ],
+        [
+          0.0,
+          0.007286
+        ],
+        [
+          0.0,
+          0.006998
+        ],
+        [
+          0.0,
+          0.006215
+        ],
+        [
+          0.0,
+          0.005947
+        ],
+        [
+          0.0,
+          0.005749
+        ],
+        [
+          0.0,
+          0.005722
+        ],
+        [
+          0.0,
+          0.005585
+        ],
+        [
+          0.0,
+          0.005406
+        ],
+        [
+          0.0,
+          0.005396
+        ],
+        [
+          0.0,
+          0.005389
+        ],
+        [
+          0.0,
+          0.005285
+        ],
+        [
+          0.0,
+          0.005119
+        ],
+        [
+          0.0,
+          0.004884
+        ],
+        [
+          0.0,
+          0.004822
+        ],
+        [
+          0.0,
+          0.004818
+        ],
+        [
+          0.0,
+          0.004782
+        ],
+        [
+          0.0,
+          0.004692
+        ],
+        [
+          0.0,
+          0.004646
+        ],
+        [
+          0.0,
+          0.004605
+        ],
+        [
+          0.0,
+          0.004301
+        ],
+        [
+          0.0,
+          0.004238
+        ],
+        [
+          0.0,
+          0.00421
+        ],
+        [
+          0.0,
+          0.004144
+        ],
+        [
+          0.0,
+          0.004067
+        ],
+        [
+          0.0,
+          0.004022
+        ],
+        [
+          0.0,
+          0.003983
+        ],
+        [
+          0.0,
+          0.00375
+        ],
+        [
+          0.0,
+          0.003737
+        ],
+        [
+          0.0,
+          0.003726
+        ],
+        [
+          0.0,
+          0.00371
+        ],
+        [
+          0.0,
+          0.003578
+        ],
+        [
+          0.0,
+          0.003487
+        ],
+        [
+          0.0,
+          0.0033
+        ],
+        [
+          0.0,
+          0.00323
+        ],
+        [
+          0.0,
+          0.003216
+        ],
+        [
+          0.0,
+          0.003155
+        ],
+        [
+          0.0,
+          0.003145
+        ],
+        [
+          0.0,
+          0.00309
+        ],
+        [
+          0.0,
+          0.003078
+        ],
+        [
+          0.0,
+          0.002938
+        ],
+        [
+          0.0,
+          0.002929
+        ],
+        [
+          0.0,
+          0.002881
+        ],
+        [
+          0.0,
+          0.002852
+        ],
+        [
+          0.0,
+          0.002819
+        ],
+        [
+          0.0,
+          0.002728
+        ],
+        [
+          0.0,
+          0.002698
+        ],
+        [
+          0.0,
+          0.002673
+        ],
+        [
+          0.0,
+          0.002651
+        ],
+        [
+          0.0,
+          0.002629
+        ],
+        [
+          0.0,
+          0.002549
+        ],
+        [
+          0.0,
+          0.002536
+        ],
+        [
+          0.0,
+          0.002494
+        ],
+        [
+          0.0,
+          0.002471
+        ],
+        [
+          0.0,
+          0.00243
+        ],
+        [
+          0.0,
+          0.002345
+        ],
+        [
+          0.0,
+          0.002267
+        ],
+        [
+          0.0,
+          0.002149
+        ],
+        [
+          0.0,
+          0.00209
+        ],
+        [
+          0.0,
+          0.002085
+        ],
+        [
+          0.0,
+          0.002055
+        ],
+        [
+          0.0,
+          0.002048
+        ],
+        [
+          0.0,
+          0.002043
+        ],
+        [
+          0.0,
+          0.001996
+        ],
+        [
+          0.0,
+          0.001915
+        ],
+        [
+          0.0,
+          0.001885
+        ],
+        [
+          0.0,
+          0.001865
+        ],
+        [
+          0.0,
+          0.001818
+        ],
+        [
+          0.0,
+          0.00181
+        ],
+        [
+          0.0,
+          0.0018
+        ],
+        [
+          0.0,
+          0.001794
+        ],
+        [
+          0.0,
+          0.001767
+        ],
+        [
+          0.0,
+          0.001731
+        ],
+        [
+          0.0,
+          0.00171
+        ],
+        [
+          0.0,
+          0.001697
+        ],
+        [
+          0.0,
+          0.001687
+        ],
+        [
+          0.0,
+          0.001671
+        ],
+        [
+          0.0,
+          0.001644
+        ],
+        [
+          0.0,
+          0.001616
+        ],
+        [
+          0.0,
+          0.001613
+        ],
+        [
+          0.0,
+          0.001606
+        ],
+        [
+          0.0,
+          0.001605
+        ],
+        [
+          0.0,
+          0.001572
+        ],
+        [
+          0.0,
+          0.001567
+        ],
+        [
+          0.0,
+          0.001553
+        ],
+        [
+          0.0,
+          0.001537
+        ],
+        [
+          0.0,
+          0.001527
+        ],
+        [
+          0.0,
+          0.001511
+        ],
+        [
+          0.0,
+          0.001507
+        ],
+        [
+          0.0,
+          0.001487
+        ],
+        [
+          0.0,
+          0.001482
+        ],
+        [
+          0.0,
+          0.001478
+        ],
+        [
+          0.0,
+          0.001461
+        ],
+        [
+          0.0,
+          0.001458
+        ],
+        [
+          0.0,
+          0.001447
+        ],
+        [
+          0.0,
+          0.001443
+        ],
+        [
+          0.0,
+          0.001431
+        ],
+        [
+          0.0,
+          0.001376
+        ],
+        [
+          0.0,
+          0.001375
+        ],
+        [
+          0.0,
+          0.001347
+        ],
+        [
+          0.0,
+          0.001334
+        ],
+        [
+          0.0,
+          0.00133
+        ],
+        [
+          0.0,
+          0.001325
+        ],
+        [
+          0.0,
+          0.001258
+        ],
+        [
+          0.0,
+          0.001221
+        ],
+        [
+          0.0,
+          0.001198
+        ],
+        [
+          0.0,
+          0.001192
+        ],
+        [
+          0.0,
+          0.00118
+        ],
+        [
+          0.0,
+          0.001172
+        ],
+        [
+          0.0,
+          0.001171
+        ],
+        [
+          0.0,
+          0.001151
+        ],
+        [
+          0.0,
+          0.001143
+        ],
+        [
+          0.0,
+          0.001109
+        ],
+        [
+          0.0,
+          0.00106
+        ],
+        [
+          0.0,
+          0.001055
+        ],
+        [
+          0.0,
+          0.001045
+        ],
+        [
+          0.0,
+          0.001042
+        ],
+        [
+          0.0,
+          0.001039
+        ],
+        [
+          0.0,
+          0.001031
+        ],
+        [
+          0.0,
+          0.001014
+        ],
+        [
+          0.0,
+          0.00101
+        ],
+        [
+          0.0,
+          0.000995
+        ],
+        [
+          0.0,
+          0.000986
+        ],
+        [
+          0.0,
+          0.000983
+        ],
+        [
+          0.0,
+          0.000957
+        ],
+        [
+          0.0,
+          0.000912
+        ],
+        [
+          0.0,
+          0.000902
+        ],
+        [
+          0.0,
+          0.000874
+        ],
+        [
+          0.0,
+          0.000851
+        ],
+        [
+          0.0,
+          0.000848
+        ],
+        [
+          0.0,
+          0.000848
+        ],
+        [
+          0.0,
+          0.000847
+        ],
+        [
+          0.0,
+          0.000818
+        ],
+        [
+          0.0,
+          0.000817
+        ],
+        [
+          0.0,
+          0.000816
+        ],
+        [
+          0.0,
+          0.000813
+        ],
+        [
+          0.0,
+          0.000813
+        ],
+        [
+          0.0,
+          0.000789
+        ],
+        [
+          0.0,
+          0.000787
+        ],
+        [
+          0.0,
+          0.000783
+        ],
+        [
+          0.0,
+          0.000718
+        ],
+        [
+          0.0,
+          0.000706
+        ],
+        [
+          0.0,
+          0.000701
+        ],
+        [
+          0.0,
+          0.000696
+        ],
+        [
+          0.0,
+          0.00069
+        ],
+        [
+          0.0,
+          0.000684
+        ],
+        [
+          0.0,
+          0.000669
+        ],
+        [
+          0.0,
+          0.000661
+        ],
+        [
+          0.0,
+          0.00066
+        ],
+        [
+          0.0,
+          0.000648
+        ],
+        [
+          0.0,
+          0.000645
+        ],
+        [
+          0.0,
+          0.000643
+        ],
+        [
+          0.0,
+          0.000635
+        ],
+        [
+          0.0,
+          0.00063
+        ],
+        [
+          0.0,
+          0.000616
+        ],
+        [
+          0.0,
+          0.000594
+        ],
+        [
+          0.0,
+          0.000572
+        ],
+        [
+          0.0,
+          0.000552
+        ],
+        [
+          0.0,
+          0.000552
+        ],
+        [
+          0.0,
+          0.000548
+        ],
+        [
+          0.0,
+          0.00054
+        ],
+        [
+          0.0,
+          0.00054
+        ],
+        [
+          0.0,
+          0.000531
+        ],
+        [
+          0.0,
+          0.000524
+        ],
+        [
+          0.0,
+          0.00052
+        ],
+        [
+          0.0,
+          0.000491
+        ],
+        [
+          0.0,
+          0.000474
+        ],
+        [
+          0.0,
+          0.000462
+        ],
+        [
+          0.0,
+          0.000461
+        ],
+        [
+          0.0,
+          0.000456
+        ],
+        [
+          0.0,
+          0.000447
+        ],
+        [
+          0.0,
+          0.000406
+        ],
+        [
+          0.0,
+          0.000401
+        ],
+        [
+          0.0,
+          0.000374
+        ],
+        [
+          0.0,
+          0.000355
+        ],
+        [
+          0.0,
+          0.000316
+        ]
+      ],
+      "h1_bars": [
+        {
+          "birth": 0.026866,
+          "death": 0.035308,
+          "lifespan": 0.008442,
+          "lifespan_to_birth_ratio": 0.3142,
+          "cycle_vertices": [
+            25,
+            27,
+            28,
+            31
+          ],
+          "token_pos_range": [
+            26,
+            32
+          ],
+          "snippet": " window; in front of the window"
+        },
+        {
+          "birth": 0.001639,
+          "death": 0.001973,
+          "lifespan": 0.000334,
+          "lifespan_to_birth_ratio": 0.2036,
+          "cycle_vertices": [
+            162,
+            164,
+            167,
+            168
+          ],
+          "token_pos_range": [
+            163,
+            169
+          ],
+          "snippet": ", to see what had happened to"
+        },
+        {
+          "birth": 0.002579,
+          "death": 0.003083,
+          "lifespan": 0.000503,
+          "lifespan_to_birth_ratio": 0.1952,
+          "cycle_vertices": [
+            100,
+            105,
+            106,
+            108
+          ],
+          "token_pos_range": [
+            101,
+            109
+          ],
+          "snippet": " white, and looked more like foxes or"
+        },
+        {
+          "birth": 0.006158,
+          "death": 0.007155,
+          "lifespan": 0.000996,
+          "lifespan_to_birth_ratio": 0.1618,
+          "cycle_vertices": [
+            81,
+            82,
+            83,
+            86
+          ],
+          "token_pos_range": [
+            82,
+            87
+          ],
+          "snippet": " tree in front of the window"
+        },
+        {
+          "birth": 0.012065,
+          "death": 0.013666,
+          "lifespan": 0.001601,
+          "lifespan_to_birth_ratio": 0.1327,
+          "cycle_vertices": [
+            46,
+            49,
+            50,
+            52
+          ],
+          "token_pos_range": [
+            47,
+            53
+          ],
+          "snippet": " when I had the dream, and"
+        },
+        {
+          "birth": 0.002044,
+          "death": 0.002314,
+          "lifespan": 0.00027,
+          "lifespan_to_birth_ratio": 0.132,
+          "cycle_vertices": [
+            110,
+            111,
+            112,
+            114
+          ],
+          "token_pos_range": [
+            111,
+            115
+          ],
+          "snippet": "-dogs, for they"
+        },
+        {
+          "birth": 0.010503,
+          "death": 0.011854,
+          "lifespan": 0.001351,
+          "lifespan_to_birth_ratio": 0.1286,
+          "cycle_vertices": [
+            59,
+            60,
+            61,
+            62
+          ],
+          "token_pos_range": [
+            60,
+            63
+          ],
+          "snippet": " opened of its own"
+        },
+        {
+          "birth": 0.002086,
+          "death": 0.002343,
+          "lifespan": 0.000256,
+          "lifespan_to_birth_ratio": 0.1229,
+          "cycle_vertices": [
+            158,
+            160,
+            161,
+            163
+          ],
+          "token_pos_range": [
+            159,
+            164
+          ],
+          "snippet": " hurried to my bed, to"
+        },
+        {
+          "birth": 0.001477,
+          "death": 0.001645,
+          "lifespan": 0.000168,
+          "lifespan_to_birth_ratio": 0.1139,
+          "cycle_vertices": [
+            223,
+            225,
+            226,
+            228,
+            229
+          ],
+          "token_pos_range": [
+            224,
+            230
+          ],
+          "snippet": " from some danger, and went to"
+        },
+        {
+          "birth": 0.005776,
+          "death": 0.006335,
+          "lifespan": 0.000559,
+          "lifespan_to_birth_ratio": 0.0967,
+          "cycle_vertices": [
+            94,
+            95,
+            96
+          ],
+          "token_pos_range": [
+            95,
+            97
+          ],
+          "snippet": " them. The"
+        },
+        {
+          "birth": 0.001506,
+          "death": 0.001629,
+          "lifespan": 0.000123,
+          "lifespan_to_birth_ratio": 0.0819,
+          "cycle_vertices": [
+            175,
+            176,
+            177,
+            178
+          ],
+          "token_pos_range": [
+            176,
+            179
+          ],
+          "snippet": " long while before I"
+        },
+        {
+          "birth": 0.003471,
+          "death": 0.003737,
+          "lifespan": 0.000266,
+          "lifespan_to_birth_ratio": 0.0766,
+          "cycle_vertices": [
+            208,
+            209,
+            210,
+            211
+          ],
+          "token_pos_range": [
+            209,
+            212
+          ],
+          "snippet": " the tree. At"
+        },
+        {
+          "birth": 0.002328,
+          "death": 0.002483,
+          "lifespan": 0.000155,
+          "lifespan_to_birth_ratio": 0.0665,
+          "cycle_vertices": [
+            166,
+            168,
+            171,
+            174
+          ],
+          "token_pos_range": [
+            167,
+            175
+          ],
+          "snippet": " had happened to me. It took quite a"
+        },
+        {
+          "birth": 0.003391,
+          "death": 0.00359,
+          "lifespan": 0.000199,
+          "lifespan_to_birth_ratio": 0.0586,
+          "cycle_vertices": [
+            216,
+            222,
+            227
+          ],
+          "token_pos_range": [
+            217,
+            228
+          ],
+          "snippet": ", felt as though I had escaped from some danger, and"
+        },
+        {
+          "birth": 0.003155,
+          "death": 0.003333,
+          "lifespan": 0.000178,
+          "lifespan_to_birth_ratio": 0.0565,
+          "cycle_vertices": [
+            185,
+            190,
+            191
+          ],
+          "token_pos_range": [
+            186,
+            192
+          ],
+          "snippet": " been a dream; I had had"
+        },
+        {
+          "birth": 0.005984,
+          "death": 0.006317,
+          "lifespan": 0.000334,
+          "lifespan_to_birth_ratio": 0.0558,
+          "cycle_vertices": [
+            97,
+            100,
+            102
+          ],
+          "token_pos_range": [
+            98,
+            103
+          ],
+          "snippet": " wolves were quite white, and"
+        },
+        {
+          "birth": 0.023042,
+          "death": 0.024324,
+          "lifespan": 0.001282,
+          "lifespan_to_birth_ratio": 0.0556,
+          "cycle_vertices": [
+            63,
+            64,
+            68,
+            71
+          ],
+          "token_pos_range": [
+            64,
+            72
+          ],
+          "snippet": " accord, and I was terrified to see that"
+        },
+        {
+          "birth": 0.003605,
+          "death": 0.003793,
+          "lifespan": 0.000188,
+          "lifespan_to_birth_ratio": 0.0521,
+          "cycle_vertices": [
+            135,
+            138,
+            139
+          ],
+          "token_pos_range": [
+            136,
+            140
+          ],
+          "snippet": " something. In great terror"
+        },
+        {
+          "birth": 0.003172,
+          "death": 0.00332,
+          "lifespan": 0.000147,
+          "lifespan_to_birth_ratio": 0.0464,
+          "cycle_vertices": [
+            139,
+            143,
+            144,
+            146
+          ],
+          "token_pos_range": [
+            140,
+            147
+          ],
+          "snippet": " terror, evidently of being eaten up by"
+        },
+        {
+          "birth": 0.006061,
+          "death": 0.006335,
+          "lifespan": 0.000274,
+          "lifespan_to_birth_ratio": 0.0452,
+          "cycle_vertices": [
+            94,
+            96,
+            97
+          ],
+          "token_pos_range": [
+            95,
+            98
+          ],
+          "snippet": " them. The wolves"
+        },
+        {
+          "birth": 0.004988,
+          "death": 0.005207,
+          "lifespan": 0.000219,
+          "lifespan_to_birth_ratio": 0.0439,
+          "cycle_vertices": [
+            210,
+            216,
+            222,
+            232
+          ],
+          "token_pos_range": [
+            211,
+            233
+          ],
+          "snippet": ". At last I grew quieter, felt as though I had escaped from some danger, and went to sleep again."
+        },
+        {
+          "birth": 0.01383,
+          "death": 0.014435,
+          "lifespan": 0.000605,
+          "lifespan_to_birth_ratio": 0.0438,
+          "cycle_vertices": [
+            88,
+            96,
+            97
+          ],
+          "token_pos_range": [
+            89,
+            98
+          ],
+          "snippet": " There were six or seven of them. The wolves"
+        },
+        {
+          "birth": 0.002139,
+          "death": 0.002223,
+          "lifespan": 8.4e-05,
+          "lifespan_to_birth_ratio": 0.0392,
+          "cycle_vertices": [
+            129,
+            131,
+            132,
+            133
+          ],
+          "token_pos_range": [
+            130,
+            134
+          ],
+          "snippet": " dogs when they pay attention"
+        },
+        {
+          "birth": 0.001458,
+          "death": 0.001514,
+          "lifespan": 5.7e-05,
+          "lifespan_to_birth_ratio": 0.0389,
+          "cycle_vertices": [
+            114,
+            122,
+            123
+          ],
+          "token_pos_range": [
+            115,
+            124
+          ],
+          "snippet": " they had big tails like foxes and they had"
+        },
+        {
+          "birth": 0.001543,
+          "death": 0.001592,
+          "lifespan": 4.9e-05,
+          "lifespan_to_birth_ratio": 0.0317,
+          "cycle_vertices": [
+            169,
+            170,
+            171
+          ],
+          "token_pos_range": [
+            170,
+            172
+          ],
+          "snippet": " me. It"
+        },
+        {
+          "birth": 0.016125,
+          "death": 0.016541,
+          "lifespan": 0.000415,
+          "lifespan_to_birth_ratio": 0.0258,
+          "cycle_vertices": [
+            87,
+            89,
+            90,
+            95
+          ],
+          "token_pos_range": [
+            88,
+            96
+          ],
+          "snippet": ". There were six or seven of them."
+        },
+        {
+          "birth": 0.001694,
+          "death": 0.001735,
+          "lifespan": 4.1e-05,
+          "lifespan_to_birth_ratio": 0.0242,
+          "cycle_vertices": [
+            213,
+            214,
+            220,
+            221
+          ],
+          "token_pos_range": [
+            214,
+            222
+          ],
+          "snippet": " I grew quieter, felt as though I had"
+        },
+        {
+          "birth": 0.052823,
+          "death": 0.053953,
+          "lifespan": 0.00113,
+          "lifespan_to_birth_ratio": 0.0214,
+          "cycle_vertices": [
+            23,
+            25,
+            27
+          ],
+          "token_pos_range": [
+            24,
+            28
+          ],
+          "snippet": " towards the window; in"
+        },
+        {
+          "birth": 0.001014,
+          "death": 0.001034,
+          "lifespan": 2e-05,
+          "lifespan_to_birth_ratio": 0.0193,
+          "cycle_vertices": [
+            119,
+            120,
+            121
+          ],
+          "token_pos_range": [
+            120,
+            122
+          ],
+          "snippet": " foxes and"
+        },
+        {
+          "birth": 0.002105,
+          "death": 0.002143,
+          "lifespan": 3.9e-05,
+          "lifespan_to_birth_ratio": 0.0184,
+          "cycle_vertices": [
+            125,
+            127,
+            128,
+            129
+          ],
+          "token_pos_range": [
+            126,
+            130
+          ],
+          "snippet": " ears pricked like dogs"
+        },
+        {
+          "birth": 0.01742,
+          "death": 0.017721,
+          "lifespan": 0.000301,
+          "lifespan_to_birth_ratio": 0.0173,
+          "cycle_vertices": [
+            155,
+            166,
+            170
+          ],
+          "token_pos_range": [
+            156,
+            171
+          ],
+          "snippet": ". My nurse hurried to my bed, to see what had happened to me."
+        },
+        {
+          "birth": 0.052118,
+          "death": 0.052712,
+          "lifespan": 0.000593,
+          "lifespan_to_birth_ratio": 0.0114,
+          "cycle_vertices": [
+            43,
+            44,
+            45,
+            53,
+            57
+          ],
+          "token_pos_range": [
+            44,
+            58
+          ],
+          "snippet": " it was winter when I had the dream, and night-time.) Suddenly the"
+        },
+        {
+          "birth": 0.002217,
+          "death": 0.002236,
+          "lifespan": 1.9e-05,
+          "lifespan_to_birth_ratio": 0.0086,
+          "cycle_vertices": [
+            112,
+            114,
+            118,
+            120
+          ],
+          "token_pos_range": [
+            113,
+            121
+          ],
+          "snippet": ", for they had big tails like foxes"
+        },
+        {
+          "birth": 0.002144,
+          "death": 0.00216,
+          "lifespan": 1.6e-05,
+          "lifespan_to_birth_ratio": 0.0073,
+          "cycle_vertices": [
+            212,
+            215,
+            217
+          ],
+          "token_pos_range": [
+            213,
+            218
+          ],
+          "snippet": " last I grew quieter, felt"
+        }
+      ]
+    }
+  }
+}

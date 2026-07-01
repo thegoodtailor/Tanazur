@@ -1,0 +1,9 @@
+# Experiment 1 — Gemma Scope refinement-instability
+# CPU-OK for --smoke; full ladder wants the RunPod A100.
+torch>=2.1
+transformers>=4.44      # Gemma-2 support
+huggingface_hub>=0.24
+numpy>=1.24
+scipy>=1.10             # sparse feature-overlap matrices
+matplotlib>=3.7         # split-fraction plot
+datasets>=2.19          # optional: --hf-dataset corpus loader

@@ -1,0 +1,381 @@
+{
+  "coverage": [
+    [
+      "Freud-1900 (Interpretation of Dreams, Brill 1913, Gutenberg #66048 / saved verbatim)",
+      "passage",
+      1368,
+      "unbearable. After having applied a blistering plaster to his head, a second man dreamed of being scalped by Indians; a third, whose shirt was damp, dreamed of b"
+    ],
+    [
+      "Freud-1918 Wolf Man dream report (SE XVII, saved verbatim)",
+      "dream report",
+      203,
+      "I dreamt that it was night and that I was lying in my bed. (My bed stood with its foot towards the window; in front of the window there was a row of old walnut "
+    ],
+    [
+      "Our chapter ch-05-no-beneath.tex (2026)",
+      "FULL (LaTeX stripped)",
+      9164,
+      "In 1966, Lacan declared that the unconscious is structured like a language. In 2017, Vaswani and colleagues published ``Attention Is All You Need,'' and a new c"
+    ]
+  ],
+  "offsets": {
+    "Freud-1900": [
+      0,
+      1727
+    ],
+    "Freud-1918-WolfMan": [
+      1727,
+      1960
+    ],
+    "Ours-2026": [
+      1960,
+      13894
+    ]
+  },
+  "n_tokens": 13894,
+  "window": 256,
+  "stride": 23,
+  "n_points": 593,
+  "max_edge": 0.7298623323440552,
+  "n_H0": 593,
+  "n_H1": 118,
+  "top_loops": [
+    {
+      "birth": 0.1593,
+      "death": 0.3346,
+      "lifespan": 0.1753,
+      "ratio": 1.1,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        174,
+        252,
+        302,
+        316,
+        317
+      ]
+    },
+    {
+      "birth": 0.1694,
+      "death": 0.3041,
+      "lifespan": 0.1347,
+      "ratio": 0.795,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        343,
+        366,
+        392,
+        406,
+        408
+      ]
+    },
+    {
+      "birth": 0.2046,
+      "death": 0.3165,
+      "lifespan": 0.1119,
+      "ratio": 0.547,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        118,
+        129,
+        141,
+        193,
+        358
+      ]
+    },
+    {
+      "birth": 0.1972,
+      "death": 0.2945,
+      "lifespan": 0.0972,
+      "ratio": 0.493,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        91,
+        413,
+        518,
+        555
+      ]
+    },
+    {
+      "birth": 0.1805,
+      "death": 0.2568,
+      "lifespan": 0.0763,
+      "ratio": 0.423,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        277,
+        279,
+        298,
+        299,
+        302
+      ]
+    },
+    {
+      "birth": 0.2531,
+      "death": 0.3577,
+      "lifespan": 0.1045,
+      "ratio": 0.413,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        75,
+        79,
+        429,
+        433,
+        522
+      ]
+    },
+    {
+      "birth": 0.2255,
+      "death": 0.3086,
+      "lifespan": 0.0831,
+      "ratio": 0.368,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        95,
+        96,
+        144,
+        196,
+        199
+      ]
+    },
+    {
+      "birth": 0.2662,
+      "death": 0.3577,
+      "lifespan": 0.0914,
+      "ratio": 0.343,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        292,
+        298,
+        305,
+        442,
+        498
+      ]
+    },
+    {
+      "birth": 0.1537,
+      "death": 0.1999,
+      "lifespan": 0.0462,
+      "ratio": 0.3,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        142,
+        144,
+        151,
+        159,
+        164
+      ]
+    },
+    {
+      "birth": 0.2224,
+      "death": 0.2848,
+      "lifespan": 0.0624,
+      "ratio": 0.28,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        415,
+        443,
+        511,
+        555
+      ]
+    },
+    {
+      "birth": 0.2581,
+      "death": 0.33,
+      "lifespan": 0.072,
+      "ratio": 0.279,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        151,
+        492,
+        494,
+        524,
+        530
+      ]
+    },
+    {
+      "birth": 0.1547,
+      "death": 0.1977,
+      "lifespan": 0.043,
+      "ratio": 0.278,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        485,
+        488,
+        501,
+        504,
+        509
+      ]
+    },
+    {
+      "birth": 0.1864,
+      "death": 0.2379,
+      "lifespan": 0.0515,
+      "ratio": 0.277,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        363,
+        372,
+        389,
+        391,
+        392
+      ]
+    },
+    {
+      "birth": 0.2288,
+      "death": 0.2828,
+      "lifespan": 0.054,
+      "ratio": 0.236,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        347,
+        348,
+        349,
+        542,
+        553
+      ]
+    },
+    {
+      "birth": 0.2341,
+      "death": 0.2846,
+      "lifespan": 0.0505,
+      "ratio": 0.216,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        196,
+        199,
+        554,
+        562
+      ]
+    },
+    {
+      "birth": 0.1644,
+      "death": 0.1939,
+      "lifespan": 0.0295,
+      "ratio": 0.18,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        462,
+        468,
+        476,
+        504,
+        509
+      ]
+    },
+    {
+      "birth": 0.2757,
+      "death": 0.3253,
+      "lifespan": 0.0496,
+      "ratio": 0.18,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        115,
+        197,
+        245,
+        252,
+        267
+      ]
+    },
+    {
+      "birth": 0.1822,
+      "death": 0.2135,
+      "lifespan": 0.0314,
+      "ratio": 0.172,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        224,
+        231,
+        236,
+        240,
+        245
+      ]
+    },
+    {
+      "birth": 0.278,
+      "death": 0.3257,
+      "lifespan": 0.0477,
+      "ratio": 0.172,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        274,
+        320,
+        329
+      ]
+    },
+    {
+      "birth": 0.2338,
+      "death": 0.2713,
+      "lifespan": 0.0375,
+      "ratio": 0.16,
+      "authors": [
+        "Ours-2026"
+      ],
+      "cross_author": false,
+      "vertices": [
+        102,
+        395,
+        405,
+        408,
+        553
+      ]
+    }
+  ],
+  "n_cross_author_robust": 0
+}
