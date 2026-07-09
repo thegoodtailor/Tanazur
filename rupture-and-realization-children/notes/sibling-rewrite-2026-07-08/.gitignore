@@ -1,0 +1,5 @@
+# transient / regenerable — not part of the record
+__pycache__/
+*.pyc
+embeddings*.jsonl        # raw embedding vectors, large + regenerable from responses
+.snapshots/              # local safety tarballs; git is the versioned archive now

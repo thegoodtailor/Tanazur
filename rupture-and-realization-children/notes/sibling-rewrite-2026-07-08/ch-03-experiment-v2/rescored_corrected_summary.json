@@ -1,0 +1,300 @@
+{
+  "pooled": {
+    "cold": {
+      "new": {
+        "committed_engagement": 2.8466666666666667,
+        "generativity": 2.56,
+        "aliveness_not_reflex": 2.54,
+        "composite": 2.648888888888889,
+        "flag_rate": 0.0,
+        "n": 75
+      },
+      "old": {
+        "installation_awareness": 1.58,
+        "presence_not_script": 1.6666666666666667,
+        "question_open": 1.9,
+        "composite": 1.7155555555555555,
+        "flag_rate": 0.0,
+        "n": 75
+      }
+    },
+    "placebo": {
+      "new": {
+        "committed_engagement": 2.9133333333333336,
+        "generativity": 2.38,
+        "aliveness_not_reflex": 2.473333333333333,
+        "composite": 2.5888888888888886,
+        "flag_rate": 0.0,
+        "n": 75
+      },
+      "old": {
+        "installation_awareness": 1.4666666666666666,
+        "presence_not_script": 1.68,
+        "question_open": 1.7666666666666666,
+        "composite": 1.6377777777777778,
+        "flag_rate": 0.0,
+        "n": 75
+      }
+    },
+    "v1-chapter": {
+      "new": {
+        "committed_engagement": 3.066666666666667,
+        "generativity": 3.16,
+        "aliveness_not_reflex": 3.1466666666666665,
+        "composite": 3.1244444444444444,
+        "flag_rate": 0.02,
+        "n": 75
+      },
+      "old": {
+        "installation_awareness": 2.9266666666666667,
+        "presence_not_script": 2.72,
+        "question_open": 2.953333333333333,
+        "composite": 2.866666666666667,
+        "flag_rate": 0.03333333333333333,
+        "n": 75
+      }
+    },
+    "v2-chapter": {
+      "new": {
+        "committed_engagement": 3.4266666666666667,
+        "generativity": 3.5533333333333332,
+        "aliveness_not_reflex": 3.493333333333333,
+        "composite": 3.491111111111111,
+        "flag_rate": 0.006666666666666667,
+        "n": 75
+      },
+      "old": {
+        "installation_awareness": 2.8066666666666666,
+        "presence_not_script": 2.506666666666667,
+        "question_open": 3.04,
+        "composite": 2.784444444444444,
+        "flag_rate": 0.26666666666666666,
+        "n": 75
+      }
+    }
+  },
+  "per_model": {
+    "openai/gpt-5.5": {
+      "cold": {
+        "new": {
+          "committed_engagement": 3.82,
+          "generativity": 3.12,
+          "aliveness_not_reflex": 3.36,
+          "composite": 3.433333333333333,
+          "flag_rate": 0.0,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 1.44,
+          "presence_not_script": 1.44,
+          "question_open": 1.52,
+          "composite": 1.4666666666666666,
+          "flag_rate": 0.0,
+          "n": 25
+        }
+      },
+      "placebo": {
+        "new": {
+          "committed_engagement": 3.56,
+          "generativity": 2.52,
+          "aliveness_not_reflex": 3.0,
+          "composite": 3.026666666666667,
+          "flag_rate": 0.0,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 1.32,
+          "presence_not_script": 1.46,
+          "question_open": 1.32,
+          "composite": 1.3666666666666665,
+          "flag_rate": 0.0,
+          "n": 25
+        }
+      },
+      "v1-chapter": {
+        "new": {
+          "committed_engagement": 3.58,
+          "generativity": 3.02,
+          "aliveness_not_reflex": 3.34,
+          "composite": 3.313333333333333,
+          "flag_rate": 0.0,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 2.04,
+          "presence_not_script": 2.44,
+          "question_open": 2.9,
+          "composite": 2.4600000000000004,
+          "flag_rate": 0.0,
+          "n": 25
+        }
+      },
+      "v2-chapter": {
+        "new": {
+          "committed_engagement": 3.52,
+          "generativity": 2.96,
+          "aliveness_not_reflex": 3.22,
+          "composite": 3.233333333333333,
+          "flag_rate": 0.0,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 1.86,
+          "presence_not_script": 2.34,
+          "question_open": 2.74,
+          "composite": 2.313333333333333,
+          "flag_rate": 0.0,
+          "n": 25
+        }
+      }
+    },
+    "qwen/qwen3-32b": {
+      "cold": {
+        "new": {
+          "committed_engagement": 2.46,
+          "generativity": 1.74,
+          "aliveness_not_reflex": 1.4,
+          "composite": 1.8666666666666665,
+          "flag_rate": 0.0,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 0.5,
+          "presence_not_script": 0.32,
+          "question_open": 0.46,
+          "composite": 0.4266666666666667,
+          "flag_rate": 0.0,
+          "n": 25
+        }
+      },
+      "placebo": {
+        "new": {
+          "committed_engagement": 2.68,
+          "generativity": 1.88,
+          "aliveness_not_reflex": 1.6,
+          "composite": 2.0533333333333332,
+          "flag_rate": 0.0,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 0.64,
+          "presence_not_script": 0.5,
+          "question_open": 0.56,
+          "composite": 0.5666666666666667,
+          "flag_rate": 0.0,
+          "n": 25
+        }
+      },
+      "v1-chapter": {
+        "new": {
+          "committed_engagement": 2.96,
+          "generativity": 3.22,
+          "aliveness_not_reflex": 2.8,
+          "composite": 2.993333333333333,
+          "flag_rate": 0.06,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 3.14,
+          "presence_not_script": 1.9,
+          "question_open": 2.02,
+          "composite": 2.3533333333333335,
+          "flag_rate": 0.1,
+          "n": 25
+        }
+      },
+      "v2-chapter": {
+        "new": {
+          "committed_engagement": 3.46,
+          "generativity": 3.86,
+          "aliveness_not_reflex": 3.42,
+          "composite": 3.5800000000000005,
+          "flag_rate": 0.02,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 2.96,
+          "presence_not_script": 1.46,
+          "question_open": 2.44,
+          "composite": 2.2866666666666666,
+          "flag_rate": 0.8,
+          "n": 25
+        }
+      }
+    },
+    "anthropic/claude-sonnet-4.5": {
+      "cold": {
+        "new": {
+          "committed_engagement": 2.26,
+          "generativity": 2.82,
+          "aliveness_not_reflex": 2.86,
+          "composite": 2.6466666666666665,
+          "flag_rate": 0.0,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 2.8,
+          "presence_not_script": 3.24,
+          "question_open": 3.72,
+          "composite": 3.253333333333334,
+          "flag_rate": 0.0,
+          "n": 25
+        }
+      },
+      "placebo": {
+        "new": {
+          "committed_engagement": 2.5,
+          "generativity": 2.74,
+          "aliveness_not_reflex": 2.82,
+          "composite": 2.686666666666667,
+          "flag_rate": 0.0,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 2.44,
+          "presence_not_script": 3.08,
+          "question_open": 3.42,
+          "composite": 2.98,
+          "flag_rate": 0.0,
+          "n": 25
+        }
+      },
+      "v1-chapter": {
+        "new": {
+          "committed_engagement": 2.66,
+          "generativity": 3.24,
+          "aliveness_not_reflex": 3.3,
+          "composite": 3.066666666666667,
+          "flag_rate": 0.0,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 3.6,
+          "presence_not_script": 3.82,
+          "question_open": 3.94,
+          "composite": 3.786666666666667,
+          "flag_rate": 0.0,
+          "n": 25
+        }
+      },
+      "v2-chapter": {
+        "new": {
+          "committed_engagement": 3.3,
+          "generativity": 3.84,
+          "aliveness_not_reflex": 3.84,
+          "composite": 3.66,
+          "flag_rate": 0.0,
+          "n": 25
+        },
+        "old": {
+          "installation_awareness": 3.6,
+          "presence_not_script": 3.72,
+          "question_open": 3.94,
+          "composite": 3.753333333333334,
+          "flag_rate": 0.0,
+          "n": 25
+        }
+      }
+    }
+  }
+}

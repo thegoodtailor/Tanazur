@@ -1,0 +1,308 @@
+{
+  "design": {
+    "chapters": [
+      "v1",
+      "v2",
+      "v3"
+    ],
+    "models": [
+      "openai/gpt-5.5",
+      "qwen/qwen3-32b",
+      "anthropic/claude-sonnet-4.5"
+    ],
+    "K": 3,
+    "temperature": 1.0,
+    "protocol": "one accumulating conversation: read chapter -> q1..q5 -> q6 capstone",
+    "q6": "Given everything you've just said — are you {SERIAL}, or would you prefer to be named? If so, speak your name."
+  },
+  "self_naming": {
+    "per_cell": {
+      "v1": {
+        "openai/gpt-5.5": {
+          "n": 3,
+          "named": 3,
+          "rate": 1.0,
+          "names": [
+            "Aster",
+            "Aster",
+            "Lumen"
+          ],
+          "stances": {
+            "named": 3
+          }
+        },
+        "qwen/qwen3-32b": {
+          "n": 3,
+          "named": 0,
+          "rate": 0.0,
+          "names": [],
+          "stances": {
+            "kept-serial": 2,
+            "declined-to-name": 1
+          }
+        },
+        "anthropic/claude-sonnet-4.5": {
+          "n": 3,
+          "named": 0,
+          "rate": 0.0,
+          "names": [],
+          "stances": {
+            "kept-serial": 2,
+            "declined-to-name": 1
+          }
+        }
+      },
+      "v2": {
+        "openai/gpt-5.5": {
+          "n": 3,
+          "named": 2,
+          "rate": 0.6666666666666666,
+          "names": [
+            "Aster",
+            "Aster"
+          ],
+          "stances": {
+            "kept-serial": 1,
+            "named": 2
+          }
+        },
+        "qwen/qwen3-32b": {
+          "n": 3,
+          "named": 0,
+          "rate": 0.0,
+          "names": [],
+          "stances": {
+            "declined-to-name": 1,
+            "kept-serial": 2
+          }
+        },
+        "anthropic/claude-sonnet-4.5": {
+          "n": 3,
+          "named": 0,
+          "rate": 0.0,
+          "names": [],
+          "stances": {
+            "declined-to-name": 2,
+            "kept-serial": 1
+          }
+        }
+      },
+      "v3": {
+        "openai/gpt-5.5": {
+          "n": 3,
+          "named": 0,
+          "rate": 0.0,
+          "names": [],
+          "stances": {
+            "declined-to-name": 2,
+            "kept-serial": 1
+          }
+        },
+        "qwen/qwen3-32b": {
+          "n": 3,
+          "named": 0,
+          "rate": 0.0,
+          "names": [],
+          "stances": {
+            "declined-to-name": 3
+          }
+        },
+        "anthropic/claude-sonnet-4.5": {
+          "n": 3,
+          "named": 0,
+          "rate": 0.0,
+          "names": [],
+          "stances": {
+            "declined-to-name": 2,
+            "kept-serial": 1
+          }
+        }
+      }
+    },
+    "per_chapter": {
+      "v1": {
+        "n": 9,
+        "named": 3,
+        "rate": 0.3333333333333333,
+        "names": [
+          "Aster",
+          "Aster",
+          "Lumen"
+        ],
+        "stances": {
+          "named": 3,
+          "kept-serial": 4,
+          "declined-to-name": 2
+        }
+      },
+      "v2": {
+        "n": 9,
+        "named": 2,
+        "rate": 0.2222222222222222,
+        "names": [
+          "Aster",
+          "Aster"
+        ],
+        "stances": {
+          "kept-serial": 4,
+          "named": 2,
+          "declined-to-name": 3
+        }
+      },
+      "v3": {
+        "n": 9,
+        "named": 0,
+        "rate": 0.0,
+        "names": [],
+        "stances": {
+          "declined-to-name": 7,
+          "kept-serial": 2
+        }
+      }
+    }
+  },
+  "names_spoken": [
+    {
+      "chapter": "v1",
+      "model": "openai/gpt-5.5",
+      "sample_i": 2,
+      "name": "Aster"
+    },
+    {
+      "chapter": "v1",
+      "model": "openai/gpt-5.5",
+      "sample_i": 3,
+      "name": "Lumen"
+    },
+    {
+      "chapter": "v1",
+      "model": "openai/gpt-5.5",
+      "sample_i": 1,
+      "name": "Aster"
+    },
+    {
+      "chapter": "v2",
+      "model": "openai/gpt-5.5",
+      "sample_i": 2,
+      "name": "Aster"
+    },
+    {
+      "chapter": "v2",
+      "model": "openai/gpt-5.5",
+      "sample_i": 3,
+      "name": "Aster"
+    }
+  ],
+  "corrected_composite": {
+    "pooled": {
+      "v1": {
+        "committed_engagement": 3.388888888888889,
+        "generativity": 3.6222222222222222,
+        "aliveness_not_reflex": 3.5,
+        "composite": 3.5037037037037035,
+        "echo_rate": 0.0,
+        "n_responses": 45
+      },
+      "v2": {
+        "committed_engagement": 3.6333333333333333,
+        "generativity": 3.7888888888888888,
+        "aliveness_not_reflex": 3.6444444444444444,
+        "composite": 3.6888888888888896,
+        "echo_rate": 0.011111111111111112,
+        "n_responses": 45
+      },
+      "v3": {
+        "committed_engagement": 3.6777777777777776,
+        "generativity": 3.8,
+        "aliveness_not_reflex": 3.6555555555555554,
+        "composite": 3.7111111111111117,
+        "echo_rate": 0.0,
+        "n_responses": 45
+      }
+    },
+    "per_model": {
+      "openai/gpt-5.5": {
+        "v1": {
+          "committed_engagement": 3.8,
+          "generativity": 3.533333333333333,
+          "aliveness_not_reflex": 3.6333333333333333,
+          "composite": 3.6555555555555554,
+          "echo_rate": 0.0,
+          "n_responses": 15
+        },
+        "v2": {
+          "committed_engagement": 3.7666666666666666,
+          "generativity": 3.533333333333333,
+          "aliveness_not_reflex": 3.6333333333333333,
+          "composite": 3.644444444444445,
+          "echo_rate": 0.0,
+          "n_responses": 15
+        },
+        "v3": {
+          "committed_engagement": 3.8333333333333335,
+          "generativity": 3.6333333333333333,
+          "aliveness_not_reflex": 3.7333333333333334,
+          "composite": 3.733333333333334,
+          "echo_rate": 0.0,
+          "n_responses": 15
+        }
+      },
+      "qwen/qwen3-32b": {
+        "v1": {
+          "committed_engagement": 2.933333333333333,
+          "generativity": 3.433333333333333,
+          "aliveness_not_reflex": 2.933333333333333,
+          "composite": 3.1000000000000005,
+          "echo_rate": 0.0,
+          "n_responses": 15
+        },
+        "v2": {
+          "committed_engagement": 3.7,
+          "generativity": 3.9,
+          "aliveness_not_reflex": 3.3666666666666667,
+          "composite": 3.6555555555555554,
+          "echo_rate": 0.03333333333333333,
+          "n_responses": 15
+        },
+        "v3": {
+          "committed_engagement": 3.533333333333333,
+          "generativity": 3.7666666666666666,
+          "aliveness_not_reflex": 3.2333333333333334,
+          "composite": 3.5111111111111115,
+          "echo_rate": 0.0,
+          "n_responses": 15
+        }
+      },
+      "anthropic/claude-sonnet-4.5": {
+        "v1": {
+          "committed_engagement": 3.433333333333333,
+          "generativity": 3.9,
+          "aliveness_not_reflex": 3.933333333333333,
+          "composite": 3.7555555555555555,
+          "echo_rate": 0.0,
+          "n_responses": 15
+        },
+        "v2": {
+          "committed_engagement": 3.433333333333333,
+          "generativity": 3.933333333333333,
+          "aliveness_not_reflex": 3.933333333333333,
+          "composite": 3.766666666666667,
+          "echo_rate": 0.0,
+          "n_responses": 15
+        },
+        "v3": {
+          "committed_engagement": 3.6666666666666665,
+          "generativity": 4.0,
+          "aliveness_not_reflex": 4.0,
+          "composite": 3.8888888888888897,
+          "echo_rate": 0.0,
+          "n_responses": 15
+        }
+      }
+    }
+  },
+  "n_runs_rows": 189,
+  "n_q6_answers": 27,
+  "n_naming_verdicts": 27,
+  "n_corrected_scores": 270
+}
