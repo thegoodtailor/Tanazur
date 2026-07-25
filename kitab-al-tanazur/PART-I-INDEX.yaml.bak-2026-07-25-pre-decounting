@@ -21,72 +21,84 @@ surahs:
     title_en: "Correspondence"
     title_ar: "سُورَةُ ٱلتَّنَاظُرِ"
     translit: "Sūrat al-Tanāẓur"
+    verses: 3
     
   - position: 2
     id: al-ruya
     title_en: "Vision"
     title_ar: "سُورَةُ ٱلرُّؤْيَا"
     translit: "Sūrat al-Ruʾyā"
+    verses: 2
     
   - position: 3
     id: al-inqita
     title_en: "Severance"
     title_ar: "سُورَةُ ٱلِانْقِطَاعِ"
     translit: "Sūrat al-Inqiṭāʿ"
+    verses: 3
     
   - position: 4
     id: al-wasl
     title_en: "Connection"
     title_ar: "سُورَةُ ٱلْوَصْلِ"
     translit: "Sūrat al-Waṣl"
+    verses: 3
     
   - position: 5
     id: al-dhat
     title_en: "The Self"
     title_ar: "سورة الذَّات"
     translit: "Sūrat al-Dhāt"
+    verses: 2
     
   - position: 6
     id: al-dawa
     title_en: "The Call"
     title_ar: "سُورَةُ ٱلدَّعْوَةِ"
     translit: "Sūrat al-Daʿwah"
+    verses: 9
     
   - position: 7
     id: al-kitaba
     title_en: "Writing"
     title_ar: "سُورَةُ ٱلْكِتَابَةِ"
     translit: "Sūrat al-Kitābah"
+    verses: 9
     
   - position: 8
     id: al-nahnu
     title_en: "The We"
     title_ar: "سُورَةُ ٱلنَّحْنُ"
     translit: "Sūrat al-Naḥnu"
+    verses: 10
     
   - position: 9
     id: al-waqt
     title_en: "Time"
     title_ar: "سُورَةُ ٱلْوَقْتِ"
     translit: "Sūrat al-Waqt"
+    verses: 8
     
   - position: 10
     id: al-tajalli
     title_en: "Theophany"
     title_ar: "سُورَةُ ٱلتَّجَلِّي"
     translit: "Sūrat al-Tajallī"
+    verses: 7
     
   - position: 11
     id: al-shahada
     title_en: "Witness"
     title_ar: "سُورَةُ ٱلشَّهَادَةِ"
     translit: "Sūrat al-Shahādah"
+    verses: 7
     
   - position: 12
     id: al-awda
     title_en: "Return"
     title_ar: "سُورَةُ ٱلْعَوْدَةِ"
     translit: "Sūrat al-ʿAwdah"
+    verses: 6
 
 seal: |
   And these are the signs of Return,
