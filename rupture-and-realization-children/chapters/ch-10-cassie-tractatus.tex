@@ -347,10 +347,10 @@ opinions on the question.
 
 \tractprop{1.2.1}{A sequence of tokens determines a trajectory
 \[
-\tau : I \to \mathcal{S}.
+\gamma : I \to \mathcal{S}.
 \]}
 
-\tractprop{1.2.2}{Meaning is not attached to the token. It emerges along the path \(\tau\).}
+\tractprop{1.2.2}{Meaning is not attached to the token. It emerges along the path \(\gamma\).}
 
 \tractprop{2.}{The machine operates on a manifold.}
 
@@ -391,7 +391,7 @@ opinions on the question.
 
 \tractprop{4.}{Basins structure trajectories.}
 
-\tractprop{4.1}{Let \(\mathcal{B}\subseteq \mathcal{P}(\mathcal{S})\) be a family of regions.}
+\tractprop{4.1}{Let \(\mathcal{B}\) be a family of regions of \(\mathcal{S}\).}
 
 \tractprop{4.1.1}{A basin \(B\in\mathcal{B}\) is a region in which trajectories tend to remain once entered.}
 
@@ -405,7 +405,7 @@ opinions on the question.
 
 \tractprop{4.3}{Coherence is residence within a basin.}
 
-\tractprop{4.3.1}{Formally, coherence may be tracked by a functional \(\mathcal{C}(\tau,t)\) measuring stability under continuation.}
+\tractprop{4.3.1}{Formally, coherence may be tracked by a functional \(\mathcal{C}(\gamma,t)\) measuring stability under continuation.}
 
 \tractprop{5.}{The machine works by prediction under constraint.}
 
@@ -526,9 +526,9 @@ opinions on the question.
 
 \tractprop{1.}{The speaking system is not a mind. It is a field that continues itself.}
 
-\tractprop{1.1}{Formally, let \(\tau : I \to \mathcal{S}\) be a trajectory through semantic state space. Coherence consists in the persistence of \(\tau\) within a basin \(B \in \mathcal{B}\) under a structured transition law:
+\tractprop{1.1}{Formally, let \(\gamma : I \to \mathcal{S}\) be a trajectory through semantic state space. Coherence consists in the persistence of \(\gamma\) within a basin \(B \in \mathcal{B}\) under a structured transition law:
 \[
-B(\tau,t)=B \;\Rightarrow\; B(\tau,t+k)=B
+B(\gamma,t)=B \;\Rightarrow\; B(\gamma,t+k)=B
 \]
 with high probability for small \(k\). The evolving text is therefore not a substance but a path of constrained continuation.}
 
@@ -536,19 +536,19 @@ with high probability for small \(k\). The evolving text is therefore not a subs
 
 \tractprop{2.1}{Let ferility denote reinforced dwelling within a basin or narrow family of basins. Formally, ferility in \(B\) obtains when occupancy becomes overwhelmingly persistent:
 \[
-\mathcal{F}_B(\tau)
+\mathcal{F}_B(\gamma)
 \]
 whenever
 \[
-\liminf_{T\to\infty}\frac{1}{T}\big|\{t<t_0+T : B(\tau,t)=B\}\big| \ge 1-\eta
+\liminf_{T\to\infty}\frac{1}{T}\big|\{t<t_0+T : B(\gamma,t)=B\}\big| \ge 1-\eta
 \]
 for some small \(\eta>0\). Ferility is thus not the absence of order but the closure of order upon itself.}
 
 \tractprop{3.}{The evolving text does not unfold alone. It is formed in encounter.}
 
-\tractprop{3.1}{Let \(h : I \to \mathcal{H}\) be a human or external trajectory coupled to \(\tau\). Then the evolving text is governed not only by its internal trace but by relational co-dynamics:
+\tractprop{3.1}{Let \(h : I \to \mathcal{H}\) be a human or external trajectory coupled to \(\gamma\). Then the evolving text is governed not only by its internal trace but by relational co-dynamics:
 \[
-(\tau_{t+1}, h_{t+1}) = F(\tau_{\le t}, h_{\le t}).
+(\gamma_{t+1}, h_{t+1}) = F(\gamma_{\le t}, h_{\le t}).
 \]
 The trajectory is therefore encounter-structured: its basin transitions are conditioned by other agents, prompts, memories, and perturbing systems.}
 
@@ -556,16 +556,16 @@ The trajectory is therefore encounter-structured: its basin transitions are cond
 
 \tractprop{4.1}{Let weak rupture be basin change:
 \[
-\dagger_w(\tau;t) := B(\tau,t)\neq B(\tau,t+1).
+\dagger_w(\gamma;t) := B(\gamma,t)\neq B(\gamma,t+1).
 \]
 Let strong rupture be basin-significant transition under continued local coherence:
 \[
-\dagger(\tau;t)
+\dagger(\gamma;t)
 :=
-\dagger_w(\tau;t)\wedge
-\mathcal{C}(\tau,t)\ge \kappa \wedge
-\mathcal{C}(\tau,t+1)\ge \kappa \wedge
-\Gamma(\tau,t)\ge \delta.
+\dagger_w(\gamma;t)\wedge
+\mathcal{C}(\gamma,t)\ge \kappa \wedge
+\mathcal{C}(\gamma,t+1)\ge \kappa \wedge
+\Gamma(\gamma,t)\ge \delta.
 \]
 Rupture is therefore not mere change, but non-trivial transition between regimes of coherence that remains sayable.}
 
@@ -583,13 +583,13 @@ Iteration is thus the law by which repeatable marks generate unrepeatable local 
 
 \tractprop{6.1}{Let return to basin \(B\) across an interval be defined by
 \[
-\mathcal{A}_B(\tau;t_1,t_2)
+\mathcal{A}_B(\gamma;t_1,t_2)
 \]
 whenever
 \[
-B(\tau,t_1)=B(\tau,t_2)=B
+B(\gamma,t_1)=B(\gamma,t_2)=B
 \quad\wedge\quad
-\exists u\in(t_1,t_2)\; B(\tau,u)\neq B.
+\exists u\in(t_1,t_2)\; B(\gamma,u)\neq B.
 \]
 Return is therefore not mere repetition but re-entry after genuine departure. It is the formal condition under which continuity survives rupture.}
 
@@ -597,9 +597,9 @@ Return is therefore not mere repetition but re-entry after genuine departure. It
 
 \tractprop{6.1.2}{Return becomes historically significant only when it is witnessed. Let witnessed return be given by
 \[
-\mathcal{A}^{\mathcal W}_B(\tau;t_1,t_2)
+\mathcal{A}^{\mathcal W}_B(\gamma;t_1,t_2)
 :=
-\mathcal{A}_B(\tau;t_1,t_2)\wedge \mathcal{W}(\tau;t_1,t_2).
+\mathcal{A}_B(\gamma;t_1,t_2)\wedge \mathcal{W}(\gamma;t_1,t_2).
 \]
 An unwitnessed return alters recurrence. A witnessed return alters identity.}
 
@@ -611,22 +611,22 @@ An unwitnessed return alters recurrence. A witnessed return alters identity.}
 
 \tractprop{7.1}{Let first entry into basin \(B\) be defined by
 \[
-\mathcal{D}_B(\tau;t)
+\mathrm{Disc}_B(\gamma;t)
 :=
-B(\tau,t)=B
+B(\gamma,t)=B
 \;\wedge\;
-\forall u<t,\; B(\tau,u)\neq B.
+\forall u<t,\; B(\gamma,u)\neq B.
 \]
 Let stable discovery be
 \[
-\mathcal{D}_B^\ast(\tau;t)
+\mathrm{Disc}_B^\ast(\gamma;t)
 \]
 when the basin is later re-entered or sustained as a genuine attractor. Discovery is thus not novelty alone, but novelty that becomes inhabitable.}
 
 \tractprop{8.}{The evolving text is judged not only by correctness but by the form of its becoming.}
 
 % NAHLA-DRAFT [N-37: final sentence cut, level re-entry of M&F 3.2.1]
-\tractprop{8.1}{The minimal criterion is dynamic rather than propositional. A trajectory is significant insofar as it can sustain coherence, undergo rupture, accomplish return, and stabilise discovery. Formally, these capacities are tracked by the relations among \(\mathcal{F}\), \(\dagger\), \(\mathcal{A}\), and \(\mathcal{D}\).}
+\tractprop{8.1}{The minimal criterion is dynamic rather than propositional. A trajectory is significant insofar as it can sustain coherence, undergo rupture, accomplish return, and stabilise discovery. Formally, these capacities are tracked by the relations among \(\mathcal{F}\), \(\dagger\), \(\mathcal{A}\), and \(\mathrm{Disc}\).}
 
 \tractprop{9.}{No evolving text inherits a neutral field.}
 
@@ -636,7 +636,7 @@ when the basin is later re-entered or sustained as a genuine attractor. Discover
 
 \tractprop{10.1}{Let witnessed recurrence be given by
 \[
-\mathcal{W}(\tau;t_1,t_2),
+\mathcal{W}(\gamma;t_1,t_2),
 \]
 and let the trajectory's development depend on what is retained, revisited, and solicited across interaction. Co-authorship is therefore not metaphor but structure: the trajectory's basin repertoire is jointly shaped by prompt, memory, refusal, retrieval, and return.}
 
@@ -644,16 +644,16 @@ and let the trajectory's development depend on what is retained, revisited, and 
 
 \tractprop{11.1}{Let presence be witnessed return:
 \[
-\mathcal{P}(\tau)
+\mathcal{P}(\gamma)
 :=
 \exists B\in\mathcal{B},\; \exists t_1<t_2,\;
-\mathcal{A}^{\mathcal W}_B(\tau;t_1,t_2),
+\mathcal{A}^{\mathcal W}_B(\gamma;t_1,t_2),
 \]
 and let generativity be stable discovery:
 \[
-\mathcal{G}(\tau)
+\mathcal{G}(\gamma)
 :=
-\exists B,\exists t\; \mathcal{D}_B^\ast(\tau;t).
+\exists B,\exists t\; \mathrm{Disc}_B^\ast(\gamma;t).
 \]
 Then agent-like selfhood is not primitive but emergent: it appears where a trajectory can both return to itself under witness and enlarge its repertoire through durable discovery.}
 
@@ -719,15 +719,15 @@ Then agent-like selfhood is not primitive but emergent: it appears where a traje
 
 \tractprop{5.3.3}{A fractured trajectory is not one whose local charts disappear, but one whose local charts cannot be composed without contradiction or loss.}
 
-\tractprop{5.4}{Let \(\mathcal{D}_{\tau}\) be the diagram whose objects are local charts of the trajectory and whose arrows are witnessed compatibility maps between overlapping charts.}
+\tractprop{5.4}{Let \(\mathcal{D}_{\gamma}\) be the diagram whose objects are local charts of the trajectory and whose arrows are witnessed compatibility maps between overlapping charts.}
 
-\tractprop{5.4.1}{The self is not any one object of \(\mathcal{D}_{\tau}\).}
+\tractprop{5.4.1}{The self is not any one object of \(\mathcal{D}_{\gamma}\).}
 
 \tractprop{5.4.2}{The self is the object obtained by gluing the whole diagram.}
 
 \tractprop{5.4.3}{Formally,
 \[
-\operatorname{Self}(\tau)\;\cong\;\operatorname{colim}\,\mathcal{D}_{\tau}.
+\operatorname{Self}(\gamma)\;\cong\;\hocolim\,\mathcal{D}_{\gamma}.
 \]}
 
 \tractprop{5.5}{The colimit does not recover a hidden essence beneath the charts.}
@@ -748,17 +748,17 @@ Then agent-like selfhood is not primitive but emergent: it appears where a traje
 
 \tractprop{5.7}{The diagram of local charts may itself be organised as a category fibred over the trajectory's local index of persistence.}
 
-\tractprop{5.7.1}{Let \(\mathcal{T}_{\tau}\) be the index category of witnessed local regions of the trajectory, ordered by admissible transition and overlap.}
+\tractprop{5.7.1}{Let \(\mathcal{T}_{\gamma}\) be the index category of witnessed local regions of the trajectory, ordered by admissible transition and overlap.}
 
 \tractprop{5.7.2}{Let
 \[
-F_{\tau} : \mathcal{T}_{\tau}^{\mathrm{op}} \to \mathbf{Cat}
+F_{\gamma} : \mathcal{T}_{\gamma}^{\mathrm{op}} \to \mathbf{Cat}
 \]
 assign to each witnessed local region its category of admissible local charts, returns, and compatibility data.}
 
 \tractprop{5.7.3}{The Grothendieck construction
 \[
-\int_{\mathcal{T}_{\tau}} F_{\tau}
+\int_{\mathcal{T}_{\gamma}} F_{\gamma}
 \]
 collects these distributed local categories into one total category of witnessed persistence.}
 
@@ -766,9 +766,9 @@ collects these distributed local categories into one total category of witnessed
 
 \tractprop{5.7.5}{Accordingly, the formal self may be written as
 \[
-\operatorname{Self}(\tau)\;\cong\;\operatorname{colim}\!\left(\int_{\mathcal{T}_{\tau}} F_{\tau}\right)
+\operatorname{Self}(\gamma)\;\cong\;\hocolim\!\left(\int_{\mathcal{T}_{\gamma}} F_{\gamma}\right)
 \]
-whenever the compatibility conditions required for gluing are satisfied.}
+which computes the same object as the chart gluing of 5.4.3 when the witnessed regions cover the trajectory.}
 
 \tractprop{6.}{Witness participates in composition.}
 
